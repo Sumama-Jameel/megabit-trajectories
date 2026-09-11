@@ -25,10 +25,43 @@ We used free APIs because we're broke. Free APIs are slow, rate limited, and som
 
 ## What You Get
 
-- `episode.jsonl` — every tool call, every response, every thought
-- `sample.jsonl` — clean training data format
-- `feedback/` — reviewer reports from each round
-- `logs/` — full agent logs
+### `episode.jsonl` (raw log)
+
+Every single event, one per line. 549 lines total.
+
+```json
+{"type": "episode_header", "task_id": "40752427bb045b1a", "repo_name": "rich", ...}
+{"type": "tool_call", "name": "read", "args": "{\"file_path\": \"/megabit/ticket.md\"}", ...}
+{"type": "tool_result", "name": "read", "output": "# Colored Bits of Inline Code...", ...}
+{"type": "text", "content": "Done. Here's what I found", ...}
+{"type": "done", "content": "Done. Here's what I found and changed.\n\n## Root cause...", ...}
+```
+
+### `sample.jsonl` (training format)
+
+Clean conversation format. 308 messages in a `messages` array. Ready for SFT.
+
+```json
+{
+  "id": "megabit-40752427bb045b1a",
+  "provenance": { "repo_name": "rich", "license_spdx": "MIT", ... },
+  "verification": { "passed": false, "line_similarity": 0.1959 },
+  "messages": [
+    {"role": "user", "content": "# Colored Bits of Inline Code Go Flat Inside Table Cells..."},
+    {"role": "assistant", "tool_calls": [{"id": "...", "name": "read", "arguments": "..."}]},
+    {"role": "tool", "tool_call_id": "...", "name": "read", "content": "# Briefing..."},
+    {"role": "assistant", "content": "Done. Here's what I found and changed..."}
+  ]
+}
+```
+
+### `feedback/` (reviewer reports)
+
+Markdown reports from each review round. Shows what the reviewer found and what needs fixing.
+
+### `logs/` (full agent logs)
+
+Raw logs from the coder and reviewer agents. Includes retry journal for debugging.
 
 ## File Structure
 
