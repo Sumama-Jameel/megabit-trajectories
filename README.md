@@ -6,9 +6,9 @@ every single move.
 
 ## What's here
 
-26 episodes: 24 verified passes (tests green and the
+29 episodes: 27 verified passes (tests green and the
 agent's diff independently scored against the upstream fix, similarity
-≥ 0.45) plus 2 earlier archive episodes. 1163 tool
+≥ 0.45) plus 2 earlier archive episodes. 1315 tool
 calls total. Repositories: attrs, cli, click, packaging, rich.
 
 ## How We Made It
@@ -41,15 +41,18 @@ providers one after another. It took a lot of debugging.
 | [`864a19a5d07ecac7`](episodes/864a19a5d07ecac7/) | click (BSD-3-Clause) | 0.765 | 31 | 1 | yes | 10 min |
 | [`afd00fe36c2ad88c`](episodes/afd00fe36c2ad88c/) | click (BSD-2-Clause) | 0.765 | 26 | 1 | yes | 6 min |
 | [`979988594a97aafb`](episodes/979988594a97aafb/) | click (BSD-3-Clause) | 0.741 | 27 | 1 | yes | 12 min |
+| [`fe34f71ffe61ad61`](episodes/fe34f71ffe61ad61/) | click (BSD-3-Clause) | 0.731 | 26 | 1 | yes | 8 min |
 | [`57b500b3a9ee36b6`](episodes/57b500b3a9ee36b6/) | click (BSD-2-Clause) | 0.725 | 25 | 1 | yes | 8 min |
 | [`b9e9143d07b01282`](episodes/b9e9143d07b01282/) | packaging (Apache-2.0) | 0.709 | 17 | 1 | yes | 11 min |
 | [`efd63c576c434d63`](episodes/efd63c576c434d63/) | packaging (Apache-2.0) | 0.678 | 57 | 1 | yes | 15 min |
 | [`33da938be0a526fb`](episodes/33da938be0a526fb/) | attrs (MIT) | 0.658 | 27 | 1 | yes | 10 min |
+| [`fd65634c348f1601`](episodes/fd65634c348f1601/) | click (BSD-3-Clause) | 0.650 | 56 | 1 | yes | 21 min |
 | [`2b67051b08a2794f`](episodes/2b67051b08a2794f/) | attrs (MIT) | 0.619 | 51 | 1 | yes | 14 min |
 | [`ebaa0de9c4092fd4`](episodes/ebaa0de9c4092fd4/) | packaging (Apache-2.0) | 0.598 | 12 | 1 | yes | 11 min |
 | [`7bd0a927168a14f3`](episodes/7bd0a927168a14f3/) | attrs (MIT) | 0.583 | 16 | 1 | yes | 3 min |
 | [`b8d783f57b4b84eb`](episodes/b8d783f57b4b84eb/) | packaging (Apache-2.0) | 0.582 | 27 | 1 | yes | 47 min |
 | [`490a433138e1fe8e`](episodes/490a433138e1fe8e/) | cli (BSD-3-Clause) | 0.552 | 56 | 1 | yes | 12 min |
+| [`f20d68038c27594c`](episodes/f20d68038c27594c/) | click (BSD-3-Clause) | 0.541 | 70 | 1 | yes | 18 min |
 | [`4c434330ee44b096`](episodes/4c434330ee44b096/) | attrs (MIT) | 0.539 | 27 | 1 | yes | 5 min |
 | [`0571b7eb5d6b7555`](episodes/0571b7eb5d6b7555/) | attrs (MIT) | 0.538 | 134 | 3 | yes | 34 min |
 | [`94dab878e2c9a0ec`](episodes/94dab878e2c9a0ec/) | packaging (Apache-2.0) | 0.534 | 39 | 1 | yes | 13 min |
