@@ -1,0 +1,16 @@
+{"attempt": 1, "kind": "ticket_attempt", "retry_feedback_chars": 0, "role": "ticket_gen", "ts": 1789061037.3170009}
+{"attempt": 1, "detail": "done error: The model returned an error: invalid character '<' looking for beginning of value, body: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>; exit 1; The model returned an error: invalid character '<' looking for beginning of value, body: <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n</body>\r\n</html>\r\n\n------------------------", "failure_kind": "engine_error", "kind": "retry", "phase": "invoke", "return_code": 1, "role": "ticket_gen", "session_id": "", "ts": 1789061230.2798333}
+{"attempt": 1, "kind": "heartbeat", "role": "ticket_gen", "session_id": "", "ts": 1789061230.2800007}
+{"attempt": 2, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1789061572.0564363}
+{"attempt": 2, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1789061572.0566232}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "e2fc297094d641daa8091858a4cc30f5", "ts": 1789062873.3054512}
+{"attempt": 1, "kind": "retry_success", "role": "coder", "session_id": "e2fc297094d641daa8091858a4cc30f5", "ts": 1789062873.305593}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1789063621.2180161}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1789063621.2188883}
+{"kind": "reviewer_report_violations", "round_no": 1, "ts": 1789063621.2212746, "violations": ["line 9: code fence", "line 16: code fence", "line 22: code fence", "line 33: code fence", "line 37: code fence", "line 40: code fence"]}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 1, "role": "coder", "session_id": "e2fc297094d641daa8091858a4cc30f5", "ts": 1789064943.808984}
+{"attempt": 1, "kind": "retry_success", "role": "coder", "session_id": "e2fc297094d641daa8091858a4cc30f5", "ts": 1789064943.809129}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1789066255.7933247}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1789066255.79347}
+{"kind": "reviewer_report_violations", "round_no": 2, "ts": 1789066255.7954245, "violations": ["line 13: code fence", "line 15: code fence", "line 22: code fence", "line 36: code fence", "line 40: code fence", "line 42: code fence"]}
+{"kind": "episode_budget_exhausted", "reason": "episode wall-clock budget of 3600s exhausted after 4680s", "tests_passed": true, "tests_ran": true, "ts": 1789066255.7957404}

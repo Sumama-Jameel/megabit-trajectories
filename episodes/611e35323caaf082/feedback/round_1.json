@@ -1,0 +1,9 @@
+{
+  "evidence": {
+    "reason": "the plan call did not complete cleanly: final response was not a structured plan (final response 3630 chars)"
+  },
+  "report": "/home/sumama/Private/MegaBit/megabit-data/episodes/611e35323caaf082/feedback/round_1.md",
+  "round": 1,
+  "verdict": "changes_needed",
+  "written_at": 1790510588.3159244
+}

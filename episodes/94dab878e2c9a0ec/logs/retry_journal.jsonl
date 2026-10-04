@@ -1,0 +1,14 @@
+{"attempt": 1, "kind": "ticket_attempt", "retry_feedback_chars": 0, "role": "ticket_gen", "ts": 1790682152.6621232}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1790682197.0391989}
+{"attempt": 1, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1790682197.039459}
+{"kind": "sleep_schedule_effective", "schedule": [10.0, 20.0, 40.0, 60.0, 60.0], "ts": 1790682242.9113019}
+{"attempts_completed": 0, "conversations": 0, "egress_hits": 0, "events": 0, "kind": "entry_evidence", "rounds_completed": 0, "source": "memory", "tests_passed": null, "tests_ran": false, "tool_calls": 0, "ts": 1790682242.912338}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "32217a80611b436ab07016768e2ab556", "ts": 1790682743.4208589}
+{"attempt": 1, "kind": "retry_success", "role": "coder", "session_id": "32217a80611b436ab07016768e2ab556", "ts": 1790682743.4210904}
+{"kind": "evidence_from_log", "malformed_lines": 0, "non_json_lines": 0, "reason": "durable evidence source", "ts": 1790682748.104133}
+{"attempt": 1, "evidence_source": "log", "evidence_truncated": false, "kind": "coder_attempt_completed", "n_tool_calls": 39, "session_id": "32217a80611b436ab07016768e2ab556", "similarity": 0.5341, "tests_passed": true, "tests_ran": true, "ts": 1790682748.1271422}
+{"commands": ["python -m pytest "], "context": "attempt:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1790682768.4890115}
+{"commands": ["python -m pytest "], "context": "round:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1790682827.7188394}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1790682899.4625528}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1790682899.4627516}
+{"kind": "reviewer_role_files_swept", "removed": ["/home/sumama/Private/MegaBit/megabit-data/episodes/94dab878e2c9a0ec/.coder_view/.reviewer.config.json", "/home/sumama/Private/MegaBit/megabit-data/episodes/94dab878e2c9a0ec/.coder_view/.reviewer.appendix.md"], "round_no": 1, "ts": 1790682899.4635034, "when": "after_round"}

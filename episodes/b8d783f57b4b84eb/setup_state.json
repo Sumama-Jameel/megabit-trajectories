@@ -1,0 +1,184 @@
+{
+  "ok": true,
+  "relock": {
+    "branches_deleted": 0,
+    "object_purged": true,
+    "relocked": 1
+  },
+  "steps": [
+    {
+      "commits": 8,
+      "detail": "detached at 8fc910b9b256, 8 commits, removed remote:origin, tags:53, local-branches:1; diff2.patch ad7328a8d7c1",
+      "diff2_sha256": "ad7328a8d7c1afe6adad69789ebb1aedbc04c9af9e6143cacfed1fb0987f3ef5",
+      "head": "8fc910b9b2564bd1282767ee847fb44b36972411",
+      "name": "materialize_workspace",
+      "ok": true,
+      "removed_refs": [
+        "remote:origin",
+        "tags:53",
+        "local-branches:1"
+      ],
+      "seconds": 8.674,
+      "step": 1
+    },
+    {
+      "detail": "34 files extracted; verified 2 files",
+      "files": 34,
+      "name": "extract_diff2_reference",
+      "ok": true,
+      "pruned": 0,
+      "seconds": 0.024,
+      "step": 1,
+      "verified_path": "tests/test_version.py"
+    },
+    {
+      "attempts": 0,
+      "detail": "ticket reused verbatim from first setup (flow point 16 reset)",
+      "name": "run_ticket_agent",
+      "ok": true,
+      "path": "/home/sumama/Private/MegaBit/megabit-data/episodes/b8d783f57b4b84eb/.first_ticket.md",
+      "seconds": 0.055,
+      "step": 2
+    },
+    {
+      "detail": "1 test file section(s) (modified=1)",
+      "has_patch": true,
+      "name": "extract_diff2_tests",
+      "ok": true,
+      "seconds": 0.003,
+      "step": 3,
+      "test_paths": [
+        "tests/test_version.py"
+      ],
+      "test_sections": [
+        [
+          "tests/test_version.py",
+          "modified"
+        ]
+      ]
+    },
+    {
+      "base": [
+        "setup.py",
+        "tasks/requirements.txt",
+        "tox.ini"
+      ],
+      "detail": "target=3 base=3 to_remove=0 languages=['python']",
+      "languages": [
+        "python"
+      ],
+      "name": "extract_diff2_manifests",
+      "ok": true,
+      "removed": [],
+      "seconds": 0.008,
+      "step": 4,
+      "target": [
+        "setup.py",
+        "tasks/requirements.txt",
+        "tox.ini"
+      ]
+    },
+    {
+      "detail": "seeded 1 test file(s)",
+      "kept_diff1_tests": [],
+      "name": "seed_diff2_tests",
+      "ok": true,
+      "pruned_diff1_tests": [],
+      "seconds": 0.806,
+      "seeded": [
+        "tests/test_version.py"
+      ],
+      "step": 5
+    },
+    {
+      "detail": "replaced 3, removed 0",
+      "name": "replace_manifests",
+      "ok": true,
+      "removed": [],
+      "replaced": [
+        "setup.py",
+        "tasks/requirements.txt",
+        "tox.ini"
+      ],
+      "seconds": 0.01,
+      "step": 6
+    },
+    {
+      "cache_dir": "/home/sumama/Private/MegaBit/megabit-data/cache/packaging",
+      "cache_hit": true,
+      "detail": "installed 6 dep line(s), verified 5 probe(s) (languages=['python'])",
+      "dropped": [],
+      "failed": [],
+      "installed": [
+        "pretend",
+        "sphinx",
+        "sphinx_rtd_theme",
+        "flake8",
+        "pep8-naming",
+        "pytest"
+      ],
+      "installed_languages": [],
+      "installed_packages": [
+        "pretend",
+        "sphinx",
+        "sphinx_rtd_theme",
+        "flake8",
+        "pep8-naming",
+        "pytest"
+      ],
+      "languages": [
+        "python"
+      ],
+      "manifest_fingerprint": "5ab50d5f26d9a92a7caef28bafb4bd3ff0ca646082acd41b7e45c09143e1add8",
+      "name": "install_deps",
+      "ok": true,
+      "seconds": 23.196,
+      "step": 7,
+      "verified_deps": [
+        "python:pretend",
+        "python:sphinx",
+        "python:sphinx_rtd_theme",
+        "python:flake8",
+        "python:pep8_naming"
+      ]
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_version.py"
+      ],
+      "name": "lock_tests_stage1",
+      "ok": true,
+      "seconds": 0.273,
+      "step": 8
+    },
+    {
+      "detail": "deleted /home/sumama/Private/MegaBit/megabit-data/episodes/b8d783f57b4b84eb/.megabit_ref",
+      "name": "delete_reference",
+      "ok": true,
+      "seconds": 0.006,
+      "step": 9
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_version.py"
+      ],
+      "name": "lock_tests_stage2",
+      "ok": true,
+      "seconds": 0.316,
+      "step": 10
+    },
+    {
+      "branches_deleted": 0,
+      "detail": "single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 1 file(s)",
+      "name": "wipe_git_history",
+      "object_purged": true,
+      "ok": true,
+      "relocked": 1,
+      "seconds": 5.059,
+      "step": 10
+    }
+  ],
+  "task_id": "b8d783f57b4b84eb"
+}

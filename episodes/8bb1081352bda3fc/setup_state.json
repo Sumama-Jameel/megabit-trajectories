@@ -1,0 +1,222 @@
+{
+  "ok": true,
+  "relock": {
+    "branches_deleted": 0,
+    "object_purged": true,
+    "relocked": 1
+  },
+  "steps": [
+    {
+      "commits": 114,
+      "detail": "detached at 052ee213ca18, 114 commits, removed remote:origin, tags:71, local-branches:1; diff2.patch 8d6aff5faf32",
+      "diff2_sha256": "8d6aff5faf32e4994dc30cecfc97c3b74f11ac640770b9b63f7ffb4745c0e460",
+      "head": "052ee213ca182a0780903d37fcde9f6ab8a6f1ad",
+      "name": "materialize_workspace",
+      "ok": true,
+      "removed_refs": [
+        "remote:origin",
+        "tags:71",
+        "local-branches:1"
+      ],
+      "seconds": 5.563,
+      "step": 1
+    },
+    {
+      "detail": "53 files extracted; verified 3 files; pruned 3 heavy artifacts",
+      "files": 53,
+      "name": "extract_diff2_reference",
+      "ok": true,
+      "pruned": 3,
+      "seconds": 0.052,
+      "step": 1,
+      "verified_path": "docs/api.rst"
+    },
+    {
+      "attempts": 2,
+      "detail": "ticket written to ticket.md (attempt 2)",
+      "name": "run_ticket_agent",
+      "ok": true,
+      "path": "/home/sumama/Private/MegaBit/megabit-data/episodes/8bb1081352bda3fc/ticket.md",
+      "seconds": 87.813,
+      "step": 2
+    },
+    {
+      "detail": "1 test file section(s) (modified=1)",
+      "has_patch": true,
+      "name": "extract_diff2_tests",
+      "ok": true,
+      "seconds": 0.003,
+      "step": 3,
+      "test_paths": [
+        "tests/test_basic.py"
+      ],
+      "test_sections": [
+        [
+          "tests/test_basic.py",
+          "modified"
+        ]
+      ],
+      "write_deny_tree": [
+        "tests",
+        "tests/test_basic.py"
+      ]
+    },
+    {
+      "base": [
+        "examples/inout/setup.py",
+        "examples/repo/setup.py",
+        "setup.cfg",
+        "setup.py"
+      ],
+      "detail": "target=4 base=4 to_remove=0 languages=['python']",
+      "languages": [
+        "python"
+      ],
+      "name": "extract_diff2_manifests",
+      "ok": true,
+      "removed": [],
+      "seconds": 0.008,
+      "step": 4,
+      "target": [
+        "examples/inout/setup.py",
+        "examples/repo/setup.py",
+        "setup.cfg",
+        "setup.py"
+      ]
+    },
+    {
+      "detail": "seeded 1 test file(s); pruned 2 Diff1-only test file(s)",
+      "kept_diff1_tests": [],
+      "name": "seed_diff2_tests",
+      "ok": true,
+      "pruned_diff1_tests": [
+        "tests/test_commands.py",
+        "tests/test_context.py"
+      ],
+      "seconds": 1.247,
+      "seeded": [
+        "tests/test_basic.py"
+      ],
+      "step": 5
+    },
+    {
+      "detail": "replaced 4, removed 0",
+      "name": "replace_manifests",
+      "ok": true,
+      "removed": [],
+      "replaced": [
+        "examples/inout/setup.py",
+        "examples/repo/setup.py",
+        "setup.cfg",
+        "setup.py"
+      ],
+      "seconds": 0.011,
+      "step": 6
+    },
+    {
+      "cache_dir": "/home/sumama/Private/MegaBit/megabit-data/cache/click",
+      "cache_hit": false,
+      "detail": "no deps declared by Diff2 manifests or imports",
+      "dropped": [],
+      "failed": [],
+      "installed": [],
+      "languages": [
+        "python"
+      ],
+      "manifest_fingerprint": "03d79c90dcf2a2186d8b8413bf3a723969c0df3f28e4e7b80421889d7babd41c",
+      "name": "install_deps",
+      "ok": true,
+      "resolved_test_command": "python -m pytest",
+      "seconds": 0.408,
+      "step": 7,
+      "test_command_resolution": {
+        "attempts": [
+          {
+            "command": "python -m pytest",
+            "exit_code": 0,
+            "kind": "pytest",
+            "note": "pytest discovered the seeded tests",
+            "outcome": "pass",
+            "source": "pytest-config",
+            "timed_out": false
+          }
+        ],
+        "reason": "pytest-config probe discovered the seeded tests",
+        "verdict": "resolved"
+      }
+    },
+    {
+      "commands": [
+        "python -m pytest"
+      ],
+      "detail": "second-diff suite green 3/3 \u00d7 1 command(s) (reference dir)",
+      "name": "verify_diff2_suite",
+      "ok": true,
+      "required_runs": 3,
+      "root": "reference dir",
+      "runs": [
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": ".megabit_ref/click/core.py:612: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"A parameter to a command comes in two versions: they are either\n\nclick/decorators.py:86\n  /megabit/.megabit_ref/click/decorators.py:86: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n======================== 14 passed, 2 warnings in 0.07s ========================\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "============== test session starts ==============================\nplatform linux -- Python 3.11.16, pytest-9.1.1, pluggy-1.6.0\nrootdir: /megabit/.megabit_ref\ncollected 14 items\n\ntests/test_basic.py ........                                             [ 57%]\ntests/test_commands.py ..                                                [ 71%]\ntests/test_context.py ....                                               [100%]\n\n============================== 14 passed in 0.03s ==============================\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "============== test session starts ==============================\nplatform linux -- Python 3.11.16, pytest-9.1.1, pluggy-1.6.0\nrootdir: /megabit/.megabit_ref\ncollected 14 items\n\ntests/test_basic.py ........                                             [ 57%]\ntests/test_commands.py ..                                                [ 71%]\ntests/test_context.py ....                                               [100%]\n\n============================== 14 passed in 0.03s ==============================\n",
+          "timed_out": false
+        }
+      ],
+      "seconds": 1.442,
+      "step": 16
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_basic.py"
+      ],
+      "name": "lock_tests_stage1",
+      "ok": true,
+      "seconds": 0.233,
+      "step": 8
+    },
+    {
+      "detail": "deleted /home/sumama/Private/MegaBit/megabit-data/episodes/8bb1081352bda3fc/.megabit_ref",
+      "name": "delete_reference",
+      "ok": true,
+      "seconds": 0.016,
+      "step": 9
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_basic.py"
+      ],
+      "name": "lock_tests_stage2",
+      "ok": true,
+      "seconds": 0.237,
+      "step": 10
+    },
+    {
+      "branches_deleted": 0,
+      "detail": "single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 1 file(s)",
+      "name": "wipe_git_history",
+      "object_purged": true,
+      "ok": true,
+      "relocked": 1,
+      "seconds": 1.84,
+      "step": 10
+    }
+  ],
+  "task_id": "8bb1081352bda3fc"
+}

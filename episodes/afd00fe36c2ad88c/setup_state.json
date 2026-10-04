@@ -1,0 +1,167 @@
+{
+  "ok": true,
+  "relock": {
+    "branches_deleted": 0,
+    "object_purged": true,
+    "relocked": 1
+  },
+  "steps": [
+    {
+      "commits": 107,
+      "detail": "detached at 45be1caa7e09, 107 commits, removed remote:origin, tags:71, local-branches:1; diff2.patch 9cbc6e7fc612",
+      "diff2_sha256": "9cbc6e7fc6125c5ed08e846522719ee30efe6df5b578d5e11d28ebd62674c8a5",
+      "head": "45be1caa7e09688fbae58e39d0846e6b19c3e6ac",
+      "name": "materialize_workspace",
+      "ok": true,
+      "removed_refs": [
+        "remote:origin",
+        "tags:71",
+        "local-branches:1"
+      ],
+      "seconds": 3.553,
+      "step": 1
+    },
+    {
+      "detail": "53 files extracted; verified 3 files; pruned 3 heavy artifacts",
+      "files": 53,
+      "name": "extract_diff2_reference",
+      "ok": true,
+      "pruned": 3,
+      "seconds": 0.042,
+      "step": 1,
+      "verified_path": "tests/test_commands.py"
+    },
+    {
+      "attempts": 2,
+      "detail": "ticket written to ticket.md (attempt 2)",
+      "name": "run_ticket_agent",
+      "ok": true,
+      "path": "/home/sumama/Private/MegaBit/megabit-data/episodes/afd00fe36c2ad88c/ticket.md",
+      "seconds": 86.79,
+      "step": 2
+    },
+    {
+      "detail": "1 test file section(s) (modified=1)",
+      "has_patch": true,
+      "name": "extract_diff2_tests",
+      "ok": true,
+      "seconds": 0.001,
+      "step": 3,
+      "test_paths": [
+        "tests/test_commands.py"
+      ],
+      "test_sections": [
+        [
+          "tests/test_commands.py",
+          "modified"
+        ]
+      ]
+    },
+    {
+      "base": [
+        "examples/inout/setup.py",
+        "examples/repo/setup.py",
+        "setup.cfg",
+        "setup.py"
+      ],
+      "detail": "target=4 base=4 to_remove=0 languages=['python']",
+      "languages": [
+        "python"
+      ],
+      "name": "extract_diff2_manifests",
+      "ok": true,
+      "removed": [],
+      "seconds": 0.009,
+      "step": 4,
+      "target": [
+        "examples/inout/setup.py",
+        "examples/repo/setup.py",
+        "setup.cfg",
+        "setup.py"
+      ]
+    },
+    {
+      "detail": "seeded 1 test file(s); pruned 2 Diff1-only test file(s)",
+      "kept_diff1_tests": [],
+      "name": "seed_diff2_tests",
+      "ok": true,
+      "pruned_diff1_tests": [
+        "tests/test_basic.py",
+        "tests/test_context.py"
+      ],
+      "seconds": 1.044,
+      "seeded": [
+        "tests/test_commands.py"
+      ],
+      "step": 5
+    },
+    {
+      "detail": "replaced 4, removed 0",
+      "name": "replace_manifests",
+      "ok": true,
+      "removed": [],
+      "replaced": [
+        "examples/inout/setup.py",
+        "examples/repo/setup.py",
+        "setup.cfg",
+        "setup.py"
+      ],
+      "seconds": 0.014,
+      "step": 6
+    },
+    {
+      "cache_dir": "/home/sumama/Private/MegaBit/megabit-data/cache/click",
+      "cache_hit": false,
+      "detail": "no deps declared by Diff2 manifests or imports",
+      "dropped": [],
+      "failed": [],
+      "installed": [],
+      "languages": [
+        "python"
+      ],
+      "manifest_fingerprint": "03d79c90dcf2a2186d8b8413bf3a723969c0df3f28e4e7b80421889d7babd41c",
+      "name": "install_deps",
+      "ok": true,
+      "seconds": 0.007,
+      "step": 7
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_commands.py"
+      ],
+      "name": "lock_tests_stage1",
+      "ok": true,
+      "seconds": 0.196,
+      "step": 8
+    },
+    {
+      "detail": "deleted /home/sumama/Private/MegaBit/megabit-data/episodes/afd00fe36c2ad88c/.megabit_ref",
+      "name": "delete_reference",
+      "ok": true,
+      "seconds": 0.01,
+      "step": 9
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_commands.py"
+      ],
+      "name": "lock_tests_stage2",
+      "ok": true,
+      "seconds": 0.195,
+      "step": 10
+    },
+    {
+      "branches_deleted": 0,
+      "detail": "single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 1 file(s)",
+      "name": "wipe_git_history",
+      "object_purged": true,
+      "ok": true,
+      "relocked": 1,
+      "seconds": 1.14,
+      "step": 10
+    }
+  ],
+  "task_id": "afd00fe36c2ad88c"
+}

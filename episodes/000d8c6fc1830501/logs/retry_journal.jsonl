@@ -1,0 +1,13 @@
+{"attempt": 1, "kind": "ticket_attempt", "retry_feedback_chars": 0, "role": "ticket_gen", "ts": 1789199616.914778}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1789199987.2816799}
+{"attempt": 1, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1789199987.2819402}
+{"attempt": 1, "kind": "ticket_retry", "reason": "contract violations: line 18: developer phrase ('This change') \u2014 the ticket must be written from a user's perspective; line 3: speculative claim ('might be') \u2014 nothing may be written on unverified assumptions", "role": "ticket_gen", "ts": 1789199987.3302846}
+{"attempt": 2, "kind": "ticket_attempt", "retry_feedback_chars": 485, "role": "ticket_gen", "ts": 1789199987.3304348}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1789200112.2375646}
+{"attempt": 1, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1789200112.2377472}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "ebaa717e66874563ab4f6e751fa01273", "ts": 1789200378.1606698}
+{"attempt": 1, "kind": "retry_success", "role": "coder", "session_id": "ebaa717e66874563ab4f6e751fa01273", "ts": 1789200378.1815853}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "ebaa717e66874563ab4f6e751fa01273", "ts": 1789200629.0814772}
+{"attempt": 1, "kind": "retry_success", "role": "coder", "session_id": "ebaa717e66874563ab4f6e751fa01273", "ts": 1789200629.0816836}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1789200660.5280175}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1789200660.5281687}

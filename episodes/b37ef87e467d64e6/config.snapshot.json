@@ -1,0 +1,990 @@
+{
+  "env_vars": [
+    {
+      "description": "LLM base URL (default: Groq OpenAI-compatible)",
+      "is_secret": false,
+      "name": "MEGABIT_BASE_URL",
+      "target": "llm.base_url",
+      "value": "https://tokenharbor.ai/v1"
+    },
+    {
+      "description": "LLM model name (default: openai/gpt-oss-120b)",
+      "is_secret": false,
+      "name": "MEGABIT_MODEL",
+      "target": "llm.model",
+      "value": "deepseek-v4.1-flash:free"
+    },
+    {
+      "description": "name of the env var holding the LLM API key",
+      "is_secret": false,
+      "name": "MEGABIT_KEY_ENV",
+      "target": "llm.api_key_env",
+      "value": "TOKENHARBOR_API_KEY"
+    },
+    {
+      "description": "model context window in tokens (int)",
+      "is_secret": false,
+      "name": "MEGABIT_CONTEXT",
+      "target": "llm.context_tokens",
+      "value": "1048576"
+    },
+    {
+      "description": "per-request output cap in tokens (int)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_TOKENS",
+      "target": "llm.max_tokens",
+      "value": "16384"
+    },
+    {
+      "description": "sampling temperature (float, default 0.7)",
+      "is_secret": false,
+      "name": "MEGABIT_TEMPERATURE",
+      "target": "llm.temperature",
+      "value": "(unset)"
+    },
+    {
+      "description": "LLM HTTP request timeout seconds (int, default 180)",
+      "is_secret": false,
+      "name": "MEGABIT_REQUEST_TIMEOUT",
+      "target": "llm.request_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "sandbox kind: 'docker' or 'local'",
+      "is_secret": false,
+      "name": "MEGABIT_SANDBOX",
+      "target": "sandbox.kind",
+      "value": "docker"
+    },
+    {
+      "description": "docker sandbox image tag (default: megabit/sandbox:latest)",
+      "is_secret": false,
+      "name": "MEGABIT_SANDBOX_IMAGE",
+      "target": "sandbox.image",
+      "value": "(unset)"
+    },
+    {
+      "description": "docker memory limit (default: 3g)",
+      "is_secret": false,
+      "name": "MEGABIT_SANDBOX_MEM_LIMIT",
+      "target": "sandbox.mem_limit",
+      "value": "2g"
+    },
+    {
+      "description": "docker CPU limit (float, default 2.0)",
+      "is_secret": false,
+      "name": "MEGABIT_SANDBOX_CPUS",
+      "target": "sandbox.cpus",
+      "value": "(unset)"
+    },
+    {
+      "description": "sandbox command wall-clock seconds (int, default 300)",
+      "is_secret": false,
+      "name": "MEGABIT_EXEC_TIMEOUT",
+      "target": "sandbox.exec_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "sandbox package-install wall-clock seconds (int, default 1200)",
+      "is_secret": false,
+      "name": "MEGABIT_INSTALL_TIMEOUT",
+      "target": "sandbox.install_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "docker --dns servers (comma-separated IPs, default: 8.8.8.8,1.1.1.1,9.9.9.9)",
+      "is_secret": false,
+      "name": "MEGABIT_SANDBOX_DNS",
+      "target": "sandbox.docker_dns",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent state dir (sessions/usage/memory) the sandbox injects; overrides the binary's $HOME/.megabit default so no state lands outside the MegaBit root",
+      "is_secret": false,
+      "name": "MEGABIT_STATE_DIR",
+      "target": "sandbox.AGENT_STATE_DIR",
+      "value": "(unset)"
+    },
+    {
+      "description": "docker user-defined bridge network name (default: megabit-net)",
+      "is_secret": false,
+      "name": "MEGABIT_NET_NAME",
+      "target": "sandbox.MEGABIT_NET",
+      "value": "(unset)"
+    },
+    {
+      "description": "extra GitHub-family hosts to blackhole in agent-phase sandboxes (comma-separated)",
+      "is_secret": false,
+      "name": "MEGABIT_GITHUB_EXTRA_HOSTS",
+      "target": "sandbox.github_blackhole_flags",
+      "value": "(unset)"
+    },
+    {
+      "description": "preflight watchdog: no-progress seconds before an install is killed (default 1800)",
+      "is_secret": false,
+      "name": "MEGABIT_INSTALL_STALL_SECONDS",
+      "target": "preflight._default_stall_seconds",
+      "value": "(unset)"
+    },
+    {
+      "description": "preflight watchdog: progress poll interval seconds (default 5.0)",
+      "is_secret": false,
+      "name": "MEGABIT_INSTALL_POLL_SECONDS",
+      "target": "preflight._default_poll_seconds",
+      "value": "(unset)"
+    },
+    {
+      "description": "miner: wall-clock cap for any git invocation seconds (int, default 300)",
+      "is_secret": false,
+      "name": "MEGABIT_GIT_TIMEOUT",
+      "target": "mining.miner._git_timeout_default",
+      "value": "(unset)"
+    },
+    {
+      "description": "failover model name (provider switch)",
+      "is_secret": false,
+      "name": "MEGABIT_FAILOVER_MODEL",
+      "target": "cli._failover_cfg",
+      "value": "mistral-medium-latest"
+    },
+    {
+      "description": "failover base URL",
+      "is_secret": false,
+      "name": "MEGABIT_FAILOVER_BASE_URL",
+      "target": "cli._failover_cfg",
+      "value": "https://api.mistral.ai/v1"
+    },
+    {
+      "description": "provider chain: extra rungs behind the pinned primary (comma-separated model ids on MEGABIT_BASE_URL, optional model|context; max 3)",
+      "is_secret": false,
+      "name": "MEGABIT_EXTRA_RUNGS",
+      "target": "os.environ['MEGABIT_EXTRA_RUNGS']",
+      "value": "deepseek-v4-flash:free|1000000,qwen3.8-flash:free|983616,mimo-v2.6-flash:free|1048576"
+    },
+    {
+      "description": "failover key env name",
+      "is_secret": false,
+      "name": "MEGABIT_FAILOVER_KEY_ENV",
+      "target": "cli._failover_cfg",
+      "value": "MISTRAL_KEY"
+    },
+    {
+      "description": "failover context window",
+      "is_secret": false,
+      "name": "MEGABIT_FAILOVER_CONTEXT",
+      "target": "cli._failover_cfg",
+      "value": "262144"
+    },
+    {
+      "description": "max seconds per episode (default 3600)",
+      "is_secret": false,
+      "name": "MEGABIT_EPISODE_BUDGET",
+      "target": "cli._episode_budget_seconds",
+      "value": "4800"
+    },
+    {
+      "description": "hard cap on agent loop iterations per episode (int)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_STEPS",
+      "target": "llm.max_steps",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent retry wall-clock seconds (0 disables; unset = caller default, 1800 for episodes/setup and 0 for per-invoke paths)",
+      "is_secret": false,
+      "name": "MEGABIT_AGENT_WALL_CLOCK",
+      "target": "flow.retry.agent_wall_clock",
+      "value": "(unset)"
+    },
+    {
+      "description": "data root for tasks/repos/episodes (default: --root > this > ./megabit-data)",
+      "is_secret": false,
+      "name": "MEGABIT_ROOT",
+      "target": "flow.artifacts.resolve_root",
+      "value": "/home/sumama/Private/MegaBit/megabit-data"
+    },
+    {
+      "description": "composite-similarity pass floor (float, default 0.45)",
+      "is_secret": false,
+      "name": "MEGABIT_SIMILARITY_THRESHOLD",
+      "target": "verify.similarity_threshold_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "verify: honest-process gate \u2014 a real failed command or a substantial tool trail before a pass claim (unset: export/`run` default 1, `verify` re-grade default 0; 0/false/no/off/empty = gate off)",
+      "is_secret": false,
+      "name": "MEGABIT_REQUIRE_REAL_ERROR",
+      "target": "cli._require_real_error",
+      "value": "(unset)"
+    },
+    {
+      "description": "refuse task files whose provenance MAC is missing or unverifiable (default: 0 = unsigned legacy tasks load with a warning)",
+      "is_secret": false,
+      "name": "MEGABIT_STRICT_PROVENANCE",
+      "target": "provenance.verify_task",
+      "value": "(unset)"
+    },
+    {
+      "description": "min free GB on data root for docker runs (default 4.0)",
+      "is_secret": false,
+      "name": "MEGABIT_MIN_DISK_GB",
+      "target": "cli._DISK_MIN_GB_DOCKER",
+      "value": "(unset)"
+    },
+    {
+      "description": "min free GB on data root for local runs (default 2.0)",
+      "is_secret": false,
+      "name": "MEGABIT_MIN_DISK_GB_LOCAL",
+      "target": "cli._DISK_MIN_GB_LOCAL",
+      "value": "(unset)"
+    },
+    {
+      "description": "deleted-episode snapshots kept (int, default 1000; 0 = keep none and REQUIRES MEGABIT_RETENTION_PURGE_ALL=1, otherwise entries are kept)",
+      "is_secret": false,
+      "name": "MEGABIT_RETENTION_LIMIT",
+      "target": "cli.DELETED_RETENTION_LIMIT",
+      "value": "(unset)"
+    },
+    {
+      "description": "acknowledge the destructive MEGABIT_RETENTION_LIMIT=0 policy: delete every deleted-episode snapshot (default 0 = keep all)",
+      "is_secret": false,
+      "name": "MEGABIT_RETENTION_PURGE_ALL",
+      "target": "cli._gc_retained_deletions_report",
+      "value": "(unset)"
+    },
+    {
+      "description": "byte cap for <root>/deleted/ (default 2GiB)",
+      "is_secret": false,
+      "name": "MEGABIT_RETENTION_MAX_BYTES",
+      "target": "cli.DELETED_MAX_BYTES",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay upstream HTTP timeout seconds (int, default 600)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_TIMEOUT",
+      "target": "relay._upstream_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay streaming chunk size bytes (int, default 16384)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_CHUNK",
+      "target": "relay._chunk_size",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay client socket timeout seconds, float (default 30; slowloris bound)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_CLIENT_TIMEOUT",
+      "target": "relay._client_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay max accepted request body bytes (int, default 33554432 = 32MiB)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_MAX_BODY",
+      "target": "relay._max_body_bytes",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay max concurrent handler threads (int, default 64; slowloris bound)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_MAX_INFLIGHT",
+      "target": "relay._max_inflight",
+      "value": "(unset)"
+    },
+    {
+      "description": "batch_run abort floor in MB free (default 800)",
+      "is_secret": false,
+      "name": "MEGABIT_BATCH_MIN_FREE_MB",
+      "target": "scripts.batch_run.main",
+      "value": "(unset)"
+    },
+    {
+      "description": "HTTP User-Agent sent by the agent harness (default: megabit/1.0)",
+      "is_secret": false,
+      "name": "MEGABIT_USER_AGENT",
+      "target": "harness.build_agent_config",
+      "value": "(unset)"
+    },
+    {
+      "description": "correlates one batch run's artifacts in the deletion-retention record (empty = not stamped)",
+      "is_secret": false,
+      "name": "MEGABIT_RUN_ID",
+      "target": "os.environ['MEGABIT_RUN_ID']",
+      "value": "(unset)"
+    },
+    {
+      "description": "credential-isolation relay: 1/true/on enables (default); 0/false/no/off/empty disables (key then enters the sandbox)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY",
+      "target": "relay.enabled",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay\u2194sandbox hop over HTTPS (default 1; 0/false/no/off/empty explicitly acknowledges plaintext)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_TLS",
+      "target": "relay._server_tls_enabled",
+      "value": "(unset)"
+    },
+    {
+      "description": "directory for the relay's self-signed cert/key (default: <data_root>/relay)",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_CERT_DIR",
+      "target": "relay._relay_cert_dir",
+      "value": "(unset)"
+    },
+    {
+      "description": "relay upstream: comma-separated SHA256 hex of expected cert DER (empty = system CA verify only)",
+      "is_secret": false,
+      "name": "MEGABIT_TLS_PIN",
+      "target": "relay._tls_pin_set",
+      "value": "(unset)"
+    },
+    {
+      "description": "logging: stderr level debug|info|warning|error (default info)",
+      "is_secret": false,
+      "name": "MEGABIT_LOG_LEVEL",
+      "target": "observability.logging._level_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "logging: stderr format console|json (default console)",
+      "is_secret": false,
+      "name": "MEGABIT_LOG_FORMAT",
+      "target": "observability.logging._format_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "logging: <root>/logs/megabit.jsonl rotation size in MB (float, default 10)",
+      "is_secret": false,
+      "name": "MEGABIT_LOG_FILE_MAX_MB",
+      "target": "observability.logging._max_bytes_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "logging: rotated megabit.jsonl backups kept (default 5)",
+      "is_secret": false,
+      "name": "MEGABIT_LOG_FILE_BACKUPS",
+      "target": "observability.logging._backups_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "set to 1 to keep a VALID episode's workspace after export (default: delete it)",
+      "is_secret": false,
+      "name": "MEGABIT_KEEP_WORKSPACE",
+      "target": "cli._cleanup_valid_workspace",
+      "value": "(unset)"
+    },
+    {
+      "description": "batch: set to 1 to also delete a FAILED episode's workspace (default: keep it as failure evidence)",
+      "is_secret": false,
+      "name": "MEGABIT_CLEAN_FAILED_WORKSPACE",
+      "target": "scripts.batch_run._cleanup_after_episode",
+      "value": "(unset)"
+    },
+    {
+      "description": "metrics: set to 0 to disable <root>/logs/metrics.jsonl (default on)",
+      "is_secret": false,
+      "name": "MEGABIT_METRICS_ENABLED",
+      "target": "observability.metrics._enabled_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "metrics: byte cap for <root>/logs/metrics.jsonl (int, default 26214400 = 25MiB; oldest lines pruned first)",
+      "is_secret": false,
+      "name": "MEGABIT_METRICS_MAX_BYTES",
+      "target": "observability.metrics._max_bytes_from_env",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: minimum diff lines (default 15)",
+      "is_secret": false,
+      "name": "MEGABIT_MIN_DIFF_LINES",
+      "target": "mining.min_diff_lines",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: maximum diff lines (default 400)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_DIFF_LINES",
+      "target": "mining.max_diff_lines",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: minimum files changed (default 1)",
+      "is_secret": false,
+      "name": "MEGABIT_MIN_FILES",
+      "target": "mining.min_files_changed",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: maximum files changed (default 8)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_FILES",
+      "target": "mining.max_files_changed",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: history scan order 'oldest'|'newest'",
+      "is_secret": false,
+      "name": "MEGABIT_MINING_ORDER",
+      "target": "mining.order",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: only commits after this date (git approxidate)",
+      "is_secret": false,
+      "name": "MEGABIT_MINING_SINCE",
+      "target": "mining.since",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: only commits before this date (git approxidate)",
+      "is_secret": false,
+      "name": "MEGABIT_MINING_UNTIL",
+      "target": "mining.until",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: change kind any|code|tests|docs|mixed",
+      "is_secret": false,
+      "name": "MEGABIT_CHANGE_KIND",
+      "target": "mining.change_kind",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: require >=1 test file in the change (default 1)",
+      "is_secret": false,
+      "name": "MEGABIT_REQUIRE_TESTS",
+      "target": "mining.require_tests",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: keep the built-in skip patterns (default on; set to 0 to drop)",
+      "is_secret": false,
+      "name": "MEGABIT_DEFAULT_SKIPS",
+      "target": "mining.use_default_skips",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: comma-separated extra skip regexes",
+      "is_secret": false,
+      "name": "MEGABIT_SKIP_PATTERNS",
+      "target": "mining.extra_skip_patterns",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: comma-separated include globs",
+      "is_secret": false,
+      "name": "MEGABIT_INCLUDE_GLOBS",
+      "target": "mining.include_globs",
+      "value": "(unset)"
+    },
+    {
+      "description": "gate: extensions treated as non-code (default .md,.txt,.rst,.ipynb,.html,.css)",
+      "is_secret": false,
+      "name": "MEGABIT_DOC_EXT",
+      "target": "paths._effective_policy",
+      "value": "(unset)"
+    },
+    {
+      "description": "gate: comma-separated non-code path fragments (default /tests/compliance,/test/compliance,/tests/fixtures,/testdata,/fixtures/)",
+      "is_secret": false,
+      "name": "MEGABIT_TEST_DATA_HINTS",
+      "target": "paths._effective_policy",
+      "value": "(unset)"
+    },
+    {
+      "description": "gate: top-level documentation directory names (default docs,doc)",
+      "is_secret": false,
+      "name": "MEGABIT_DOC_DIRS",
+      "target": "paths._effective_policy",
+      "value": "(unset)"
+    },
+    {
+      "description": "git committer name inside workspaces (default: megabit)",
+      "is_secret": false,
+      "name": "MEGABIT_GIT_IDENTITY_NAME",
+      "target": "flow.constants.GIT_IDENTITY_NAME",
+      "value": "(unset)"
+    },
+    {
+      "description": "git committer email inside workspaces (default: megabit@local)",
+      "is_secret": false,
+      "name": "MEGABIT_GIT_IDENTITY_EMAIL",
+      "target": "flow.constants.GIT_IDENTITY_EMAIL",
+      "value": "(unset)"
+    },
+    {
+      "description": "ticket agent total producer attempts (int, default 5)",
+      "is_secret": false,
+      "name": "MEGABIT_TICKET_MAX_ATTEMPTS",
+      "target": "flow.constants.TICKET_MAX_ATTEMPTS",
+      "value": "(unset)"
+    },
+    {
+      "description": "session final-response cap chars (int, default 4096)",
+      "is_secret": false,
+      "name": "MEGABIT_ENVELOPE_FINAL_CAP",
+      "target": "flow.constants.ENVELOPE_FINAL_RESPONSE_CAP",
+      "value": "(unset)"
+    },
+    {
+      "description": "coder session default timeout seconds (int, default 3600)",
+      "is_secret": false,
+      "name": "MEGABIT_CODER_TIMEOUT",
+      "target": "flow.constants.SESSION_DEFAULT_TIMEOUT",
+      "value": "(unset)"
+    },
+    {
+      "description": "1 (default) = fail the invocation if the relay cannot start; 0/false/no/off explicitly allows the legacy real-key-in-config fallback",
+      "is_secret": false,
+      "name": "MEGABIT_RELAY_STRICT",
+      "target": "harness.build_agent_config",
+      "value": "(unset)"
+    },
+    {
+      "description": "Empero endpoint key for the keyless free.empero.org endpoint (optional: the endpoint also accepts the public placeholder 'free')",
+      "is_secret": true,
+      "name": "EMPERO_API_KEY",
+      "target": "flow.provider_fallback._EMPERO_FREE_KEY",
+      "value": "(unset)"
+    },
+    {
+      "description": "Mistral API key (provider chain; alt name: MISTRAL_KEY)",
+      "is_secret": true,
+      "name": "MISTRAL_API_KEY",
+      "target": "os.environ['MISTRAL_API_KEY']",
+      "value": "(unset)"
+    },
+    {
+      "description": "Groq API key (provider chain; default api_key_env)",
+      "is_secret": true,
+      "name": "GROQ_API_KEY",
+      "target": "os.environ['GROQ_API_KEY']",
+      "value": "(set)"
+    },
+    {
+      "description": "docker availability-probe timeout seconds (int, default 5)",
+      "is_secret": false,
+      "name": "MEGABIT_DOCKER_PROBE_TIMEOUT",
+      "target": "config._docker_available",
+      "value": "(unset)"
+    },
+    {
+      "description": "evidence: max NDJSON log events replayed when rehydrating an episode from logs/coder.ndjson (int, default 200000)",
+      "is_secret": false,
+      "name": "MEGABIT_EVENT_REHYDRATE_MAX",
+      "target": "flow.evidence.EVENT_REHYDRATE_MAX",
+      "value": "(unset)"
+    },
+    {
+      "description": "retry: engine attempt cap used when MEGABIT_ENGINE_MAX=0 AND the agent wall clock is disabled (int, default 25)",
+      "is_secret": false,
+      "name": "MEGABIT_ENGINE_MAX_FALLBACK",
+      "target": "flow.retry.DEFAULT_ENGINE_MAX",
+      "value": "(unset)"
+    },
+    {
+      "description": "retry: absolute ceiling on attempts in one retry chain (int, default 250)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_TOTAL_ATTEMPTS",
+      "target": "flow.retry.MAX_TOTAL_ATTEMPTS",
+      "value": "(unset)"
+    },
+    {
+      "description": "retry: count of immediate cutoff retries per chain (int, default 10)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_CUTOFF_RETRIES",
+      "target": "flow.retry.DEFAULT_MAX_CUTOFF_RETRIES",
+      "value": "(unset)"
+    },
+    {
+      "description": "default agent-invoke timeout seconds for roles without their own (int, default 3600)",
+      "is_secret": false,
+      "name": "MEGABIT_INVOKE_TIMEOUT",
+      "target": "flow.agents.DEFAULT_INVOKE_TIMEOUT",
+      "value": "(unset)"
+    },
+    {
+      "description": "provider chain: consecutive failures before switching providers (0 = shipped per-entry threshold)",
+      "is_secret": false,
+      "name": "MEGABIT_FAILOVER_THRESHOLD",
+      "target": "flow.provider_fallback.FAILOVER_THRESHOLD",
+      "value": "1"
+    },
+    {
+      "description": "provider chain: per-entry request timeout seconds (0 = shipped 180s)",
+      "is_secret": false,
+      "name": "MEGABIT_PROVIDER_REQUEST_TIMEOUT",
+      "target": "flow.provider_fallback.PROVIDER_REQUEST_TIMEOUT",
+      "value": "(unset)"
+    },
+    {
+      "description": "provider chain: cooldown ladder base seconds (default 30)",
+      "is_secret": false,
+      "name": "MEGABIT_PROVIDER_COOLDOWN_BASE",
+      "target": "flow.provider_fallback.PROVIDER_COOLDOWN_BASE",
+      "value": "(unset)"
+    },
+    {
+      "description": "provider chain: cooldown ladder cap seconds (default 180)",
+      "is_secret": false,
+      "name": "MEGABIT_PROVIDER_COOLDOWN_CAP",
+      "target": "flow.provider_fallback.PROVIDER_COOLDOWN_CAP",
+      "value": "(unset)"
+    },
+    {
+      "description": "resume: 1 (default) a resumed episode continues the journaled attempt budget; 0 = legacy fresh budget per resume",
+      "is_secret": false,
+      "name": "MEGABIT_RESUME_REUSES_ATTEMPT_BUDGET",
+      "target": "os.environ['MEGABIT_RESUME_REUSES_ATTEMPT_BUDGET']",
+      "value": "(unset)"
+    },
+    {
+      "description": "1 = fail the harness when the provider chain is unset (0/false/no/off = warn and fall back)",
+      "is_secret": false,
+      "name": "MEGABIT_STRICT_PROVIDER_CHAIN",
+      "target": "harness.build_agent_config",
+      "value": "(unset)"
+    },
+    {
+      "description": "session: in-memory event window before older events age out (int, default 5000; durable log remains authoritative)",
+      "is_secret": false,
+      "name": "MEGABIT_SESSION_EVENT_WINDOW",
+      "target": "flow.session.CoderSession",
+      "value": "(unset)"
+    },
+    {
+      "description": "retry: comma-separated backoff seconds between provider attempts (default 10,20,40,60,60)",
+      "is_secret": false,
+      "name": "MEGABIT_SLEEP_SCHEDULE",
+      "target": "flow.session.CoderSession",
+      "value": "(unset)"
+    },
+    {
+      "description": "retry: engine-error attempts per invocation (0 = unbounded, bounded by the wall clock; otherwise falls back to MEGABIT_ENGINE_MAX_FALLBACK)",
+      "is_secret": false,
+      "name": "MEGABIT_ENGINE_MAX",
+      "target": "flow.retry.run_with_retries",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: default max tasks for `megabit mine` (int; --max-tasks wins)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_TASKS",
+      "target": "cli.build_parser",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: default max diff pairs for `megabit select` (int; --max-pairs wins)",
+      "is_secret": false,
+      "name": "MEGABIT_MAX_PAIRS",
+      "target": "cli.build_parser",
+      "value": "(unset)"
+    },
+    {
+      "description": "mining: default commit scan depth for mine/select (int; --scan-commits wins)",
+      "is_secret": false,
+      "name": "MEGABIT_SCAN_COMMITS",
+      "target": "cli.build_parser",
+      "value": "(unset)"
+    },
+    {
+      "description": "deleted-episode retention: comma-separated basenames copied into each <root>/deleted/ snapshot (empty = shipped default set)",
+      "is_secret": false,
+      "name": "MEGABIT_RETENTION_FILES",
+      "target": "cli._retention_files",
+      "value": "(unset)"
+    },
+    {
+      "description": "sandbox: per-exec combined stdout+stderr byte budget before the process group is killed (int MB, minimum 1, default 256)",
+      "is_secret": false,
+      "name": "MEGABIT_OUTPUT_FLOOD_CAP_MB",
+      "target": "flow.constants.output_flood_cap_bytes",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: byte cap for the extracted Diff2 reference tree (int, default 536870912)",
+      "is_secret": false,
+      "name": "MEGABIT_REF_MAX_BYTES",
+      "target": "flow.setup.SetupRunner",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: file-count cap for the extracted Diff2 reference tree (int, default 200000)",
+      "is_secret": false,
+      "name": "MEGABIT_REF_MAX_MEMBERS",
+      "target": "flow.setup.SetupRunner",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: max diff lines quoted into the ticket-agent prompt (int, default 2000)",
+      "is_secret": false,
+      "name": "MEGABIT_DIFF_SUMMARY_MAX_LINES",
+      "target": "flow.constants.DIFF_SUMMARY_MAX_LINES",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: max tool iterations for the ticket agent's write call (int, default 40)",
+      "is_secret": false,
+      "name": "MEGABIT_TICKET_WRITE_MAX_ITERATIONS",
+      "target": "flow.constants.TICKET_WRITE_MAX_ITERATIONS",
+      "value": "(unset)"
+    },
+    {
+      "description": "evaluate: max tool iterations for the reviewer's plan call (int, default 16)",
+      "is_secret": false,
+      "name": "MEGABIT_REVIEWER_PLAN_MAX_ITERATIONS",
+      "target": "flow.constants.REVIEWER_PLAN_MAX_ITERATIONS",
+      "value": "(unset)"
+    },
+    {
+      "description": "evaluate: max tool iterations for the reviewer's write call (int, default 24)",
+      "is_secret": false,
+      "name": "MEGABIT_REVIEWER_WRITE_MAX_ITERATIONS",
+      "target": "flow.constants.REVIEWER_WRITE_MAX_ITERATIONS",
+      "value": "(unset)"
+    },
+    {
+      "description": "TEST-ONLY: stub the dependency installer in `megabit doctor` (never set in production)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TEST_STUB",
+      "target": "flow.setup.SetupDeps",
+      "value": "(unset)"
+    },
+    {
+      "description": "TEST-ONLY: permit stubbed installers/tests to bypass real execution",
+      "is_secret": false,
+      "name": "MEGABIT_ALLOW_TEST_STUB",
+      "target": "flow.setup.SetupRunner",
+      "value": "(unset)"
+    },
+    {
+      "description": "TEST-ONLY: 1 acknowledges a VALID finalize with no independent reviewer run; unset (production) = fail closed",
+      "is_secret": false,
+      "name": "MEGABIT_EVAL_ALLOW_UNREVIEWED",
+      "target": "flow.evaluate.evaluate",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent binary: path to the generated provider-config JSON (set by the harness, not by operators)",
+      "is_secret": false,
+      "name": "MEGABIT_CONFIG",
+      "target": "agent_binary.AGENT_CONFIG_ENV",
+      "value": "(unset)"
+    },
+    {
+      "description": "scripts/run_batch.sh: wall-clock cap per episode seconds (default 1800)",
+      "is_secret": false,
+      "name": "MEGABIT_BATCH_TIMEOUT",
+      "target": "scripts.run_batch",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent binary: path of the episode-scoped agent debug log (exported per invocation by the harness)",
+      "is_secret": false,
+      "name": "MEGABIT_AGENT_LOG_PATH",
+      "target": "flow.agents.build_command",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent binary: rotation size in MB for the agent debug log (read by the vendored binary; default 10)",
+      "is_secret": false,
+      "name": "MEGABIT_AGENT_LOG_MAX_MB",
+      "target": "flow.agents.build_command",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent binary: number of rotated agent debug logs to retain",
+      "is_secret": false,
+      "name": "MEGABIT_AGENT_LOG_BACKUPS",
+      "target": "flow.agents.build_command",
+      "value": "(unset)"
+    },
+    {
+      "description": "agent binary: agent debug log format (text or json)",
+      "is_secret": false,
+      "name": "MEGABIT_AGENT_LOG_FORMAT",
+      "target": "flow.agents.build_command",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for host-side git operations (int, default 600)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_HOST_GIT",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for sandbox git operations (int, default 300)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_SANDBOX_GIT",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for Diff2 archive extraction (int, default 600)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_ARCHIVE",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for git prune/gc operations (int, default 600)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_PRUNE",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for the initial state commit (int, default 300)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_COMMIT",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for host git show (int, default 600)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_HOST_SHOW",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for clone/fetch (int, default 900)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_CLONE",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for chmod (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_CHMOD",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for stat (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_STAT",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for git apply (int, default 120)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_GIT_APPLY",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for test execution (int, default 900)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_TEST_RUN",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for docker rm (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_DOCKER_RM",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for git add (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_ADD",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for manifest removal (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_RM_MANIFEST",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for reference prune removal (int, default 180)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_PRUNE_RM",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for workspace restore (int, default 180)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_RESTORE",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for diff generation (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_DIFF",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for git ls-tree (int, default 60)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_LS_TREE",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "setup: timeout for legacy installer (int, default 120)",
+      "is_secret": false,
+      "name": "MEGABIT_SETUP_TIMEOUT_LEGACY_INSTALL",
+      "target": "flow.constants._setup_timeout",
+      "value": "(unset)"
+    },
+    {
+      "description": "miner: network-bound fetch timeout seconds (int, default 600)",
+      "is_secret": false,
+      "name": "MEGABIT_FETCH_TIMEOUT",
+      "target": "mining.miner._FETCH_TIMEOUT_S",
+      "value": "(unset)"
+    },
+    {
+      "description": "Empero provider credential alias",
+      "is_secret": true,
+      "name": "EMPERO_KEY",
+      "target": "flow.provider_fallback.resolve_provider_key",
+      "value": "(unset)"
+    },
+    {
+      "description": "Mistral provider credential alias",
+      "is_secret": true,
+      "name": "MISTRAL_KEY",
+      "target": "flow.provider_fallback.resolve_provider_key",
+      "value": "(set)"
+    },
+    {
+      "description": "Mistral provider credential alias (legacy spelling)",
+      "is_secret": true,
+      "name": "mistral_key",
+      "target": "flow.provider_fallback.resolve_provider_key",
+      "value": "(unset)"
+    }
+  ],
+  "llm": {
+    "api_key_env": "TOKENHARBOR_API_KEY",
+    "base_url": "https://tokenharbor.ai/v1",
+    "context_tokens": 1048576,
+    "max_tokens": 16384,
+    "model": "deepseek-v4.1-flash:free"
+  },
+  "max_attempts": 3,
+  "max_review_rounds": 3,
+  "min_tool_calls": 4,
+  "sandbox_kind": "docker",
+  "similarity_threshold": 0.45,
+  "written_at": "2026-09-28T18:36:02Z"
+}

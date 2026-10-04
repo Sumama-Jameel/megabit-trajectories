@@ -1,0 +1,241 @@
+{
+  "ok": true,
+  "relock": {
+    "branches_deleted": 0,
+    "object_purged": true,
+    "relocked": 1
+  },
+  "steps": [
+    {
+      "commits": 26,
+      "detail": "detached at 2040ed5e486f, 26 commits, removed remote:origin, tags:38, local-branches:1; diff2.patch e45a8a170212",
+      "diff2_sha256": "e45a8a170212dd814898a731d87d1e51238ba1c7e6c5e8da24692fd7bd694744",
+      "head": "2040ed5e486f5a3310c6a1718a2103427fe36948",
+      "name": "materialize_workspace",
+      "ok": true,
+      "removed_refs": [
+        "remote:origin",
+        "tags:38",
+        "local-branches:1"
+      ],
+      "seconds": 6.397,
+      "step": 1
+    },
+    {
+      "detail": "31 files extracted; verified 3 files",
+      "files": 31,
+      "name": "extract_diff2_reference",
+      "ok": true,
+      "pruned": 0,
+      "seconds": 0.092,
+      "step": 1,
+      "verified_path": "docs/api.rst"
+    },
+    {
+      "attempts": 1,
+      "detail": "ticket written to ticket.md (attempt 1)",
+      "name": "run_ticket_agent",
+      "ok": true,
+      "path": "/home/sumama/Private/MegaBit/megabit-data/episodes/33da938be0a526fb/ticket.md",
+      "seconds": 29.441,
+      "step": 2
+    },
+    {
+      "detail": "1 test file section(s) (modified=1)",
+      "has_patch": true,
+      "name": "extract_diff2_tests",
+      "ok": true,
+      "seconds": 0.003,
+      "step": 3,
+      "test_paths": [
+        "tests/test_validators.py"
+      ],
+      "test_sections": [
+        [
+          "tests/test_validators.py",
+          "modified"
+        ]
+      ],
+      "write_deny_tree": [
+        "tests",
+        "tests/test_validators.py"
+      ]
+    },
+    {
+      "base": [
+        "setup.py",
+        "tox.ini"
+      ],
+      "detail": "target=2 base=2 to_remove=0 languages=['python']",
+      "languages": [
+        "python"
+      ],
+      "name": "extract_diff2_manifests",
+      "ok": true,
+      "removed": [],
+      "seconds": 0.02,
+      "step": 4,
+      "target": [
+        "setup.py",
+        "tox.ini"
+      ]
+    },
+    {
+      "detail": "seeded 1 test file(s)",
+      "kept_diff1_tests": [],
+      "name": "seed_diff2_tests",
+      "ok": true,
+      "pruned_diff1_tests": [],
+      "seconds": 3.409,
+      "seeded": [
+        "tests/test_validators.py"
+      ],
+      "step": 5
+    },
+    {
+      "detail": "replaced 2, removed 0",
+      "name": "replace_manifests",
+      "ok": true,
+      "removed": [],
+      "replaced": [
+        "setup.py",
+        "tox.ini"
+      ],
+      "seconds": 0.02,
+      "step": 6
+    },
+    {
+      "cache_dir": "/home/sumama/Private/MegaBit/megabit-data/cache/attrs",
+      "cache_hit": true,
+      "detail": "installed 8 dep line(s), verified 6 probe(s) (languages=['python'])",
+      "dropped": [],
+      "failed": [],
+      "installed": [
+        "setuptools>=7.0",
+        "pytest-cov",
+        "flake8",
+        "sphinx",
+        "zope.interface",
+        "check-manifest",
+        "pytest",
+        "zope"
+      ],
+      "installed_languages": [],
+      "installed_packages": [
+        "setuptools>=7.0",
+        "pytest-cov",
+        "flake8",
+        "sphinx",
+        "zope.interface",
+        "check-manifest",
+        "pytest",
+        "zope"
+      ],
+      "languages": [
+        "python"
+      ],
+      "manifest_fingerprint": "c3e698ccdd255ef30bded1c8a96f4ff3cdafcfbcfb822e6fc3d597a4cd7a8ef8",
+      "name": "install_deps",
+      "ok": true,
+      "resolved_test_command": "python -m pytest",
+      "seconds": 102.482,
+      "step": 7,
+      "test_command_resolution": {
+        "attempts": [
+          {
+            "command": "python -m pytest",
+            "exit_code": 2,
+            "kind": "pytest",
+            "note": "pytest discovered the seeded tests",
+            "outcome": "pass",
+            "source": "pytest-config",
+            "timed_out": false
+          }
+        ],
+        "reason": "pytest-config probe discovered the seeded tests",
+        "verdict": "resolved"
+      },
+      "verified_deps": [
+        "python:setuptools",
+        "python:pytest_cov",
+        "python:flake8",
+        "python:sphinx",
+        "python:zope",
+        "python:check_manifest"
+      ]
+    },
+    {
+      "commands": [
+        "python -m pytest"
+      ],
+      "detail": "second-diff suite green 3/3 \u00d7 1 command(s) (reference dir)",
+      "name": "verify_diff2_suite",
+      "ok": true,
+      "required_runs": 3,
+      "root": "reference dir",
+      "runs": [
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "e.py ..................                                    [ 90%]\ntests/test_validators.py ......                                          [100%]\n\n=============================== warnings summary ===============================\nattr/_make.py:129\n  /megabit/.megabit_ref/attr/_make.py:129: DeprecationWarning: invalid escape sequence '\\ '\n    \"\"\"\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n======================== 60 passed, 1 warning in 0.38s =========================\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "llected 60 items\n\ntests/test_dark_magic.py ....                                            [  6%]\ntests/test_dunders.py .......................                            [ 45%]\ntests/test_funcs.py .........                                            [ 60%]\ntests/test_make.py ..................                                    [ 90%]\ntests/test_validators.py ......                                          [100%]\n\n============================== 60 passed in 0.32s ==============================\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "llected 60 items\n\ntests/test_dark_magic.py ....                                            [  6%]\ntests/test_dunders.py .......................                            [ 45%]\ntests/test_funcs.py .........                                            [ 60%]\ntests/test_make.py ..................                                    [ 90%]\ntests/test_validators.py ......                                          [100%]\n\n============================== 60 passed in 0.25s ==============================\n",
+          "timed_out": false
+        }
+      ],
+      "seconds": 4.466,
+      "step": 16
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_validators.py"
+      ],
+      "name": "lock_tests_stage1",
+      "ok": true,
+      "seconds": 0.53,
+      "step": 8
+    },
+    {
+      "detail": "deleted /home/sumama/Private/MegaBit/megabit-data/episodes/33da938be0a526fb/.megabit_ref",
+      "name": "delete_reference",
+      "ok": true,
+      "seconds": 0.009,
+      "step": 9
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_validators.py"
+      ],
+      "name": "lock_tests_stage2",
+      "ok": true,
+      "seconds": 0.533,
+      "step": 10
+    },
+    {
+      "branches_deleted": 0,
+      "detail": "single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 1 file(s)",
+      "name": "wipe_git_history",
+      "object_purged": true,
+      "ok": true,
+      "relocked": 1,
+      "seconds": 11.755,
+      "step": 10
+    }
+  ],
+  "task_id": "33da938be0a526fb"
+}

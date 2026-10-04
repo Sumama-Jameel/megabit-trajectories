@@ -1,0 +1,16 @@
+{"attempt": 1, "kind": "ticket_attempt", "retry_feedback_chars": 0, "role": "ticket_gen", "ts": 1790683006.4165936}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1790683038.7410626}
+{"attempt": 1, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1790683038.7412825}
+{"kind": "sleep_schedule_effective", "schedule": [10.0, 20.0, 40.0, 60.0, 60.0], "ts": 1790683087.7981253}
+{"attempts_completed": 0, "conversations": 0, "egress_hits": 0, "events": 0, "kind": "entry_evidence", "rounds_completed": 0, "source": "memory", "tests_passed": null, "tests_ran": false, "tool_calls": 0, "ts": 1790683087.799344}
+{"attempt": 1, "detail": "done with no write event", "failure_kind": "no_write", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab", "ts": 1790683223.2288296}
+{"attempt": 1, "kind": "heartbeat", "role": "coder", "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab", "ts": 1790683223.2291112}
+{"attempt": 2, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab", "ts": 1790683366.953512}
+{"attempt": 2, "kind": "retry_success", "role": "coder", "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab", "ts": 1790683366.953737}
+{"kind": "evidence_from_log", "malformed_lines": 0, "non_json_lines": 0, "reason": "durable evidence source", "ts": 1790683369.3147926}
+{"attempt": 1, "evidence_source": "log", "evidence_truncated": false, "kind": "coder_attempt_completed", "n_tool_calls": 20, "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab", "similarity": 0.7803, "tests_passed": true, "tests_ran": true, "ts": 1790683369.375628}
+{"commands": ["python -m pytest "], "context": "attempt:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1790683370.0937068}
+{"commands": ["python -m pytest "], "context": "round:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest ", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1790683371.6676311}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1790683449.651565}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1790683449.6517253}
+{"kind": "reviewer_role_files_swept", "removed": ["/home/sumama/Private/MegaBit/megabit-data/episodes/a066c3d9cbcb7e18/.coder_view/.reviewer.config.json", "/home/sumama/Private/MegaBit/megabit-data/episodes/a066c3d9cbcb7e18/.coder_view/.reviewer.appendix.md"], "round_no": 1, "ts": 1790683449.6523244, "when": "after_round"}

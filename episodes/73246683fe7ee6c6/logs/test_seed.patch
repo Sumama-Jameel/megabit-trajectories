@@ -1,0 +1,95 @@
+diff --git a/tests/test_funcs.py b/tests/test_funcs.py
+index c5a29c3..4a96480 100644
+--- a/tests/test_funcs.py
++++ b/tests/test_funcs.py
+@@ -8,11 +8,11 @@ from attr._funcs import ls, has, to_dict
+ from attr._make import (
+     Attribute,
+     _make_attr,
+-    s,
++    _add_methods,
+ )
+ 
+ 
+-@s
++@_add_methods
+ class C(object):
+     x = _make_attr()
+     y = _make_attr()
+@@ -42,7 +42,6 @@ class TestLs(object):
+         """
+         Returns a list of `Attribute`.
+         """
+-
+         assert all(isinstance(a, Attribute) for a in ls(C))
+ 
+ 
+@@ -86,7 +85,7 @@ class TestHas(object):
+         """
+         Returns `True` on decorated classes even if there are no attributes.
+         """
+-        @s
++        @_add_methods
+         class D(object):
+             pass
+ 
+diff --git a/tests/test_make.py b/tests/test_make.py
+index 7bc2fc6..71f13be 100644
+--- a/tests/test_make.py
++++ b/tests/test_make.py
+@@ -7,9 +7,9 @@ import pytest
+ from attr._make import (
+     Attribute,
+     _CountingAttr,
++    _add_methods,
+     _get_attrs,
+     _make_attr,
+-    s,
+ )
+ 
+ 
+@@ -46,7 +46,7 @@ class TestGetAttrs(object):
+         """
+         Returns attributes in correct order.
+         """
+-        @s
++        @_add_methods
+         class C(object):
+             z = _make_attr()
+             y = _make_attr()
+@@ -58,22 +58,22 @@ class TestGetAttrs(object):
+         """
+         No attributes returns an empty list.
+         """
+-        @s
++        @_add_methods
+         class C(object):
+             pass
+ 
+         assert [] == _get_attrs(C)
+ 
+ 
+-class TestS(object):
++class TestAddMethods(object):
+     """
+-    Tests for the `s` class decorator.
++    Tests for the `_add_methods` class decorator.
+     """
+     def test_sets_attrs(self):
+         """
+         Sets the `__attrs_attrs__` class attribute with a list of `Attribute`s.
+         """
+-        @s
++        @_add_methods
+         class C(object):
+             x = _make_attr()
+         assert "x" == C.__attrs_attrs__[0].name
+@@ -83,7 +83,7 @@ class TestS(object):
+         """
+         No attributes, no problems.
+         """
+-        @s
++        @_add_methods
+         class C3(object):
+             pass
+         assert "C3()" == repr(C3())

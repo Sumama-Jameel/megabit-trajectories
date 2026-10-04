@@ -1,0 +1,25 @@
+[step 1] materialize_workspace: begin
+[step 1] materialize_workspace: detached at da4c9ca5149d, 6 commits, removed remote:origin, tags:38, local-branches:1; diff2.patch 988ca2d7533e
+[step 1] extract_diff2_reference: begin
+[step 1] extract_diff2_reference: 27 files extracted; verified 3 files
+[step 2] run_ticket_agent: begin
+[step 2] run_ticket_agent: ticket written to ticket.md (attempt 1)
+[step 3] extract_diff2_tests: begin
+[step 3] extract_diff2_tests: 1 test file section(s) (modified=1)
+[step 4] extract_diff2_manifests: begin
+[step 4] extract_diff2_manifests: target=2 base=2 to_remove=0 languages=['python']
+[step 5] seed_diff2_tests: begin
+[step 5] seed_diff2_tests: sub: Diff1-only test prune skipped: the suite does not collect even before pruning (python -m pytest )
+[step 5] seed_diff2_tests: seeded 1 test file(s)
+[step 6] replace_manifests: begin
+[step 6] replace_manifests: replaced 2, removed 0
+[step 7] install_deps: begin
+[step 7] install_deps: installed 6 dep line(s), verified 5 probe(s) (languages=['python'])
+[step 8] lock_tests_stage1: begin
+[step 8] lock_tests_stage1: locked+verified 1 test file(s)
+[step 9] delete_reference: begin
+[step 9] delete_reference: deleted /home/sumama/Private/MegaBit/megabit-data/episodes/7bd0a927168a14f3/.megabit_ref
+[step 10] wipe_git_history: begin
+[step 10] lock_tests_stage2: begin
+[step 10] lock_tests_stage2: locked+verified 1 test file(s)
+[step 10] wipe_git_history: single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 1 file(s)
