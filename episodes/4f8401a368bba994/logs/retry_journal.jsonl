@@ -1,0 +1,22 @@
+{"attempt": 1, "kind": "ticket_attempt", "retry_feedback_chars": 0, "role": "ticket_gen", "ts": 1791119869.975139}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1791119973.1839585}
+{"attempt": 1, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1791119973.1841674}
+{"created": "click-8.5.0.dev.dist-info", "excluded": true, "kind": "package_metadata", "ts": 1791119997.085177}
+{"hosts": ["docs.python.org", "example.txt", "existing.txt", "foo.txt", "github.com", "hello.txt", "ipykernel.faked", "marker.txt", "new.txt", "sentinel.unset", "subprocess.popen", "test.bin", "test.py", "test.txt", "ufffd.txt"], "kind": "required_test_hosts", "ts": 1791120003.0716248}
+{"count": 1, "kind": "pipeline_artifacts_dropped", "paths": [".megabit_tmp/prefetch_light.log"], "ts": 1791120042.0274787}
+{"kind": "agent_egress_relaxed", "mode": "github-block", "reason": "seeded tests call external hosts", "ts": 1791120074.3834972}
+{"kind": "sleep_schedule_effective", "schedule": [10.0, 20.0, 40.0, 60.0, 60.0], "ts": 1791120080.3420014}
+{"attempts_completed": 0, "conversations": 0, "egress_hits": 0, "egress_taint": 0, "events": 0, "kind": "entry_evidence", "malformed_arg_results": 0, "malformed_tool_args": 0, "rounds_completed": 0, "source": "memory", "tests_passed": null, "tests_ran": false, "tool_calls": 0, "ts": 1791120080.3443213}
+{"attempt": 1, "detail": "done error: context deadline exceeded (Client.Timeout or context cancellation while reading body); exit 1; context deadline exceeded (Client.Timeout or context cancellation while reading body)", "failure_kind": "provider_error", "kind": "retry", "phase": "invoke", "return_code": 1, "role": "coder", "session_id": "3b9728f5cd674196999179c2f3779c55", "ts": 1791120789.546985}
+{"attempt": 1, "detail": "sleeping 10.0s before retry", "failure_kind": "provider_error", "kind": "retry", "phase": "invoke", "reason": "schedule", "role": "coder", "session_id": "3b9728f5cd674196999179c2f3779c55", "ts": 1791120789.5493338}
+{"attempt": 1, "kind": "heartbeat", "role": "coder", "session_id": "3b9728f5cd674196999179c2f3779c55", "ts": 1791120799.5593612}
+{"attempt": 2, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 1, "role": "coder", "session_id": "3b9728f5cd674196999179c2f3779c55", "ts": 1791121974.4501956}
+{"attempt": 2, "kind": "retry_success", "role": "coder", "session_id": "3b9728f5cd674196999179c2f3779c55", "ts": 1791121974.4656448}
+{"kind": "evidence_from_log", "malformed_lines": 0, "non_json_lines": 0, "reason": "durable evidence source", "ts": 1791121990.8963804}
+{"attempt": 1, "from_tool_results": 2, "kind": "malformed_tool_args", "total": 2, "ts": 1791121991.0667753}
+{"attempt": 1, "evidence_source": "log", "evidence_truncated": false, "kind": "coder_attempt_completed", "n_tool_calls": 123, "session_id": "3b9728f5cd674196999179c2f3779c55", "similarity": 0.6722, "tests_passed": true, "tests_ran": true, "ts": 1791121991.067917}
+{"commands": ["python -m pytest"], "context": "attempt:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1791122005.167856}
+{"commands": ["python -m pytest"], "context": "round:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1791122045.7070026}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1791122225.1820483}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1791122225.182238}
+{"kind": "reviewer_role_files_swept", "removed": ["/home/sumama/Private/MegaBit/megabit-data/episodes/4f8401a368bba994/.coder_view/.reviewer.config.json", "/home/sumama/Private/MegaBit/megabit-data/episodes/4f8401a368bba994/.coder_view/.reviewer.appendix.md"], "round_no": 1, "ts": 1791122225.1829736, "when": "after_round"}

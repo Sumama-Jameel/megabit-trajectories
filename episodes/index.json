@@ -266,6 +266,25 @@
   "attempts": 1
  },
  {
+  "task_id": "4f8401a368bba994",
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "license_spdx": "BSD-3-Clause",
+  "base_commit": "cbd7a4109da16ce58f54c2a618b4c986e3041fcf",
+  "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
+  "target_message": "Refactor pager stream handling; drop text/binary branching",
+  "model": "stealth/space-bunny-alpha",
+  "line_similarity": 0.6414,
+  "exact_match": false,
+  "tool_calls": 123,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.6722,
+  "tests_passed": true,
+  "seconds": 2433.0,
+  "attempts": 1
+ },
+ {
   "task_id": "33da938be0a526fb",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
@@ -301,6 +320,25 @@
   "similarity": 0.6502,
   "tests_passed": true,
   "seconds": 1236.0,
+  "attempts": 1
+ },
+ {
+  "task_id": "349db9dae0e05b9e",
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "license_spdx": "BSD-3-Clause",
+  "base_commit": "7944461a80b780d060899c8835acab3c273a04a6",
+  "target_commit": "22177f857a34e3c35ba957553853a37f23feb37e",
+  "target_message": "`path_type` narrows the converted value's type for `convert` and `prompt`",
+  "model": "stealth/space-bunny-alpha",
+  "line_similarity": 0.5471,
+  "exact_match": false,
+  "tool_calls": 69,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.6373,
+  "tests_passed": true,
+  "seconds": 1297.8,
   "attempts": 1
  },
  {
