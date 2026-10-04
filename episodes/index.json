@@ -511,43 +511,5 @@
   "tests_passed": true,
   "seconds": 1206.0,
   "attempts": 1
- },
- {
-  "task_id": "40752427bb045b1a",
-  "repo_name": "rich",
-  "repo_url": "https://github.com/Textualize/rich",
-  "license_spdx": "MIT",
-  "base_commit": "19c67b9a3479841e9133bea94607c89ee931d3fc",
-  "target_commit": "7ef2d05ca8aa3cb405dab2fdf3282e69cf8089e3",
-  "target_message": "fix inline code in table cells",
-  "model": "bai_qwen_flash/qwen3.8-flash",
-  "line_similarity": 0.1959,
-  "exact_match": false,
-  "tool_calls": 153,
-  "review_rounds": 2,
-  "status": "archive",
-  "similarity": 0.1959,
-  "tests_passed": null,
-  "seconds": null,
-  "attempts": null
- },
- {
-  "task_id": "000d8c6fc1830501",
-  "repo_name": "rich",
-  "repo_url": "https://github.com/Textualize/rich.git",
-  "license_spdx": "MIT",
-  "base_commit": "a168ed4129dc1b122477146cbd3d2f93b82adc06",
-  "target_commit": "8f8f6df172de6b19f4f3148572786bfa3fb651c0",
-  "target_message": "table sizing fixes",
-  "model": "inferx_devstral/Devstral-2-123B-Instruct-2512-int4-AutoRound",
-  "line_similarity": 0.0319,
-  "exact_match": false,
-  "tool_calls": 65,
-  "review_rounds": 1,
-  "status": "archive",
-  "similarity": 0.0319,
-  "tests_passed": null,
-  "seconds": null,
-  "attempts": null
  }
 ]

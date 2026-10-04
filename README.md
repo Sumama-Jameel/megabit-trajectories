@@ -6,10 +6,10 @@ every single move.
 
 ## What's here
 
-29 episodes: 27 verified passes (tests green and the
+27 episodes: 27 verified passes (tests green and the
 agent's diff independently scored against the upstream fix, similarity
-≥ 0.45) plus 2 earlier archive episodes. 1315 tool
-calls total. Repositories: attrs, cli, click, packaging, rich.
+≥ 0.45). 1097 tool
+calls total. Repositories: attrs, cli, click, packaging.
 
 ## How We Made It
 
@@ -58,12 +58,9 @@ providers one after another. It took a lot of debugging.
 | [`94dab878e2c9a0ec`](episodes/94dab878e2c9a0ec/) | packaging (Apache-2.0) | 0.534 | 39 | 1 | yes | 13 min |
 | [`c929463c84ceb538`](episodes/c929463c84ceb538/) | click (BSD-2-Clause) | 0.481 | 74 | 1 | yes | 11 min |
 | [`966101f98864fafa`](episodes/966101f98864fafa/) | click (BSD-2-Clause) | 0.452 | 51 | 1 | yes | 20 min |
-| [`40752427bb045b1a`](episodes/40752427bb045b1a/) | rich (MIT) | 0.196 | 153 | 2 | — | — |
-| [`000d8c6fc1830501`](episodes/000d8c6fc1830501/) | rich (MIT) | 0.032 | 65 | 1 | — | — |
 
 `Sim` is the line similarity between the agent's diff and the upstream
-fix (1.000 = identical). Archive rows show their original line similarity
-and are kept as showcase material, not verified passes.
+fix (1.000 = identical).
 
 ## What You Get
 
@@ -129,7 +126,6 @@ episodes/<task_id>/
 - [cli](https://github.com/httpie/cli) — under BSD-3-Clause
 - [click](https://github.com/pallets/click) — under BSD-2-Clause / BSD-3-Clause
 - [packaging](https://github.com/pypa/packaging) — under Apache-2.0
-- [rich](https://github.com/Textualize/rich) — under MIT
 
 ## License
 
