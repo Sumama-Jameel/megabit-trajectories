@@ -399,6 +399,25 @@
   "attempts": 1
  },
  {
+  "task_id": "2288ac90554bcfa6",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "",
+  "base_commit": "413d006fadf5b9b14d78ad444201d8189bff8c64",
+  "target_commit": "2d873eb6002021a8c007c933fbdab58b37a5079b",
+  "target_message": "fix(metadata): fold every line boundary when writing headers (#1356)",
+  "model": "stealth/space-bunny-alpha",
+  "line_similarity": 0.4667,
+  "exact_match": false,
+  "tool_calls": 40,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.6147,
+  "tests_passed": true,
+  "seconds": 1498.0,
+  "attempts": 1
+ },
+ {
   "task_id": "ebaa0de9c4092fd4",
   "repo_name": "packaging",
   "repo_url": "https://github.com/pypa/packaging",
