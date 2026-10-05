@@ -589,6 +589,25 @@
   "attempts": 1
  },
  {
+  "task_id": "25e452d88c01814e",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "",
+  "base_commit": "5b583e309996a085ad3b5b045f3bf50a09c11b58",
+  "target_commit": "206834025040aca6f8a2fdfc4039dbfa2a9861a6",
+  "target_message": "fix(metadata): aggregate from_email validation errors (#1268)",
+  "model": "stealth/space-bunny-alpha",
+  "line_similarity": 0.3107,
+  "exact_match": false,
+  "tool_calls": 35,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.4913,
+  "tests_passed": true,
+  "seconds": 1223.1,
+  "attempts": 1
+ },
+ {
   "task_id": "c929463c84ceb538",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",
