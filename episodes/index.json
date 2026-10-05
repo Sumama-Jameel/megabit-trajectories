@@ -190,6 +190,25 @@
   "attempts": 1
  },
  {
+  "task_id": "31fc77740af45bd4",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "3a68d4913221abc6f8ad3be50937f7ae49300a98",
+  "target_commit": "48b8611c27779811d161200e17de8da24aae7feb",
+  "target_message": "Add instance support to attrs.fields() (#1529)",
+  "model": "stealth/space-bunny-alpha",
+  "line_similarity": 0.6471,
+  "exact_match": false,
+  "tool_calls": 39,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.7354,
+  "tests_passed": true,
+  "seconds": 1404.3,
+  "attempts": 1
+ },
+ {
   "task_id": "fe34f71ffe61ad61",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",

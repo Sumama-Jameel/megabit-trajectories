@@ -6,9 +6,9 @@ every single move.
 
 ## What's here
 
-35 episodes: 35 verified passes (tests green and the
+36 episodes: 36 verified passes (tests green and the
 agent's diff independently scored against the upstream fix, similarity
-≥ 0.45). 1510 tool
+≥ 0.45). 1549 tool
 calls total. Repositories: attrs, cli, click, packaging.
 
 ## How We Made It
@@ -41,6 +41,7 @@ providers one after another. It took a lot of debugging.
 | [`864a19a5d07ecac7`](episodes/864a19a5d07ecac7/) | click (BSD-3-Clause) | 0.765 | 31 | 1 | yes | 10 min |
 | [`afd00fe36c2ad88c`](episodes/afd00fe36c2ad88c/) | click (BSD-2-Clause) | 0.765 | 26 | 1 | yes | 6 min |
 | [`979988594a97aafb`](episodes/979988594a97aafb/) | click (BSD-3-Clause) | 0.741 | 27 | 1 | yes | 12 min |
+| [`31fc77740af45bd4`](episodes/31fc77740af45bd4/) | attrs (MIT) | 0.735 | 39 | 1 | yes | 23 min |
 | [`fe34f71ffe61ad61`](episodes/fe34f71ffe61ad61/) | click (BSD-3-Clause) | 0.731 | 26 | 1 | yes | 8 min |
 | [`2f219d6f06d064cc`](episodes/2f219d6f06d064cc/) | attrs (MIT) | 0.726 | 37 | 1 | yes | 18 min |
 | [`57b500b3a9ee36b6`](episodes/57b500b3a9ee36b6/) | click (BSD-2-Clause) | 0.725 | 25 | 1 | yes | 8 min |
