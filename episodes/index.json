@@ -532,6 +532,25 @@
   "attempts": 1
  },
  {
+  "task_id": "81a8b6b065bafe21",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
+  "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
+  "target_message": "Resolve field aliases before calling field_transformer (#1509)",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 0.4823,
+  "exact_match": false,
+  "tool_calls": 95,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.5625,
+  "tests_passed": true,
+  "seconds": 2189.8,
+  "attempts": 1
+ },
+ {
   "task_id": "490a433138e1fe8e",
   "repo_name": "cli",
   "repo_url": "https://github.com/httpie/cli",
