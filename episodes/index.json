@@ -209,6 +209,25 @@
   "attempts": 1
  },
  {
+  "task_id": "2f219d6f06d064cc",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "000c563473400aa086f6486a9c38ace0e77ea219",
+  "target_commit": "5bab46deb916520b153892d73400978ccb08ef96",
+  "target_message": "Allow deep_iterable and deep_mapping take lists/tuples (#1449)",
+  "model": "stealth/space-bunny-alpha",
+  "line_similarity": 0.6256,
+  "exact_match": false,
+  "tool_calls": 37,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.7257,
+  "tests_passed": true,
+  "seconds": 1075.0,
+  "attempts": 1
+ },
+ {
   "task_id": "57b500b3a9ee36b6",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",

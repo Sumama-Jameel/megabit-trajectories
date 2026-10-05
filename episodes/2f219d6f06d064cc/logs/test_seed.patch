@@ -1,0 +1,90 @@
+diff --git a/tests/test_validators.py b/tests/test_validators.py
+index df94d2a..9fd3f2d 100644
+--- a/tests/test_validators.py
++++ b/tests/test_validators.py
+@@ -621,6 +621,19 @@ class TestDeepIterable:
+ 
+         assert expected_repr == repr(v)
+ 
++    @pytest.mark.parametrize("conv", [list, tuple])
++    def test_validators_iterables(self, conv):
++        """
++        If iterables are passed as validators, they are combined with and_.
++        """
++        member_validator = (instance_of(int),)
++        iterable_validator = (instance_of(list), min_len(1))
++
++        v = deep_iterable(conv(member_validator), conv(iterable_validator))
++
++        assert and_(*member_validator) == v.member_validator
++        assert and_(*iterable_validator) == v.iterable_validator
++
+ 
+ class TestDeepMapping:
+     """
+@@ -755,6 +768,25 @@ class TestDeepMapping:
+ 
+         v(None, a, {"a": 6, "b": 7})
+ 
++    @pytest.mark.parametrize("conv", [list, tuple])
++    def test_validators_iterables(self, conv):
++        """
++        If iterables are passed as validators, they are combined with and_.
++        """
++        key_validator = (instance_of(str), min_len(2))
++        value_validator = (instance_of(int), ge(10))
++        mapping_validator = (instance_of(dict), max_len(2))
++
++        v = deep_mapping(
++            conv(key_validator),
++            conv(value_validator),
++            conv(mapping_validator),
++        )
++
++        assert and_(*key_validator) == v.key_validator
++        assert and_(*value_validator) == v.value_validator
++        assert and_(*mapping_validator) == v.mapping_validator
++
+ 
+ class TestIsCallable:
+     """
+diff --git a/tests/typing_example.py b/tests/typing_example.py
+index e5738aa..89fccff 100644
+--- a/tests/typing_example.py
++++ b/tests/typing_example.py
+@@ -190,12 +190,19 @@ class Validated:
+             attr.validators.instance_of(C), attr.validators.instance_of(list)
+         ),
+     )
+-    aa = attr.ib(
++    a2 = attr.ib(
+         type=Tuple[C],
+         validator=attr.validators.deep_iterable(
+             attr.validators.instance_of(C), attr.validators.instance_of(tuple)
+         ),
+     )
++    a3 = attr.ib(
++        type=Tuple[C],
++        validator=attr.validators.deep_iterable(
++            [attr.validators.instance_of(C)],
++            [attr.validators.instance_of(tuple)],
++        ),
++    )
+     b = attr.ib(
+         type=List[C],
+         validator=attr.validators.deep_iterable(
+@@ -226,6 +233,14 @@ class Validated:
+             value_validator=attr.validators.instance_of(C)
+         ),
+     )
++    d4 = attr.ib(
++        type=Dict[C, D],
++        validator=attr.validators.deep_mapping(
++            key_validator=[attr.validators.instance_of(C)],
++            value_validator=[attr.validators.instance_of(C)],
++            mapping_validator=[attr.validators.instance_of(dict)],
++        ),
++    )
+     e: str = attr.ib(validator=attr.validators.matches_re(re.compile(r"foo")))
+     f: str = attr.ib(
+         validator=attr.validators.matches_re(r"foo", flags=42, func=re.search)
