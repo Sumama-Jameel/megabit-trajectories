@@ -608,6 +608,25 @@
   "attempts": 2
  },
  {
+  "task_id": "a5e823c9f6618766",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
+  "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
+  "target_message": "Fix message passing in frozen errors",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 0.5625,
+  "exact_match": false,
+  "tool_calls": 44,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.5477,
+  "tests_passed": true,
+  "seconds": 935.5,
+  "attempts": 1
+ },
+ {
   "task_id": "f20d68038c27594c",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",

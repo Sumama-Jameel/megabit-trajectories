@@ -1,0 +1,32 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "2709a843a09744ebbd56689d2d2d258e",
+      "tests_passed": true,
+      "tool_calls": 44
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/a5e823c9f6618766/a5e823c9f6618766.episode.jsonl",
+  "raw_sha256": "bfe3cc937f7cd2ae3ec70d64aaefb2afade2f326bffe7b7bada725e51b183fa8",
+  "review_rounds": 1,
+  "sample_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/a5e823c9f6618766/a5e823c9f6618766.sample.jsonl",
+  "sample_sha256": "46bccb2d58df96d44ebf668c5276715ed8aa13b644c3812e391bd178dbbabc1e",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 1,
+    "selected_segment": 0,
+    "tests_passed": true,
+    "tool_calls": 44
+  },
+  "session_id": "2709a843a09744ebbd56689d2d2d258e",
+  "task_id": "a5e823c9f6618766",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 44
+}
