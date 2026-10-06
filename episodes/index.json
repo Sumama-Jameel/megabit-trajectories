@@ -95,6 +95,25 @@
   "attempts": 1
  },
  {
+  "task_id": "a0b5794e7403ed3d",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "",
+  "base_commit": "b097450461523502ada842f98274449ad74ff1ff",
+  "target_commit": "4e79787a31c99348649bb0dafee2a5078d3595be",
+  "target_message": "fix(tags): preserve explicitly empty platform iterables (#1360)",
+  "model": "openai/gpt-oss-120b",
+  "line_similarity": 0.871,
+  "exact_match": false,
+  "tool_calls": 33,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.9131,
+  "tests_passed": true,
+  "seconds": 1562.2,
+  "attempts": 2
+ },
+ {
   "task_id": "3a35d6717919075a",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
