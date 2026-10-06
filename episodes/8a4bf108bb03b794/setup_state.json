@@ -1,0 +1,271 @@
+{
+  "ok": true,
+  "relock": {
+    "branches_deleted": 0,
+    "object_purged": true,
+    "relocked": 2
+  },
+  "steps": [
+    {
+      "commits": 1096,
+      "detail": "detached at 0bfc3cea4f9f, 1096 commits, removed remote:origin, tags:53, local-branches:1; diff2.patch 13a55e631e5f",
+      "diff2_sha256": "13a55e631e5fa3c942ece5a16d4a57cc14edd3462adecf4a969ece94c6bfe028",
+      "head": "0bfc3cea4f9fe1b1b0c80ce06f02bd2433500c81",
+      "name": "materialize_workspace",
+      "ok": true,
+      "removed_refs": [
+        "remote:origin",
+        "tags:53",
+        "local-branches:1"
+      ],
+      "seconds": 7.844,
+      "step": 1
+    },
+    {
+      "detail": "139 files extracted; verified 3 files",
+      "files": 139,
+      "name": "extract_diff2_reference",
+      "ok": true,
+      "pruned": 0,
+      "seconds": 0.125,
+      "step": 1,
+      "verified_path": "tests/test_requirements.py"
+    },
+    {
+      "attempts": 1,
+      "detail": "ticket written to ticket.md (attempt 1)",
+      "name": "run_ticket_agent",
+      "ok": true,
+      "path": "/home/sumama/Private/MegaBit/megabit-data/episodes/8a4bf108bb03b794/ticket.md",
+      "seconds": 47.471,
+      "step": 2
+    },
+    {
+      "detail": "2 test file section(s) (modified=2)",
+      "has_patch": true,
+      "name": "extract_diff2_tests",
+      "ok": true,
+      "seconds": 0.001,
+      "step": 3,
+      "test_paths": [
+        "tests/test_markers.py",
+        "tests/test_requirements.py"
+      ],
+      "test_sections": [
+        [
+          "tests/test_markers.py",
+          "modified"
+        ],
+        [
+          "tests/test_requirements.py",
+          "modified"
+        ]
+      ],
+      "write_deny_tree": [
+        "tests",
+        "tests/test_markers.py",
+        "tests/test_requirements.py"
+      ]
+    },
+    {
+      "base": [
+        "pyproject.toml"
+      ],
+      "detail": "target=1 base=1 to_remove=0 languages=['python']",
+      "languages": [
+        "python"
+      ],
+      "name": "extract_diff2_manifests",
+      "ok": true,
+      "removed": [],
+      "seconds": 0.015,
+      "step": 4,
+      "target": [
+        "pyproject.toml"
+      ]
+    },
+    {
+      "detail": "seeded 2 test file(s)",
+      "kept_diff1_tests": [],
+      "name": "seed_diff2_tests",
+      "ok": true,
+      "pruned_diff1_tests": [],
+      "seconds": 5.261,
+      "seeded": [
+        "tests/test_markers.py",
+        "tests/test_requirements.py"
+      ],
+      "step": 5
+    },
+    {
+      "detail": "replaced 1, removed 0",
+      "name": "replace_manifests",
+      "ok": true,
+      "removed": [],
+      "replaced": [
+        "pyproject.toml"
+      ],
+      "seconds": 0.004,
+      "step": 6
+    },
+    {
+      "cache_dir": "/home/sumama/Private/MegaBit/megabit-data/cache/packaging",
+      "cache_hit": true,
+      "detail": "installed 7 dep line(s), verified 7 probe(s) (languages=['python'])",
+      "dropped": [],
+      "failed": [],
+      "installed": [
+        "coverage[toml]>=7.2.0",
+        "hypothesis>=6.0.0",
+        "pip>=21.1",
+        "pretend",
+        "pytest>=6.2.0",
+        "tomli; python_version<'3.11'",
+        "tomli_w"
+      ],
+      "installed_languages": [],
+      "installed_packages": [
+        "coverage[toml]>=7.2.0",
+        "hypothesis>=6.0.0",
+        "pip>=21.1",
+        "pretend",
+        "pytest>=6.2.0",
+        "tomli; python_version<'3.11'",
+        "tomli_w"
+      ],
+      "languages": [
+        "python"
+      ],
+      "manifest_fingerprint": "f01532806472fe28607144584493c052eceb24953d86b9eeece67ef02635d4b2",
+      "name": "install_deps",
+      "ok": true,
+      "required_test_hosts": [
+        "1.0.post",
+        "2bcu130-py3-none-any.whl",
+        "bitbucket.org",
+        "everything.metadata",
+        "example.com",
+        "foo.com",
+        "git.example.com",
+        "github.com",
+        "local.version.label",
+        "nex3.medium.com",
+        "packaging.markers.invalidmarker",
+        "packaging.requirements.invalidrequirement",
+        "pylock.spec-example.toml",
+        "readthedocs.org",
+        "v.an",
+        "v.devn",
+        "v.postn",
+        "v.pren",
+        "www.example.com"
+      ],
+      "requires_test_hosts": true,
+      "resolved_test_command": "python -m pytest",
+      "seconds": 46.84,
+      "step": 7,
+      "test_command_resolution": {
+        "attempts": [
+          {
+            "command": "python -m pytest",
+            "exit_code": 0,
+            "kind": "pytest",
+            "note": "pytest discovered the seeded tests",
+            "outcome": "pass",
+            "source": "pytest-config",
+            "timed_out": false
+          }
+        ],
+        "reason": "pytest-config probe discovered the seeded tests",
+        "verdict": "resolved"
+      },
+      "verified_deps": [
+        "python:coverage",
+        "python:hypothesis",
+        "python:pip",
+        "python:pretend",
+        "python:pytest",
+        "python:tomli",
+        "python:tomli_w"
+      ]
+    },
+    {
+      "commands": [
+        "python -m pytest"
+      ],
+      "detail": "second-diff suite green 3/3 \u00d7 1 command(s) (reference dir)",
+      "name": "verify_diff2_suite",
+      "ok": true,
+      "required_runs": 3,
+      "root": "reference dir",
+      "runs": [
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": ".......... [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n.................................................................        [100%]\n\n=============== 62357 passed, 427 deselected in 87.57s (0:01:27) ===============\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": ".......... [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n.................................................................        [100%]\n\n=============== 62357 passed, 427 deselected in 87.22s (0:01:27) ===============\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": ".......... [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n.................................................................        [100%]\n\n=============== 62357 passed, 427 deselected in 88.67s (0:01:28) ===============\n",
+          "timed_out": false
+        }
+      ],
+      "seconds": 280.278,
+      "step": 16
+    },
+    {
+      "detail": "locked+verified 2 test file(s)",
+      "locked": [
+        "tests/test_markers.py",
+        "tests/test_requirements.py"
+      ],
+      "name": "lock_tests_stage1",
+      "ok": true,
+      "seconds": 0.43,
+      "step": 8
+    },
+    {
+      "detail": "deleted /home/sumama/Private/MegaBit/megabit-data/episodes/8a4bf108bb03b794/.megabit_ref",
+      "name": "delete_reference",
+      "ok": true,
+      "seconds": 0.016,
+      "step": 9
+    },
+    {
+      "detail": "locked+verified 2 test file(s)",
+      "locked": [
+        "tests/test_markers.py",
+        "tests/test_requirements.py"
+      ],
+      "name": "lock_tests_stage2",
+      "ok": true,
+      "seconds": 0.464,
+      "step": 10
+    },
+    {
+      "branches_deleted": 0,
+      "detail": "single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 2 file(s)",
+      "name": "wipe_git_history",
+      "object_purged": true,
+      "ok": true,
+      "pipeline_artifacts_dropped": [
+        ".megabit_tmp/prefetch_light.log"
+      ],
+      "relocked": 2,
+      "seconds": 1.906,
+      "step": 10
+    }
+  ],
+  "task_id": "8a4bf108bb03b794"
+}

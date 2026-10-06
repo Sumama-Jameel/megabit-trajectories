@@ -19,6 +19,25 @@
   "attempts": 3
  },
  {
+  "task_id": "8a4bf108bb03b794",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "",
+  "base_commit": "0bfc3cea4f9fe1b1b0c80ce06f02bd2433500c81",
+  "target_commit": "189a76d54d64899adbca907c2a3efa5b6befdb28",
+  "target_message": "fix(parser): require true end of input (#1345)",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 1.0,
+  "exact_match": true,
+  "tool_calls": 28,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 1.0,
+  "tests_passed": true,
+  "seconds": 1053.2,
+  "attempts": 1
+ },
+ {
   "task_id": "b37ef87e467d64e6",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
