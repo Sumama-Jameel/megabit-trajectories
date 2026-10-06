@@ -342,6 +342,25 @@
   "attempts": 1
  },
  {
+  "task_id": "8b48d640ad1f1576",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
+  "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
+  "target_message": "Make validators optional in deep_mapping (#1448)",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 0.5714,
+  "exact_match": false,
+  "tool_calls": 46,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.6647,
+  "tests_passed": true,
+  "seconds": 595.0,
+  "attempts": 1
+ },
+ {
   "task_id": "33da938be0a526fb",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",

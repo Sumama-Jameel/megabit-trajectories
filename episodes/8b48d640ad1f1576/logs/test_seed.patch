@@ -1,0 +1,75 @@
+diff --git a/tests/test_validators.py b/tests/test_validators.py
+index 45e7050..df94d2a 100644
+--- a/tests/test_validators.py
++++ b/tests/test_validators.py
+@@ -651,6 +651,8 @@ class TestDeepMapping:
+             (instance_of(str), instance_of(int), 42),
+             (42, 42, None),
+             (42, 42, 42),
++            (42, None, None),
++            (None, 42, None),
+         ],
+     )
+     def test_noncallable_validators(
+@@ -719,8 +721,40 @@ class TestDeepMapping:
+             "<deep_mapping validator for objects mapping "
+             f"{key_repr} to {value_repr}>"
+         )
++
+         assert expected_repr == repr(v)
+ 
++    def test_error_neither_validator_provided(self):
++        """
++        Raise ValueError if neither key_validator nor value_validator is
++        provided.
++        """
++        with pytest.raises(ValueError) as e:
++            deep_mapping()
++
++        assert (
++            "At least one of key_validator or value_validator must be provided"
++            == e.value.args[0]
++        )
++
++    def test_key_validator_can_be_none(self):
++        """
++        The key validator can be None.
++        """
++        v = deep_mapping(value_validator=instance_of(int))
++        a = simple_attr("test")
++
++        v(None, a, {"a": 6, "b": 7})
++
++    def test_value_validator_can_be_none(self):
++        """
++        The value validator can be None.
++        """
++        v = deep_mapping(key_validator=instance_of(str))
++        a = simple_attr("test")
++
++        v(None, a, {"a": 6, "b": 7})
++
+ 
+ class TestIsCallable:
+     """
+diff --git a/tests/typing_example.py b/tests/typing_example.py
+index 82a5c25..e5738aa 100644
+--- a/tests/typing_example.py
++++ b/tests/typing_example.py
+@@ -216,6 +216,16 @@ class Validated:
+             attr.validators.instance_of(C), attr.validators.instance_of(D)
+         ),
+     )
++    d2 = attr.ib(
++        type=Dict[C, D],
++        validator=attr.validators.deep_mapping(attr.validators.instance_of(C)),
++    )
++    d3 = attr.ib(
++        type=Dict[C, D],
++        validator=attr.validators.deep_mapping(
++            value_validator=attr.validators.instance_of(C)
++        ),
++    )
+     e: str = attr.ib(validator=attr.validators.matches_re(re.compile(r"foo")))
+     f: str = attr.ib(
+         validator=attr.validators.matches_re(r"foo", flags=42, func=re.search)
