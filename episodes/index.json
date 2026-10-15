@@ -646,6 +646,25 @@
   "attempts": 1
  },
  {
+  "task_id": "21721c8be6eec2d5",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
+  "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
+  "target_message": "Make `kw_only=True` behavior consistent with dataclasses (#1457)",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 0.5,
+  "exact_match": false,
+  "tool_calls": 100,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.5474,
+  "tests_passed": true,
+  "seconds": 2781.5,
+  "attempts": 1
+ },
+ {
   "task_id": "f20d68038c27594c",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",

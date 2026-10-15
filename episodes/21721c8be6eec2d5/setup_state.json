@@ -1,0 +1,254 @@
+{
+  "ok": true,
+  "relock": {
+    "branches_deleted": 0,
+    "object_purged": true,
+    "relocked": 1
+  },
+  "steps": [
+    {
+      "commits": 1677,
+      "detail": "detached at af349876f4fb, 1677 commits, removed remote:origin, tags:38, local-branches:1; diff2.patch 456cb8140338",
+      "diff2_sha256": "456cb8140338e60b4f4b6c3047b31a42d7530a144fcca07a164a917a9bd7048a",
+      "head": "af349876f4fb5df2b71a3f4878239b775bc89230",
+      "name": "materialize_workspace",
+      "ok": true,
+      "removed_refs": [
+        "remote:origin",
+        "tags:38",
+        "local-branches:1"
+      ],
+      "seconds": 7.209,
+      "step": 1
+    },
+    {
+      "detail": "132 files extracted; verified 3 files; pruned 16 heavy artifacts",
+      "files": 132,
+      "name": "extract_diff2_reference",
+      "ok": true,
+      "pruned": 16,
+      "seconds": 0.118,
+      "step": 1,
+      "verified_path": "src/attr/_make.py"
+    },
+    {
+      "attempts": 2,
+      "detail": "ticket written to ticket.md (attempt 2)",
+      "name": "run_ticket_agent",
+      "ok": true,
+      "path": "/home/sumama/Private/MegaBit/megabit-data/episodes/21721c8be6eec2d5/ticket.md",
+      "seconds": 202.496,
+      "step": 2
+    },
+    {
+      "detail": "1 test file section(s) (modified=1)",
+      "has_patch": true,
+      "name": "extract_diff2_tests",
+      "ok": true,
+      "seconds": 0.036,
+      "step": 3,
+      "test_paths": [
+        "tests/test_make.py"
+      ],
+      "test_sections": [
+        [
+          "tests/test_make.py",
+          "modified"
+        ]
+      ],
+      "write_deny_tree": [
+        "tests",
+        "tests/test_make.py"
+      ]
+    },
+    {
+      "base": [
+        "pyproject.toml",
+        "tox.ini"
+      ],
+      "detail": "target=2 base=2 to_remove=0 languages=['python']",
+      "languages": [
+        "python"
+      ],
+      "name": "extract_diff2_manifests",
+      "ok": true,
+      "removed": [],
+      "seconds": 0.027,
+      "step": 4,
+      "target": [
+        "pyproject.toml",
+        "tox.ini"
+      ]
+    },
+    {
+      "detail": "seeded 1 test file(s)",
+      "kept_diff1_tests": [],
+      "name": "seed_diff2_tests",
+      "ok": true,
+      "pruned_diff1_tests": [],
+      "seconds": 1.717,
+      "seeded": [
+        "tests/test_make.py"
+      ],
+      "step": 5
+    },
+    {
+      "detail": "replaced 2, removed 0",
+      "name": "replace_manifests",
+      "ok": true,
+      "removed": [],
+      "replaced": [
+        "pyproject.toml",
+        "tox.ini"
+      ],
+      "seconds": 0.071,
+      "step": 6
+    },
+    {
+      "cache_dir": "/home/sumama/Private/MegaBit/megabit-data/cache/attrs",
+      "cache_hit": true,
+      "detail": "installed 9 dep line(s), verified 9 probe(s) (languages=['python'])",
+      "dropped": [],
+      "failed": [],
+      "installed": [
+        "cloudpickle; platform_python_implementation == \"CPython\"",
+        "hypothesis",
+        "pympler",
+        "pytest",
+        "pytest-xdist[psutil]",
+        "watchfiles",
+        "cogapp",
+        "pre-commit-uv",
+        "doc2dash"
+      ],
+      "installed_languages": [],
+      "installed_packages": [
+        "cloudpickle; platform_python_implementation == \"CPython\"",
+        "hypothesis",
+        "pympler",
+        "pytest",
+        "pytest-xdist[psutil]",
+        "watchfiles",
+        "cogapp",
+        "pre-commit-uv",
+        "doc2dash"
+      ],
+      "languages": [
+        "python"
+      ],
+      "manifest_fingerprint": "348f7b845a2c87cab8d3beaef0337c5583d2c1fa4f5b361c4a36b06ccbec7bd1",
+      "name": "install_deps",
+      "ok": true,
+      "required_test_hosts": [
+        "bugs.python.org",
+        "github.com"
+      ],
+      "requires_test_hosts": true,
+      "resolved_test_command": "python -m pytest",
+      "seconds": 317.657,
+      "step": 7,
+      "test_command_resolution": {
+        "attempts": [
+          {
+            "command": "python -m pytest",
+            "exit_code": 0,
+            "kind": "pytest",
+            "note": "pytest discovered the seeded tests",
+            "outcome": "pass",
+            "source": "pytest-config",
+            "timed_out": false
+          }
+        ],
+        "reason": "pytest-config probe discovered the seeded tests",
+        "verdict": "resolved"
+      },
+      "verified_deps": [
+        "python:cloudpickle",
+        "python:hypothesis",
+        "python:pympler",
+        "python:pytest",
+        "python:xdist",
+        "python:watchfiles",
+        "python:cogapp",
+        "python:pre_commit_uv",
+        "python:doc2dash"
+      ]
+    },
+    {
+      "commands": [
+        "python -m pytest"
+      ],
+      "detail": "second-diff suite green 3/3 \u00d7 1 command(s) (reference dir)",
+      "name": "verify_diff2_suite",
+      "ok": true,
+      "required_runs": 3,
+      "root": "reference dir",
+      "runs": [
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "ctional.py:784: requires Python 3.13+\nSKIPPED [1] tests/test_functional.py:798: requires Python 3.13+\nSKIPPED [1] tests/test_make.py:2834: Pre-3.10 only.\nSKIPPED [1] tests/test_pyright.py:35: Requires pyright.\nSKIPPED [1] tests/test_pyright.py:83: Requires pyright.\nSKIPPED [1] tests/test_slots.py:503: slots without weakref_slot should only work on PyPy\nXFAIL tests/test_setattr.py::TestSetAttr::test_slotted_confused\n================= 1354 passed, 7 skipped, 1 xfailed in 26.46s ==================\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "ctional.py:784: requires Python 3.13+\nSKIPPED [1] tests/test_functional.py:798: requires Python 3.13+\nSKIPPED [1] tests/test_make.py:2834: Pre-3.10 only.\nSKIPPED [1] tests/test_pyright.py:35: Requires pyright.\nSKIPPED [1] tests/test_pyright.py:83: Requires pyright.\nSKIPPED [1] tests/test_slots.py:503: slots without weakref_slot should only work on PyPy\nXFAIL tests/test_setattr.py::TestSetAttr::test_slotted_confused\n================= 1354 passed, 7 skipped, 1 xfailed in 22.51s ==================\n",
+          "timed_out": false
+        },
+        {
+          "command": "python -m pytest",
+          "exit_code": 0,
+          "kind": "substantive",
+          "tail": "ctional.py:784: requires Python 3.13+\nSKIPPED [1] tests/test_functional.py:798: requires Python 3.13+\nSKIPPED [1] tests/test_make.py:2834: Pre-3.10 only.\nSKIPPED [1] tests/test_pyright.py:35: Requires pyright.\nSKIPPED [1] tests/test_pyright.py:83: Requires pyright.\nSKIPPED [1] tests/test_slots.py:503: slots without weakref_slot should only work on PyPy\nXFAIL tests/test_setattr.py::TestSetAttr::test_slotted_confused\n================= 1354 passed, 7 skipped, 1 xfailed in 22.83s ==================\n",
+          "timed_out": false
+        }
+      ],
+      "seconds": 76.083,
+      "step": 16
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_make.py"
+      ],
+      "name": "lock_tests_stage1",
+      "ok": true,
+      "seconds": 0.311,
+      "step": 8
+    },
+    {
+      "detail": "deleted /home/sumama/Private/MegaBit/megabit-data/episodes/21721c8be6eec2d5/.megabit_ref",
+      "name": "delete_reference",
+      "ok": true,
+      "seconds": 0.012,
+      "step": 9
+    },
+    {
+      "detail": "locked+verified 1 test file(s)",
+      "locked": [
+        "tests/test_make.py"
+      ],
+      "name": "lock_tests_stage2",
+      "ok": true,
+      "seconds": 0.378,
+      "step": 10
+    },
+    {
+      "branches_deleted": 0,
+      "detail": "single commit on main; purged branches:0, gc:ok; solution object gone; stage-2 relocked 1 file(s)",
+      "name": "wipe_git_history",
+      "object_purged": true,
+      "ok": true,
+      "pipeline_artifacts_dropped": [
+        ".megabit_tmp/prefetch_light.log"
+      ],
+      "relocked": 1,
+      "seconds": 2.042,
+      "step": 10
+    }
+  ],
+  "task_id": "21721c8be6eec2d5"
+}
