@@ -589,6 +589,25 @@
   "attempts": 1
  },
  {
+  "task_id": "2d6f3e5f14681273",
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "license_spdx": "MIT",
+  "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
+  "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
+  "target_message": "Improve performance of attr.astuple (#1469)",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 0.4231,
+  "exact_match": false,
+  "tool_calls": 43,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.5657,
+  "tests_passed": true,
+  "seconds": 744.0,
+  "attempts": 1
+ },
+ {
   "task_id": "81a8b6b065bafe21",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
