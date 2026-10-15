@@ -323,6 +323,25 @@
   "attempts": 1
  },
  {
+  "task_id": "407fa06b826e1657",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "",
+  "base_commit": "7cea5e88671ed14016e9ab3dd08eab064f596564",
+  "target_commit": "77e9ed42b6db9c5c011a5148047a356ebe42692a",
+  "target_message": "feat(tags): add pure Python tag generator (#1346)",
+  "model": "deepseek-v4.1-flash:free",
+  "line_similarity": 0.5253,
+  "exact_match": false,
+  "tool_calls": 29,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.6907,
+  "tests_passed": true,
+  "seconds": 1612.5,
+  "attempts": 1
+ },
+ {
   "task_id": "efd63c576c434d63",
   "repo_name": "packaging",
   "repo_url": "https://github.com/pypa/packaging",
