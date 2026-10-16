@@ -1098,11 +1098,18 @@
     "base_url": "https://api.groq.com/openai/v1",
     "context_tokens": 131072,
     "max_tokens": 8192,
-    "model": "openai/gpt-oss-120b"
+    "model": "deepseek-v4.1-flash:free"
   },
   "max_attempts": 3,
   "max_review_rounds": 3,
   "min_tool_calls": 4,
+  "relabel_note": {
+    "at": "2026-10-16T15:36:30.979967+00:00",
+    "field": "llm.model",
+    "from": "openai/gpt-oss-120b",
+    "reason": "provenance relabel: config read at reexport time disagreed with the served event tags",
+    "to": "deepseek-v4.1-flash:free"
+  },
   "sandbox_kind": "docker",
   "similarity_threshold": 0.45,
   "written_at": "2026-10-06T11:04:29Z"

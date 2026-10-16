@@ -13,9 +13,21 @@
   "outcome": "valid",
   "raw_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/fd65634c348f1601/fd65634c348f1601.episode.jsonl",
   "raw_sha256": "d5a6f8d226d77d38929f96ffe31abfbec8f74eba6edccdc897ac6d271efbd3f2",
+  "relabel": {
+    "at": "2026-10-16T15:37:46.537605+00:00",
+    "changes": [
+      {
+        "evidence": "final done event of the shipped segment",
+        "field": "terminal",
+        "from": "",
+        "to": "final_answer"
+      }
+    ],
+    "tool": "megabit relabel"
+  },
   "review_rounds": 1,
   "sample_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/fd65634c348f1601/fd65634c348f1601.sample.jsonl",
-  "sample_sha256": "c8b73e7b73e28fb0f786191f00303646b5e2be693a1da015c876c220fca771a0",
+  "sample_sha256": "88cf44d1977ba716f2ae622f73e7529e07031b0c0dc9028daa12a0e959dd2cb3",
   "schema": 1,
   "segment": {
     "degenerate": false,
@@ -26,6 +38,7 @@
   },
   "session_id": "3c1e6e85a9d940dbac489c871f638f0e",
   "task_id": "fd65634c348f1601",
+  "terminal_state": "final_answer",
   "tests_passed": true,
   "tests_ran": true,
   "tool_calls": 56

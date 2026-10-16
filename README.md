@@ -32,11 +32,11 @@ providers one after another. It took a lot of debugging.
 | Episode | Repository | Sim | Tool calls | Review rounds | Tests pass | Time |
 |---|---|---|---|---|---|---|
 | [`611e35323caaf082`](episodes/611e35323caaf082/) | attrs (MIT) | 1.000 | 61 | 3 | yes | 12 min |
-| [`8a4bf108bb03b794`](episodes/8a4bf108bb03b794/) | packaging () | 1.000 | 28 | 1 | yes | 18 min |
+| [`8a4bf108bb03b794`](episodes/8a4bf108bb03b794/) | packaging (Apache-2.0) | 1.000 | 28 | 1 | yes | 18 min |
 | [`b37ef87e467d64e6`](episodes/b37ef87e467d64e6/) | attrs (MIT) | 1.000 | 45 | 1 | yes | 6 min |
 | [`d6f9cc39994bea23`](episodes/d6f9cc39994bea23/) | packaging (Apache-2.0) | 1.000 | 35 | 1 | yes | 9 min |
 | [`8bb1081352bda3fc`](episodes/8bb1081352bda3fc/) | click (BSD-2-Clause) | 0.938 | 30 | 1 | yes | 5 min |
-| [`a0b5794e7403ed3d`](episodes/a0b5794e7403ed3d/) | packaging () | 0.913 | 33 | 1 | yes | 26 min |
+| [`a0b5794e7403ed3d`](episodes/a0b5794e7403ed3d/) | packaging (Apache-2.0) | 0.913 | 33 | 1 | yes | 26 min |
 | [`3a35d6717919075a`](episodes/3a35d6717919075a/) | attrs (MIT) | 0.850 | 33 | 1 | yes | 6 min |
 | [`73246683fe7ee6c6`](episodes/73246683fe7ee6c6/) | attrs (MIT) | 0.835 | 24 | 1 | yes | 5 min |
 | [`a066c3d9cbcb7e18`](episodes/a066c3d9cbcb7e18/) | attrs (MIT) | 0.780 | 20 | 1 | yes | 8 min |
@@ -48,17 +48,17 @@ providers one after another. It took a lot of debugging.
 | [`2f219d6f06d064cc`](episodes/2f219d6f06d064cc/) | attrs (MIT) | 0.726 | 37 | 1 | yes | 18 min |
 | [`57b500b3a9ee36b6`](episodes/57b500b3a9ee36b6/) | click (BSD-2-Clause) | 0.725 | 25 | 1 | yes | 8 min |
 | [`b9e9143d07b01282`](episodes/b9e9143d07b01282/) | packaging (Apache-2.0) | 0.709 | 17 | 1 | yes | 11 min |
-| [`407fa06b826e1657`](episodes/407fa06b826e1657/) | packaging () | 0.691 | 29 | 1 | yes | 27 min |
+| [`407fa06b826e1657`](episodes/407fa06b826e1657/) | packaging (Apache-2.0) | 0.691 | 29 | 1 | yes | 27 min |
 | [`efd63c576c434d63`](episodes/efd63c576c434d63/) | packaging (Apache-2.0) | 0.678 | 57 | 1 | yes | 15 min |
 | [`4f8401a368bba994`](episodes/4f8401a368bba994/) | click (BSD-3-Clause) | 0.672 | 123 | 1 | yes | 41 min |
 | [`8b48d640ad1f1576`](episodes/8b48d640ad1f1576/) | attrs (MIT) | 0.665 | 46 | 1 | yes | 10 min |
 | [`33da938be0a526fb`](episodes/33da938be0a526fb/) | attrs (MIT) | 0.658 | 27 | 1 | yes | 10 min |
 | [`fd65634c348f1601`](episodes/fd65634c348f1601/) | click (BSD-3-Clause) | 0.650 | 56 | 1 | yes | 21 min |
-| [`012ad533e237baaf`](episodes/012ad533e237baaf/) | packaging () | 0.649 | 26 | 1 | yes | 14 min |
+| [`012ad533e237baaf`](episodes/012ad533e237baaf/) | packaging (Apache-2.0) | 0.649 | 26 | 1 | yes | 14 min |
 | [`5760e3b4271e5d3e`](episodes/5760e3b4271e5d3e/) | click (BSD-3-Clause) | 0.641 | 50 | 1 | yes | 11 min |
 | [`349db9dae0e05b9e`](episodes/349db9dae0e05b9e/) | click (BSD-3-Clause) | 0.637 | 69 | 1 | yes | 22 min |
 | [`2b67051b08a2794f`](episodes/2b67051b08a2794f/) | attrs (MIT) | 0.619 | 51 | 1 | yes | 14 min |
-| [`2288ac90554bcfa6`](episodes/2288ac90554bcfa6/) | packaging () | 0.615 | 40 | 1 | yes | 25 min |
+| [`2288ac90554bcfa6`](episodes/2288ac90554bcfa6/) | packaging (Apache-2.0) | 0.615 | 40 | 1 | yes | 25 min |
 | [`44a7dbbd48675f67`](episodes/44a7dbbd48675f67/) | click (BSD-3-Clause) | 0.611 | 23 | 1 | yes | 8 min |
 | [`ebaa0de9c4092fd4`](episodes/ebaa0de9c4092fd4/) | packaging (Apache-2.0) | 0.598 | 12 | 1 | yes | 11 min |
 | [`7bd0a927168a14f3`](episodes/7bd0a927168a14f3/) | attrs (MIT) | 0.583 | 16 | 1 | yes | 3 min |
@@ -73,12 +73,20 @@ providers one after another. It took a lot of debugging.
 | [`4c434330ee44b096`](episodes/4c434330ee44b096/) | attrs (MIT) | 0.539 | 27 | 1 | yes | 5 min |
 | [`0571b7eb5d6b7555`](episodes/0571b7eb5d6b7555/) | attrs (MIT) | 0.538 | 134 | 3 | yes | 34 min |
 | [`94dab878e2c9a0ec`](episodes/94dab878e2c9a0ec/) | packaging (Apache-2.0) | 0.534 | 39 | 1 | yes | 13 min |
-| [`25e452d88c01814e`](episodes/25e452d88c01814e/) | packaging () | 0.491 | 35 | 1 | yes | 20 min |
+| [`25e452d88c01814e`](episodes/25e452d88c01814e/) | packaging (Apache-2.0) | 0.491 | 35 | 1 | yes | 20 min |
 | [`c929463c84ceb538`](episodes/c929463c84ceb538/) | click (BSD-2-Clause) | 0.481 | 74 | 1 | yes | 11 min |
 | [`966101f98864fafa`](episodes/966101f98864fafa/) | click (BSD-2-Clause) | 0.452 | 51 | 1 | yes | 20 min |
 
 `Sim` is the line similarity between the agent's diff and the upstream
 fix (1.000 = identical).
+
+`terminal_state` in each sample's metadata records how the agent's
+session ended: `final_answer` (the session closed cleanly), `error` (a
+final error event), or `iteration_cap` (the backend's iteration ceiling
+stopped the session). Two episodes in this corpus ended at the
+iteration cap: their transcripts stop mid-work even though the harness
+then ran the test suite green — the episodes are verified passes, just
+flagged so a reader is not surprised by the abrupt ending.
 
 ## What You Get
 

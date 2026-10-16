@@ -13,9 +13,21 @@
   "outcome": "valid",
   "raw_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/81a8b6b065bafe21/81a8b6b065bafe21.episode.jsonl",
   "raw_sha256": "5787c4bcfee2292509bab135b0487aba88d943745a10eb4552d3acdbeb1ee332",
+  "relabel": {
+    "at": "2026-10-16T15:37:26.492206+00:00",
+    "changes": [
+      {
+        "evidence": "final done event of the shipped segment",
+        "field": "terminal",
+        "from": "",
+        "to": "final_answer"
+      }
+    ],
+    "tool": "megabit relabel"
+  },
   "review_rounds": 1,
   "sample_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/81a8b6b065bafe21/81a8b6b065bafe21.sample.jsonl",
-  "sample_sha256": "48b5eeb2da2c1bdf0980cce25ed01c14fa9f7065074ed91718af27ec8b644f4b",
+  "sample_sha256": "d08080dc46b2185767ff8ac60d667f73a38c7173204e7d7a6d6e88e8e17e3731",
   "schema": 1,
   "segment": {
     "degenerate": false,
@@ -26,6 +38,7 @@
   },
   "session_id": "eef6980dbb8841beaf77057076675ea0",
   "task_id": "81a8b6b065bafe21",
+  "terminal_state": "final_answer",
   "tests_passed": true,
   "tests_ran": true,
   "tool_calls": 95
