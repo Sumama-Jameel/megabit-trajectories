@@ -1,0 +1,75 @@
+diff --git a/tests/test_deprecations.py b/tests/test_deprecations.py
+new file mode 100644
+index 0000000..9985faa
+--- /dev/null
++++ b/tests/test_deprecations.py
+@@ -0,0 +1,25 @@
++import pytest
++
++import click
++
++
++@pytest.mark.parametrize("module", [click, click.utils], ids=["click", "click.utils"])
++@pytest.mark.parametrize("name", ["get_binary_stream", "get_text_stream"])
++def test_stream_helper_deprecated(module, name):
++    with pytest.warns(DeprecationWarning, match=name):
++        getattr(module, name)
++
++
++@pytest.mark.parametrize(
++    "name",
++    [
++        "LazyFile",
++        "KeepOpenFile",
++        "make_default_short_help",
++        "PacifyFlushWrapper",
++        "safecall",
++    ],
++)
++def test_utilities_deprecated(name):
++    with pytest.warns(DeprecationWarning, match=name):
++        getattr(click.utils, name)
+diff --git a/tests/test_testing.py b/tests/test_testing.py
+index 6fae8cb..eb30d88 100644
+--- a/tests/test_testing.py
++++ b/tests/test_testing.py
+@@ -10,14 +10,14 @@ import pytest
+ import click
+ from click.exceptions import ClickException
+ from click.testing import CliRunner
+-from click.utils import get_binary_stream
++from click.utils import _get_binary_stream
+ 
+ 
+ def test_runner():
+     @click.command()
+     def test():
+-        i = get_binary_stream("stdin")
+-        o = get_binary_stream("stdout")
++        i = _get_binary_stream("stdin")
++        o = _get_binary_stream("stdout")
+         while True:
+             chunk = i.read(4096)
+             if not chunk:
+@@ -34,8 +34,8 @@ def test_runner():
+ def test_echo_stdin_stream():
+     @click.command()
+     def test():
+-        i = get_binary_stream("stdin")
+-        o = get_binary_stream("stdout")
++        i = _get_binary_stream("stdin")
++        o = _get_binary_stream("stdout")
+         while True:
+             chunk = i.read(4096)
+             if not chunk:
+@@ -92,8 +92,8 @@ def test_echo_stdin_prompts():
+ def test_runner_with_stream():
+     @click.command()
+     def test():
+-        i = get_binary_stream("stdin")
+-        o = get_binary_stream("stdout")
++        i = _get_binary_stream("stdin")
++        o = _get_binary_stream("stdout")
+         while True:
+             chunk = i.read(4096)
+             if not chunk:
