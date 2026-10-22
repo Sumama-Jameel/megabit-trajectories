@@ -160,6 +160,26 @@
   "attempts": 2
  },
  {
+  "task_id": "aeb75d2533b23d63",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+  "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+  "target_message": "fix: make InvalidMetadata and CyclicDependencyGroup picklable (#1328)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 0.7541,
+  "exact_match": false,
+  "tool_calls": 18,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.8745,
+  "tests_passed": true,
+  "seconds": 1245.4,
+  "attempts": 1
+ },
+ {
   "task_id": "3a35d6717919075a",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
