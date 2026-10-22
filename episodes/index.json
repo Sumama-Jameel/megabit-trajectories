@@ -740,6 +740,26 @@
   "attempts": 1
  },
  {
+  "task_id": "1039a0159065c3b0",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+  "target_commit": "9d0ec47b36a1bcdf705b397b84cd89272410a00d",
+  "target_message": "fix(metadata): reject malformed Description-Content-Type values (#1329)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 0.3571,
+  "exact_match": false,
+  "tool_calls": 35,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.5744,
+  "tests_passed": true,
+  "seconds": 1450.7,
+  "attempts": 1
+ },
+ {
   "task_id": "2d6f3e5f14681273",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
