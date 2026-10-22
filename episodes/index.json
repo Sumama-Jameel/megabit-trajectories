@@ -300,6 +300,26 @@
   "attempts": 1
  },
  {
+  "task_id": "1b1f2e9f7ff0fd2a",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "d5fedc90bba333ed0962ba5dfb7072d38f2c1d84",
+  "target_commit": "9d4927b661d44a5a74d31890c9a777838fe31760",
+  "target_message": "fix(version): raise InvalidVersion for non-str pre letters in from_parts (#1241)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 0.5581,
+  "exact_match": false,
+  "tool_calls": 29,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.7427,
+  "tests_passed": true,
+  "seconds": 1872.7,
+  "attempts": 1
+ },
+ {
   "task_id": "979988594a97aafb",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",

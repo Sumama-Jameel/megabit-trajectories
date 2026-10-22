@@ -1,0 +1,18 @@
+diff --git a/tests/test_version.py b/tests/test_version.py
+index 9f127bf..06ad917 100644
+--- a/tests/test_version.py
++++ b/tests/test_version.py
+@@ -1278,6 +1278,13 @@ def test_from_parts(args: dict[str, typing.Any], string: str) -> None:
+     assert v == Version(string)
+ 
+ 
++def test_from_parts_rejects_non_str_pre_letter() -> None:
++    # A non-string pre letter must raise InvalidVersion rather than escaping
++    # as an AttributeError from the normalization step.
++    with pytest.raises(InvalidVersion, match="pre must be a tuple"):
++        Version.from_parts(release=(1,), pre=(1, 1))  # type: ignore[arg-type]
++
++
+ @pytest.mark.parametrize(
+     "version",
+     [
