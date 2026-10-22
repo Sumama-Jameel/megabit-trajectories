@@ -60,6 +60,26 @@
   "attempts": 1
  },
  {
+  "task_id": "99a4bccd5addbb0e",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "58c6cd700bdfd33cb3ebfbb9ad5d8cfde4e82f08",
+  "target_commit": "abf000549c2ec5b31357046498d6e4f0f9d7d743",
+  "target_message": "fix(metadata): accept UTF-8 charset case-insensitively (#1330)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 1.0,
+  "exact_match": true,
+  "tool_calls": 16,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 1.0,
+  "tests_passed": true,
+  "seconds": 1228.3,
+  "attempts": 1
+ },
+ {
   "task_id": "b37ef87e467d64e6",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",
