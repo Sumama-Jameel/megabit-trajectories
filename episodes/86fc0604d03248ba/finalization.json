@@ -1,0 +1,45 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "824bb6fe1d3a417c9c357e8f9c22d7aa",
+      "tests_passed": true,
+      "tool_calls": 21
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/86fc0604d03248ba/86fc0604d03248ba.episode.jsonl",
+  "raw_sha256": "0032b34a9008ee78c55778955c1389f917a2df22dbdbc30c089f75662577eec4",
+  "relabel": {
+    "at": "2026-10-22T12:43:56.630644+00:00",
+    "changes": [
+      {
+        "evidence": "license files at base_commit 3db4261366ee",
+        "field": "license",
+        "from": "",
+        "to": "Apache-2.0"
+      }
+    ],
+    "tool": "megabit relabel"
+  },
+  "review_rounds": 1,
+  "sample_path": "/home/sumama/Private/MegaBit/megabit-data/episodes/86fc0604d03248ba/86fc0604d03248ba.sample.jsonl",
+  "sample_sha256": "fe2dba58b4aa20db85b0d2cc750e0718333cde4b52f004a9e020babb373fed69",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 1,
+    "selected_segment": 0,
+    "tests_passed": true,
+    "tool_calls": 21
+  },
+  "session_id": "824bb6fe1d3a417c9c357e8f9c22d7aa",
+  "task_id": "86fc0604d03248ba",
+  "terminal_state": "final_answer",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 21
+}

@@ -20,6 +20,26 @@
   "attempts": 3
  },
  {
+  "task_id": "86fc0604d03248ba",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "3db4261366eebeb802574458dd037b3e13515e2e",
+  "target_commit": "b80e6eb0a6c0f61dcaa9b1587f3aab370263dc65",
+  "target_message": "fix(pylock): respect explicitly empty environments in select() (#1362)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 1.0,
+  "exact_match": true,
+  "tool_calls": 21,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 1.0,
+  "tests_passed": true,
+  "seconds": 2233.8,
+  "attempts": 1
+ },
+ {
   "task_id": "8a4bf108bb03b794",
   "repo_name": "packaging",
   "repo_url": "https://github.com/pypa/packaging",
