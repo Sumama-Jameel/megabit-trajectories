@@ -720,6 +720,26 @@
   "attempts": 1
  },
  {
+  "task_id": "e3a02407766bdf33",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
+  "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+  "target_message": "fix(pylock): respect an explicitly empty tag sequence in select() (#1349)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 0.5217,
+  "exact_match": false,
+  "tool_calls": 30,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.5867,
+  "tests_passed": true,
+  "seconds": 2065.3,
+  "attempts": 1
+ },
+ {
   "task_id": "9abc66072ab1bc9b",
   "repo_name": "click",
   "repo_url": "https://github.com/pallets/click",
