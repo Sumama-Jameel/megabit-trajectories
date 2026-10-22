@@ -160,6 +160,26 @@
   "attempts": 2
  },
  {
+  "task_id": "12817d803e8f9f1c",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
+  "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
+  "target_message": "fix(dependency_groups): collect InvalidRequirement instead of leaking it (#1302)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 0.7925,
+  "exact_match": false,
+  "tool_calls": 17,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 0.8979,
+  "tests_passed": true,
+  "seconds": 1581.2,
+  "attempts": 1
+ },
+ {
   "task_id": "aeb75d2533b23d63",
   "repo_name": "packaging",
   "repo_url": "https://github.com/pypa/packaging",
