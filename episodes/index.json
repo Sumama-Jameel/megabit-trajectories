@@ -1,5 +1,25 @@
 [
  {
+  "task_id": "3fc1a5fb92713be9",
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "license_spdx": "Apache-2.0",
+  "base_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
+  "target_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+  "target_message": "fix(metadata): don't rewrite user values containing '{field}' in errors (#1327)",
+  "model": "deepseek-v4.1-flash:free",
+  "terminal_state": "final_answer",
+  "line_similarity": 1.0,
+  "exact_match": true,
+  "tool_calls": 26,
+  "review_rounds": 1,
+  "status": "verified",
+  "similarity": 1.0,
+  "tests_passed": true,
+  "seconds": 2426.8,
+  "attempts": 1
+ },
+ {
   "task_id": "611e35323caaf082",
   "repo_name": "attrs",
   "repo_url": "https://github.com/python-attrs/attrs",

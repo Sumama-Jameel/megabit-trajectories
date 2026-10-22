@@ -6,9 +6,9 @@ every single move.
 
 ## What's here
 
-57 episodes: 57 verified passes (tests green and the
+58 episodes: 58 verified passes (tests green and the
 agent's diff independently scored against the upstream fix, similarity
-≥ 0.45). 2297 tool
+≥ 0.45). 2323 tool
 calls total. Repositories: attrs, cli, click, packaging.
 
 ## How We Made It
@@ -31,6 +31,7 @@ providers one after another. It took a lot of debugging.
 
 | Episode | Repository | Sim | Tool calls | Review rounds | Tests pass | Time |
 |---|---|---|---|---|---|---|
+| [`3fc1a5fb92713be9`](episodes/3fc1a5fb92713be9/) | packaging (Apache-2.0) | 1.000 | 26 | 1 | yes | 40 min |
 | [`611e35323caaf082`](episodes/611e35323caaf082/) | attrs (MIT) | 1.000 | 61 | 3 | yes | 12 min |
 | [`86fc0604d03248ba`](episodes/86fc0604d03248ba/) | packaging (Apache-2.0) | 1.000 | 21 | 1 | yes | 37 min |
 | [`8a4bf108bb03b794`](episodes/8a4bf108bb03b794/) | packaging (Apache-2.0) | 1.000 | 28 | 1 | yes | 18 min |

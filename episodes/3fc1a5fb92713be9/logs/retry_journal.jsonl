@@ -1,0 +1,19 @@
+{"attempt": 1, "kind": "ticket_attempt", "retry_feedback_chars": 0, "role": "ticket_gen", "ts": 1792688882.5507412}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "ticket_gen", "session_id": "", "ts": 1792689116.9878662}
+{"attempt": 1, "kind": "retry_success", "role": "ticket_gen", "session_id": "", "ts": 1792689116.9881263}
+{"kind": "package_metadata", "skip": "dynamic version", "ts": 1792689176.2549822}
+{"hosts": ["1.0.post", "bitbucket.org", "everything.metadata", "example.com", "foo.com", "git.example.com", "github.com", "local.version.label", "nex3.medium.com", "packaging.markers.invalidmarker", "packaging.requirements.invalidrequirement", "pylock.spec-example.toml", "readthedocs.org", "v.an", "v.devn", "v.postn", "v.pren", "www.example.com"], "kind": "required_test_hosts", "ts": 1792689198.998503}
+{"count": 1, "kind": "pipeline_artifacts_dropped", "paths": [".megabit_tmp/prefetch_light.log"], "ts": 1792689742.9078617}
+{"kind": "agent_egress_relaxed", "mode": "github-block", "reason": "seeded tests call external hosts", "ts": 1792689760.6114333}
+{"kind": "sleep_schedule_effective", "schedule": [30.0, 60.0, 90.0, 120.0, 180.0], "ts": 1792689765.026304}
+{"attempts_completed": 0, "conversations": 0, "egress_hits": 0, "egress_taint": 0, "events": 0, "kind": "entry_evidence", "malformed_arg_results": 0, "malformed_tool_args": 0, "rounds_completed": 0, "source": "memory", "tests_passed": null, "tests_ran": false, "tool_calls": 0, "ts": 1792689765.0540469}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "coder", "session_id": "6b8c2ec0b2d949d8b6545e159e763ff4", "ts": 1792690376.140445}
+{"attempt": 1, "kind": "retry_success", "role": "coder", "session_id": "6b8c2ec0b2d949d8b6545e159e763ff4", "ts": 1792690376.1408446}
+{"kind": "evidence_from_log", "malformed_lines": 0, "non_json_lines": 0, "reason": "durable evidence source", "ts": 1792690397.2790623}
+{"attempt": 1, "evidence_source": "log", "evidence_truncated": false, "kind": "coder_attempt_completed", "n_tool_calls": 26, "session_id": "6b8c2ec0b2d949d8b6545e159e763ff4", "similarity": 1.0, "tests_passed": true, "tests_ran": true, "ts": 1792690397.465746}
+{"commands": ["python -m pytest"], "context": "attempt:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1792690583.3595865}
+{"commands": ["python -m pytest"], "context": "round:1", "kind": "harness_test_runs", "reason": null, "runs": [{"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}, {"cmd": "python -m pytest", "exit": 0, "kind": "substantive", "timed_out": false}], "ts": 1792691125.1490993}
+{"attempt": 1, "detail": "", "failure_kind": "clean_done", "kind": "retry", "phase": "invoke", "return_code": 0, "role": "reviewer", "session_id": "", "ts": 1792691251.530013}
+{"attempt": 1, "kind": "retry_success", "role": "reviewer", "session_id": "", "ts": 1792691251.5311499}
+{"kind": "reviewer_role_files_swept", "removed": ["/home/sumama/Private/MegaBit/megabit-data/episodes/3fc1a5fb92713be9/.coder_view/.reviewer.config.json", "/home/sumama/Private/MegaBit/megabit-data/episodes/3fc1a5fb92713be9/.coder_view/.reviewer.appendix.md"], "round_no": 1, "ts": 1792691251.5324337, "when": "after_round"}
+{"kind": "config_snapshot_preserved", "task_id": "3fc1a5fb92713be9", "ts": 1792691252.458233}
