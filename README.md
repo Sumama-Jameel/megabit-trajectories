@@ -92,7 +92,21 @@ providers one after another. It took a lot of debugging.
 | [`966101f98864fafa`](episodes/966101f98864fafa/) | click (BSD-2-Clause) | 0.452 | 51 | 1 | yes | 20 min |
 
 `Sim` is the line similarity between the agent's diff and the upstream
-fix (1.000 = identical).
+fix (1.000 = identical). The pass gate is **composite similarity >= 0.45**,
+not line similarity; line similarity is a stricter sub-score and can fall
+below 0.45 even when the composite passes. 20 older episodes predate the
+composite field and carry line similarity only. See [DATA_CARD.md](DATA_CARD.md)
+for exact ranges and limits.
+
+## Verify
+
+```bash
+python3 verify.py
+```
+
+Checks the sha256 values recorded in each `finalization.json`, header/footer
+presence, tool-call counts, and the export verdict. It does not re-run the
+sandbox.
 
 `terminal_state` in each sample's metadata records how the agent's
 session ended: `final_answer` (the session closed cleanly), `error` (a
