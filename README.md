@@ -69,7 +69,7 @@ Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is 
 | Verified at export | 66 / 66 |
 | Raw tool_call events | 2,541 |
 | Tool calls in published samples | 2,311 |
-| Split parallel blocks repaired in samples | 553 |
+| Split parallel blocks repaired in samples | 552 |
 | Parallel-call batches in samples | 455 |
 | Tool executions that failed in samples | 60 |
 | Raw tool_call events missing tool_call_id | 0 |
@@ -138,7 +138,7 @@ The ground-truth patch is not shipped. The agent's own work is: `produced_diff` 
 This is continued-pretraining data, not an instruction-tuning set. There is no per-step label or preference to optimize against; the supervision is the whole transcript, in order. The corpus is deliberately boring to load and hard to fake.
 
 1. **Use every episode.** All 66 are sessions, not answers. The 2 `research_only` ones show what a session looks like when it runs out of budget, which is useful context for a model that has to decide when to stop.
-2. **Pack whole sessions.** The median sample is about 62k characters, roughly 15k tokens; the largest is about 230k characters. Pack at your context length and keep the order. Do not shuffle messages inside an episode.
+2. **Pack whole sessions.** The median sample is about 72k characters, roughly 17k tokens; the largest is about 260k characters. Pack at your context length and keep the order. Do not shuffle messages inside an episode.
 3. **Keep tool results verbatim.** Cap markers are part of the record. Do not re-summarize them, or you throw away the failure signal.
 4. **Measure the loop, not a vibe.** Tool-call schema validity, tool-call parse rate, tests passed at the end of a session, and recovery rate (does the session fix its own failed call) are the scores this data is built to move. A held-out protocol test is the right instrument, not a general coding leaderboard.
 

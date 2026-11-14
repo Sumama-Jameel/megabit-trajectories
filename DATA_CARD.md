@@ -23,7 +23,7 @@ That is the part most public trajectory corpora drop.
 | Repositories | packaging (21), click (20), attrs (18), tenacity (6), cli (1) |
 | Languages | Python |
 | Tool calls (all attempts) | 2,541 |
-| Tool calls (shipped segments) | 2,312 |
+| Tool calls (published samples) | 2,311 |
 | Median tool calls per episode | 29 (range 11–100) |
 | Tests passing at end | 66 / 66 |
 | Review rounds | 1 round: 64 episodes; 3 rounds: 2 |
@@ -88,7 +88,7 @@ episodes/<task_id>/
   .ticket_gen.config.json    ticket-agent role config
   feedback/round_N.md        reviewer reports (+ round_N.json raw report)
   logs/                      coder, reviewer, ticket agent, retry journal,
-                             setup log and setup steps, provider alerts
+                             setup log and setup steps
   logs/test_seed.patch       the QA tests seeded into the workspace
   config.snapshot.json       run config, secrets redacted
   setup_state.json           setup-step record
@@ -294,7 +294,21 @@ byte-identical before and after; only `*.sample.jsonl` and the digests in
    gold-touched file is never dropped.
 
 The corpus's own `verify.py` reports 66/66 after the rebuild. Tool-call totals
-are unchanged: 2,541 raw, 2,312 in shipped segments.
+are unchanged: 2,541 raw, 2,311 in published samples.
+
+### 2026-11-14 — counts corrected
+
+README said 553 split parallel calls repaired in samples; the published
+samples carry 552. README said the median sample is about 62k characters
+and the largest about 230k; measured median is about 72k characters and
+the largest about 260k. DATA_CARD said 2,312 tool calls in shipped
+segments; the published samples carry 2,311 (the corrupt call of
+b37ef87e467d64e6 is excluded from the sample layer and kept verbatim in
+the raw log). The logs/ description promised a provider alerts file; no
+episode ships one. episodes/index.json now mirrors the sample metadata
+for the attempts value of a066c3d9cbcb7e18 (from 1 to 2; the sample
+metadata and its attempt_segments both say 2). No episode.jsonl or
+sample.jsonl changed; verify.py reports 66/66.
 
 ## Contact
 
