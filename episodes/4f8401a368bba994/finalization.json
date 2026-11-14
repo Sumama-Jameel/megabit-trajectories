@@ -1,0 +1,55 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 0,
+      "session_id": "3b9728f5cd674196999179c2f3779c55",
+      "superseded_by": 1,
+      "tests_passed": false,
+      "tool_calls": 28
+    },
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 1,
+      "session_id": "3b9728f5cd674196999179c2f3779c55",
+      "tests_passed": true,
+      "tool_calls": 95
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "<MEGABIT_DATA>/episodes/4f8401a368bba994/4f8401a368bba994.episode.jsonl",
+  "raw_sha256": "76b12cfef31437b2a724298d8621700464d374c9cfb3cc47651a41e8887cbfe4",
+  "relabel": {
+    "at": "2026-10-16T15:37:19.774869+00:00",
+    "changes": [
+      {
+        "evidence": "final done event of the shipped segment",
+        "field": "terminal",
+        "from": "",
+        "to": "iteration_cap"
+      }
+    ],
+    "tool": "megabit relabel"
+  },
+  "review_rounds": 1,
+  "sample_path": "<MEGABIT_DATA>/episodes/4f8401a368bba994/4f8401a368bba994.sample.jsonl",
+  "sample_sha256": "cc3782589ae1dbc2ffd02eb9ce0bf4fef5d85adc811b3f769d271329b9fd9940",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 2,
+    "selected_segment": 1,
+    "tests_passed": true,
+    "tool_calls": 95
+  },
+  "session_id": "3b9728f5cd674196999179c2f3779c55",
+  "task_id": "4f8401a368bba994",
+  "terminal_state": "iteration_cap",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 95,
+  "sample_rebuilt_at": "2026-11-13T13:05:44Z"
+}

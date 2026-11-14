@@ -1,0 +1,56 @@
+diff --git a/tests/test_termui.py b/tests/test_termui.py
+index 9da8ffb..1825b19 100644
+--- a/tests/test_termui.py
++++ b/tests/test_termui.py
+@@ -421,13 +421,13 @@ def test_getchar_windows_exceptions(runner, monkeypatch, key_char, exc):
+         click.getchar()
+ 
+ 
+-@pytest.mark.skipif(platform.system() == "Windows", reason="No sed on Windows.")
++@pytest.mark.skipif(WIN, reason="No sed on Windows.")
+ def test_fast_edit(runner):
+     result = click.edit("a\nb", editor="sed -i~ 's/$/Test/'")
+     assert result == "aTest\nbTest\n"
+ 
+ 
+-@pytest.mark.skipif(platform.system() == "Windows", reason="No sed on Windows.")
++@pytest.mark.skipif(WIN, reason="No sed on Windows.")
+ def test_edit(runner):
+     with tempfile.NamedTemporaryFile(mode="w") as named_tempfile:
+         named_tempfile.write("a\nb\n")
+@@ -448,6 +448,19 @@ def test_edit(runner):
+             assert reopened_file.read() == "aTest\nbTest\n"
+ 
+ 
++@pytest.mark.skipif(WIN, reason="No sed on Windows.")
++@pytest.mark.parametrize("use_iterable", [False, True], ids=["single", "iterable"])
++def test_edit_pathlib(runner, tmp_path, use_iterable):
++    """Issue #2869: ``filename`` accepts ``os.PathLike`` values."""
++    file_path = tmp_path / "file.txt"
++    file_path.write_text("a\nb\n", encoding="UTF-8")
++    filename = [file_path] if use_iterable else file_path
++
++    result = click.edit(filename=filename, editor="sed -i~ 's/$/Test/'")
++    assert result is None
++    assert file_path.read_text(encoding="UTF-8") == "aTest\nbTest\n"
++
++
+ @pytest.mark.parametrize(
+     ("editor_cmd", "filenames", "expected_args"),
+     [
+diff --git a/tests/typing/typing_edit.py b/tests/typing/typing_edit.py
+new file mode 100644
+index 0000000..848ba94
+--- /dev/null
++++ b/tests/typing/typing_edit.py
+@@ -0,0 +1,10 @@
++from pathlib import Path
++
++from typing_extensions import assert_type
++
++import click
++
++# ``filename`` accepts a path or an iterable of paths.
++assert_type(click.edit(filename="f.txt"), None)
++assert_type(click.edit(filename=Path("f.txt")), None)
++assert_type(click.edit(filename=["f.txt", Path("g.txt")]), None)

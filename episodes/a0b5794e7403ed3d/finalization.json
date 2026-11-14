@@ -1,0 +1,85 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "tests_passed": true,
+      "tool_calls": 21
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 1,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "superseded_by": 0,
+      "tests_passed": true,
+      "tool_calls": 5
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 2,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "superseded_by": 0,
+      "tests_passed": true,
+      "tool_calls": 3
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 3,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "superseded_by": 0,
+      "tests_passed": true,
+      "tool_calls": 4
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "<MEGABIT_DATA>/episodes/a0b5794e7403ed3d/a0b5794e7403ed3d.episode.jsonl",
+  "raw_sha256": "791a8f4987b7063e86a7e1d0906041d4c2fd4a9eb7640a7ded874b4b2409c013",
+  "relabel": {
+    "at": "2026-10-16T15:36:30.979967+00:00",
+    "changes": [
+      {
+        "evidence": "dominant served model tag in the event stream",
+        "field": "model",
+        "from": "openai/gpt-oss-120b",
+        "to": "deepseek-v4.1-flash:free"
+      },
+      {
+        "evidence": "license files at base_commit b09745046152",
+        "field": "license",
+        "from": "",
+        "to": "Apache-2.0"
+      },
+      {
+        "evidence": "final done event of the shipped segment",
+        "field": "terminal",
+        "from": "",
+        "to": "final_answer"
+      }
+    ],
+    "tool": "megabit relabel"
+  },
+  "review_rounds": 1,
+  "sample_path": "<MEGABIT_DATA>/episodes/a0b5794e7403ed3d/a0b5794e7403ed3d.sample.jsonl",
+  "sample_sha256": "bbd50ecd83e7e1f9124661a4024b9805cf187e80445d1e23690484f2eb25ce82",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 4,
+    "selected_segment": 0,
+    "tests_passed": true,
+    "tool_calls": 21
+  },
+  "session_id": "ed2055934e3b468b9b2cee7f17477848",
+  "task_id": "a0b5794e7403ed3d",
+  "terminal_state": "final_answer",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 21,
+  "sample_rebuilt_at": "2026-11-13T13:05:58Z"
+}

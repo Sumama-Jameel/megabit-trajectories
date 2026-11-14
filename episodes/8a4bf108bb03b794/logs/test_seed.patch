@@ -1,0 +1,51 @@
+diff --git a/tests/test_markers.py b/tests/test_markers.py
+index 5ea3ec0..39c1278 100644
+--- a/tests/test_markers.py
++++ b/tests/test_markers.py
+@@ -230,6 +230,17 @@ class TestMarker:
+         with pytest.raises(InvalidMarker):
+             Marker(marker_string)
+ 
++    @pytest.mark.parametrize("line_break", ["\n", "\r", "\r\n"])
++    def test_parses_invalid_trailing_line_break(self, line_break: str) -> None:
++        with pytest.raises(InvalidMarker):
++            Marker('python_version >= "3"' + line_break)
++
++    @pytest.mark.parametrize("whitespace", [" ", "\t", " \t"])
++    def test_parses_trailing_horizontal_whitespace(self, whitespace: str) -> None:
++        assert Marker('python_version >= "3"' + whitespace) == Marker(
++            'python_version >= "3"'
++        )
++
+     @pytest.mark.parametrize(
+         ("marker_string", "expected"),
+         [
+diff --git a/tests/test_requirements.py b/tests/test_requirements.py
+index 3bbae5c..8c0fd8e 100644
+--- a/tests/test_requirements.py
++++ b/tests/test_requirements.py
+@@ -229,6 +229,24 @@ class TestRequirementParsing:
+         # THEN
+         assert req.url == url
+ 
++    @pytest.mark.parametrize("line_break", ["\n", "\r", "\r\n"])
++    @pytest.mark.parametrize(
++        "requirement",
++        [
++            "name>=1",
++            'name; python_version >= "3"',
++        ],
++    )
++    def test_error_when_suffixed_with_line_break(
++        self, requirement: str, line_break: str
++    ) -> None:
++        with pytest.raises(InvalidRequirement):
++            Requirement(requirement + line_break)
++
++    @pytest.mark.parametrize("whitespace", [" ", "\t", " \t"])
++    def test_trailing_horizontal_whitespace(self, whitespace: str) -> None:
++        assert Requirement("name>=1" + whitespace) == Requirement("name>=1")
++
+     def test_empty_extras(self) -> None:
+         # GIVEN
+         to_parse = "name[]"

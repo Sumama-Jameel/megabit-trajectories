@@ -1,0 +1,358 @@
+{
+  "version": 1,
+  "sha256": "567b873c0f5cce01f8591d33976d6a8f8af8a0fec56729ca7b9e824b6b5adb8d",
+  "generated_at": "2026-11-13T13:06:13Z",
+  "canonical_names": [
+    "read",
+    "glob",
+    "grep",
+    "edit",
+    "write",
+    "bash",
+    "todo_write",
+    "todoread"
+  ],
+  "aliases": {
+    "execute": "bash",
+    "shell": "bash",
+    "background": "bash",
+    "todowrite": "todo_write",
+    "edit_file": "edit",
+    "multi_edit": "edit",
+    "write_file": "write"
+  },
+  "truncation": {
+    "max_chars": 8000,
+    "head_chars": 6000,
+    "tail_chars": 2000,
+    "max_message_chars": 8131,
+    "marker": "\n[... tool output truncated: {dropped} of {original} chars dropped; head and tail kept, full text is in the episode's raw event log ...]\n",
+    "alignment": "line-boundary",
+    "applies_to": "sample.messages only; episode.jsonl keeps the full verbatim output"
+  },
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "read",
+        "description": "Reads a file with line numbers. If the path is a directory it returns the directory structure instead. Default limit is 2000 lines; long lines and 200KB+ files are cut with an explicit marker telling you where to continue.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_path": {
+              "type": "string",
+              "description": "Absolute path to read (preferred). Relative paths resolve against the working directory."
+            },
+            "offset": {
+              "type": "integer",
+              "description": "Line number to start reading from (0-indexed)."
+            },
+            "limit": {
+              "type": "integer",
+              "description": "Number of lines to read. Default 2000."
+            }
+          },
+          "required": [
+            "file_path"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "glob",
+        "description": "Searches for files by gitignore-style glob pattern (requires ripgrep). Returns paths relative to the search directory, most recently modified first; respects .gitignore and excludes VCS and dependency directories.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "description": "Glob pattern matched against paths relative to the search directory (e.g. '**/*.test.ts')."
+            },
+            "path": {
+              "type": "string",
+              "description": "Directory to search in. Defaults to the working directory."
+            },
+            "max_depth": {
+              "type": "integer",
+              "description": "Maximum directory depth to search."
+            },
+            "limit": {
+              "type": "integer",
+              "description": "Maximum number of files to return. Default 100, max 500."
+            }
+          },
+          "required": [
+            "pattern"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "grep",
+        "description": "Search tool built on ripgrep. Full regex syntax; literal braces need escaping. Output modes: files_with_matches (default), content, count. Supports context lines, pagination and file type filtering.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "pattern": {
+              "type": "string",
+              "description": "The search pattern (regex)."
+            },
+            "path": {
+              "type": "string",
+              "description": "File or directory to search in. Use absolute paths."
+            },
+            "include": {
+              "type": "string",
+              "description": "Glob pattern to filter files (e.g. '*.py')."
+            },
+            "case_insensitive": {
+              "type": "boolean",
+              "description": "Case-insensitive matching."
+            },
+            "max_results": {
+              "type": "integer",
+              "description": "Maximum results. Default 250, max 1000."
+            },
+            "output_mode": {
+              "type": "string",
+              "enum": [
+                "files_with_matches",
+                "content",
+                "count"
+              ],
+              "description": "Output mode."
+            },
+            "before_context": {
+              "type": "integer",
+              "description": "Lines before each match (content mode)."
+            },
+            "after_context": {
+              "type": "integer",
+              "description": "Lines after each match (content mode)."
+            },
+            "context": {
+              "type": "integer",
+              "description": "Lines before and after each match; overrides the separate options."
+            },
+            "offset": {
+              "type": "integer",
+              "description": "Skip this many results for pagination."
+            },
+            "multiline": {
+              "type": "boolean",
+              "description": "Enable multiline matching."
+            },
+            "file_type": {
+              "type": "string",
+              "description": "ripgrep file type filter."
+            }
+          },
+          "required": [
+            "pattern",
+            "path"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "edit",
+        "description": "Performs exact string replacements in files and can create new files. Provide file_path + old_string + new_string to replace, file_path + new_string with an empty old_string to create, or file_path + edits for a sequential multi-edit. Whitespace must match exactly.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_path": {
+              "type": "string",
+              "description": "Absolute path to modify or create."
+            },
+            "old_string": {
+              "type": "string",
+              "description": "Exact text to replace. Leave empty to create a new file. Mutually exclusive with edits."
+            },
+            "new_string": {
+              "type": "string",
+              "description": "Replacement text, or the full content when creating."
+            },
+            "replace_all": {
+              "type": "boolean",
+              "description": "Replace every occurrence. Default false."
+            },
+            "start_line": {
+              "type": "integer",
+              "description": "1-based start line that narrows the search scope."
+            },
+            "end_line": {
+              "type": "integer",
+              "description": "1-based end line that narrows the search scope."
+            },
+            "edits": {
+              "type": "array",
+              "description": "Edit operations applied sequentially. Mutually exclusive with old_string.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "old_string": {
+                    "type": "string",
+                    "description": "Exact text to replace."
+                  },
+                  "new_string": {
+                    "type": "string",
+                    "description": "Replacement text."
+                  },
+                  "replace_all": {
+                    "type": "boolean",
+                    "description": "Replace every occurrence in this edit."
+                  }
+                },
+                "required": [
+                  "old_string",
+                  "new_string"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "file_path"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "write",
+        "description": "Writes content to a file, creating it if needed or overwriting it if it exists.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "file_path": {
+              "type": "string",
+              "description": "Absolute path to write."
+            },
+            "content": {
+              "type": "string",
+              "description": "Full content to write."
+            }
+          },
+          "required": [
+            "file_path",
+            "content"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "bash",
+        "description": "Executes a bash command. Runs synchronously by default and returns stdout/stderr. Set background=true to run it in the background and return immediately with a task id (use this for long installs/tests). Never use sleep or polling loops to implement a delayed or recurring request.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "The command to execute."
+            },
+            "timeout": {
+              "type": "integer",
+              "description": "Optional timeout in milliseconds (max 600000). Default 120000. Ignored when background=true."
+            },
+            "background": {
+              "type": "boolean",
+              "description": "Run in the background and return immediately with a task id."
+            },
+            "description": {
+              "type": "string",
+              "description": "Clear, concise description of what this command does in 5-10 words."
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "aliases": [
+        "execute",
+        "shell",
+        "background"
+      ]
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "todo_write",
+        "description": "Creates and manages the structured task list for the session. Always send the FULL list. Only one task should be in_progress at a time.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "todos": {
+              "type": "array",
+              "description": "The complete todo list.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "description": "Unique numeric identifier."
+                  },
+                  "title": {
+                    "type": "string",
+                    "description": "Task description."
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "pending",
+                      "in_progress",
+                      "completed",
+                      "cancelled"
+                    ],
+                    "description": "Task state."
+                  }
+                },
+                "required": [
+                  "id",
+                  "title",
+                  "status"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "todos"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "aliases": [
+        "todowrite"
+      ]
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "todoread",
+        "description": "Returns the current todo list for the session.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      }
+    }
+  ]
+}

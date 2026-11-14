@@ -1,0 +1,34 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "1a17be9102594a639423ec9233b0bc9a",
+      "tests_passed": true,
+      "tool_calls": 19
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "<MEGABIT_DATA>/episodes/9abc66072ab1bc9b/9abc66072ab1bc9b.episode.jsonl",
+  "raw_sha256": "19bc769d24cf9509839aa1b270a0385094666c775e7b2f2bdbf8732caaa48cbb",
+  "review_rounds": 1,
+  "sample_path": "<MEGABIT_DATA>/episodes/9abc66072ab1bc9b/9abc66072ab1bc9b.sample.jsonl",
+  "sample_sha256": "a7757571345eb57fae1945bb280767545abbf58d42ae377e07abaf8c2ecbfee2",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 1,
+    "selected_segment": 0,
+    "tests_passed": true,
+    "tool_calls": 19
+  },
+  "session_id": "1a17be9102594a639423ec9233b0bc9a",
+  "task_id": "9abc66072ab1bc9b",
+  "terminal_state": "final_answer",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 19,
+  "sample_rebuilt_at": "2026-11-13T13:05:57Z"
+}

@@ -1,0 +1,47 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "18819b48abb1434ab2b776235425a678",
+      "tests_passed": true,
+      "tool_calls": 12
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "<MEGABIT_DATA>/episodes/ebaa0de9c4092fd4/ebaa0de9c4092fd4.episode.jsonl",
+  "raw_sha256": "e0c6a2ef3a72c905d397cc672849ab64b5264dc682d3610b76132b7410c8fb9f",
+  "reexported_at": "2026-10-03T07:47:41Z",
+  "relabel": {
+    "at": "2026-10-16T15:37:43.468848+00:00",
+    "changes": [
+      {
+        "evidence": "final done event of the shipped segment",
+        "field": "terminal",
+        "from": "",
+        "to": "final_answer"
+      }
+    ],
+    "tool": "megabit relabel"
+  },
+  "review_rounds": 1,
+  "sample_path": "<MEGABIT_DATA>/episodes/ebaa0de9c4092fd4/ebaa0de9c4092fd4.sample.jsonl",
+  "sample_sha256": "d09f80361e30cf0da4ccac176ab1829f6f55cd38d3010544267815698ff5e0cb",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 1,
+    "selected_segment": 0,
+    "tests_passed": true,
+    "tool_calls": 12
+  },
+  "session_id": "18819b48abb1434ab2b776235425a678",
+  "task_id": "ebaa0de9c4092fd4",
+  "terminal_state": "final_answer",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 12,
+  "sample_rebuilt_at": "2026-11-13T13:06:09Z"
+}

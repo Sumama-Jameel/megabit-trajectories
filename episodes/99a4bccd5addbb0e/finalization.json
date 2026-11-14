@@ -1,0 +1,34 @@
+{
+  "attempt_segments": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "9d3cc627128048c3a29d0c04935e192b",
+      "tests_passed": true,
+      "tool_calls": 16
+    }
+  ],
+  "export_committed": true,
+  "outcome": "valid",
+  "raw_path": "<MEGABIT_DATA>/episodes/99a4bccd5addbb0e/99a4bccd5addbb0e.episode.jsonl",
+  "raw_sha256": "5392edbf2a545b9c0ee5bb04f217819e041f6025c62427b09f4803ec8c4f4e59",
+  "review_rounds": 1,
+  "sample_path": "<MEGABIT_DATA>/episodes/99a4bccd5addbb0e/99a4bccd5addbb0e.sample.jsonl",
+  "sample_sha256": "4b0d474fa092a9a6aa6a8371083de016ba5ef65b5a5be64002a54b81b49a2eb7",
+  "schema": 1,
+  "segment": {
+    "degenerate": false,
+    "segments": 1,
+    "selected_segment": 0,
+    "tests_passed": true,
+    "tool_calls": 16
+  },
+  "session_id": "9d3cc627128048c3a29d0c04935e192b",
+  "task_id": "99a4bccd5addbb0e",
+  "terminal_state": "final_answer",
+  "tests_passed": true,
+  "tests_ran": true,
+  "tool_calls": 16,
+  "sample_rebuilt_at": "2026-11-13T13:05:56Z"
+}

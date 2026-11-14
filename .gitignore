@@ -1,0 +1,8 @@
+# Private engine source must never be published from this public corpus repo.
+megabit/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
