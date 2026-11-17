@@ -25,9 +25,22 @@
     ],
     "tool": "megabit relabel"
   },
+  "remediation": {
+    "adopted_at": "2026-11-17T09:32:47Z",
+    "evidence_dir": "evidence/",
+    "kind": "megabit.remediation_adoption",
+    "previous_sample_sha256": "5c363a1957b2c279f8826e6d5cfc5cd9ed02610c924e5762efacf89db6a6cb4f",
+    "raw_sha256": "a0fdd58db1e658a7f425c923fd226a379cd429d9abc7a86ec43c8035580eeb49",
+    "remediation_version": "2026-11-17-r2",
+    "report": "REMEDIATION_REPORT_2026-11-17.md",
+    "sample_sha256": "2b788bd7e7b03b2967927cd94e111c70e64150bb30e0517537bc9ddf5fb4d3a2",
+    "split": "action_only",
+    "split_reason": "reasoning_unrecoverable_v1"
+  },
   "review_rounds": 1,
   "sample_path": "<MEGABIT_DATA>/episodes/8bb1081352bda3fc/8bb1081352bda3fc.sample.jsonl",
-  "sample_sha256": "5c363a1957b2c279f8826e6d5cfc5cd9ed02610c924e5762efacf89db6a6cb4f",
+  "sample_rebuilt_at": "2026-11-13T13:05:53Z",
+  "sample_sha256": "2b788bd7e7b03b2967927cd94e111c70e64150bb30e0517537bc9ddf5fb4d3a2",
   "schema": 1,
   "segment": {
     "degenerate": false,
@@ -41,6 +54,5 @@
   "terminal_state": "final_answer",
   "tests_passed": true,
   "tests_ran": true,
-  "tool_calls": 30,
-  "sample_rebuilt_at": "2026-11-13T13:05:53Z"
+  "tool_calls": 30
 }

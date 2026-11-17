@@ -1,0 +1,37 @@
+{
+  "classification": {
+    "README.rst": "docs",
+    "attr/__init__.py": "source",
+    "docs/why.rst": "docs",
+    "tests/test_dark_magic.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_dark_magic.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_dark_magic.py"
+  ],
+  "matched": [
+    "README.rst",
+    "attr/__init__.py",
+    "docs/why.rst"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_dark_magic.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "attr/__init__.py"
+  ],
+  "status": "clean"
+}

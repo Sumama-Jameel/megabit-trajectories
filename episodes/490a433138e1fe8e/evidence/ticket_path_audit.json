@@ -1,0 +1,56 @@
+{
+  "base_commit": "ee598d304dd722d312940d1eeb11161bad72e089",
+  "diff1_tree_sha256": "32f4a165b0b06b0d02456f85758f7e3e61627ef09f583437299fda31295496ce",
+  "diff2_tree_sha256": "32f4a165b0b06b0d02456f85758f7e3e61627ef09f583437299fda31295496ce",
+  "episode_id": "490a433138e1fe8e",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 15,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "httpie/cli.py"
+      },
+      {
+        "status": "allowed",
+        "token": "httpie/__main__.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/tests.py"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/cli-212cc5c7c9",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "0c4c6c47536a853cf1ac0bb3ff69261a380173e3",
+  "ticket": {
+    "allowed_path_count": 15,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "httpie/cli.py"
+      },
+      {
+        "status": "allowed",
+        "token": "httpie/__main__.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/tests.py"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

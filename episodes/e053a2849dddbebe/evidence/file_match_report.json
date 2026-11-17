@@ -1,0 +1,40 @@
+{
+  "classification": {
+    "CHANGES.md": "docs",
+    "docs/api.md": "docs",
+    "src/click/__init__.py": "source",
+    "src/click/decorators.py": "source",
+    "tests/test_basic.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_basic.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_basic.py"
+  ],
+  "matched": [
+    "CHANGES.md",
+    "docs/api.md",
+    "src/click/__init__.py",
+    "src/click/decorators.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_basic.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/click/__init__.py",
+    "src/click/decorators.py"
+  ],
+  "status": "clean"
+}

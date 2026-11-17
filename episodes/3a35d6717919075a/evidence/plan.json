@@ -1,0 +1,22 @@
+{
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+    34
+  ],
+  "first_mutation_event_id": "38",
+  "first_mutation_index": 38,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-02T14:34:57.643347998Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+    "todo_plan": true
+  },
+  "text_sha256": "77a1c4528162dc545e58cb00599ef54e6aff8e6229602c5be72b853ab84197a9",
+  "todo_writes": 2
+}

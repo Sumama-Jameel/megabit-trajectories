@@ -1,0 +1,33 @@
+{
+  "classification": {
+    "src/packaging/metadata.py": "source",
+    "tests/test_metadata.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_metadata.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_metadata.py"
+  ],
+  "matched": [
+    "src/packaging/metadata.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_metadata.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/packaging/metadata.py"
+  ],
+  "status": "clean"
+}

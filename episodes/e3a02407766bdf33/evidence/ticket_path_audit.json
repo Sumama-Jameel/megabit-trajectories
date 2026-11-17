@@ -1,0 +1,48 @@
+{
+  "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
+  "diff1_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+  "diff2_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+  "episode_id": "e3a02407766bdf33",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 139,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/packaging/pylock.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_pylock_select.py"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+  "ticket": {
+    "allowed_path_count": 139,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/packaging/pylock.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_pylock_select.py"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

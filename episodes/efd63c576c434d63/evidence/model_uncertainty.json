@@ -1,0 +1,6 @@
+{
+  "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F12",
+  "kind": "megabit.model_uncertainty",
+  "note": "Ordinary debugging confusion, not pipeline-induced. Annotation only; no gate.",
+  "text": "I'm confused by the regex results"
+}

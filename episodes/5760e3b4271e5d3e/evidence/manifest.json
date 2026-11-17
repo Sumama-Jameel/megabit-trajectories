@@ -1,0 +1,202 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "49bc1bc1ca354b00bbafa7bd7745e1fc",
+      "tests_passed": true,
+      "tool_calls": 50
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 50,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 50,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "5760e3b4271e5d3e",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "2420cfd79f6522be",
+      "c407de7e21c49777",
+      "4dbf51bc6e313111"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      32
+    ],
+    "first_mutation_event_id": "40",
+    "first_mutation_index": 40,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-05T12:47:07.739804605Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "c132a6ca1e456297e72ab0566381200754d8f6a2ddeea56922fb7c4d89920569",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "2103e157683c5e4cadc8ee1838df526a54bde9a4",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-3-Clause",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "49bc1bc1ca354b00bbafa7bd7745e1fc",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "a1d87858abd77fa8e3ffc204670ccd75b96c4781",
+    "target_message": "Add support of `pathlib.Path` to `edit`",
+    "task_fingerprint": "sha256:41b4d55be1bfab9893b8c1f6aed6a0fb4667df79c1cc021bcc6e1aa5d5849607",
+    "task_id": "5760e3b4271e5d3e",
+    "task_mac_valid": true,
+    "ticket_summary": "# The edit helper crashes when I hand it a file path object\n\n## What happens now\n\nWhen I pass a single file path object to the `edit` helper in Click, the program\nstops with a TypeError saying the pat",
+    "verification_line_similarity": 0.5257,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "5760e3b4271e5d3e.episode.jsonl",
+  "raw_sha256": "922484737f0cb737d8351b682472b64575b934a480ae3bdaee4a7e73c6599a19",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "5760e3b4271e5d3e.sample.jsonl",
+  "sample_sha256": "5ff7d409bdbf6c9cc9b7b8669bc64dc272275ba67c4a6c9e1e473251c6ca2399",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "5760e3b4271e5d3e",
+  "task_validity": {
+    "base_commit": "2103e157683c5e4cadc8ee1838df526a54bde9a4",
+    "source_verified": true,
+    "target_commit": "a1d87858abd77fa8e3ffc204670ccd75b96c4781",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "2103e157683c5e4cadc8ee1838df526a54bde9a4",
+    "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+    "diff2_tree_sha256": "153b6fca9cbabbd2609f3b2d372df7d8d5f794f129239f5d0845da82308b3d2d",
+    "episode_id": "5760e3b4271e5d3e",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 165,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/termui.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/_termui_impl.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_termui.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "a1d87858abd77fa8e3ffc204670ccd75b96c4781",
+    "ticket": {
+      "allowed_path_count": 165,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/termui.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/_termui_impl.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_termui.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

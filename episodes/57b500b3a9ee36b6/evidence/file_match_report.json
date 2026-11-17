@@ -1,0 +1,38 @@
+{
+  "classification": {
+    "click/core.py": "source",
+    "click/decorators.py": "source",
+    "docs/complex.rst": "docs",
+    "tests/test_context.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_context.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_context.py"
+  ],
+  "matched": [
+    "click/core.py",
+    "click/decorators.py",
+    "docs/complex.rst"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_context.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "click/core.py",
+    "click/decorators.py"
+  ],
+  "status": "clean"
+}

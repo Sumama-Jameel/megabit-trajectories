@@ -1,0 +1,16 @@
+{
+  "agent_egress_relaxed": false,
+  "external_hosts": [
+    "httpbin.org"
+  ],
+  "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F2/F5",
+  "kind": "megabit.network_dependent",
+  "reason": "live_external_host_required_by_seeded_tests",
+  "required_before_sft": "Re-run with httpbin replaced by a local fixture (loopback only, --network none) and the pinned requests compatibility shim in the base image, or keep this episode as labeled network-dependent research data only.",
+  "required_test_hosts": null,
+  "setup_contamination": [
+    "conftest.py@repo-root",
+    "pytest.ini@repo-root"
+  ],
+  "summary": "The episode calls httpbin.org/get from the coder (raw rows 61-62) and the seeded QA tests themselves call httpbin.org/basic-auth and /digest-auth. The retry journal records neither agent_egress_relaxed nor required_test_hosts, although 44 other episodes that call external hosts do carry the relaxation record. The README policy (external egress taints an episode and withholds the positive sample) did not trigger here. The coder also added root-level conftest.py (requests.compat shim) and pytest.ini to make the legacy httpie suite collectible, which is setup work, not ticket work, and is flagged as setup_contamination."
+}

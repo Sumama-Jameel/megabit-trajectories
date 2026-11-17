@@ -1,0 +1,46 @@
+{
+  "classification": {
+    "changelog.d/1462.change.md": "docs",
+    "changelog.d/1463.change.md": "docs",
+    "src/attr/_funcs.py": "source",
+    "tests/test_funcs.py": "test"
+  },
+  "extra": [
+    "changelog.d/1462.change.md"
+  ],
+  "extra_classification": {
+    "changelog.d/1462.change.md": "docs"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_funcs.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_funcs.py"
+  ],
+  "matched": [
+    "src/attr/_funcs.py"
+  ],
+  "missing": [
+    "changelog.d/1463.change.md"
+  ],
+  "missing_classification": {
+    "changelog.d/1463.change.md": "docs"
+  },
+  "missing_docs": [
+    "changelog.d/1463.change.md"
+  ],
+  "missing_including_locked_tests": [
+    "changelog.d/1463.change.md",
+    "tests/test_funcs.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/attr/_funcs.py"
+  ],
+  "status": "clean_with_missing_docs"
+}

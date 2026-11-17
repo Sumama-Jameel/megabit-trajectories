@@ -1,0 +1,46 @@
+{
+  "classification": {
+    "README.rst": "docs",
+    "attr/_dunders.py": "source",
+    "docs/changelog.rst": "docs",
+    "docs/why.rst": "docs",
+    "tests/test_dunders.py": "test",
+    "tests/test_make.py": "test"
+  },
+  "extra": [
+    "docs/changelog.rst"
+  ],
+  "extra_classification": {
+    "docs/changelog.rst": "docs"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_dunders.py",
+    "tests/test_make.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_dunders.py",
+    "tests/test_make.py"
+  ],
+  "matched": [
+    "README.rst",
+    "attr/_dunders.py",
+    "docs/why.rst"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_dunders.py",
+    "tests/test_make.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "attr/_dunders.py"
+  ],
+  "status": "clean_with_extra"
+}

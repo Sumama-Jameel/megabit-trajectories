@@ -2,7 +2,7 @@
 
 [![Episodes](https://img.shields.io/badge/Episodes-66-blue)](#composition)
 [![Verified](https://img.shields.io/badge/Verified-66%2F66-success)](verify.py)
-[![Tool calls](https://img.shields.io/badge/Tool%20calls-2,541-informational)](#composition)
+[![Tool calls](https://img.shields.io/badge/Tool%20calls%20at%20export-2%2C312-informational)](#composition)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 [![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)](#read-this-before-you-pretrain)
 
@@ -17,9 +17,9 @@ A coding agent does not fail because it cannot write a function. It fails becaus
 It is pretraining data for four capabilities:
 
 - **Coding.** Real commits from real open source repositories: packaging, click, attrs, tenacity, cli.
-- **Planning.** A ticket is read, the repository is explored, the next step is chosen, edits happen in a sensible order, and the session ends when the work verifies. The planning is visible in the todo lists, the greps before the edits, and the tests before the final answer.
-- **Tool calls.** Every call carries its full JSON schema, its arguments, and the exact output the tool returned. Malformed calls stay in the raw logs (the sample layer excludes the one unparseable call, see below).
-- **Recovery from failures.** Failed commands, rejected calls, broken tests and the steps that fixed them are kept in order, not filtered out.
+- **Planning.** A ticket is read, the repository is explored, the next step is chosen, edits happen in a sensible order, and the session ends when the work verifies. Plans are re-adjudicated from the full trajectory by a versioned detector (`plan_detector_v1`), not by whether a todo was written: 60 of 66 episodes show a plan before the first edit; 6 are labelled `legacy_unplanned` and kept as negative examples.
+- **Tool calls.** Every call carries its full JSON schema, its arguments, and the exact output the tool returned. Malformed calls stay in the raw logs and in the sample layer's rejection records (the sample excludes the one unparseable call from chat structure, see below).
+- **Recovery from failures.** Failed commands, rejected calls, broken tests and the steps that fixed them are kept in order, not filtered out. Authentic calls from failed and superseded attempts are shipped in the `failure_recovery` records.
 
 The claim is not that a model becomes better at everything. It is narrower and measurable: this is pretraining data for the loop of act, observe, fail, repair.
 
@@ -68,7 +68,12 @@ Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is 
 | Episodes | 66 |
 | Verified at export | 66 / 66 |
 | Raw tool_call events | 2,541 |
-| Tool calls in published samples | 2,311 |
+| Tool-call attempts at export | 2,312 |
+| Tool-call records in published samples | 2,311 |
+| Rejected at export (kept in raw + rejection records) | 1 |
+| Authentic calls restored from failed attempts | 221 (`failure_recovery`) |
+| Jargon calls in any training view | 0 |
+| Unresolved calls | 0 |
 | Split parallel blocks repaired in samples | 552 |
 | Parallel-call batches in samples | 455 |
 | Tool executions that failed in samples | 60 |
@@ -76,14 +81,15 @@ Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is 
 | Repositories | attrs, cli, click, packaging, tenacity |
 | Median tool calls per episode | 29 (shipped segments) |
 | Tool outputs capped in samples | 138 |
-| Split | sft: 64, research_only: 2 |
+| Splits | action_only: 56, legacy_unplanned: 6, network_dependent: 1, quarantine_test_only: 1, research_only: 2 |
+| Trainable SFT episodes | 0 (v1 captured no reasoning; see below) |
 | Line similarity median | 0.5723 |
 | Composite similarity median | 0.6593 |
 | License | MIT (data packaging); upstream code keeps its own license |
 
-The raw log carries 2,541 `tool_call` events, and every one of them carries a non-empty `tool_call_id`. 605 of those events sit directly after another call with no text or result between them; the samples ship them merged into one assistant turn per batch (455 batches). The merge preserves id order and all call content, so it is a grouping change, not a content change. The merged shape is the default sample shape: a strict chat-format loader can read every message as shipped.
+The raw log carries 2,541 `tool_call` events, and every one of them carries a non-empty `tool_call_id`. As recorded at export, that is 2,312 tool-call attempts, one of which is the corrupt attempt noted below; the published samples carry 2,311 tool-call records. 605 of those events sit directly after another call with no text or result between them; the samples ship them merged into one assistant turn per batch (455 batches). The merge preserves id order and all call content, so it is a grouping change, not a content change. The merged shape is the default sample shape: a strict chat-format loader can read every message as shipped.
 
-One call in the corpus carries stream-truncated arguments that no parser can read. The sample layer excludes that call and its tool result — an unpaired result is not valid chat structure — and the raw log keeps both verbatim, marked `args_corrupt: true`. `episodes/failures.jsonl` indexes the call with the same-tool calls that follow it, so the recovery arc stays in the corpus in its original bytes.
+One call in the corpus carries stream-truncated arguments that no parser can read. The sample layer excludes that call and its tool result — an unpaired result is not valid chat structure — and the raw log keeps both verbatim. The call is also recorded with its rejection in `episodes/b37ef87e467d64e6/evidence/restore_rejection.jsonl` (and indexed by `episodes/failures.jsonl` with the same-tool calls that follow it), so the malformed call, the exact error, and the recovery arc are all visible to a consumer.
 
 "60 tool executions that failed" counts tool messages that record an error (`error` set, or output beginning "Tool execution failed"). The successful retries that follow keep every failure visible in order; nothing is filtered out.
 
@@ -101,12 +107,40 @@ assistant the fix, the retry, the passing run
 
 Every assistant step and every tool result is in order. Nothing is summarized and nothing is invented.
 
+## Remediation (2026-11-17)
+
+A full read-only audit of the corpus (`TRAJECTORY_VERIFICATION_2026-11-17`) found the file-integrity layer clean (66/66 digests, 0 secret matches) and the training story weaker than advertised. The findings and their dispositions are recorded per episode under `episodes/*/evidence/` and in `REMEDIATION_REPORT_2026-11-17.md`. Headline dispositions:
+
+- `966101f98864fafa` quarantined (test-only human target). It passed the composite gate on a LICENSE-only diff; it is not a valid SFT episode and is not presented as one.
+- `490a433138e1fe8e` labelled `network_dependent` (live httpbin). The egress audit missed it; the seeded-tests host scan is fixed in the engine (engine-side change).
+- 6 episodes with no detected plan before the first edit are labelled `legacy_unplanned`; 14 others previously flagged by the old todo-based gate show plans in narration and keep their evidence. No todo write is required by any gate.
+- `b37ef87e467d64e6`'s corrupt grep call is preserved with its rejection in `evidence/restore_rejection.jsonl`; `a066c3d9cbcb7e18`'s degenerate first attempt is preserved in raw with a machine marker and excluded from the clean view (`episode.clean.jsonl`).
+- `611e35323caaf082` now carries an offline replay of its final diff (3/3 sequential runs against the locked seeded tests).
+- 221 authentic calls from failed/superseded attempts are restored as `failure_recovery` data; nothing authentic was silently dropped. 68-call `/tmp` rejection friction (re-measured: 41 tool_result denial events across 36-38 episodes; see report) annotated as harness friction, not model error.
+- No secrets anywhere: 2,738 files byte-scanned (0 findings); `keys/` never published and now git-ignored.
+- Every provenance field is a boolean with a reason; the two null records are corrected to `false` with the reason recorded (framework hashes unchanged — the raw bytes are the record).
+
 ### Files per episode
 
 ```
 episodes/<task_id>/
   <task_id>.episode.jsonl    raw event log: header, every event, footer
   <task_id>.sample.jsonl     training record: messages[] + tools + provenance
+  evidence/                  machine-readable remediation artifacts:
+    manifest.json            per-episode v2 manifest (hashes, split, plan, reasoning,
+                             harness round, provenance, quarantine records)
+    calls.json               per-call accounting (raw call -> disposition)
+    plan.json                plan_detector_v1 evidence for the selected segment
+    reasoning.json           reasoning capture record (none for v1)
+    harness.json             harness three-run record (legacy journal)
+    review.json              reviewer evidence (read-only; reviewer never runs tests)
+    ticket_path_audit.json   Diff1-only path firewall result (66/66 pass)
+    restore_*.jsonl          restored calls by disposition
+    file_match_report.json   produced vs target diff, classified
+    upstream.json            cached-clone commit ancestry + license check
+    harness_friction.jsonl   /tmp denials, where present      
+    ...                        (plus per-episode markers: quarantine, network,
+    legacy_unplanned, and replay/rejection records where applicable)
   ticket.md                  what the agent was asked to do
   briefing.md                workspace facts it was given
   hints.md                   file paths it was allowed to see
@@ -114,7 +148,7 @@ episodes/<task_id>/
   logs/                      coder, reviewer, ticket agent, setup, retries
   config.snapshot.json       run config, secrets redacted
   setup_state.json           10-step setup record
-  finalization.json          verdict + sha256 of both JSONL files
+  finalization.json          verdict + sha256 of both JSONL files (+ adoption record)
 ```
 
 The ground-truth patch is not shipped. The agent's own work is: `produced_diff` in the episode footer and the final patch in the sample messages.
@@ -138,7 +172,7 @@ The ground-truth patch is not shipped. The agent's own work is: `produced_diff` 
 This is continued-pretraining data, not an instruction-tuning set. There is no per-step label or preference to optimize against; the supervision is the whole transcript, in order. The corpus is deliberately boring to load and hard to fake.
 
 1. **Use every episode.** All 66 are sessions, not answers. The 2 `research_only` ones show what a session looks like when it runs out of budget, which is useful context for a model that has to decide when to stop.
-2. **Pack whole sessions.** The median sample is about 72k characters, roughly 17k tokens; the largest is about 260k characters. Pack at your context length and keep the order. Do not shuffle messages inside an episode.
+2. **Pack whole sessions.** The median sample is about 62k characters of message content (~15.5k tokens by a 4-chars/token heuristic); the largest is about 230k such characters. Pack at your context length and keep the order. Do not shuffle messages inside an episode.
 3. **Keep tool results verbatim.** Cap markers are part of the record. Do not re-summarize them, or you throw away the failure signal.
 4. **Measure the loop, not a vibe.** Tool-call schema validity, tool-call parse rate, tests passed at the end of a session, and recovery rate (does the session fix its own failed call) are the scores this data is built to move. A held-out protocol test is the right instrument, not a general coding leaderboard.
 
@@ -169,7 +203,7 @@ Most of these are bigger. Rig is two orders of magnitude bigger with a trained m
 | Episode | Repository | Sim | Tool calls | Review rounds | Tests pass | Time |
 |---|---|---|---|---|---|---|
 | [`3fc1a5fb92713be9`](episodes/3fc1a5fb92713be9/) | packaging (Apache-2.0) | 1.000 | 26 | 1 | yes | 40 min |
-| [`611e35323caaf082`](episodes/611e35323caaf082/) | attrs (MIT) | 1.000 | 61 | 3 | yes | 12 min |
+| [`611e35323caaf082`](episodes/611e35323caaf082/) | attrs (MIT) | 1.000 | 61 | 3 | yes | 12 min § |
 | [`86fc0604d03248ba`](episodes/86fc0604d03248ba/) | packaging (Apache-2.0) | 1.000 | 21 | 1 | yes | 37 min |
 | [`8a4bf108bb03b794`](episodes/8a4bf108bb03b794/) | packaging (Apache-2.0) | 1.000 | 28 | 1 | yes | 18 min |
 | [`99a4bccd5addbb0e`](episodes/99a4bccd5addbb0e/) | packaging (Apache-2.0) | 1.000 | 16 | 1 | yes | 20 min |
@@ -220,7 +254,7 @@ Most of these are bigger. Rig is two orders of magnitude bigger with a trained m
 | [`2d6f3e5f14681273`](episodes/2d6f3e5f14681273/) | attrs (MIT) | 0.566 | 43 | 1 | yes | 12 min |
 | [`81a8b6b065bafe21`](episodes/81a8b6b065bafe21/) | attrs (MIT) | 0.562 | 95 | 1 | yes | 36 min |
 | [`032c699ac1c2d252`](episodes/032c699ac1c2d252/) | packaging (Apache-2.0) | 0.559 | 19 | 1 | yes | 28 min |
-| [`490a433138e1fe8e`](episodes/490a433138e1fe8e/) | cli (BSD-3-Clause) | 0.552 | 56 | 1 | yes | 12 min |
+| [`490a433138e1fe8e`](episodes/490a433138e1fe8e/) | cli (BSD-3-Clause) | 0.552 | 56 | 1 | yes | 12 min ‡ |
 | [`a5e823c9f6618766`](episodes/a5e823c9f6618766/) | attrs (MIT) | 0.548 | 44 | 1 | yes | 16 min |
 | [`21721c8be6eec2d5`](episodes/21721c8be6eec2d5/) | attrs (MIT) | 0.547 | 100 | 1 | yes | 46 min |
 | [`f20d68038c27594c`](episodes/f20d68038c27594c/) | click (BSD-3-Clause) | 0.541 | 70 | 1 | yes | 18 min |
@@ -233,19 +267,32 @@ Most of these are bigger. Rig is two orders of magnitude bigger with a trained m
 | [`d6f539cc3e8728e8`](episodes/d6f539cc3e8728e8/) | click (BSD-3-Clause) | 0.498 | 31 | 1 | yes | 10 min |
 | [`25e452d88c01814e`](episodes/25e452d88c01814e/) | packaging (Apache-2.0) | 0.491 | 35 | 1 | yes | 20 min |
 | [`c929463c84ceb538`](episodes/c929463c84ceb538/) | click (BSD-2-Clause) | 0.481 | 74 | 1 | yes | 11 min |
-| [`966101f98864fafa`](episodes/966101f98864fafa/) | click (BSD-2-Clause) | 0.452 | 51 | 1 | yes | 20 min |
+| [`966101f98864fafa`](episodes/966101f98864fafa/) | click (BSD-2-Clause) | 0.452 | 51 | 1 | yes | 20 min † |
 
 `Sim` is composite similarity against the human patch (1.000 = identical). The pass
 gate is composite >= 0.45, not line similarity; line similarity is a stricter sub-score
 and can fall below 0.45 while the composite passes. Older episodes without a recorded
 composite show line similarity instead.
 
+- † `966101f98864fafa` is quarantined (`quarantine_test_only`): the human fix is
+  test-only, the seeded tests were locked before the coder started, the produced
+  diff touches only LICENSE, and the gate passed on the LICENSE hunk. Kept as
+  evidence; excluded from every training-ready list.
+- ‡ `490a433138e1fe8e` is `network_dependent`: live httpbin.org calls in the coder
+  session and in the seeded tests, with no egress-relaxation record on file. Kept
+  as labeled research data; do not present as offline-reproducible.
+- § `611e35323caaf082` recorded no three-run harness round in its retry journal
+  (the reviewer ran the suite). An offline replay of the final diff against the
+  locked seeded tests passes 3 of 3 sequential runs; see
+  `episodes/611e35323caaf082/evidence/harness_replay.json`.
+
 ## Read This Before You Pretrain
 
-- **66 sessions, about 1.5M tokens.** Nearly every token is a real action or a real observation, so the density is high: 2,311 tool calls, 455 parallel-call batches and 60 tool executions that failed. That makes it a strong component in a pretraining mixture. It is not a corpus to pretrain on alone, and a gain here is a protocol-instrument result, not a general capability claim.
+- **66 sessions, about 1.17M tokens (about 4.7M characters of message content).** Nearly every token is a real action or a real observation, so the density is high: 2,541 raw tool-call events, 2,312 export attempts (2,311 tool-call records in the published samples, 1 rejected-at-export call preserved with its error), 221 authentic calls restored from failed attempts into `failure_recovery`, 455 parallel-call batches and 60 tool executions that failed. That makes it a strong component in a pretraining mixture. It is not a corpus to pretrain on alone, and a gain here is a protocol-instrument result, not a general capability claim.
 - **Python only.** Five mainstream libraries. No systems code, no frontend, no infrastructure.
 - **The tickets are near-spec.** Every ticket names the files to look at and every episode ships a hints file with paths; the QA tests are seeded from the human patch. The median recorded change is 22 added and 5 removed lines over 2 files.
 - **Not contamination-free.** The target commit is public, so the fix is derivable from upstream. Use it for training and research, not as a clean leaderboard.
+- **Splits, stated precisely.** `action_only` (56): real actions and real observations, no captured reasoning — v1 disabled reasoning in every provider config, so the segments are honest action data, not reasoning data. `research_only` (2): iteration-cap sessions. `legacy_unplanned` (6): no plan detected before the first edit by `plan_detector_v1`; kept as negative examples. `network_dependent` (1): `490a433138e1fe8e`. `quarantine_test_only` (1): `966101f98864fafa`. **No trainable SFT split is published from v1**: until episodes are recorded with reasoning enabled, nothing in this corpus ships as reasoning-bearing SFT data.
 - **Two episodes are labelled `research_only`** because they ended at the iteration cap, and both record an agent-written test log inside their final diff. They are kept and flagged, not hidden.
 
 ---
@@ -258,6 +305,8 @@ python3 verify.py --quiet
 ```
 
 It re-computes both sha256 values per episode, checks header and footer presence, tool-call counts, the export verdict, provenance fields, and the recorded `task_mac_valid` verdict (it does not re-derive the HMAC). It does not re-run the sandbox; it checks that the record you downloaded is the record that was published.
+
+Deeper checks live with the engine (`megabit-remediation` tooling): a deep verifier re-derives counts from the artifacts, re-checks every raw call disposition, re-audits every ticket/hint path against the Diff1 tree, re-scans secrets including binaries, and verifies the signed `release_manifest.json` at the repository root. `counts.json` at the repository root is the single generated source of truth for every number above; the release manifest covers every file except itself, the signature, and the deep-verification report.
 
 Operational records (setup state, setup logs, retry journals, feedback reports, finalization, config snapshots) carry placeholders instead of the build machine's paths: `<MEGABIT_DATA>`, `<MEGABIT_REPO>`, `<HOME>`, `<SANDBOX_HOME>`. Raw logs and samples are untouched, so every sha256 above still covers the published bytes.
 
@@ -303,9 +352,15 @@ merge_parallel_calls.py        merge split parallel calls (no deps)
 check_shape.py                 check the merged tool-call shape (no deps)
 verify.py                      offline integrity check
 TOOLS.md                       guide to the three repair tools
+counts.json                    generated source of truth for every count
+remediation_manifest.json      file-level adoption ledger (before/after sha256)
+secret_scan.json               full-tree byte scan (0 findings)
+release_manifest.json          signed manifest of every published file
+verify_report.json             deep-verification output
+REMEDIATION_REPORT_2026-11-17.md  audit findings and their dispositions
 episodes/
   tools.json                   the tool contract for the whole corpus
-  index.json                   one row per episode
+  index.json                   one row per episode (split, split_reason, ...)
   failures.jsonl               malformed calls excluded from samples, with pointers
   <task_id>/                   one episode
 DATA_CARD.md                   composition, limits, changelog

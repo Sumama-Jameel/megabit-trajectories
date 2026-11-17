@@ -1,0 +1,55 @@
+{
+  "classification": {
+    "changelog.d/1457.breaking.md": "docs",
+    "pytest_full.log": "other",
+    "src/attr/__init__.pyi": "source",
+    "src/attr/_make.py": "source",
+    "src/attr/_next_gen.py": "source",
+    "src/attrs/__init__.pyi": "source",
+    "tests/test_make.py": "test"
+  },
+  "extra": [
+    "pytest_full.log"
+  ],
+  "extra_classification": {
+    "pytest_full.log": "other"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_make.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_make.py"
+  ],
+  "matched": [
+    "src/attr/__init__.pyi",
+    "src/attr/_make.py",
+    "src/attr/_next_gen.py",
+    "src/attrs/__init__.pyi"
+  ],
+  "missing": [
+    "changelog.d/1457.breaking.md"
+  ],
+  "missing_classification": {
+    "changelog.d/1457.breaking.md": "docs"
+  },
+  "missing_docs": [
+    "changelog.d/1457.breaking.md"
+  ],
+  "missing_including_locked_tests": [
+    "changelog.d/1457.breaking.md",
+    "tests/test_make.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/attr/__init__.pyi",
+    "src/attr/_make.py",
+    "src/attr/_next_gen.py",
+    "src/attrs/__init__.pyi"
+  ],
+  "status": "clean_with_missing_docs"
+}

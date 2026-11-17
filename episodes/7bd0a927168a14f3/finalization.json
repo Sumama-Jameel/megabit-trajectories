@@ -26,9 +26,22 @@
     ],
     "tool": "megabit relabel"
   },
+  "remediation": {
+    "adopted_at": "2026-11-17T09:32:47Z",
+    "evidence_dir": "evidence/",
+    "kind": "megabit.remediation_adoption",
+    "previous_sample_sha256": "678614eac9bd3d4748bbff5e522ab987eee38da3e5a85004de52c4fe7dafecad",
+    "raw_sha256": "beb2e194ffe0f533b1bac93325c7231473877ff973eae3c6d55b8a9fcf13d00c",
+    "remediation_version": "2026-11-17-r2",
+    "report": "REMEDIATION_REPORT_2026-11-17.md",
+    "sample_sha256": "5c65a8c477102aef42065e3837d0214a3fd47e883b72666eed6928a05413187c",
+    "split": "legacy_unplanned",
+    "split_reason": "plan_detector_v1_found_no_plan_before_first_edit"
+  },
   "review_rounds": 1,
   "sample_path": "<MEGABIT_DATA>/episodes/7bd0a927168a14f3/7bd0a927168a14f3.sample.jsonl",
-  "sample_sha256": "678614eac9bd3d4748bbff5e522ab987eee38da3e5a85004de52c4fe7dafecad",
+  "sample_rebuilt_at": "2026-11-13T13:05:47Z",
+  "sample_sha256": "5c65a8c477102aef42065e3837d0214a3fd47e883b72666eed6928a05413187c",
   "schema": 1,
   "segment": {
     "degenerate": false,
@@ -42,6 +55,5 @@
   "terminal_state": "final_answer",
   "tests_passed": true,
   "tests_ran": true,
-  "tool_calls": 16,
-  "sample_rebuilt_at": "2026-11-13T13:05:47Z"
+  "tool_calls": 16
 }

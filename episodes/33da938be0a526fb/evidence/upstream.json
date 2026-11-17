@@ -1,0 +1,31 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "diff_files": 7,
+  "diff_sha256": "e45a8a170212dd814898a731d87d1e51238ba1c7e6c5e8da24692fd7bd694744",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "MIT"
+  ],
+  "license_match": true,
+  "license_recorded": "MIT",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "attr/validators.py",
+    "docs/api.rst",
+    "docs/examples.rst",
+    "tox.ini"
+  ],
+  "target_exists": true,
+  "target_files": [
+    ".gitignore",
+    "attr/validators.py",
+    "docs/api.rst",
+    "docs/examples.rst",
+    "setup.py",
+    "tests/test_validators.py",
+    "tox.ini"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:32:59Z"
+}

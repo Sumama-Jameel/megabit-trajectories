@@ -1,0 +1,210 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "734952893e95454da475ea4000395a66",
+      "tests_passed": true,
+      "tool_calls": 25
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 25,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 25,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "1bdf5e7c144469b8",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "385e06efc86067c1",
+      "b0df1c36e1b97f57",
+      "bec9fe45485f774e"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      47
+    ],
+    "first_mutation_event_id": "61",
+    "first_mutation_index": 61,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-29T18:30:54.855286575Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "0236c6f7e8385574383b9127ae8d0d4dd92d5e8acb15f9cb6420b545d3fdc306",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "a09999688c8d3bb3d4ca1716748009954cc7c4d0",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "tenacity",
+    "repo_url": "https://github.com/jd/tenacity",
+    "session_id": "734952893e95454da475ea4000395a66",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "389aab8b2688f7a1df41c2dd7797eeb18c8baff9",
+    "target_message": "fix: restore support for falsy wait values and callable + strategy (#694)",
+    "task_fingerprint": "sha256:4b82ec11ccce58d89dd7f370a016c45c6c3d4fc0dc6ea18bb4b9f5aced620e9e",
+    "task_id": "1bdf5e7c144469b8",
+    "task_mac_valid": true,
+    "ticket_summary": "# Turning off the wait, or joining waits together, makes a retry blow up\n\n## What happens now\n\nWhen I tell my retry not to wait between attempts, my code blows up with a type error. This happens when ",
+    "verification_line_similarity": 0.5049,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "1bdf5e7c144469b8.episode.jsonl",
+  "raw_sha256": "4ee5e48fea2ee4d551a52c997beb199181c349aff9cb99a463ee3d6972bd23a0",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "1bdf5e7c144469b8.sample.jsonl",
+  "sample_sha256": "0b7e631b8278e97ab59bb638c27067ef7f2e5c272f81b685e028c4fe1d67cc73",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "1bdf5e7c144469b8",
+  "task_validity": {
+    "base_commit": "a09999688c8d3bb3d4ca1716748009954cc7c4d0",
+    "source_verified": true,
+    "target_commit": "389aab8b2688f7a1df41c2dd7797eeb18c8baff9",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "a09999688c8d3bb3d4ca1716748009954cc7c4d0",
+    "diff1_tree_sha256": "a25069b6277c4ef5bb0deea2f9acbb7236d238fa90e169d86f4bf3ef30c48d73",
+    "diff2_tree_sha256": "a112c51cf5542b111cdcfd607a143751c93fa5bc4b498115802ffd0f3807690a",
+    "episode_id": "1bdf5e7c144469b8",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 90,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tenacity/wait.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tenacity/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tenacity/asyncio/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tenacity.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_asyncio.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/tenacity-e9dd6a3faf",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "389aab8b2688f7a1df41c2dd7797eeb18c8baff9",
+    "ticket": {
+      "allowed_path_count": 90,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tenacity/wait.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tenacity/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tenacity/asyncio/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tenacity.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_asyncio.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

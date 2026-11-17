@@ -1,0 +1,35 @@
+{
+  "classification": {
+    "CHANGES.md": "docs",
+    "src/click/_utils.py": "source",
+    "tests/test_utils/test_sentinel.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_utils/test_sentinel.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_utils/test_sentinel.py"
+  ],
+  "matched": [
+    "CHANGES.md",
+    "src/click/_utils.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_utils/test_sentinel.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/click/_utils.py"
+  ],
+  "status": "clean"
+}

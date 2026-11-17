@@ -1,0 +1,194 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "b90a968c2cf9436c9d0ce94fff22241e",
+      "tests_passed": true,
+      "tool_calls": 12
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 12,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 12,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "400b4635d276b767",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "b105cba4f1d91d22",
+      "a7ef6167bf28febe",
+      "59781bfe5998ed9a"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      14
+    ],
+    "first_mutation_event_id": "16",
+    "first_mutation_index": 16,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-29T19:59:26.638360634Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "6be363b0439bd213dd5ea4cb0c0c184bf616232a",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "tenacity",
+    "repo_url": "https://github.com/jd/tenacity",
+    "session_id": "b90a968c2cf9436c9d0ce94fff22241e",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "213446e8f5f73ca0d20e22ec8ee38b1f75a45434",
+    "target_message": "fix: guard against None seconds_since_start in after_log (#591)",
+    "task_fingerprint": "sha256:3b949c45143b45b3bc16e2f280efa2a0282dcd967f0709b5f07eb247a49cc6bf",
+    "task_id": "400b4635d276b767",
+    "task_mac_valid": true,
+    "ticket_summary": "# The \"finished call\" log line breaks when the finish time is unknown\n\n## What happens now\nWhen a retried call finishes, the built-in after-log helper writes a line saying what finished, how long it t",
+    "verification_line_similarity": 0.7027,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "400b4635d276b767.episode.jsonl",
+  "raw_sha256": "a31d88a7515d3665a472d26ba1e6c73ca53344c44906f1f03813e91b90a06df3",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "400b4635d276b767.sample.jsonl",
+  "sample_sha256": "e09863e94c29d020f0061ba317cbdf0642c577746ffbdf97fc27fa7b6915ab22",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "400b4635d276b767",
+  "task_validity": {
+    "base_commit": "6be363b0439bd213dd5ea4cb0c0c184bf616232a",
+    "source_verified": true,
+    "target_commit": "213446e8f5f73ca0d20e22ec8ee38b1f75a45434",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "6be363b0439bd213dd5ea4cb0c0c184bf616232a",
+    "diff1_tree_sha256": "5678b2217655b7ab8735dd5b03bce61462302691f49ad660a951ee65ac38bbb0",
+    "diff2_tree_sha256": "5678b2217655b7ab8735dd5b03bce61462302691f49ad660a951ee65ac38bbb0",
+    "episode_id": "400b4635d276b767",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 80,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tenacity/after.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tenacity/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_after.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/tenacity-e9dd6a3faf",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "213446e8f5f73ca0d20e22ec8ee38b1f75a45434",
+    "ticket": {
+      "allowed_path_count": 80,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tenacity/after.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tenacity/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_after.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

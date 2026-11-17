@@ -1,0 +1,194 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "dfe1b2abfe42428190ca53618bc8ef69",
+      "tests_passed": true,
+      "tool_calls": 26
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 26,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 26,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "012ad533e237baaf",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "a23c181a90bfcf7f",
+      "4ee59531d70df44f",
+      "dbf5371392a60179"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      48
+    ],
+    "first_mutation_event_id": "50",
+    "first_mutation_index": 50,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-05T13:01:48.357251399Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "86d5aee0dba92cfd97954bffbb3579a9d4b8a0bc5f10c5c970110aeeb013c284",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "55cbf1b9426f44455fa1a9e0836f1fc082cc8452",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "packaging",
+    "repo_url": "https://github.com/pypa/packaging",
+    "session_id": "dfe1b2abfe42428190ca53618bc8ef69",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "053c884615f2e83d80705251b447769ec2599653",
+    "target_message": "tags: add interpreter_abi (#611)",
+    "task_fingerprint": "sha256:bf6a5d16fb279fe9e6f0296fc3f6e0bc449657e4789b49c4374c558dd31bdd66",
+    "task_id": "012ad533e237baaf",
+    "task_mac_valid": true,
+    "ticket_summary": "# No way to get the ABI part of the tag for the interpreter I am running\n\n## What happens now\nThe library gives me a helper for the name of the running interpreter and a helper for its version, and bo",
+    "verification_line_similarity": 0.5882,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "012ad533e237baaf.episode.jsonl",
+  "raw_sha256": "bbd99f13612c199d6c2a5b8d693e702c0ce89174f832181bd6f7fda1ea2c8143",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "012ad533e237baaf.sample.jsonl",
+  "sample_sha256": "12b945da6c14df7c18d89e7e90192b57ef0af867bd704756b254b078b3b90409",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "012ad533e237baaf",
+  "task_validity": {
+    "base_commit": "55cbf1b9426f44455fa1a9e0836f1fc082cc8452",
+    "source_verified": true,
+    "target_commit": "053c884615f2e83d80705251b447769ec2599653",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "55cbf1b9426f44455fa1a9e0836f1fc082cc8452",
+    "diff1_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+    "diff2_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+    "episode_id": "012ad533e237baaf",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 139,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/packaging/tags.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/tags.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tags.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "053c884615f2e83d80705251b447769ec2599653",
+    "ticket": {
+      "allowed_path_count": 139,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/packaging/tags.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/tags.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tags.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

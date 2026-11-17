@@ -1,0 +1,48 @@
+{
+  "base_commit": "868c60b80cd84273bf15a8b3f5c2026776728e5f",
+  "diff1_tree_sha256": "9f8e037a9e5c913478555b494c403b02d01d6c421b4baebcaf00bdaa51daed77",
+  "diff2_tree_sha256": "b11513b1dbc92adbd5c52609b610c1cbfbf19dd63ccfdefd6d53ccb75776619c",
+  "episode_id": "467619066bf26662",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 83,
+    "forbidden_path_count": 1,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "tenacity/wait.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_tenacity.py"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/tenacity-e9dd6a3faf",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "4ee186c10924ef9125f2464f2ad608d3de32ced0",
+  "ticket": {
+    "allowed_path_count": 83,
+    "forbidden_path_count": 1,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "tenacity/wait.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_tenacity.py"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

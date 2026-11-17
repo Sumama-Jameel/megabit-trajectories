@@ -1,0 +1,34 @@
+{
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+    "45322eee49e0e5be",
+    "5244187fcf3a42f4",
+    "a52ff5f4997c22dd"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+    {
+      "cmd": "python -m pytest",
+      "exit": 0,
+      "kind": "substantive",
+      "timed_out": false
+    },
+    {
+      "cmd": "python -m pytest",
+      "exit": 0,
+      "kind": "substantive",
+      "timed_out": false
+    },
+    {
+      "cmd": "python -m pytest",
+      "exit": 0,
+      "kind": "substantive",
+      "timed_out": false
+    }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+}

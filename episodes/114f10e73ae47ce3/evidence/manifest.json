@@ -1,0 +1,186 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "a225042e6fdd45e0a5df70da4c5c1481",
+      "tests_passed": true,
+      "tool_calls": 50
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 50,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 50,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "114f10e73ae47ce3",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "341e2bdc8991505d",
+      "2124608b62e88787",
+      "f61a3004c974baa9"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      20
+    ],
+    "first_mutation_event_id": "33",
+    "first_mutation_index": 33,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-29T19:16:18.518333904Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "0346e9aadcce0b0c6c91e1cb17fd49d53da57995c62f14e2f3ee7557c0f6b125",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "42b70f90790e1a3203e3dc61ad2648579c3709db",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "tenacity",
+    "repo_url": "https://github.com/jd/tenacity",
+    "session_id": "a225042e6fdd45e0a5df70da4c5c1481",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "a02b51a20fbda8fcc9051b10bad4a728882a631c",
+    "target_message": "fix: restore plain function composition with retry_base via | and & (#606)",
+    "task_fingerprint": "sha256:3c06e9fddab2b736fdaf0c967670f8d8b35cb751cedad45a2228b43acb0db72e",
+    "task_id": "114f10e73ae47ce3",
+    "task_mac_valid": true,
+    "ticket_summary": "# I cannot put my own check first or second when I join it with a ready-made retry rule\n\n## What happens now\nJoining a ready-made retry rule with my own check only works in one order. When my own chec",
+    "verification_line_similarity": 0.7234,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "114f10e73ae47ce3.episode.jsonl",
+  "raw_sha256": "91518b7dfce41be736d8fd26c50156e1ee58c73aa91c2a9894b408f84a445824",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "114f10e73ae47ce3.sample.jsonl",
+  "sample_sha256": "25a97c7e7cf6c3b6740b86967ebe3b07536d6750cd72d5a7c66194114a325e4f",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "114f10e73ae47ce3",
+  "task_validity": {
+    "base_commit": "42b70f90790e1a3203e3dc61ad2648579c3709db",
+    "source_verified": true,
+    "target_commit": "a02b51a20fbda8fcc9051b10bad4a728882a631c",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "42b70f90790e1a3203e3dc61ad2648579c3709db",
+    "diff1_tree_sha256": "5678b2217655b7ab8735dd5b03bce61462302691f49ad660a951ee65ac38bbb0",
+    "diff2_tree_sha256": "5678b2217655b7ab8735dd5b03bce61462302691f49ad660a951ee65ac38bbb0",
+    "episode_id": "114f10e73ae47ce3",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 80,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tenacity/retry.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tenacity.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/tenacity-e9dd6a3faf",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "a02b51a20fbda8fcc9051b10bad4a728882a631c",
+    "ticket": {
+      "allowed_path_count": 80,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tenacity/retry.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tenacity.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

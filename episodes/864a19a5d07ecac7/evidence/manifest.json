@@ -1,0 +1,194 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "06f9e89afc514b6785ff4c05b519603c",
+      "tests_passed": true,
+      "tool_calls": 31
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 31,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 31,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "864a19a5d07ecac7",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "2364d2be86246a60",
+      "cad17488548023f5",
+      "97c0626a37c5425a"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      29
+    ],
+    "first_mutation_event_id": "39",
+    "first_mutation_index": 39,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-04T11:01:50.937886129Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "d046aea250f3a68fae7dcfafc2be0ce7585a021aa9b7aecc7adaf48cc801df0a",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "be13b152cf5949a362926322c835fa76019cc6fe",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-3-Clause",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "06f9e89afc514b6785ff4c05b519603c",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "271effb3d96da5575eb527216ce3552bd7628fab",
+    "target_message": "Add `Option.get_help_spec` to return the option's help left part",
+    "task_fingerprint": "sha256:18f9c47967f5e217e251bb7f26b242301ce2761ff21829086eb9d2b6bb0bef65",
+    "task_id": "864a19a5d07ecac7",
+    "task_mac_valid": true,
+    "ticket_summary": "# No way to get an option's short name text when the option is hidden\n\n## What happens now\n\nIf I mark an option as hidden, there is no way to ask that option for its own short name text, the part that",
+    "verification_line_similarity": 0.766,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "864a19a5d07ecac7.episode.jsonl",
+  "raw_sha256": "2b158c848fdbff84588682d70493b5eb03a02bf511802fc2d24e65c24d2aa91e",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "864a19a5d07ecac7.sample.jsonl",
+  "sample_sha256": "37d3e8b1af73a9fbeba28731a9ec49e56d30fada82096c2bc9db4b6fe79fadd8",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "864a19a5d07ecac7",
+  "task_validity": {
+    "base_commit": "be13b152cf5949a362926322c835fa76019cc6fe",
+    "source_verified": true,
+    "target_commit": "271effb3d96da5575eb527216ce3552bd7628fab",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "be13b152cf5949a362926322c835fa76019cc6fe",
+    "diff1_tree_sha256": "b8147b61cfaf14ec0934b68fadd3d8332fdeba8c1d671828865c393acf159e46",
+    "diff2_tree_sha256": "b8147b61cfaf14ec0934b68fadd3d8332fdeba8c1d671828865c393acf159e46",
+    "episode_id": "864a19a5d07ecac7",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 167,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/core.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_options.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "271effb3d96da5575eb527216ce3552bd7628fab",
+    "ticket": {
+      "allowed_path_count": 167,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/core.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_options.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

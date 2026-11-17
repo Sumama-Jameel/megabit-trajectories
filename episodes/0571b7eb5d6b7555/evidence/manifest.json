@@ -1,0 +1,228 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 0,
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "superseded_by": 2,
+      "tests_passed": true,
+      "tool_calls": 62
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 1,
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "superseded_by": 2,
+      "tests_passed": true,
+      "tool_calls": 30
+    },
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 2,
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tests_passed": true,
+      "tool_calls": 42
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 88,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 92,
+    "raw_tool_calls": 134,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 88,
+    "sample_tool_calls": 42,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "0571b7eb5d6b7555",
+  "harness_tests": {
+    "canonical_context": "round:3",
+    "canonical_run_ids": [
+      "08a4dd6ec1372ce6",
+      "688593c690c0f2a4",
+      "50577ce90d50e427"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      31
+    ],
+    "first_mutation_event_id": "33",
+    "first_mutation_index": 33,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-02T07:57:18.648236315Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "6d37958399c6c44db15bdd0b99e09c540ab4e5f7679ce9c133b7643504a09bda",
+    "todo_writes": 2
+  },
+  "provenance": {
+    "base_commit": "f3e16ed15ecdf658348d8f58adc554c77ac4cf6c",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "MIT",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "attrs",
+    "repo_url": "https://github.com/python-attrs/attrs",
+    "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "d291e8c4dc249373e026e680a824839fd854a748",
+    "target_message": "Add some API docs",
+    "task_fingerprint": "sha256:edd1722ad51745879e4d9e4ed0af10f85e03647d5dd176c24af17e8dc3f93208",
+    "task_id": "0571b7eb5d6b7555",
+    "task_mac_valid": true,
+    "ticket_summary": "# Listing attributes works on instances by accident, and nothing is written down about the helpers\n\n## What happens now\n\nWhen I ask for the attributes of an object, the tool accepts an object as well ",
+    "verification_line_similarity": 0.422,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "0571b7eb5d6b7555.episode.jsonl",
+  "raw_sha256": "b7e1c113e40f560be82fe3ac425e004e203d097e8f13b1e8287ae3beb460bea0",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 3,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "0571b7eb5d6b7555.sample.jsonl",
+  "sample_sha256": "c017636b55b4e10f60c80878e3eccb276743a5dd316d1cd7b84c0862ed7fe7a4",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "0571b7eb5d6b7555",
+  "task_validity": {
+    "base_commit": "f3e16ed15ecdf658348d8f58adc554c77ac4cf6c",
+    "source_verified": true,
+    "target_commit": "d291e8c4dc249373e026e680a824839fd854a748",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "f3e16ed15ecdf658348d8f58adc554c77ac4cf6c",
+    "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+    "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+    "episode_id": "0571b7eb5d6b7555",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 27,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "attr/_funcs.py"
+        },
+        {
+          "status": "allowed",
+          "token": "attr/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "attr/_make.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/api.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_funcs.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "d291e8c4dc249373e026e680a824839fd854a748",
+    "ticket": {
+      "allowed_path_count": 27,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "attr/_funcs.py"
+        },
+        {
+          "status": "allowed",
+          "token": "attr/__init__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "attr/_make.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/api.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_funcs.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

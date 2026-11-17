@@ -1,0 +1,239 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "tests_passed": true,
+      "tool_calls": 21
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 1,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "superseded_by": 0,
+      "tests_passed": true,
+      "tool_calls": 5
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 2,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "superseded_by": 0,
+      "tests_passed": true,
+      "tool_calls": 3
+    },
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 3,
+      "session_id": "ed2055934e3b468b9b2cee7f17477848",
+      "superseded_by": 0,
+      "tests_passed": true,
+      "tool_calls": 4
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 11,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 12,
+    "raw_tool_calls": 33,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 11,
+    "sample_tool_calls": 21,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "a0b5794e7403ed3d",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "8d01740d9b98d1b0",
+      "e48c2aa32c15380a",
+      "cf2c1cd6af7e658d"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.38,
+    "detected": false,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      0,
+      1,
+      2,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "first_mutation_event_id": "33",
+    "first_mutation_index": 33,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-06T06:33:18.068973296Z",
+    "reason": "no concrete plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "explicit_heading": false,
+      "forward_markers": 2,
+      "generic_only": false,
+      "mutation_seen": true,
+      "ordered_steps": 0,
+      "plan_words": 2,
+      "targets": [
+        "list(platforms or platform_tags())"
+      ],
+      "text_chars": 211,
+      "ticket_echo": false,
+      "verification": false
+    },
+    "text_sha256": "9eb9674aa3b0dae83f73d4aae5867f3c01f83002963d6c03e8c62acdd242b01a",
+    "todo_writes": 0
+  },
+  "provenance": {
+    "base_commit": "b097450461523502ada842f98274449ad74ff1ff",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "packaging",
+    "repo_url": "https://github.com/pypa/packaging",
+    "session_id": "ed2055934e3b468b9b2cee7f17477848",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "4e79787a31c99348649bb0dafee2a5078d3595be",
+    "target_message": "fix(tags): preserve explicitly empty platform iterables (#1360)",
+    "task_fingerprint": "sha256:6423dec008e6ace4bfb863eaac47c2e65df9cb1e92026143fbe446dc1af1cbb4",
+    "task_id": "a0b5794e7403ed3d",
+    "task_mac_valid": true,
+    "ticket_summary": "# An empty list of platforms is ignored when building wheel tags\n\n## What happens now\nWhen I ask for wheel tags and hand in an empty list of platforms, the empty list is treated as if I had not given ",
+    "verification_line_similarity": 0.871,
+    "verification_passed": true
+  },
+  "quarantine": {
+    "reason": "plan_detector_v1_found_no_plan_before_first_edit",
+    "record": "evidence/legacy_unplanned.json"
+  },
+  "raw_path": "a0b5794e7403ed3d.episode.jsonl",
+  "raw_sha256": "791a8f4987b7063e86a7e1d0906041d4c2fd4a9eb7640a7ded874b4b2409c013",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "a0b5794e7403ed3d.sample.jsonl",
+  "sample_sha256": "cac15e4cfe90fc5bbe24ca828d5fb25859afa908dfccbfe091f120aa7b4fb3f2",
+  "schema_version": 2,
+  "splits": [
+    "legacy_unplanned"
+  ],
+  "supersedes": "a0b5794e7403ed3d",
+  "task_validity": {
+    "base_commit": "b097450461523502ada842f98274449ad74ff1ff",
+    "source_verified": true,
+    "target_commit": "4e79787a31c99348649bb0dafee2a5078d3595be",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "b097450461523502ada842f98274449ad74ff1ff",
+    "diff1_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+    "diff2_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+    "episode_id": "a0b5794e7403ed3d",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 139,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/packaging/tags.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tags.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "4e79787a31c99348649bb0dafee2a5078d3595be",
+    "ticket": {
+      "allowed_path_count": 139,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/packaging/tags.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_tags.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

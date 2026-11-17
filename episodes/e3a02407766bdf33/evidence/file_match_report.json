@@ -1,0 +1,38 @@
+{
+  "classification": {
+    "CHANGELOG.rst": "docs",
+    "src/packaging/pylock.py": "source",
+    "tests/test_pylock_select.py": "test"
+  },
+  "extra": [
+    "CHANGELOG.rst"
+  ],
+  "extra_classification": {
+    "CHANGELOG.rst": "docs"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_pylock_select.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_pylock_select.py"
+  ],
+  "matched": [
+    "src/packaging/pylock.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_pylock_select.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/packaging/pylock.py"
+  ],
+  "status": "clean_with_extra"
+}

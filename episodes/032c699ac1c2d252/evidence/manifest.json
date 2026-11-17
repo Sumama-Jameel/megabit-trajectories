@@ -1,0 +1,186 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "906e1df226b744eeb185eeb223c71e9d",
+      "tests_passed": true,
+      "tool_calls": 19
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 19,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 19,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "032c699ac1c2d252",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "45322eee49e0e5be",
+      "5244187fcf3a42f4",
+      "a52ff5f4997c22dd"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      14
+    ],
+    "first_mutation_event_id": "16",
+    "first_mutation_index": 16,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-22T18:02:34.540191504Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "26b89a05f6f404dbfd808f6ac60d744e8a5e0386",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "packaging",
+    "repo_url": "https://github.com/pypa/packaging",
+    "session_id": "906e1df226b744eeb185eeb223c71e9d",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "e64c20eb7a854c72710d4c962bc8a95f343230e6",
+    "target_message": "perf(specifiers): keep range caches across canonicalization (#1253)",
+    "task_fingerprint": "sha256:ce09d8126ee9a23d69b826991030c70e666d8e77350328c8bd62f24faf0ec47e",
+    "task_id": "032c699ac1c2d252",
+    "task_mac_valid": true,
+    "ticket_summary": "# Saved version answers get thrown away when rules are tidied\n\n## What happens now\n\nWhen I give a group of version rules and then ask for it as text, the tool tidies the rules by removing repeats and ",
+    "verification_line_similarity": 0.6111,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "032c699ac1c2d252.episode.jsonl",
+  "raw_sha256": "f4fc61767219feb335be7b0b4da4ea3c89990ac65dabc8f587b2435602a5f654",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "032c699ac1c2d252.sample.jsonl",
+  "sample_sha256": "f586dbe2251180f2fb8d1275f14d123b3b379c93e479f65ea1bfe7b846e0c0aa",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "032c699ac1c2d252",
+  "task_validity": {
+    "base_commit": "26b89a05f6f404dbfd808f6ac60d744e8a5e0386",
+    "source_verified": true,
+    "target_commit": "e64c20eb7a854c72710d4c962bc8a95f343230e6",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "26b89a05f6f404dbfd808f6ac60d744e8a5e0386",
+    "diff1_tree_sha256": "266c8d45971e4dae850c39993be24c36455bd1ef7474f1fdabf37916d5f86aae",
+    "diff2_tree_sha256": "266c8d45971e4dae850c39993be24c36455bd1ef7474f1fdabf37916d5f86aae",
+    "episode_id": "032c699ac1c2d252",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 132,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/packaging/specifiers.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_specifiers.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "e64c20eb7a854c72710d4c962bc8a95f343230e6",
+    "ticket": {
+      "allowed_path_count": 132,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/packaging/specifiers.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_specifiers.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

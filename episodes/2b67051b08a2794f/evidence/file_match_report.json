@@ -1,0 +1,44 @@
+{
+  "classification": {
+    "attr/_dunders.py": "source",
+    "attr/_make.py": "source",
+    "docs/api.rst": "docs",
+    "docs/why.rst": "docs",
+    "tests/test_dark_magic.py": "test",
+    "tests/test_dunders.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_dark_magic.py",
+    "tests/test_dunders.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_dark_magic.py",
+    "tests/test_dunders.py"
+  ],
+  "matched": [
+    "attr/_dunders.py",
+    "attr/_make.py",
+    "docs/api.rst",
+    "docs/why.rst"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_dark_magic.py",
+    "tests/test_dunders.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "attr/_dunders.py",
+    "attr/_make.py"
+  ],
+  "status": "clean"
+}

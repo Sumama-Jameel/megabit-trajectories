@@ -1,0 +1,202 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "17da92dc567b46a9bdc70b507e4bad52",
+      "tests_passed": true,
+      "tool_calls": 27
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 27,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 27,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "b8d783f57b4b84eb",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "a25e50f870328ca3",
+      "b031829c16c3602c",
+      "bb898782389546b9"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.38,
+    "detected": false,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      0,
+      1,
+      18
+    ],
+    "first_mutation_event_id": "19",
+    "first_mutation_index": 19,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-09-29T13:29:43.544637278Z",
+    "reason": "no concrete plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "explicit_heading": false,
+      "forward_markers": 2,
+      "generic_only": false,
+      "mutation_seen": true,
+      "ordered_steps": 0,
+      "plan_words": 1,
+      "targets": [
+        "packaging/version.py"
+      ],
+      "text_chars": 118,
+      "ticket_echo": false,
+      "verification": false
+    },
+    "text_sha256": "7d587bcdab6877418f5ba17d313c3023e0bdac8fed187ff8408d50b66506aa2c",
+    "todo_writes": 0
+  },
+  "provenance": {
+    "base_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "Apache-2.0",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "packaging",
+    "repo_url": "https://github.com/pypa/packaging",
+    "session_id": "17da92dc567b46a9bdc70b507e4bad52",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
+    "target_message": "Normalize post releases like pre-releases and development releases",
+    "task_fingerprint": "sha256:b383e7651c3e8c9ee6e59669e04142afab3fc3c537110167d458ca84760e77ad",
+    "task_id": "b8d783f57b4b84eb",
+    "task_mac_valid": true,
+    "ticket_summary": "# Post releases written without a dot, or without a number, are rejected\n\n## What happens now\n\nIf a version ends with a post release, the word post has to be written with a\ndot in front of it and a nu",
+    "verification_line_similarity": 0.4935,
+    "verification_passed": true
+  },
+  "quarantine": {
+    "reason": "plan_detector_v1_found_no_plan_before_first_edit",
+    "record": "evidence/legacy_unplanned.json"
+  },
+  "raw_path": "b8d783f57b4b84eb.episode.jsonl",
+  "raw_sha256": "8c277f7534a75918e9955d4a57d0215e5a1435441242e4a817852e2b292ae5c8",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "b8d783f57b4b84eb.sample.jsonl",
+  "sample_sha256": "5c0b9a159c5846c41c6c80a4068c4679ac3c8e28972145ae400380df2364ba56",
+  "schema_version": 2,
+  "splits": [
+    "legacy_unplanned"
+  ],
+  "supersedes": "b8d783f57b4b84eb",
+  "task_validity": {
+    "base_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+    "source_verified": true,
+    "target_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+    "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+    "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+    "episode_id": "b8d783f57b4b84eb",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 34,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "packaging/version.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_version.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
+    "ticket": {
+      "allowed_path_count": 34,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "packaging/version.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_version.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

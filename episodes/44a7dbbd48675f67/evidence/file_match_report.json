@@ -1,0 +1,43 @@
+{
+  "classification": {
+    "CHANGES.md": "docs",
+    "src/click/_compat.py": "source",
+    "tests/test_compat.py": "test",
+    "tests/test_formatting.py": "test",
+    "tests/test_utils/test_style.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_compat.py",
+    "tests/test_formatting.py",
+    "tests/test_utils/test_style.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_compat.py",
+    "tests/test_formatting.py",
+    "tests/test_utils/test_style.py"
+  ],
+  "matched": [
+    "CHANGES.md",
+    "src/click/_compat.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_compat.py",
+    "tests/test_formatting.py",
+    "tests/test_utils/test_style.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/click/_compat.py"
+  ],
+  "status": "clean"
+}

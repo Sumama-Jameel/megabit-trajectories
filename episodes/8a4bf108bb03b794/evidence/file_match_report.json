@@ -1,0 +1,37 @@
+{
+  "classification": {
+    "src/packaging/_tokenizer.py": "source",
+    "tests/test_markers.py": "test",
+    "tests/test_requirements.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_markers.py",
+    "tests/test_requirements.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_markers.py",
+    "tests/test_requirements.py"
+  ],
+  "matched": [
+    "src/packaging/_tokenizer.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_markers.py",
+    "tests/test_requirements.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/packaging/_tokenizer.py"
+  ],
+  "status": "clean"
+}

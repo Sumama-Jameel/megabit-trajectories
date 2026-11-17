@@ -1,0 +1,40 @@
+{
+  "classification": {
+    "click/__init__.py": "source",
+    "click/types.py": "source",
+    "docs/api.rst": "docs",
+    "docs/parameters.rst": "docs",
+    "tests/test_basic.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_basic.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_basic.py"
+  ],
+  "matched": [
+    "click/__init__.py",
+    "click/types.py",
+    "docs/api.rst",
+    "docs/parameters.rst"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_basic.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "click/__init__.py",
+    "click/types.py"
+  ],
+  "status": "clean"
+}

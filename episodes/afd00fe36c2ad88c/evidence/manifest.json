@@ -1,0 +1,219 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "25a62996c1154294a53a0b66c8299613",
+      "tests_passed": true,
+      "tool_calls": 26
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 26,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 26,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "afd00fe36c2ad88c",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "4850439dbbd17de8",
+      "5e94c030e3924a76",
+      "2537d870a5672a20"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.42,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "first_mutation_event_id": "45",
+    "first_mutation_index": 45,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-09-28T18:12:35.268396622Z",
+    "reason": "concrete target and verification before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "explicit_heading": false,
+      "forward_markers": 0,
+      "generic_only": false,
+      "mutation_seen": true,
+      "ordered_steps": 0,
+      "plan_words": 2,
+      "targets": [
+        "core.py",
+        "make_default_short_help",
+        "utils.py"
+      ],
+      "text_chars": 153,
+      "ticket_echo": false,
+      "verification": true
+    },
+    "text_sha256": "6e6c5d359a2bec2500d8ec6549b47a26fb01c4e9ccacd6f0944c48352169d3eb",
+    "todo_writes": 0
+  },
+  "provenance": {
+    "base_commit": "45be1caa7e09688fbae58e39d0846e6b19c3e6ac",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-2-Clause",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "25a62996c1154294a53a0b66c8299613",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "a25bf1300142bc30369920e3bca740efb92c4575",
+    "target_message": "Auto truncate short help instead of hiding it.  Fixes #53",
+    "task_fingerprint": "sha256:d0beb2ef1cd9948649105215e34310762ca34f3082d215de0b3d40c0b62e023a",
+    "task_id": "afd00fe36c2ad88c",
+    "task_mac_valid": true,
+    "ticket_summary": "# Long command descriptions are dropped from the command list instead of being shortened\n\n## What happens now\nWhen a tool has a command whose description has no short version, the command list shows n",
+    "verification_line_similarity": 0.75,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "afd00fe36c2ad88c.episode.jsonl",
+  "raw_sha256": "8b1bf285fded5f46270578f6b5b05cecf955122bdecc533f4749967191b34b3f",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "afd00fe36c2ad88c.sample.jsonl",
+  "sample_sha256": "0046dfd8bab2d7d9678ad06a2f9197a4efd929c27873ec636b5123bdc20c469c",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "afd00fe36c2ad88c",
+  "task_validity": {
+    "base_commit": "45be1caa7e09688fbae58e39d0846e6b19c3e6ac",
+    "source_verified": true,
+    "target_commit": "a25bf1300142bc30369920e3bca740efb92c4575",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "45be1caa7e09688fbae58e39d0846e6b19c3e6ac",
+    "diff1_tree_sha256": "a75a07dff89aaa230db732919d7f19c9ac7c12a5a09431ab43262f33979c706a",
+    "diff2_tree_sha256": "a75a07dff89aaa230db732919d7f19c9ac7c12a5a09431ab43262f33979c706a",
+    "episode_id": "afd00fe36c2ad88c",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 53,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "click/core.py"
+        },
+        {
+          "status": "allowed",
+          "token": "click/utils.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_commands.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "a25bf1300142bc30369920e3bca740efb92c4575",
+    "ticket": {
+      "allowed_path_count": 53,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "click/core.py"
+        },
+        {
+          "status": "allowed",
+          "token": "click/utils.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_commands.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

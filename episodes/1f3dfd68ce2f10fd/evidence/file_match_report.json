@@ -1,0 +1,48 @@
+{
+  "classification": {
+    "doc/source/index.rst": "docs",
+    "tenacity/__init__.py": "source",
+    "tenacity/asyncio/__init__.py": "source",
+    "tests/test_asyncio.py": "test",
+    "tests/test_tenacity.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "matched": [
+    "tenacity/__init__.py",
+    "tenacity/asyncio/__init__.py"
+  ],
+  "missing": [
+    "doc/source/index.rst"
+  ],
+  "missing_classification": {
+    "doc/source/index.rst": "docs"
+  },
+  "missing_docs": [
+    "doc/source/index.rst"
+  ],
+  "missing_including_locked_tests": [
+    "doc/source/index.rst",
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "tenacity/__init__.py",
+    "tenacity/asyncio/__init__.py"
+  ],
+  "status": "clean_with_missing_docs"
+}

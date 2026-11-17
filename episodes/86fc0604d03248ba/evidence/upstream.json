@@ -1,0 +1,24 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "diff_files": 2,
+  "diff_sha256": "baeb268008fe7873170b6bbcec82fe01484c2ed70cc4795e20f13a04edf61cbd",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "Apache-2.0",
+    "BSD-2-Clause"
+  ],
+  "license_match": true,
+  "license_recorded": "Apache-2.0",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "src/packaging/pylock.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "src/packaging/pylock.py",
+    "tests/test_pylock_select.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:33:00Z"
+}

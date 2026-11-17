@@ -1,0 +1,38 @@
+{
+  "classification": {
+    "src/attr/exceptions.py": "source",
+    "src/attr/exceptions.pyi": "source",
+    "tests/test_functional.py": "test"
+  },
+  "extra": [
+    "src/attr/exceptions.pyi"
+  ],
+  "extra_classification": {
+    "src/attr/exceptions.pyi": "source"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_functional.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_functional.py"
+  ],
+  "matched": [
+    "src/attr/exceptions.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_functional.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/attr/exceptions.py"
+  ],
+  "status": "clean_with_extra"
+}

@@ -1,0 +1,52 @@
+{
+  "applicable": true,
+  "confidence": 0.22,
+  "detected": false,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "first_mutation_event_id": "40",
+  "first_mutation_index": 40,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-29T06:52:14.179468102Z",
+  "reason": "no concrete plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+    "explicit_heading": false,
+    "forward_markers": 0,
+    "generic_only": false,
+    "mutation_seen": true,
+    "ordered_steps": 0,
+    "plan_words": 1,
+    "targets": [
+      "_cmpkey",
+      "packaging/version.py",
+      "release"
+    ],
+    "text_chars": 191,
+    "ticket_echo": false,
+    "verification": false
+  },
+  "text_sha256": "7cfde7489983957f5cb5b562d765582e76d44acaa1d8d340e6ce6ccab78672de",
+  "todo_writes": 0
+}

@@ -1,0 +1,29 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/tenacity-e9dd6a3faf",
+  "diff_files": 6,
+  "diff_sha256": "ff1633b96d7624eafb4d88aa2aa3a692caea5bebb17de89163c3f39c8b3aa4a4",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "Apache-2.0"
+  ],
+  "license_match": true,
+  "license_recorded": "Apache-2.0",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "tenacity/__init__.py",
+    "tenacity/asyncio/__init__.py",
+    "tenacity/wait.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "releasenotes/notes/fix-falsy-wait-regression-3b7e91c4a5d20f68.yaml",
+    "tenacity/__init__.py",
+    "tenacity/asyncio/__init__.py",
+    "tenacity/wait.py",
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:32:58Z"
+}

@@ -1,0 +1,23 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "diff_files": 2,
+  "diff_sha256": "e323be3c3890534d7d9c581457a8140a10fa2fa20fecbd282482fc6543e83dee",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "MIT"
+  ],
+  "license_match": true,
+  "license_recorded": "MIT",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "attr/_dunders.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "attr/_dunders.py",
+    "tests/test_dunders.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:33:01Z"
+}

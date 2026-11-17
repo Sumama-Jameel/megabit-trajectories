@@ -1,0 +1,194 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "88b0fb2fd4504f2ab0df6d2944554ef1",
+      "tests_passed": true,
+      "tool_calls": 69
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 69,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 69,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "349db9dae0e05b9e",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "2babe99153623e10",
+      "714609cb41324121",
+      "4950cddd092a1085"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      129
+    ],
+    "first_mutation_event_id": "273",
+    "first_mutation_index": 273,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-04T13:02:38.301682096Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "d6f4dcfbe58dbd805406770e0fc6ed9dfcafa066b94763adef1660dc162cdc36",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "7944461a80b780d060899c8835acab3c273a04a6",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-3-Clause",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "88b0fb2fd4504f2ab0df6d2944554ef1",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "22177f857a34e3c35ba957553853a37f23feb37e",
+    "target_message": "`path_type` narrows the converted value's type for `convert` and `prompt`",
+    "task_fingerprint": "sha256:b13333cb5df8a3c9cd8840114172a07432d017d35680a30bf04a90870ad23a54",
+    "task_id": "349db9dae0e05b9e",
+    "task_mac_valid": true,
+    "ticket_summary": "# Editors do not know a path option gives me a real path object\n\n## What happens now\nWhen I ask for a path option that hands me a pathlib Path, I still get a red squiggle under the value, because noth",
+    "verification_line_similarity": 0.5471,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "349db9dae0e05b9e.episode.jsonl",
+  "raw_sha256": "6586389d53fe7cfd67d1b04c471b92a6b99b141da80ed8afbdd9953dfd602c09",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "349db9dae0e05b9e.sample.jsonl",
+  "sample_sha256": "992c58024e401c65118e3cfdd279eb1142d344f22567e4bbd17966c79fb2884c",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "349db9dae0e05b9e",
+  "task_validity": {
+    "base_commit": "7944461a80b780d060899c8835acab3c273a04a6",
+    "source_verified": true,
+    "target_commit": "22177f857a34e3c35ba957553853a37f23feb37e",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "7944461a80b780d060899c8835acab3c273a04a6",
+    "diff1_tree_sha256": "234c72bfc235a661032ef8c11ff1147fe7fbe3acd5c9c0157864c95ceaff0ad1",
+    "diff2_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+    "episode_id": "349db9dae0e05b9e",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 177,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/types.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_types/test_Path.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "22177f857a34e3c35ba957553853a37f23feb37e",
+    "ticket": {
+      "allowed_path_count": 177,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/types.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_types/test_Path.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

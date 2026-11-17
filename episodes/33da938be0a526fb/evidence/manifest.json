@@ -1,0 +1,218 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "4e9f96f246044a3498e7a5e38c3d6e78",
+      "tests_passed": true,
+      "tool_calls": 27
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 27,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 27,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "33da938be0a526fb",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "718ffc5af8fda66d",
+      "9a8ec10465cf1a28",
+      "d75731e65b951756"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      26
+    ],
+    "first_mutation_event_id": "36",
+    "first_mutation_index": 36,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-02T14:16:24.463493333Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "0d83b9c13ff52a3dccd438e5e489b005da32e66207e3fb16a88ab48da7991312",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "2040ed5e486f5a3310c6a1718a2103427fe36948",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "MIT",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "attrs",
+    "repo_url": "https://github.com/python-attrs/attrs",
+    "session_id": "4e9f96f246044a3498e7a5e38c3d6e78",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "8bb430cf1887feae4e04d2821d4ee3725038eb9c",
+    "target_message": "Add basic support for zope.interface",
+    "task_fingerprint": "sha256:e9ae4f4df5f039a5c0b965fe9a74bca2a6d42ac80391adc42d7347fd44970253",
+    "task_id": "33da938be0a526fb",
+    "task_mac_valid": true,
+    "ticket_summary": "# No built-in way to check that a value provides a zope interface\n\n## What happens now\nThe only built-in check you can attach to an attribute is the one that verifies a value is an instance of a given",
+    "verification_line_similarity": 0.6014,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "33da938be0a526fb.episode.jsonl",
+  "raw_sha256": "5164082adaaa299eb41d0f73ee278925e4e694869cd41c22d15e7614d6adf845",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "33da938be0a526fb.sample.jsonl",
+  "sample_sha256": "f0643579e31dd0ea8c0a1d287468678d5a145f91fdca7a9d33ca17d261e06c6b",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "33da938be0a526fb",
+  "task_validity": {
+    "base_commit": "2040ed5e486f5a3310c6a1718a2103427fe36948",
+    "source_verified": true,
+    "target_commit": "8bb430cf1887feae4e04d2821d4ee3725038eb9c",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "2040ed5e486f5a3310c6a1718a2103427fe36948",
+    "diff1_tree_sha256": "db34ed7b5d5b704d9beb37e9761c5f07856883d44c32931698db0d0c1eccd511",
+    "diff2_tree_sha256": "db34ed7b5d5b704d9beb37e9761c5f07856883d44c32931698db0d0c1eccd511",
+    "episode_id": "33da938be0a526fb",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 31,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "attr/validators.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/api.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/examples.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_validators.py"
+        },
+        {
+          "status": "allowed",
+          "token": "setup.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tox.ini"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "8bb430cf1887feae4e04d2821d4ee3725038eb9c",
+    "ticket": {
+      "allowed_path_count": 31,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "attr/validators.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/api.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/examples.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_validators.py"
+        },
+        {
+          "status": "allowed",
+          "token": "setup.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tox.ini"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "dcc14972a569411dbbed5bd279fce30b",
+      "tests_passed": true,
+      "tool_calls": 39
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 39,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 39,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "31fc77740af45bd4",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "2d32f5d67c8aa2ea",
+      "e514442117ec236f",
+      "77c635657028d0e5"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      56
+    ],
+    "first_mutation_event_id": "61",
+    "first_mutation_index": 61,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-05T15:05:06.123221242Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "673664c113dcc65220903db7769400e554fc8142064e64503d3465341dce8cc6",
+    "todo_writes": 2
+  },
+  "provenance": {
+    "base_commit": "3a68d4913221abc6f8ad3be50937f7ae49300a98",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "MIT",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "attrs",
+    "repo_url": "https://github.com/python-attrs/attrs",
+    "session_id": "dcc14972a569411dbbed5bd279fce30b",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "48b8611c27779811d161200e17de8da24aae7feb",
+    "target_message": "Add instance support to attrs.fields() (#1529)",
+    "task_fingerprint": "sha256:6660e5fc3d0b5c9c81e8e7d706148fb340f9e5530610566a79933e36f6b8b00d",
+    "task_id": "31fc77740af45bd4",
+    "task_mac_valid": true,
+    "ticket_summary": "# attrs.fields() refuses to look at an object, only at its class\n\n## What happens now\n\nToday, asking attrs to list the fields of one of your objects fails. Only the class is accepted. I ran it in the ",
+    "verification_line_similarity": 0.6471,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "31fc77740af45bd4.episode.jsonl",
+  "raw_sha256": "7add85cfdd8643752f91b6eb37a21d0fa0bf5da92b40ca53ffbba8c300dadd53",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "31fc77740af45bd4.sample.jsonl",
+  "sample_sha256": "4379e646e727a7b1db84d96db14250432cc4a2d6764148d2abceda24e07302b4",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "31fc77740af45bd4",
+  "task_validity": {
+    "base_commit": "3a68d4913221abc6f8ad3be50937f7ae49300a98",
+    "source_verified": true,
+    "target_commit": "48b8611c27779811d161200e17de8da24aae7feb",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "3a68d4913221abc6f8ad3be50937f7ae49300a98",
+    "diff1_tree_sha256": "e2b8c8cdad4bb70f91129c65bd19a0f1ad3192f93cc8e171fca8c6313f4cb985",
+    "diff2_tree_sha256": "08b86d09e1102c10e8134d3321352b4aff65a27e1eb0b8c0a8025713c7e37c24",
+    "episode_id": "31fc77740af45bd4",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 133,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/attr/_make.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/api.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_make.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_mypy.yml"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "48b8611c27779811d161200e17de8da24aae7feb",
+    "ticket": {
+      "allowed_path_count": 133,
+      "forbidden_path_count": 1,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/attr/_make.py"
+        },
+        {
+          "status": "allowed",
+          "token": "docs/api.rst"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_make.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_mypy.yml"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

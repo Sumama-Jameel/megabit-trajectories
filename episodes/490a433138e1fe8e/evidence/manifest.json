@@ -1,0 +1,242 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 0,
+      "session_id": "caa4e6b8f4454e59a8d70e8399177ca0",
+      "superseded_by": 1,
+      "tests_passed": null,
+      "tool_calls": 42
+    },
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 1,
+      "session_id": "caa4e6b8f4454e59a8d70e8399177ca0",
+      "tests_passed": true,
+      "tool_calls": 14
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 42,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 42,
+    "raw_tool_calls": 56,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 42,
+    "sample_tool_calls": 14,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "490a433138e1fe8e",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "fc2dcb9741644c21",
+      "63ac6ad7d3444a1a",
+      "a0865c8f0a2e2805"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest ",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.58,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      0,
+      5,
+      6,
+      9,
+      10,
+      15,
+      16,
+      17,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      28
+    ],
+    "first_mutation_event_id": "29",
+    "first_mutation_index": 29,
+    "judge": null,
+    "needs_review": true,
+    "plan_created_at": "2026-09-29T12:44:17.320400351Z",
+    "reason": "concrete target and verification before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "explicit_heading": false,
+      "forward_markers": 1,
+      "generic_only": false,
+      "mutation_seen": true,
+      "ordered_steps": 0,
+      "plan_words": 6,
+      "targets": [
+        "*_test.py",
+        "conftest.py",
+        "file cannot",
+        "file does",
+        "file intends",
+        "file itself",
+        "file to",
+        "from requests.compat import StringIO, is_py26, str",
+        "is_py26",
+        "package via",
+        "python -m pytest",
+        "requests"
+      ],
+      "text_chars": 1210,
+      "ticket_echo": false,
+      "verification": true
+    },
+    "text_sha256": "193368a30f7a99fad187d42f5c4d6321cf175bc60ee3f4fbc133bbe1bbed817d",
+    "todo_writes": 0
+  },
+  "provenance": {
+    "base_commit": "ee598d304dd722d312940d1eeb11161bad72e089",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-3-Clause",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "cli",
+    "repo_url": "https://github.com/httpie/cli",
+    "session_id": "caa4e6b8f4454e59a8d70e8399177ca0",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "0c4c6c47536a853cf1ac0bb3ff69261a380173e3",
+    "target_message": "Added --auth-type and tests for basic/digest auth.",
+    "task_fingerprint": "sha256:788acb18f1b4ed0b82d6d4aa4df2bdc79ea6d019e51dd0572b0f56a32c140b1c",
+    "task_id": "490a433138e1fe8e",
+    "task_mac_valid": true,
+    "ticket_summary": "# I cannot say which sign-in style I want, and the old switch is accepted with no user name at all\n\n## What happens now\n\nTo send a request with digest sign-in, I have to add a simple on/off switch cal",
+    "verification_line_similarity": 0.4697,
+    "verification_passed": true
+  },
+  "quarantine": {
+    "reason": "requires_live_httpbin_no_egress_relaxation_record",
+    "record": "evidence/network_dependent.json"
+  },
+  "raw_path": "490a433138e1fe8e.episode.jsonl",
+  "raw_sha256": "23674f98059c5e6760b9f2876ee3d20b569029cc9979a4ddf56312a15270fd66",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "490a433138e1fe8e.sample.jsonl",
+  "sample_sha256": "e016031692fd2a877d80eac7617c42fb07489bd94fc135196bbf8cedab1fad4a",
+  "schema_version": 2,
+  "splits": [
+    "network_dependent"
+  ],
+  "supersedes": "490a433138e1fe8e",
+  "task_validity": {
+    "base_commit": "ee598d304dd722d312940d1eeb11161bad72e089",
+    "source_verified": true,
+    "target_commit": "0c4c6c47536a853cf1ac0bb3ff69261a380173e3",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "ee598d304dd722d312940d1eeb11161bad72e089",
+    "diff1_tree_sha256": "32f4a165b0b06b0d02456f85758f7e3e61627ef09f583437299fda31295496ce",
+    "diff2_tree_sha256": "32f4a165b0b06b0d02456f85758f7e3e61627ef09f583437299fda31295496ce",
+    "episode_id": "490a433138e1fe8e",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 15,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "httpie/cli.py"
+        },
+        {
+          "status": "allowed",
+          "token": "httpie/__main__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/tests.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/cli-212cc5c7c9",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "0c4c6c47536a853cf1ac0bb3ff69261a380173e3",
+    "ticket": {
+      "allowed_path_count": 15,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "httpie/cli.py"
+        },
+        {
+          "status": "allowed",
+          "token": "httpie/__main__.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/tests.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

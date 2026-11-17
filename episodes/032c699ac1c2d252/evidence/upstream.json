@@ -1,0 +1,24 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "diff_files": 2,
+  "diff_sha256": "1d0d1f0fc18d851d78df9463d423ad59b8049dd29d2cac9b9ba2b0737874c3a1",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "Apache-2.0",
+    "BSD-2-Clause"
+  ],
+  "license_match": true,
+  "license_recorded": "Apache-2.0",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "src/packaging/specifiers.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "src/packaging/specifiers.py",
+    "tests/test_specifiers.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:32:57Z"
+}

@@ -1,0 +1,53 @@
+{
+  "classification": {
+    ".gitignore": "other",
+    "attr/validators.py": "source",
+    "docs/api.rst": "docs",
+    "docs/examples.rst": "docs",
+    "setup.py": "source",
+    "tests/test_validators.py": "test",
+    "tox.ini": "config"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_validators.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_validators.py"
+  ],
+  "matched": [
+    "attr/validators.py",
+    "docs/api.rst",
+    "docs/examples.rst",
+    "tox.ini"
+  ],
+  "missing": [
+    ".gitignore",
+    "setup.py"
+  ],
+  "missing_classification": {
+    ".gitignore": "other",
+    "setup.py": "source"
+  },
+  "missing_docs": [
+    ".gitignore"
+  ],
+  "missing_including_locked_tests": [
+    ".gitignore",
+    "setup.py",
+    "tests/test_validators.py"
+  ],
+  "missing_source": [
+    "setup.py"
+  ],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "attr/validators.py"
+  ],
+  "status": "partial_patch"
+}

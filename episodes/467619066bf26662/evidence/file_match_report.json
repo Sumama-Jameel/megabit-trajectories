@@ -1,0 +1,41 @@
+{
+  "classification": {
+    "releasenotes/notes/fix-wait-chain-empty-strategies-d3a8f7c2b1e4f569.yaml": "config",
+    "tenacity/wait.py": "source",
+    "tests/test_tenacity.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_tenacity.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_tenacity.py"
+  ],
+  "matched": [
+    "tenacity/wait.py"
+  ],
+  "missing": [
+    "releasenotes/notes/fix-wait-chain-empty-strategies-d3a8f7c2b1e4f569.yaml"
+  ],
+  "missing_classification": {
+    "releasenotes/notes/fix-wait-chain-empty-strategies-d3a8f7c2b1e4f569.yaml": "config"
+  },
+  "missing_docs": [
+    "releasenotes/notes/fix-wait-chain-empty-strategies-d3a8f7c2b1e4f569.yaml"
+  ],
+  "missing_including_locked_tests": [
+    "releasenotes/notes/fix-wait-chain-empty-strategies-d3a8f7c2b1e4f569.yaml",
+    "tests/test_tenacity.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "tenacity/wait.py"
+  ],
+  "status": "clean_with_missing_docs"
+}

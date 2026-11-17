@@ -1,0 +1,64 @@
+{
+  "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
+  "diff1_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+  "diff2_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+  "episode_id": "d6f539cc3e8728e8",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 178,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/click/core.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/arguments.md"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/documentation.md"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_arguments.py"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
+  "ticket": {
+    "allowed_path_count": 178,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/click/core.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/arguments.md"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/documentation.md"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_arguments.py"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

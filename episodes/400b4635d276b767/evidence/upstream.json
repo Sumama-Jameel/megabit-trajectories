@@ -1,0 +1,23 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/tenacity-e9dd6a3faf",
+  "diff_files": 2,
+  "diff_sha256": "fa102e268931f3f4ce1d2f894c3920602bddfa9c6c98d51fec5fddbe44ab6a80",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "Apache-2.0"
+  ],
+  "license_match": true,
+  "license_recorded": "Apache-2.0",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "tenacity/after.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "tenacity/after.py",
+    "tests/test_after.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:32:59Z"
+}

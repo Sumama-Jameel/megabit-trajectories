@@ -1,0 +1,27 @@
+{
+  "episodes": 66,
+  "exported_tool_calls": 2312,
+  "failure_recovery_tool_calls": 221,
+  "harness_green_rounds": 65,
+  "harness_test_runs": 195,
+  "jargon_tool_calls": 0,
+  "raw_tool_calls": 2541,
+  "reasoning_available": 0,
+  "reasoning_events": 0,
+  "rejected_at_export": 1,
+  "rejection_example_calls": 1,
+  "restored_tool_calls": 222,
+  "sample_tool_calls": 2311,
+  "schema": 1,
+  "splits": {
+    "action_only": 56,
+    "legacy_unplanned": 6,
+    "network_dependent": 1,
+    "quarantine_test_only": 1,
+    "research_only": 2
+  },
+  "ticket_path_audits": 66,
+  "ticket_path_failures": 0,
+  "ticket_path_unverifiable": 0,
+  "unresolved_tool_calls": 0
+}

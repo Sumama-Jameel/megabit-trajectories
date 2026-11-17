@@ -1,0 +1,8 @@
+{
+  "findings_count": 3,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": true,
+  "reviewer_test_calls": 7,
+  "schema": 1
+}

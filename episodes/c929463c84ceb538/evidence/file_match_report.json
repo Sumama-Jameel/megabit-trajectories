@@ -1,0 +1,35 @@
+{
+  "classification": {
+    "click/core.py": "source",
+    "docs/commands.rst": "docs",
+    "tests/test_commands.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_commands.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_commands.py"
+  ],
+  "matched": [
+    "click/core.py",
+    "docs/commands.rst"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_commands.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "click/core.py"
+  ],
+  "status": "clean"
+}

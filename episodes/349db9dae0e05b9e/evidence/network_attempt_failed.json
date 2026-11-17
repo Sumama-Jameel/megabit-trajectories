@@ -1,0 +1,7 @@
+{
+  "command": "pip install mypy pyright",
+  "error": "ERROR: No matching distribution found for mypy",
+  "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F11",
+  "kind": "megabit.network_attempt_failed",
+  "outcome": "no_package_installed"
+}

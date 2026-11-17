@@ -1,0 +1,48 @@
+{
+  "classification": {
+    "changelog.d/1448.change.md": "docs",
+    "src/attr/validators.py": "source",
+    "src/attr/validators.pyi": "source",
+    "tests/test_validators.py": "test",
+    "tests/typing_example.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_validators.py",
+    "tests/typing_example.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_validators.py",
+    "tests/typing_example.py"
+  ],
+  "matched": [
+    "src/attr/validators.py",
+    "src/attr/validators.pyi"
+  ],
+  "missing": [
+    "changelog.d/1448.change.md"
+  ],
+  "missing_classification": {
+    "changelog.d/1448.change.md": "docs"
+  },
+  "missing_docs": [
+    "changelog.d/1448.change.md"
+  ],
+  "missing_including_locked_tests": [
+    "changelog.d/1448.change.md",
+    "tests/test_validators.py",
+    "tests/typing_example.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/attr/validators.py",
+    "src/attr/validators.pyi"
+  ],
+  "status": "clean_with_missing_docs"
+}

@@ -1,0 +1,50 @@
+{
+  "classification": {
+    "docs/api.md": "docs",
+    "docs/handling-files.md": "docs",
+    "docs/wincmd.md": "docs",
+    "src/click/__init__.py": "source",
+    "src/click/utils.py": "source",
+    "tests/test_deprecations.py": "test",
+    "tests/test_testing.py": "test"
+  },
+  "extra": [
+    "docs/api.md",
+    "docs/wincmd.md"
+  ],
+  "extra_classification": {
+    "docs/api.md": "docs",
+    "docs/wincmd.md": "docs"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_deprecations.py",
+    "tests/test_testing.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_deprecations.py",
+    "tests/test_testing.py"
+  ],
+  "matched": [
+    "docs/handling-files.md",
+    "src/click/__init__.py",
+    "src/click/utils.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_deprecations.py",
+    "tests/test_testing.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/click/__init__.py",
+    "src/click/utils.py"
+  ],
+  "status": "clean_with_extra"
+}

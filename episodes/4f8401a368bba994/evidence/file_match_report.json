@@ -1,0 +1,47 @@
+{
+  "classification": {
+    ".pytest_stress.log": "other",
+    "CHANGES.md": "docs",
+    "src/click/_compat.py": "source",
+    "src/click/_termui_impl.py": "source",
+    "tests/test_termui.py": "test",
+    "tests/test_utils/test_echo_via_pager.py": "test"
+  },
+  "extra": [
+    ".pytest_stress.log"
+  ],
+  "extra_classification": {
+    ".pytest_stress.log": "other"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_termui.py",
+    "tests/test_utils/test_echo_via_pager.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_termui.py",
+    "tests/test_utils/test_echo_via_pager.py"
+  ],
+  "matched": [
+    "CHANGES.md",
+    "src/click/_compat.py",
+    "src/click/_termui_impl.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_termui.py",
+    "tests/test_utils/test_echo_via_pager.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/click/_compat.py",
+    "src/click/_termui_impl.py"
+  ],
+  "status": "clean_with_extra"
+}

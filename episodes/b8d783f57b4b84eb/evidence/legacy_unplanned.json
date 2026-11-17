@@ -1,0 +1,8 @@
+{
+  "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F4/F5; REMEDIATION_PLAN N12/N13",
+  "kind": "megabit.legacy_unplanned",
+  "plan_detector_version": "plan_detector_v1",
+  "reason": "no_detected_plan_before_first_mutation",
+  "summary": "plan_detector_v1 (deterministic features + judge) found no plan evidence in the pre-edit trajectory: no forward-looking steps naming a target and a verification action. The legacy gate flagged this episode and the detector confirms it. The episode is kept for research and as a negative example. It does not count as plan-compliant SFT data.",
+  "todo_write_count": 0
+}

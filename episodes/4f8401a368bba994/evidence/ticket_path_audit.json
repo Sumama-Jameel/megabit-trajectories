@@ -1,0 +1,80 @@
+{
+  "base_commit": "cbd7a4109da16ce58f54c2a618b4c986e3041fcf",
+  "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+  "diff2_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+  "episode_id": "4f8401a368bba994",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 165,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/click/_termui_impl.py"
+      },
+      {
+        "status": "allowed",
+        "token": "src/click/_compat.py"
+      },
+      {
+        "status": "allowed",
+        "token": "src/click/utils.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_termui.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_utils/test_echo_via_pager.py"
+      },
+      {
+        "status": "allowed",
+        "token": "CHANGES.md"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
+  "ticket": {
+    "allowed_path_count": 165,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/click/_termui_impl.py"
+      },
+      {
+        "status": "allowed",
+        "token": "src/click/_compat.py"
+      },
+      {
+        "status": "allowed",
+        "token": "src/click/utils.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_termui.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_utils/test_echo_via_pager.py"
+      },
+      {
+        "status": "allowed",
+        "token": "CHANGES.md"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

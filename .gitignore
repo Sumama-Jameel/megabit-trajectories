@@ -6,3 +6,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .DS_Store
+
+# Never publish the HMAC signing key or any key material.
+keys/
+*.key

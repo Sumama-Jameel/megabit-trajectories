@@ -1,0 +1,72 @@
+{
+  "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
+  "diff1_tree_sha256": "515530e4a81de4feeab2d4a0f7010489101d239d722ca9ae04b01a7af6a3fde7",
+  "diff2_tree_sha256": "515530e4a81de4feeab2d4a0f7010489101d239d722ca9ae04b01a7af6a3fde7",
+  "episode_id": "4c434330ee44b096",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 29,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "attr/_dunders.py"
+      },
+      {
+        "status": "allowed",
+        "token": "attr/_make.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/examples.rst"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_dunders.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_dark_magic.py"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
+  "ticket": {
+    "allowed_path_count": 29,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "attr/_dunders.py"
+      },
+      {
+        "status": "allowed",
+        "token": "attr/_make.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/examples.rst"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_dunders.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_dark_magic.py"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

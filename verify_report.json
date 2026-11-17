@@ -1,0 +1,70 @@
+{
+  "corpus": "/home/sumama/Private/megabit-trajectories",
+  "definition_of_done": {
+    "counts_single_source": true,
+    "deep_report_and_signed_manifest": true,
+    "every_raw_call_accounted": true,
+    "no_jargon_in_training": true,
+    "no_sft_network_dependency": true,
+    "no_sft_test_only_target": true,
+    "offline_replay": "not_applicable_no_sft",
+    "provenance_booleans": true,
+    "rejection_preserved": true,
+    "replay_summary": null,
+    "reviewer_never_runs_tests": true,
+    "sft_plan_before_edit": true,
+    "sft_reasoning_captured": true,
+    "sft_source_change": true,
+    "sft_three_sequential_runs": true,
+    "tickets_diff1_only": true,
+    "v1_accounted": true,
+    "v1_hash_identical": true,
+    "v1_reasoning_not_fabricated": true
+  },
+  "episodes_expected": 66,
+  "episodes_verified": 66,
+  "failures": [],
+  "generated_counts": {
+    "episodes": 66,
+    "exported_tool_calls": 2312,
+    "failure_recovery_tool_calls": 221,
+    "harness_green_rounds": 65,
+    "harness_test_runs": 195,
+    "jargon_tool_calls": 0,
+    "raw_tool_calls": 2541,
+    "reasoning_available": 0,
+    "reasoning_events": 0,
+    "rejected_at_export": 1,
+    "rejection_example_calls": 1,
+    "restored_tool_calls": 222,
+    "sample_tool_calls": 2311,
+    "schema": 1,
+    "splits": {
+      "action_only": 56,
+      "legacy_unplanned": 6,
+      "network_dependent": 1,
+      "quarantine_test_only": 1,
+      "research_only": 2
+    },
+    "ticket_path_audits": 66,
+    "ticket_path_failures": 0,
+    "ticket_path_unverifiable": 0,
+    "unresolved_tool_calls": 0
+  },
+  "layout": "in_place",
+  "ok": true,
+  "schema": 1,
+  "secret_scan": {
+    "findings": [],
+    "scanned_files": 2196
+  },
+  "splits": {
+    "action_only": 56,
+    "legacy_unplanned": 6,
+    "network_dependent": 1,
+    "quarantine_test_only": 1,
+    "research_only": 2
+  },
+  "v2_root": "/home/sumama/Private/megabit-trajectories",
+  "warnings": []
+}

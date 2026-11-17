@@ -1,0 +1,55 @@
+{
+  "classification": {
+    "changelog.d/1497.change.md": "docs",
+    "changelog.d/1529.change.md": "docs",
+    "docs/api.rst": "docs",
+    "src/attr/__init__.pyi": "source",
+    "src/attr/_make.py": "source",
+    "tests/test_make.py": "test",
+    "tests/test_mypy.yml": "test"
+  },
+  "extra": [
+    "changelog.d/1497.change.md"
+  ],
+  "extra_classification": {
+    "changelog.d/1497.change.md": "docs"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_make.py",
+    "tests/test_mypy.yml"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_make.py",
+    "tests/test_mypy.yml"
+  ],
+  "matched": [
+    "docs/api.rst",
+    "src/attr/__init__.pyi",
+    "src/attr/_make.py"
+  ],
+  "missing": [
+    "changelog.d/1529.change.md"
+  ],
+  "missing_classification": {
+    "changelog.d/1529.change.md": "docs"
+  },
+  "missing_docs": [
+    "changelog.d/1529.change.md"
+  ],
+  "missing_including_locked_tests": [
+    "changelog.d/1529.change.md",
+    "tests/test_make.py",
+    "tests/test_mypy.yml"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/attr/__init__.pyi",
+    "src/attr/_make.py"
+  ],
+  "status": "clean_with_missing_docs"
+}

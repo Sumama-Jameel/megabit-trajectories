@@ -1,0 +1,36 @@
+{
+  "applicable": true,
+  "confidence": 0.42,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+    6,
+    7,
+    8
+  ],
+  "first_mutation_event_id": "11",
+  "first_mutation_index": 11,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-27T12:07:22.228041123Z",
+  "reason": "concrete target and verification before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+    "explicit_heading": false,
+    "forward_markers": 0,
+    "generic_only": false,
+    "mutation_seen": true,
+    "ordered_steps": 0,
+    "plan_words": 0,
+    "targets": [
+      "make_class",
+      "these"
+    ],
+    "text_chars": 158,
+    "ticket_echo": false,
+    "verification": true
+  },
+  "text_sha256": "507145b22e6c1b03f2fbda4f08469628c3fa1841ecd2660d7e7a32cfc6f74e7a",
+  "todo_writes": 0
+}

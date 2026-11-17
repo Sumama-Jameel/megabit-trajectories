@@ -1,0 +1,189 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "bbd97a815aec44d8a5c76f2b1d174f0d",
+      "tests_passed": true,
+      "tool_calls": 51
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 51,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 51,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "966101f98864fafa",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "741c5fbe5759df48",
+      "3c21058e652db06f",
+      "3fa3f8b936d925b4"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      53
+    ],
+    "first_mutation_event_id": "80",
+    "first_mutation_index": 80,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-01T14:28:50.636260839Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "4687055b3167a4a1e87aa747391fd0542ead9e55ca390355c6346ec2e1040c21",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "82d9b0c56b1dfec813ac3c16934a5eb401f302f7",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-2-Clause",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "bbd97a815aec44d8a5c76f2b1d174f0d",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "14c9b1a0b05e1c3855f1d48e3780596f77bee3b0",
+    "target_message": "Made tests pass on 3.x",
+    "task_fingerprint": "sha256:be98aba786d0892611138f7b6df5ce85abdc7e0cb9ea1214823e3d17d3a80981",
+    "task_id": "966101f98864fafa",
+    "task_mac_valid": true,
+    "ticket_summary": "# Tests cannot be run on Python 3\n\n## What happens now\n\nOn Python 3 the test run fails before a single test runs, because the test helper imports a text-buffer module that exists only on Python 2. The",
+    "verification_line_similarity": 0.3256,
+    "verification_passed": true
+  },
+  "quarantine": {
+    "reason": "target_diff_has_no_source_change",
+    "record": "evidence/quarantine.json"
+  },
+  "raw_path": "966101f98864fafa.episode.jsonl",
+  "raw_sha256": "f61fea45b71a52ee5f3fa54e5f502959ff0e9b580b038895c552c60c2ea126e7",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "966101f98864fafa.sample.jsonl",
+  "sample_sha256": "f535c30724ada0f5104e513ca650f0c8dbede2347faa0f0f8b5495a318bbf75d",
+  "schema_version": 2,
+  "splits": [
+    "quarantine_test_only"
+  ],
+  "supersedes": "966101f98864fafa",
+  "task_validity": {
+    "base_commit": "82d9b0c56b1dfec813ac3c16934a5eb401f302f7",
+    "source_verified": true,
+    "target_commit": "14c9b1a0b05e1c3855f1d48e3780596f77bee3b0",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "82d9b0c56b1dfec813ac3c16934a5eb401f302f7",
+    "diff1_tree_sha256": "f4069dae011f4f7fbe8d0c5d9308521d636e0217101d470299987fbe8c372b43",
+    "diff2_tree_sha256": "f4069dae011f4f7fbe8d0c5d9308521d636e0217101d470299987fbe8c372b43",
+    "episode_id": "966101f98864fafa",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 51,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tests/conftest.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_basic.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "14c9b1a0b05e1c3855f1d48e3780596f77bee3b0",
+    "ticket": {
+      "allowed_path_count": 51,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "tests/conftest.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_basic.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

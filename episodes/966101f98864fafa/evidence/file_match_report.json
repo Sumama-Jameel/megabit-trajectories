@@ -1,0 +1,35 @@
+{
+  "classification": {
+    "LICENSE": "license",
+    "tests/conftest.py": "test",
+    "tests/test_basic.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/conftest.py",
+    "tests/test_basic.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/conftest.py",
+    "tests/test_basic.py"
+  ],
+  "matched": [
+    "LICENSE"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/conftest.py",
+    "tests/test_basic.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": false,
+  "source_files_matched": [],
+  "status": "test_only_task"
+}

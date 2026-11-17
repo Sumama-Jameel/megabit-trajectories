@@ -1,0 +1,10 @@
+{
+  "detected_spdx": "Apache-2.0",
+  "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F10",
+  "kind": "megabit.provenance_backfill",
+  "method": "textual detection (LICENSE at base commit)",
+  "reason": "task record has no SPDX id; license detected Apache-2.0 in the repository; there is no recorded base license to compare against; verification cannot produce a positive result",
+  "source_verified": false,
+  "task_record": "no SPDX id",
+  "verified_at": "2026-11-17T09:32:47Z"
+}

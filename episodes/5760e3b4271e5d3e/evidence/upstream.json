@@ -1,0 +1,28 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "diff_files": 5,
+  "diff_sha256": "c2b0b233d117022f4139ac05553fb7da4e66e0bf0aa76462868a50422434b902",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "BSD-3-Clause"
+  ],
+  "license_match": true,
+  "license_recorded": "BSD-3-Clause",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "CHANGES.md",
+    "src/click/_termui_impl.py",
+    "src/click/termui.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "CHANGES.md",
+    "src/click/_termui_impl.py",
+    "src/click/termui.py",
+    "tests/test_termui.py",
+    "tests/typing/typing_edit.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:33:00Z"
+}

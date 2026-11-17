@@ -1,0 +1,88 @@
+{
+  "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
+  "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "episode_id": "94dab878e2c9a0ec",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 34,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "packaging/version.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_version.py"
+      },
+      {
+        "status": "allowed",
+        "token": "packaging/_compat.py"
+      },
+      {
+        "status": "allowed",
+        "token": "packaging/_structures.py"
+      },
+      {
+        "status": "allowed",
+        "token": "packaging/__about__.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/index.rst"
+      },
+      {
+        "status": "allowed",
+        "token": "README.rst"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+  "ticket": {
+    "allowed_path_count": 34,
+    "forbidden_path_count": 0,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "packaging/version.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_version.py"
+      },
+      {
+        "status": "allowed",
+        "token": "packaging/_compat.py"
+      },
+      {
+        "status": "allowed",
+        "token": "packaging/_structures.py"
+      },
+      {
+        "status": "allowed",
+        "token": "packaging/__about__.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/index.rst"
+      },
+      {
+        "status": "allowed",
+        "token": "README.rst"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}

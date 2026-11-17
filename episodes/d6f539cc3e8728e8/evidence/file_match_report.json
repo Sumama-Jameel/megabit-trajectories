@@ -1,0 +1,48 @@
+{
+  "classification": {
+    "CHANGES.md": "docs",
+    "docs/arguments.md": "docs",
+    "docs/documentation.md": "docs",
+    "src/click/core.py": "source",
+    "tests/test_arguments.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_arguments.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_arguments.py"
+  ],
+  "matched": [
+    "docs/arguments.md",
+    "src/click/core.py"
+  ],
+  "missing": [
+    "CHANGES.md",
+    "docs/documentation.md"
+  ],
+  "missing_classification": {
+    "CHANGES.md": "docs",
+    "docs/documentation.md": "docs"
+  },
+  "missing_docs": [
+    "CHANGES.md",
+    "docs/documentation.md"
+  ],
+  "missing_including_locked_tests": [
+    "CHANGES.md",
+    "docs/documentation.md",
+    "tests/test_arguments.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/click/core.py"
+  ],
+  "status": "clean_with_missing_docs"
+}

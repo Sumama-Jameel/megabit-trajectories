@@ -1,0 +1,11 @@
+{
+  "canonical_context": null,
+  "canonical_run_ids": [],
+  "green": false,
+  "legacy_harness": true,
+  "run_count": 0,
+  "runs": [],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": false
+}

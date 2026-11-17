@@ -1,0 +1,2409 @@
+{
+  "episodes": {
+    "012ad533e237baaf": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_tags.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.34s\n",
+          "passed": null,
+          "seconds": 7.316,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 4.85s\n",
+          "passed": null,
+          "seconds": 5.722,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 4.96s\n",
+          "passed": null,
+          "seconds": 5.822,
+          "sequence": 3
+        }
+      ],
+      "seconds": 18.901,
+      "status": "replayed_fail"
+    },
+    "032c699ac1c2d252": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_specifiers.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "oundError: No module named 'hypothesis'\n=========================== short test summary info ============================\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!\n8 errors in 7.10s\n",
+          "passed": null,
+          "seconds": 11.419,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "oundError: No module named 'hypothesis'\n=========================== short test summary info ============================\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!\n8 errors in 5.63s\n",
+          "passed": null,
+          "seconds": 9.874,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "oundError: No module named 'hypothesis'\n=========================== short test summary info ============================\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 8 errors during collection !!!!!!!!!!!!!!!!!!!!\n8 errors in 5.64s\n",
+          "passed": null,
+          "seconds": 9.902,
+          "sequence": 3
+        }
+      ],
+      "seconds": 31.242,
+      "status": "replayed_fail"
+    },
+    "0571b7eb5d6b7555": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_funcs.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.11s\n",
+          "passed": 33,
+          "seconds": 1.122,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.10s\n",
+          "passed": 33,
+          "seconds": 1.21,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.09s\n",
+          "passed": 33,
+          "seconds": 1.113,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.465,
+      "status": "replayed_pass"
+    },
+    "1039a0159065c3b0": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_metadata.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 7.84s\n",
+          "passed": null,
+          "seconds": 12.272,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.01s\n",
+          "passed": null,
+          "seconds": 10.351,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.06s\n",
+          "passed": null,
+          "seconds": 10.307,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.969,
+      "status": "replayed_fail"
+    },
+    "114f10e73ae47ce3": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_tenacity.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 43%]\n........................................................................ [ 94%]\n.......                                                                  [100%]\n139 passed, 12 subtests passed in 2.79s\n",
+          "passed": 139,
+          "seconds": 4.033,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 43%]\n........................................................................ [ 94%]\n.......                                                                  [100%]\n139 passed, 12 subtests passed in 2.72s\n",
+          "passed": 139,
+          "seconds": 3.882,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 43%]\n........................................................................ [ 94%]\n.......                                                                  [100%]\n139 passed, 12 subtests passed in 2.73s\n",
+          "passed": 139,
+          "seconds": 3.928,
+          "sequence": 3
+        }
+      ],
+      "seconds": 11.865,
+      "status": "replayed_pass"
+    },
+    "12817d803e8f9f1c": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dependency_groups.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 7.78s\n",
+          "passed": null,
+          "seconds": 12.197,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.01s\n",
+          "passed": null,
+          "seconds": 10.292,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.06s\n",
+          "passed": null,
+          "seconds": 10.35,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.877,
+      "status": "replayed_fail"
+    },
+    "1b1f2e9f7ff0fd2a": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 7.83s\n",
+          "passed": null,
+          "seconds": 12.129,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.85s\n",
+          "passed": null,
+          "seconds": 11.042,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 5.70s\n",
+          "passed": null,
+          "seconds": 9.97,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.187,
+      "status": "replayed_fail"
+    },
+    "1bdf5e7c144469b8": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_asyncio.py",
+        "tests/test_tenacity.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "................................................................................................................................. [ 72%]\n..................................................                       [100%]\n179 passed, 15 subtests passed in 3.03s\n",
+          "passed": 179,
+          "seconds": 4.375,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "................................................................................................................................. [ 72%]\n..................................................                       [100%]\n179 passed, 15 subtests passed in 2.96s\n",
+          "passed": 179,
+          "seconds": 4.128,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "................................................................................................................................. [ 72%]\n..................................................                       [100%]\n179 passed, 15 subtests passed in 3.11s\n",
+          "passed": 179,
+          "seconds": 4.269,
+          "sequence": 3
+        }
+      ],
+      "seconds": 12.793,
+      "status": "replayed_pass"
+    },
+    "1eb9f1613651e8fb": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_funcs.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-x2k0cyoh/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.004,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-x2k0cyoh/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.047,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-x2k0cyoh/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.027,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.164,
+      "status": "replayed_fail"
+    },
+    "1f3dfd68ce2f10fd": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_asyncio.py",
+        "tests/test_tenacity.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 41%]\n........................................................................ [ 91%]\n.............                                                            [100%]\n145 passed, 12 subtests passed in 2.88s\n",
+          "passed": 145,
+          "seconds": 4.054,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 41%]\n........................................................................ [ 91%]\n.............                                                            [100%]\n145 passed, 12 subtests passed in 2.81s\n",
+          "passed": 145,
+          "seconds": 4.021,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 41%]\n........................................................................ [ 91%]\n.............                                                            [100%]\n145 passed, 12 subtests passed in 2.87s\n",
+          "passed": 145,
+          "seconds": 4.071,
+          "sequence": 3
+        }
+      ],
+      "seconds": 12.181,
+      "status": "replayed_pass"
+    },
+    "21721c8be6eec2d5": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_make.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-7j61ro7m/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.074,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-7j61ro7m/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.024,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-7j61ro7m/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.987,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.185,
+      "status": "replayed_fail"
+    },
+    "2288ac90554bcfa6": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_metadata.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.12s\n",
+          "passed": null,
+          "seconds": 12.524,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.24s\n",
+          "passed": null,
+          "seconds": 10.559,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.20s\n",
+          "passed": null,
+          "seconds": 10.501,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.63,
+      "status": "replayed_fail"
+    },
+    "23fcc876cc35b523": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_asyncio.py",
+        "tests/test_tenacity.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "................................................................................................................................. [ 70%]\n.......................................................                  [100%]\n184 passed, 15 subtests passed in 3.07s\n",
+          "passed": 184,
+          "seconds": 4.327,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "................................................................................................................................. [ 70%]\n.......................................................                  [100%]\n184 passed, 15 subtests passed in 3.08s\n",
+          "passed": 184,
+          "seconds": 4.301,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "................................................................................................................................. [ 70%]\n.......................................................                  [100%]\n184 passed, 15 subtests passed in 3.08s\n",
+          "passed": 184,
+          "seconds": 4.27,
+          "sequence": 3
+        }
+      ],
+      "seconds": 12.92,
+      "status": "replayed_pass"
+    },
+    "25e452d88c01814e": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_metadata.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 7.97s\n",
+          "passed": null,
+          "seconds": 12.471,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.11s\n",
+          "passed": null,
+          "seconds": 10.431,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.15s\n",
+          "passed": null,
+          "seconds": 10.456,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.41,
+      "status": "replayed_fail"
+    },
+    "2b67051b08a2794f": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dark_magic.py",
+        "tests/test_dunders.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..................................                                       [100%]\n34 passed in 0.13s\n",
+          "passed": 34,
+          "seconds": 1.198,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..................................                                       [100%]\n34 passed in 0.09s\n",
+          "passed": 34,
+          "seconds": 1.122,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..................................                                       [100%]\n34 passed in 0.09s\n",
+          "passed": 34,
+          "seconds": 1.096,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.431,
+      "status": "replayed_pass"
+    },
+    "2d6f3e5f14681273": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_funcs.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-bm4qw2lw/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.074,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-bm4qw2lw/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.977,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-bm4qw2lw/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.084,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.236,
+      "status": "replayed_fail"
+    },
+    "2f219d6f06d064cc": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_validators.py",
+        "tests/typing_example.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-14yrkye8/work/conftest.py'.\nconftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.992,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-14yrkye8/work/conftest.py'.\nconftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.964,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-14yrkye8/work/conftest.py'.\nconftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.062,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.121,
+      "status": "replayed_fail"
+    },
+    "31fc77740af45bd4": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_make.py",
+        "tests/test_mypy.yml"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-mpqz0y8z/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.01,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-mpqz0y8z/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.962,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-mpqz0y8z/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.026,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.095,
+      "status": "replayed_fail"
+    },
+    "33da938be0a526fb": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_validators.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est module '/tmp/mb-replay-hd0cem_p/work/tests/test_validators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_validators.py:10: in <module>\n    import zope.interface\nE   ModuleNotFoundError: No module named 'zope'\n=========================== short test summary info ============================\nERROR tests/test_validators.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.24s\n",
+          "passed": null,
+          "seconds": 1.329,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est module '/tmp/mb-replay-hd0cem_p/work/tests/test_validators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_validators.py:10: in <module>\n    import zope.interface\nE   ModuleNotFoundError: No module named 'zope'\n=========================== short test summary info ============================\nERROR tests/test_validators.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.19s\n",
+          "passed": null,
+          "seconds": 1.216,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est module '/tmp/mb-replay-hd0cem_p/work/tests/test_validators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_validators.py:10: in <module>\n    import zope.interface\nE   ModuleNotFoundError: No module named 'zope'\n=========================== short test summary info ============================\nERROR tests/test_validators.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.20s\n",
+          "passed": null,
+          "seconds": 1.259,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.821,
+      "status": "replayed_fail"
+    },
+    "349db9dae0e05b9e": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_types/test_Path.py",
+        "tests/typing/typing_path.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n.................................................s...................... [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n.....................................................................    [100%]\n2060 passed, 24 skipped, 31000 deselected, 1 xfailed in 8.15s\n",
+          "passed": 2060,
+          "seconds": 11.448,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n.................................................s...................... [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n.....................................................................    [100%]\n2060 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.20s\n",
+          "passed": 2060,
+          "seconds": 10.508,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n.................................................s...................... [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n.....................................................................    [100%]\n2060 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.26s\n",
+          "passed": 2060,
+          "seconds": 10.581,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.597,
+      "status": "replayed_pass"
+    },
+    "3a35d6717919075a": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_funcs.py",
+        "tests/test_make.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est module '/tmp/mb-replay-2o3labrl/work/tests/test_validators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_validators.py:10: in <module>\n    import zope.interface\nE   ModuleNotFoundError: No module named 'zope'\n=========================== short test summary info ============================\nERROR tests/test_validators.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.23s\n",
+          "passed": null,
+          "seconds": 1.268,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est module '/tmp/mb-replay-2o3labrl/work/tests/test_validators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_validators.py:10: in <module>\n    import zope.interface\nE   ModuleNotFoundError: No module named 'zope'\n=========================== short test summary info ============================\nERROR tests/test_validators.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.20s\n",
+          "passed": null,
+          "seconds": 1.253,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est module '/tmp/mb-replay-2o3labrl/work/tests/test_validators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/usr/lib/python3.10/importlib/__init__.py:126: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests/test_validators.py:10: in <module>\n    import zope.interface\nE   ModuleNotFoundError: No module named 'zope'\n=========================== short test summary info ============================\nERROR tests/test_validators.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.19s\n",
+          "passed": null,
+          "seconds": 1.199,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.813,
+      "status": "replayed_fail"
+    },
+    "3fc1a5fb92713be9": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_metadata.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 8.15s\n",
+          "passed": null,
+          "seconds": 12.542,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.06s\n",
+          "passed": null,
+          "seconds": 10.475,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 5.99s\n",
+          "passed": null,
+          "seconds": 10.33,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.395,
+      "status": "replayed_fail"
+    },
+    "400b4635d276b767": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_after.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 46%]\n....................................................................     [100%]\n128 passed, 12 subtests passed in 2.82s\n",
+          "passed": 128,
+          "seconds": 4.075,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 46%]\n....................................................................     [100%]\n128 passed, 12 subtests passed in 2.70s\n",
+          "passed": 128,
+          "seconds": 3.955,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............................................................ [ 46%]\n....................................................................     [100%]\n128 passed, 12 subtests passed in 2.72s\n",
+          "passed": 128,
+          "seconds": 3.853,
+          "sequence": 3
+        }
+      ],
+      "seconds": 11.905,
+      "status": "replayed_pass"
+    },
+    "407fa06b826e1657": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_tags.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.01s\n",
+          "passed": null,
+          "seconds": 12.501,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.18s\n",
+          "passed": null,
+          "seconds": 10.504,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.12s\n",
+          "passed": null,
+          "seconds": 10.391,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.443,
+      "status": "replayed_fail"
+    },
+    "44a7dbbd48675f67": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_compat.py",
+        "tests/test_formatting.py",
+        "tests/test_utils/test_style.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n...............................................................s........ [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...............................................                          [100%]\n1894 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.63s\n",
+          "passed": 1894,
+          "seconds": 10.917,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n...............................................................s........ [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...............................................                          [100%]\n1894 passed, 24 skipped, 31000 deselected, 1 xfailed in 6.89s\n",
+          "passed": 1894,
+          "seconds": 10.109,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n...............................................................s........ [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...............................................                          [100%]\n1894 passed, 24 skipped, 31000 deselected, 1 xfailed in 6.94s\n",
+          "passed": 1894,
+          "seconds": 10.151,
+          "sequence": 3
+        }
+      ],
+      "seconds": 31.22,
+      "status": "replayed_pass"
+    },
+    "467619066bf26662": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_tenacity.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".............................................................. [ 37%]\n...................................................................... [ 79%]\n..................................                                       [100%]\n166 passed, 12 subtests passed in 2.98s\n",
+          "passed": 166,
+          "seconds": 4.15,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".............................................................. [ 37%]\n...................................................................... [ 79%]\n..................................                                       [100%]\n166 passed, 12 subtests passed in 3.07s\n",
+          "passed": 166,
+          "seconds": 4.223,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".............................................................. [ 37%]\n...................................................................... [ 79%]\n..................................                                       [100%]\n166 passed, 12 subtests passed in 2.96s\n",
+          "passed": 166,
+          "seconds": 4.1,
+          "sequence": 3
+        }
+      ],
+      "seconds": 12.492,
+      "status": "replayed_pass"
+    },
+    "490a433138e1fe8e": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/tests.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "...............                                                          [100%]\n15 passed in 5.79s\n",
+          "passed": 15,
+          "seconds": 6.929,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "...............                                                          [100%]\n15 passed in 5.52s\n",
+          "passed": 15,
+          "seconds": 6.66,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "...............                                                          [100%]\n15 passed in 5.54s\n",
+          "passed": 15,
+          "seconds": 6.665,
+          "sequence": 3
+        }
+      ],
+      "seconds": 20.269,
+      "status": "replayed_pass"
+    },
+    "4c434330ee44b096": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dark_magic.py",
+        "tests/test_dunders.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..........................................                               [100%]\n42 passed in 0.13s\n",
+          "passed": 42,
+          "seconds": 1.161,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..........................................                               [100%]\n42 passed in 0.10s\n",
+          "passed": 42,
+          "seconds": 1.149,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..........................................                               [100%]\n42 passed in 0.11s\n",
+          "passed": 42,
+          "seconds": 1.217,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.546,
+      "status": "replayed_pass"
+    },
+    "4f8401a368bba994": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_termui.py",
+        "tests/test_utils/test_echo_via_pager.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n................................................................s....... [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n....................................................                     [100%]\n1971 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.89s\n",
+          "passed": 1971,
+          "seconds": 11.181,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n................................................................s....... [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n....................................................                     [100%]\n1971 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.02s\n",
+          "passed": 1971,
+          "seconds": 10.284,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n................................................................s....... [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n....................................................                     [100%]\n1971 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.07s\n",
+          "passed": 1971,
+          "seconds": 10.307,
+          "sequence": 3
+        }
+      ],
+      "seconds": 31.83,
+      "status": "replayed_pass"
+    },
+    "5760e3b4271e5d3e": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_termui.py",
+        "tests/typing/typing_edit.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n............s........................................................... [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [100%]\n1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 8.15s\n",
+          "passed": 1991,
+          "seconds": 11.487,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n............s........................................................... [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [100%]\n1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.12s\n",
+          "passed": 1991,
+          "seconds": 10.35,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n............s........................................................... [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [100%]\n1991 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.15s\n",
+          "passed": 1991,
+          "seconds": 10.395,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.287,
+      "status": "replayed_pass"
+    },
+    "57b500b3a9ee36b6": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_context.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "                   [100%]\n=============================== warnings summary ===============================\nclick/core.py:545\n  /tmp/mb-replay-izavu8rd/work/click/core.py:545: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"A parameter to a command comes in two versions: they are either\n\nclick/decorators.py:92\n  /tmp/mb-replay-izavu8rd/work/click/decorators.py:92: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n12 passed, 2 warnings in 0.12s\n",
+          "passed": 12,
+          "seconds": 1.328,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............                                                             [100%]\n12 passed in 0.07s\n",
+          "passed": 12,
+          "seconds": 1.206,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "............                                                             [100%]\n12 passed in 0.07s\n",
+          "passed": 12,
+          "seconds": 1.193,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.746,
+      "status": "replayed_pass"
+    },
+    "611e35323caaf082": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dunders.py",
+        "tests/test_make.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................                                           [100%]\n30 passed in 0.11s\n",
+          "passed": 30,
+          "seconds": 1.106,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................                                           [100%]\n30 passed in 0.12s\n",
+          "passed": 30,
+          "seconds": 1.247,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................                                           [100%]\n30 passed in 0.08s\n",
+          "passed": 30,
+          "seconds": 1.144,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.515,
+      "status": "replayed_pass"
+    },
+    "73246683fe7ee6c6": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_funcs.py",
+        "tests/test_make.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.12s\n",
+          "passed": 33,
+          "seconds": 1.122,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.09s\n",
+          "passed": 33,
+          "seconds": 1.095,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.13s\n",
+          "passed": 33,
+          "seconds": 1.23,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.461,
+      "status": "replayed_pass"
+    },
+    "7bd0a927168a14f3": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_funcs.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.11s\n",
+          "passed": 33,
+          "seconds": 1.122,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.09s\n",
+          "passed": 33,
+          "seconds": 1.101,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................                                        [100%]\n33 passed in 0.09s\n",
+          "passed": 33,
+          "seconds": 1.198,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.435,
+      "status": "replayed_pass"
+    },
+    "7d2d3557467897b4": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_termui.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n..........s............................................................. [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n......................................................................   [100%]\n1989 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.96s\n",
+          "passed": 1989,
+          "seconds": 11.293,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n..........s............................................................. [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n......................................................................   [100%]\n1989 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.17s\n",
+          "passed": 1989,
+          "seconds": 10.454,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 78%]\n........................................................................ [ 82%]\n........................................................................ [ 85%]\n..........s............................................................. [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n......................................................................   [100%]\n1989 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.15s\n",
+          "passed": 1989,
+          "seconds": 10.38,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.17,
+      "status": "replayed_pass"
+    },
+    "81a8b6b065bafe21": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_functional.py",
+        "tests/test_hooks.py",
+        "tests/test_make.py",
+        "tests/utils.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-ized7kzg/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.016,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-ized7kzg/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.971,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-ized7kzg/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.068,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.145,
+      "status": "replayed_fail"
+    },
+    "864a19a5d07ecac7": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_options.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n.........................................s.............................. [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n....................................................................     [100%]\n2059 passed, 24 skipped, 31000 deselected, 1 xfailed in 8.41s\n",
+          "passed": 2059,
+          "seconds": 11.825,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n.........................................s.............................. [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n....................................................................     [100%]\n2059 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.33s\n",
+          "passed": 2059,
+          "seconds": 10.552,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 82%]\n.........................................s.............................. [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n....................................................................     [100%]\n2059 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.23s\n",
+          "passed": 2059,
+          "seconds": 10.465,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.896,
+      "status": "replayed_pass"
+    },
+    "86fc0604d03248ba": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_pylock_select.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.18s\n",
+          "passed": null,
+          "seconds": 12.569,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.08s\n",
+          "passed": null,
+          "seconds": 10.553,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.12s\n",
+          "passed": null,
+          "seconds": 10.429,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.597,
+      "status": "replayed_fail"
+    },
+    "8a4bf108bb03b794": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_markers.py",
+        "tests/test_requirements.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.09s\n",
+          "passed": null,
+          "seconds": 12.445,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.14s\n",
+          "passed": null,
+          "seconds": 10.478,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.22s\n",
+          "passed": null,
+          "seconds": 10.65,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.611,
+      "status": "replayed_fail"
+    },
+    "8b48d640ad1f1576": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_validators.py",
+        "tests/typing_example.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-656zytjx/work/conftest.py'.\nconftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.068,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-656zytjx/work/conftest.py'.\nconftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.026,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-656zytjx/work/conftest.py'.\nconftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.961,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.112,
+      "status": "replayed_fail"
+    },
+    "8bb1081352bda3fc": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_basic.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "                   [100%]\n=============================== warnings summary ===============================\nclick/core.py:612\n  /tmp/mb-replay-u5d0gc8u/work/click/core.py:612: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"A parameter to a command comes in two versions: they are either\n\nclick/decorators.py:86\n  /tmp/mb-replay-u5d0gc8u/work/click/decorators.py:86: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n14 passed, 2 warnings in 0.15s\n",
+          "passed": 14,
+          "seconds": 1.304,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............                                                           [100%]\n14 passed in 0.07s\n",
+          "passed": 14,
+          "seconds": 1.165,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............                                                           [100%]\n14 passed in 0.07s\n",
+          "passed": 14,
+          "seconds": 1.214,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.701,
+      "status": "replayed_pass"
+    },
+    "94dab878e2c9a0ec": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n............................................................             [100%]\n17700 passed in 21.59s\n",
+          "passed": 17700,
+          "seconds": 24.318,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n............................................................             [100%]\n17700 passed in 21.43s\n",
+          "passed": 17700,
+          "seconds": 24.101,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n............................................................             [100%]\n17700 passed in 21.33s\n",
+          "passed": 17700,
+          "seconds": 24.249,
+          "sequence": 3
+        }
+      ],
+      "seconds": 72.688,
+      "status": "replayed_pass"
+    },
+    "966101f98864fafa": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/conftest.py",
+        "tests/test_basic.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "                    [100%]\n=============================== warnings summary ===============================\nclick/core.py:503\n  /tmp/mb-replay-cc6b2n2g/work/click/core.py:503: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"A parameter to a command comes in two versions: they are either\n\nclick/decorators.py:79\n  /tmp/mb-replay-cc6b2n2g/work/click/decorators.py:79: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n7 passed, 2 warnings in 0.08s\n",
+          "passed": 7,
+          "seconds": 1.247,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".......                                                                  [100%]\n7 passed in 0.06s\n",
+          "passed": 7,
+          "seconds": 1.193,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".......                                                                  [100%]\n7 passed in 0.06s\n",
+          "passed": 7,
+          "seconds": 1.161,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.625,
+      "status": "replayed_pass"
+    },
+    "979988594a97aafb": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_arguments.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n........................................................s............... [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n....                                                                     [100%]\n2067 passed, 24 skipped, 31000 deselected, 1 xfailed in 8.48s\n",
+          "passed": 2067,
+          "seconds": 11.833,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n........................................................s............... [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n....                                                                     [100%]\n2067 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.25s\n",
+          "passed": 2067,
+          "seconds": 10.623,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n........................................................s............... [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n....                                                                     [100%]\n2067 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.22s\n",
+          "passed": 2067,
+          "seconds": 10.525,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.034,
+      "status": "replayed_pass"
+    },
+    "99a4bccd5addbb0e": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_metadata.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.15s\n",
+          "passed": null,
+          "seconds": 12.558,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.10s\n",
+          "passed": null,
+          "seconds": 10.432,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.12s\n",
+          "passed": null,
+          "seconds": 10.479,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.507,
+      "status": "replayed_fail"
+    },
+    "9abc66072ab1bc9b": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_commands.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 80%]\n........................................................................ [ 83%]\n..............................................s......................... [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 94%]\n........................................................................ [ 98%]\n..................................                                       [100%]\n1953 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.92s\n",
+          "passed": 1953,
+          "seconds": 11.239,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 80%]\n........................................................................ [ 83%]\n..............................................s......................... [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 94%]\n........................................................................ [ 98%]\n..................................                                       [100%]\n1953 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.07s\n",
+          "passed": 1953,
+          "seconds": 10.346,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 80%]\n........................................................................ [ 83%]\n..............................................s......................... [ 87%]\n........................................................................ [ 91%]\n........................................................................ [ 94%]\n........................................................................ [ 98%]\n..................................                                       [100%]\n1953 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.02s\n",
+          "passed": 1953,
+          "seconds": 10.248,
+          "sequence": 3
+        }
+      ],
+      "seconds": 31.889,
+      "status": "replayed_pass"
+    },
+    "a066c3d9cbcb7e18": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dunders.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..................................                                       [100%]\n34 passed in 0.11s\n",
+          "passed": 34,
+          "seconds": 1.131,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..................................                                       [100%]\n34 passed in 0.09s\n",
+          "passed": 34,
+          "seconds": 1.127,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..................................                                       [100%]\n34 passed in 0.09s\n",
+          "passed": 34,
+          "seconds": 1.147,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.434,
+      "status": "replayed_pass"
+    },
+    "a0b5794e7403ed3d": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_tags.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.11s\n",
+          "passed": null,
+          "seconds": 12.527,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.10s\n",
+          "passed": null,
+          "seconds": 10.441,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.24s\n",
+          "passed": null,
+          "seconds": 10.6,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.611,
+      "status": "replayed_fail"
+    },
+    "a535207a360b1f44": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_deprecations.py",
+        "tests/test_testing.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "........ss........................................ [ 78%]\n........................................................................ [ 81%]\n........................................................................ [ 85%]\n........s............................................................... [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n................................................................         [100%]\n1911 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.73s\n",
+          "passed": 1911,
+          "seconds": 11.04,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "........ss........................................ [ 78%]\n........................................................................ [ 81%]\n........................................................................ [ 85%]\n........s............................................................... [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n................................................................         [100%]\n1911 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.00s\n",
+          "passed": 1911,
+          "seconds": 10.161,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "........ss........................................ [ 78%]\n........................................................................ [ 81%]\n........................................................................ [ 85%]\n........s............................................................... [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n................................................................         [100%]\n1911 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.03s\n",
+          "passed": 1911,
+          "seconds": 10.222,
+          "sequence": 3
+        }
+      ],
+      "seconds": 31.475,
+      "status": "replayed_pass"
+    },
+    "a5e823c9f6618766": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_functional.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-1qf0qh1h/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.059,
+          "sequence": 1
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-1qf0qh1h/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 1.004,
+          "sequence": 2
+        },
+        {
+          "exit_code": 4,
+          "failed": null,
+          "output_tail": "ImportError while loading conftest '/tmp/mb-replay-1qf0qh1h/work/tests/conftest.py'.\ntests/conftest.py:7: in <module>\n    from hypothesis import HealthCheck, settings\nE   ModuleNotFoundError: No module named 'hypothesis'\n",
+          "passed": null,
+          "seconds": 0.98,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.127,
+      "status": "replayed_fail"
+    },
+    "aeb75d2533b23d63": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dependency_groups.py",
+        "tests/test_metadata.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 7.84s\n",
+          "passed": null,
+          "seconds": 12.312,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.11s\n",
+          "passed": null,
+          "seconds": 10.444,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "est_ranges_pubgrub.py\nERROR tests/property/test_ranges_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!\n13 errors in 6.12s\n",
+          "passed": null,
+          "seconds": 10.477,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.269,
+      "status": "replayed_fail"
+    },
+    "afd00fe36c2ad88c": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_commands.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "                   [100%]\n=============================== warnings summary ===============================\nclick/core.py:594\n  /tmp/mb-replay-o54usfs5/work/click/core.py:594: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"A parameter to a command comes in two versions: they are either\n\nclick/decorators.py:86\n  /tmp/mb-replay-o54usfs5/work/click/decorators.py:86: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n13 passed, 2 warnings in 0.12s\n",
+          "passed": 13,
+          "seconds": 1.245,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".............                                                            [100%]\n13 passed in 0.07s\n",
+          "passed": 13,
+          "seconds": 1.179,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".............                                                            [100%]\n13 passed in 0.08s\n",
+          "passed": 13,
+          "seconds": 1.285,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.729,
+      "status": "replayed_pass"
+    },
+    "b37ef87e467d64e6": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_dark_magic.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................                                           [100%]\n30 passed in 0.12s\n",
+          "passed": 30,
+          "seconds": 1.193,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................                                           [100%]\n30 passed in 0.08s\n",
+          "passed": 30,
+          "seconds": 1.073,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................                                           [100%]\n30 passed in 0.08s\n",
+          "passed": 30,
+          "seconds": 1.146,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.432,
+      "status": "replayed_pass"
+    },
+    "b8d783f57b4b84eb": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.56s\n",
+          "passed": 17726,
+          "seconds": 24.236,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 22.02s\n",
+          "passed": 17726,
+          "seconds": 24.661,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.95s\n",
+          "passed": 17726,
+          "seconds": 24.59,
+          "sequence": 3
+        }
+      ],
+      "seconds": 73.51,
+      "status": "replayed_pass"
+    },
+    "b9e9143d07b01282": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.72s\n",
+          "passed": 17726,
+          "seconds": 24.492,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 23.72s\n",
+          "passed": 17726,
+          "seconds": 26.335,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 22.09s\n",
+          "passed": 17726,
+          "seconds": 24.721,
+          "sequence": 3
+        }
+      ],
+      "seconds": 75.575,
+      "status": "replayed_pass"
+    },
+    "c929463c84ceb538": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_commands.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "                    [100%]\n=============================== warnings summary ===============================\nclick/core.py:554\n  /tmp/mb-replay-xt7b6j68/work/click/core.py:554: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"A parameter to a command comes in two versions: they are either\n\nclick/decorators.py:79\n  /tmp/mb-replay-xt7b6j68/work/click/decorators.py:79: DeprecationWarning: invalid escape sequence '\\s'\n    \"\"\"Creates a new :class:`Command` and uses the decorated function as\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n8 passed, 2 warnings in 0.08s\n",
+          "passed": 8,
+          "seconds": 1.258,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "........                                                                 [100%]\n8 passed in 0.06s\n",
+          "passed": 8,
+          "seconds": 1.16,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "........                                                                 [100%]\n8 passed in 0.07s\n",
+          "passed": 8,
+          "seconds": 1.297,
+          "sequence": 3
+        }
+      ],
+      "seconds": 3.739,
+      "status": "replayed_pass"
+    },
+    "d6f539cc3e8728e8": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_arguments.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n.....................................................s.................. [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.                                                                        [100%]\n2064 passed, 24 skipped, 31000 deselected, 1 xfailed in 8.36s\n",
+          "passed": 2064,
+          "seconds": 11.718,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n.....................................................s.................. [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.                                                                        [100%]\n2064 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.32s\n",
+          "passed": 2064,
+          "seconds": 10.519,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n.....................................................s.................. [ 86%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.                                                                        [100%]\n2064 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.23s\n",
+          "passed": 2064,
+          "seconds": 10.477,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.758,
+      "status": "replayed_pass"
+    },
+    "d6f9cc39994bea23": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.77s\n",
+          "passed": 17726,
+          "seconds": 24.404,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.78s\n",
+          "passed": 17726,
+          "seconds": 24.446,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.43s\n",
+          "passed": 17726,
+          "seconds": 24.12,
+          "sequence": 3
+        }
+      ],
+      "seconds": 72.987,
+      "status": "replayed_pass"
+    },
+    "e053a2849dddbebe": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_basic.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................ssssssssssssssssssss [ 75%]\ns................ss..................................................... [ 80%]\n........................................................................ [ 84%]\n...................................................................s.... [ 88%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n......................................................                   [100%]\n1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.66s\n",
+          "passed": 1685,
+          "seconds": 10.945,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................ssssssssssssssssssss [ 75%]\ns................ss..................................................... [ 80%]\n........................................................................ [ 84%]\n...................................................................s.... [ 88%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n......................................................                   [100%]\n1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 6.56s\n",
+          "passed": 1685,
+          "seconds": 9.827,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "..............................ssssssssssssssssssss [ 75%]\ns................ss..................................................... [ 80%]\n........................................................................ [ 84%]\n...................................................................s.... [ 88%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n......................................................                   [100%]\n1685 passed, 24 skipped, 31000 deselected, 1 xfailed in 6.55s\n",
+          "passed": 1685,
+          "seconds": 9.716,
+          "sequence": 3
+        }
+      ],
+      "seconds": 30.529,
+      "status": "replayed_pass"
+    },
+    "e0de8e048c30d0d6": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_utils/test_style.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 77%]\n........................................................................ [ 81%]\n...................................................................s.... [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n..............................................                           [100%]\n1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.59s\n",
+          "passed": 1749,
+          "seconds": 10.918,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 77%]\n........................................................................ [ 81%]\n...................................................................s.... [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n..............................................                           [100%]\n1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 6.72s\n",
+          "passed": 1749,
+          "seconds": 9.927,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 77%]\n........................................................................ [ 81%]\n...................................................................s.... [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n..............................................                           [100%]\n1749 passed, 24 skipped, 31000 deselected, 1 xfailed in 6.76s\n",
+          "passed": 1749,
+          "seconds": 9.963,
+          "sequence": 3
+        }
+      ],
+      "seconds": 30.86,
+      "status": "replayed_pass"
+    },
+    "e3a02407766bdf33": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_pylock_select.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 8.16s\n",
+          "passed": null,
+          "seconds": 12.593,
+          "sequence": 1
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.07s\n",
+          "passed": null,
+          "seconds": 10.35,
+          "sequence": 2
+        },
+        {
+          "exit_code": 2,
+          "failed": null,
+          "output_tail": "s_set_algebra.py\nERROR tests/property/test_ranges_set_relations.py\nERROR tests/property/test_ranges_to_specifier_set.py\nERROR tests/property/test_specifier_comparison.py\nERROR tests/property/test_specifier_extended.py\nERROR tests/property/test_specifier_implied.py\nERROR tests/property/test_specifier_matching.py\nERROR tests/property/test_version_format.py\nERROR tests/property/test_version_normalization.py\nERROR tests/property/test_version_ordering.py\nERROR tests/property/test_version_releases.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 14 errors during collection !!!!!!!!!!!!!!!!!!!\n14 errors in 6.07s\n",
+          "passed": null,
+          "seconds": 10.444,
+          "sequence": 3
+        }
+      ],
+      "seconds": 33.426,
+      "status": "replayed_fail"
+    },
+    "ebaa0de9c4092fd4": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.70s\n",
+          "passed": 17726,
+          "seconds": 24.327,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 22.09s\n",
+          "passed": 17726,
+          "seconds": 24.731,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n..............                                                           [100%]\n17726 passed in 21.36s\n",
+          "passed": 17726,
+          "seconds": 24.004,
+          "sequence": 3
+        }
+      ],
+      "seconds": 73.078,
+      "status": "replayed_pass"
+    },
+    "efd63c576c434d63": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_version.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 96%]\n........................................................................ [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n.............................................................            [100%]\n16117 passed in 20.14s\n",
+          "passed": 16117,
+          "seconds": 22.694,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 96%]\n........................................................................ [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n.............................................................            [100%]\n16117 passed in 20.13s\n",
+          "passed": 16117,
+          "seconds": 22.642,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": "......... [ 96%]\n........................................................................ [ 97%]\n........................................................................ [ 97%]\n........................................................................ [ 98%]\n........................................................................ [ 98%]\n........................................................................ [ 99%]\n........................................................................ [ 99%]\n.............................................................            [100%]\n16117 passed in 19.86s\n",
+          "passed": 16117,
+          "seconds": 22.504,
+          "sequence": 3
+        }
+      ],
+      "seconds": 67.862,
+      "status": "replayed_pass"
+    },
+    "f20d68038c27594c": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_utils/test_sentinel.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 81%]\n........................................................................ [ 85%]\n............s........................................................... [ 88%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.........                                                                [100%]\n2000 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.98s\n",
+          "passed": 2000,
+          "seconds": 11.262,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 81%]\n........................................................................ [ 85%]\n............s........................................................... [ 88%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.........                                                                [100%]\n2000 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.20s\n",
+          "passed": 2000,
+          "seconds": 10.457,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 81%]\n........................................................................ [ 85%]\n............s........................................................... [ 88%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.........                                                                [100%]\n2000 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.21s\n",
+          "passed": 2000,
+          "seconds": 10.424,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.184,
+      "status": "replayed_pass"
+    },
+    "fd65634c348f1601": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_info_dict.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n...........................................................s............ [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.......                                                                  [100%]\n2070 passed, 24 skipped, 31000 deselected, 1 xfailed in 8.04s\n",
+          "passed": 2070,
+          "seconds": 11.472,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n...........................................................s............ [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.......                                                                  [100%]\n2070 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.39s\n",
+          "passed": 2070,
+          "seconds": 10.695,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 82%]\n...........................................................s............ [ 85%]\n........................................................................ [ 89%]\n........................................................................ [ 92%]\n........................................................................ [ 96%]\n........................................................................ [ 99%]\n.......                                                                  [100%]\n2070 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.20s\n",
+          "passed": 2070,
+          "seconds": 10.438,
+          "sequence": 3
+        }
+      ],
+      "seconds": 32.661,
+      "status": "replayed_pass"
+    },
+    "fe34f71ffe61ad61": {
+      "environment_adapted": true,
+      "locked_test_files": [
+        "tests/test_termui.py"
+      ],
+      "network_used": false,
+      "ordered_sequential": true,
+      "runs": [
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 83%]\n...............................................................s........ [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...................................................                      [100%]\n1970 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.86s\n",
+          "passed": 1970,
+          "seconds": 11.198,
+          "sequence": 1
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 83%]\n...............................................................s........ [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...................................................                      [100%]\n1970 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.10s\n",
+          "passed": 1970,
+          "seconds": 10.355,
+          "sequence": 2
+        },
+        {
+          "exit_code": 0,
+          "failed": 0,
+          "output_tail": ".................................................. [ 79%]\n........................................................................ [ 83%]\n...............................................................s........ [ 86%]\n........................................................................ [ 90%]\n........................................................................ [ 93%]\n........................................................................ [ 97%]\n...................................................                      [100%]\n1970 passed, 24 skipped, 31000 deselected, 1 xfailed in 7.05s\n",
+          "passed": 1970,
+          "seconds": 10.278,
+          "sequence": 3
+        }
+      ],
+      "seconds": 31.878,
+      "status": "replayed_pass"
+    }
+  },
+  "kind": "megabit.offline_replay",
+  "summary": {
+    "failed": 25,
+    "passed": 41,
+    "unverifiable": 0
+  }
+}

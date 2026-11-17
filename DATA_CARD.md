@@ -1,7 +1,7 @@
 # MegaBit Trajectories — Data Card
 
-Last updated: 2026-11-13
-Corpus: 66 episodes (samples rebuilt 2026-11-12; raw episode files unchanged)
+Last updated: 2026-11-17
+Corpus: 66 episodes (samples rebuilt 2026-11-12; remediated in place 2026-11-17; raw episode files unchanged)
 Generator: MegaBit (private factory)
 License of this packaging: MIT. Upstream source code remains under its original license.
 
@@ -22,16 +22,21 @@ That is the part most public trajectory corpora drop.
 | Episodes | 66 |
 | Repositories | packaging (21), click (20), attrs (18), tenacity (6), cli (1) |
 | Languages | Python |
-| Tool calls (all attempts) | 2,541 |
-| Tool calls (published samples) | 2,311 |
+| Tool calls (raw log events) | 2,541 |
+| Tool-call attempts at export | 2,312 |
+| Rejected at export (preserved) | 1 |
+| Tool-call records in published samples | 2,311 |
+| Authentic calls restored from failed attempts | 221 (`failure_recovery`) |
 | Median tool calls per episode | 29 (range 11–100) |
 | Tests passing at end | 66 / 66 |
 | Review rounds | 1 round: 64 episodes; 3 rounds: 2 |
 | Attempts | 1: 61; 2: 3; 3: 2 |
 | Terminal state | final_answer: 64; iteration_cap: 2 |
+| Plan detected before first edit | 60 of 66 (plan_detector_v1); 6 `legacy_unplanned` |
 | Composite similarity | present on 66; median 0.6593, range 0.4517–1.0000 (see the note below) |
 | Line similarity | 66 episodes, range 0.3107–1.0000, median 0.5723 |
-| Split | sft: 64, research_only: 2 |
+| Splits | action_only: 56, legacy_unplanned: 6, network_dependent: 1, quarantine_test_only: 1, research_only: 2 |
+| Trainable SFT episodes | 0 (see “Splits and transcript flags”) |
 | Transcripts ending on an answer | 64 (`ends_with_final_answer`); 2 end on a tool result |
 | Tool output truncated in samples | 138 messages, cap 8,000 chars (see policy below) |
 | Total size | ~63 MB |
@@ -67,6 +72,16 @@ commit. Upstream repositories retain their original licenses and copyright. If y
 redistribute derived data, keep the upstream notices.
 
 ## Files
+
+Remediation (2026-11-17) added machine-readable evidence per episode under
+episodes/<task_id>/evidence/: manifest.json (v2 manifest with hashes, split,
+plan, reasoning, harness round, provenance), calls.json (per-call dispositions),
+plan.json, reasoning.json, harness.json, review.json, ticket_path_audit.json
+(66/66 pass), restore_*.jsonl, file_match_report.json, upstream.json, and any
+applicable markers (harness_friction.jsonl, network_attempt_failed.json,
+model_uncertainty.json, segments.jsonl for a066c3d9cbcb7e18). a066c3d9cbcb7e18
+additionally ships episode.clean.jsonl, a derived view excluding the degenerate
+first attempt; raw episode.jsonl is untouched.
 
 ```
 retag_tools.py               rename the tool vocabulary (no deps)
@@ -144,9 +159,26 @@ the tool actually emitted, so the full output is never lost.
 
 ### Splits and transcript flags
 
-- `metadata.split` is `sft` (64) or `research_only` (2), with `split_reason`.
-  `research_only` is a label, never a deletion: both are the iteration-cap
-  episodes, kept for failure research.
+- `metadata.split` is one of:
+  - `action_only` (56) — real action/observation data with no captured
+    reasoning. v1 disabled reasoning in all 132 provider configs, so nothing
+    v1 ships as reasoning-bearing SFT data. Fingerprints are preserved; the
+    label is honest about what the record contains.
+  - `research_only` (2) — the iteration-cap episodes, kept for failure research.
+  - `legacy_unplanned` (6) — no plan detected before the first edit by
+    `plan_detector_v1` (`7bd0a927168a14f3`, `a0b5794e7403ed3d`,
+    `b8d783f57b4b84eb`, `b9e9143d07b01282`, `d6f9cc39994bea23`,
+    `ebaa0de9c4092fd4`). Kept as negative examples; not plan-compliant SFT data.
+  - `network_dependent` (1) — `490a433138e1fe8e` (live httpbin.org in coder and
+    seeded tests; no egress-relaxation record; includes root-level coder
+    `conftest.py`/`pytest.ini`). Not offline-reproducible research data.
+  - `quarantine_test_only` (1) — `966101f98864fafa` (human fix is test-only;
+    seeded tests were locked; produced diff touches LICENSE only; the old
+    composite gate passed on the LICENSE hunk). Kept as evidence; excluded from
+    every training-ready list.
+- No split is presented as reasoning-bearing SFT. An SFT split requires episodes
+  recorded with reasoning enabled, a plan before the first edit, and a canonical
+  harness round of three sequential green runs.
 - `metadata.ends_with_final_answer` says whether the transcript closes on an
   assistant answer. 64 do; the 2 iteration-cap episodes end on a tool result.
 - `metadata.terminal_state` records how the session ended.
@@ -219,6 +251,16 @@ replacement for SWE-bench-style evaluation.
 
 ## Known limits
 
+- v1 captured no reasoning. All 132 coder and ticket configs have `"reasoning": false`.
+- One episode (`490a433138e1fe8e`) depends on a live external host; one (`966101f98864fafa`)
+  has a test-only human target; six have no detected plan before the first edit. All eight
+  are labelled or quarantined rather than hidden.
+- `611e35323caaf082` recorded no three-run harness round in its export journal (the reviewer
+  executed the suite). An offline replay of its final diff passes 3/3 against the locked
+  seeded tests (evidence/harness_replay.json).
+- The 68 `/tmp`-denial rejections previously reported were re-measured: 41 denial events in
+  raw logs across 36–38 episodes; the audit’s number does not reproduce from the shipped
+  bytes. Annotated as harness friction, not model error.
 - Python only in v1. No Rust, Go, C/C++, or kernel-scale data yet.
 - Five repositories. Narrow domain coverage.
 - Two episodes ended at the iteration cap; they are flagged in metadata even though
@@ -294,21 +336,54 @@ byte-identical before and after; only `*.sample.jsonl` and the digests in
    gold-touched file is never dropped.
 
 The corpus's own `verify.py` reports 66/66 after the rebuild. Tool-call totals
-are unchanged: 2,541 raw, 2,311 in published samples.
+are unchanged: 2,541 raw, 2,312 attempts at export, 2,311 records in published samples.
 
 ### 2026-11-14 — counts corrected
 
 README said 553 split parallel calls repaired in samples; the published
-samples carry 552. README said the median sample is about 62k characters
-and the largest about 230k; measured median is about 72k characters and
-the largest about 260k. DATA_CARD said 2,312 tool calls in shipped
-segments; the published samples carry 2,311 (the corrupt call of
+samples carry 552. README claimed a median sample of about 72k characters and
+about 17k tokens; measured on len() of message content it is about 62k
+(~15.5k tokens, 4 chars/token), and the largest is about 230k. DATA_CARD said
+2,312 tool calls in shipped segments; the published samples carry 2,311
+tool-call records (attempts at export here total 2,312; the corrupt call of
 b37ef87e467d64e6 is excluded from the sample layer and kept verbatim in
 the raw log). The logs/ description promised a provider alerts file; no
 episode ships one. episodes/index.json now mirrors the sample metadata
 for the attempts value of a066c3d9cbcb7e18 (from 1 to 2; the sample
 metadata and its attempt_segments both say 2). No episode.jsonl or
 sample.jsonl changed; verify.py reports 66/66.
+
+### 2026-11-16 — counts unified, byte claims corrected
+
+The export/attempts accounting is now stated the same way everywhere: 2,541 raw
+tool_call events; 2,312 tool-call attempts at export (includes the corrupt
+attempt, kept verbatim in the raw logs and indexed by failures.jsonl);
+2,311 tool-call records in the published samples. The GitHub badge now reads
+2,312 so the headline matches the export summary everywhere. No episode file
+changed; `episodes/index.json`'s `tool_calls_shipped` already sums to 2,312 and
+is now consistently described as attempts at export, not records-in-samples.
+
+Measured on `len()` of message content: median sample 62,067 characters
+(~15.5k tokens at 4 chars/token), largest 230,301, total corpus content about
+4.7M characters (~1.17M tokens). Earlier draft claims of "~72k / ~260k /
+~1.5M tokens" were not reproducible from the shipped files and have been
+corrected in README and the Kaggle description. No verification number, count,
+split or license changed; `verify.py` reports 66/66.
+
+### 2026-11-17 — remediation (audit fixes applied in place)
+
+A read-only audit (`TRAJECTORY_VERIFICATION_2026-11-17`) found file integrity
+clean (66/66 digests, zero secret matches in 2,738 byte-scanned files) and the
+training story weaker than advertised. Everything was fixed in place with the
+raw `*.episode.jsonl` files untouched (SHA-256 verified against the
+pre-mutation manifest); every change is listed with before/after hashes in
+`remediation_manifest.json`. Headline changes: one quarantine (`quarantine_test_only`),
+one `network_dependent`, six `legacy_unplanned`, reasoning marked unrecoverable
+(`action_only` instead of `sft`), 221 authentic failed-attempt calls restored as
+`failure_recovery`, one corrupt call preserved with its rejection, a degenerate
+segment fenced off into a clean view, Diff1-only ticket/hint path firewall
+(66/66 pass), full provenance booleans with evidence, and a generated
+`counts.json` as the single source of truth. Details: `REMEDIATION_REPORT_2026-11-17.md`.
 
 ## Contact
 

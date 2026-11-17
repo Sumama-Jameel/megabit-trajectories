@@ -1,0 +1,47 @@
+{
+  "classification": {
+    "README.rst": "docs",
+    "conftest.py": "source",
+    "httpie/__main__.py": "source",
+    "httpie/cli.py": "source",
+    "pytest.ini": "config",
+    "tests/tests.py": "test"
+  },
+  "extra": [
+    "README.rst",
+    "conftest.py",
+    "pytest.ini"
+  ],
+  "extra_classification": {
+    "README.rst": "docs",
+    "conftest.py": "source",
+    "pytest.ini": "config"
+  },
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/tests.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/tests.py"
+  ],
+  "matched": [
+    "httpie/__main__.py",
+    "httpie/cli.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/tests.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": true,
+  "source_coverage": true,
+  "source_files_matched": [
+    "httpie/__main__.py",
+    "httpie/cli.py"
+  ],
+  "status": "setup_contamination"
+}

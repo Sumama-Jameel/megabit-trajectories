@@ -1,0 +1,29 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "diff_files": 5,
+  "diff_sha256": "b213486d2b87e0ba3229c02db8e62b7d5436264359627fe4cb012668dfd0b765",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "BSD-3-Clause"
+  ],
+  "license_match": true,
+  "license_recorded": "BSD-3-Clause",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "CHANGES.md",
+    "docs/api.md",
+    "src/click/__init__.py",
+    "src/click/decorators.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "CHANGES.md",
+    "docs/api.md",
+    "src/click/__init__.py",
+    "src/click/decorators.py",
+    "tests/test_basic.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:33:02Z"
+}

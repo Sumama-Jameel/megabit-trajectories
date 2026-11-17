@@ -1,0 +1,27 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "diff_files": 4,
+  "diff_sha256": "c15da6e74bb87a0b2fae702cbc3560b31c5184f21ab1f114016ddb6c530e6793",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "BSD-2-Clause"
+  ],
+  "license_match": true,
+  "license_recorded": "BSD-2-Clause",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "click/core.py",
+    "click/decorators.py",
+    "docs/complex.rst"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "click/core.py",
+    "click/decorators.py",
+    "docs/complex.rst",
+    "tests/test_context.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:33:00Z"
+}

@@ -1,0 +1,33 @@
+{
+  "classification": {
+    "src/packaging/pylock.py": "source",
+    "tests/test_pylock_select.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_pylock_select.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_pylock_select.py"
+  ],
+  "matched": [
+    "src/packaging/pylock.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_pylock_select.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "src/packaging/pylock.py"
+  ],
+  "status": "clean"
+}

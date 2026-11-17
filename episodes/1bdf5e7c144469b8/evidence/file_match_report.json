@@ -1,0 +1,51 @@
+{
+  "classification": {
+    "releasenotes/notes/fix-falsy-wait-regression-3b7e91c4a5d20f68.yaml": "config",
+    "tenacity/__init__.py": "source",
+    "tenacity/asyncio/__init__.py": "source",
+    "tenacity/wait.py": "source",
+    "tests/test_asyncio.py": "test",
+    "tests/test_tenacity.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "matched": [
+    "tenacity/__init__.py",
+    "tenacity/asyncio/__init__.py",
+    "tenacity/wait.py"
+  ],
+  "missing": [
+    "releasenotes/notes/fix-falsy-wait-regression-3b7e91c4a5d20f68.yaml"
+  ],
+  "missing_classification": {
+    "releasenotes/notes/fix-falsy-wait-regression-3b7e91c4a5d20f68.yaml": "config"
+  },
+  "missing_docs": [
+    "releasenotes/notes/fix-falsy-wait-regression-3b7e91c4a5d20f68.yaml"
+  ],
+  "missing_including_locked_tests": [
+    "releasenotes/notes/fix-falsy-wait-regression-3b7e91c4a5d20f68.yaml",
+    "tests/test_asyncio.py",
+    "tests/test_tenacity.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "tenacity/__init__.py",
+    "tenacity/asyncio/__init__.py",
+    "tenacity/wait.py"
+  ],
+  "status": "clean_with_missing_docs"
+}

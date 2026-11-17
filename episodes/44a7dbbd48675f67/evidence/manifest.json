@@ -1,0 +1,210 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 0,
+      "session_id": "1729c415ad204bc6a6ae12e84eec8ede",
+      "tests_passed": true,
+      "tool_calls": 23
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 0,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 0,
+    "raw_tool_calls": 23,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 0,
+    "sample_tool_calls": 23,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "44a7dbbd48675f67",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "e40249ba75c37a29",
+      "7edf847cc75265ed",
+      "8f5c510fbe3ea70e"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      105
+    ],
+    "first_mutation_event_id": "112",
+    "first_mutation_index": 112,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-15T18:25:04.498452918Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "1875f2b46f6656ed02e418bdb2f1dfd1454ebb313fc00e5cf627b3642c5902fe",
+    "todo_writes": 2
+  },
+  "provenance": {
+    "base_commit": "8a4ce842564ae94ab050062db8525196ad476c19",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-3-Clause",
+    "mode": "founder_flow",
+    "model": "deepseek-v4.1-flash:free",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "1729c415ad204bc6a6ae12e84eec8ede",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "71f2bafa541e7f798834e74076786ff4281ac83e",
+    "target_message": "Strip all ANSI sequences",
+    "task_fingerprint": "sha256:126338ab43abb574cae090cfae04016819ca3d7da02e8bea23b663daed55c0b4",
+    "task_id": "44a7dbbd48675f67",
+    "task_mac_valid": true,
+    "ticket_summary": "# Removing colors and measuring text width miss some terminal codes\n\n## What happens now\nWhen colored text comes from another tool, Click does not always recognize the marks that carry the color. Some",
+    "verification_line_similarity": 0.5263,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "44a7dbbd48675f67.episode.jsonl",
+  "raw_sha256": "b4c35d9f48c539e84f3e90f39cb98e0a3d1953a00bc69dad7fd57d360070084a",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "44a7dbbd48675f67.sample.jsonl",
+  "sample_sha256": "b7a3d8a28ed1dde4c847ec647c52311e068c2a6949681811da88645fbadbbf61",
+  "schema_version": 2,
+  "splits": [
+    "action_only"
+  ],
+  "supersedes": "44a7dbbd48675f67",
+  "task_validity": {
+    "base_commit": "8a4ce842564ae94ab050062db8525196ad476c19",
+    "source_verified": true,
+    "target_commit": "71f2bafa541e7f798834e74076786ff4281ac83e",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "8a4ce842564ae94ab050062db8525196ad476c19",
+    "diff1_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
+    "diff2_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
+    "episode_id": "44a7dbbd48675f67",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 163,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/_compat.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/_textwrap.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_compat.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_utils/test_style.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_formatting.py"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "71f2bafa541e7f798834e74076786ff4281ac83e",
+    "ticket": {
+      "allowed_path_count": 163,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/_compat.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/_textwrap.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_compat.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_utils/test_style.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_formatting.py"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

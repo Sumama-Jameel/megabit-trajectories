@@ -1,0 +1,2 @@
+{"detector": {"chars": 24.0, "chars_per_word": 8.0, "glued_token_ratio": 0.0, "max_ngram_repeat": 0.0, "non_script_ratio": 0.0909}, "event_end": 3162, "event_start": 0, "reason": "degenerate_text: ", "segment_id": 0, "sha256": "3f06aeeba7672b6ed353d97d07290017481da22fa8a2e8ebdcc9c4236d0d2d29", "tests_passed": null, "tool_calls": 5, "valid": false}
+{"event_end": 3449, "event_start": 3163, "reason": null, "segment_id": 1, "sha256": "2c66ff0d5aba8a3b1aff04e4b9ee639c5113ab63252f775ff1498f0b8fb8f6c8", "tests_passed": true, "tool_calls": 15, "valid": true}

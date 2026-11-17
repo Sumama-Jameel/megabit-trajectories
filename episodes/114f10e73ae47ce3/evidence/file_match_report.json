@@ -1,0 +1,33 @@
+{
+  "classification": {
+    "tenacity/retry.py": "source",
+    "tests/test_tenacity.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_tenacity.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_tenacity.py"
+  ],
+  "matched": [
+    "tenacity/retry.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_tenacity.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "tenacity/retry.py"
+  ],
+  "status": "clean"
+}

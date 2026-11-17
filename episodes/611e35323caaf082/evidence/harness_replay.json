@@ -1,0 +1,54 @@
+{
+ "kind": "megabit.harness_replay",
+ "episode": "611e35323caaf082",
+ "verified_at": "2026-11-17T11:39:44Z",
+ "method": "offline replay of the recorded final diff",
+ "environment_adapted": true,
+ "environment": {
+  "python": "3.10.12",
+  "pytest": "9.0.3",
+  "platform": "linux"
+ },
+ "network_used": false,
+ "steps": [
+  "git worktree at cached clone 5ce5e48074a53f7b95421f64f15a858e2d6d9263 (base commit)",
+  "git apply of the episode's produced_diff from the raw footer (README.rst, attr/_dunders.py, docs/changelog.rst, docs/why.rst)",
+  "checkout of the locked seeded test files from target commit 58d5c0a7677fe27aa726fc0e823f60e185abaab2: tests/test_dunders.py, tests/test_make.py (per logs/test_seed.patch)"
+ ],
+ "negative_control": "running the base-commit suite WITHOUT the locked seeded tests fails 2 tests (tests/test_dunders.py::TestAddRepr::test_repr, tests/test_make.py::TestS::test_empty) as expected: the base tests assert the old repr format the episode intentionally changed",
+ "runs": [
+  {
+   "sequence": 1,
+   "cmd": "python -m pytest -q",
+   "exit_code": 0,
+   "collected": 30,
+   "passed": 30,
+   "failed": 0,
+   "skipped": 0,
+   "timed_out": false
+  },
+  {
+   "sequence": 2,
+   "cmd": "python -m pytest -q",
+   "exit_code": 0,
+   "collected": 30,
+   "passed": 30,
+   "failed": 0,
+   "skipped": 0,
+   "timed_out": false
+  },
+  {
+   "sequence": 3,
+   "cmd": "python -m pytest -q",
+   "exit_code": 0,
+   "collected": 30,
+   "passed": 30,
+   "failed": 0,
+   "skipped": 0,
+   "timed_out": false
+  }
+ ],
+ "three_sequential_passes": true,
+ "diff_sha256_of_produced_diff": "315c8a9b716cd25d8e97eef9cdd33a274881116d0f29ae77f9d32848d027b9eb",
+ "note": "The export environment at 2026-10-11 was a Docker sandbox; this replay ran on the host with system CPython 3.10.12 and pytest 9.0.3 instead, so it verifies the recorded diff against the locked tests but is not byte-identical to the original sandbox run. The recorded export journal had no three-run harness round for this episode (reviewer ran the suite; journal has no harness_test_runs event), which is why this replay was required."
+}

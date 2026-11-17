@@ -1,0 +1,2305 @@
+{
+  "calls": [
+    {
+      "args_sha256": "873744cb4a5bfaa7e53d019a06620901483b63d74a472bf9d772ef3bbce051d8",
+      "authenticity": "authentic",
+      "call_id": "53525e8c-3a2b-4825-969c-d7bc16be0b55",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "3",
+      "event_index": 3,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "8c4852fb490377f3c5e72794c53d204b3dc1d17a3bcf966d52942b43c24d4cf4",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "a76ba255859fac72cd043771e56217b66af36acd32ce36a54231b879409954b8",
+      "authenticity": "authentic",
+      "call_id": "4aadfca7-4bfa-4689-a75d-fdfa295c0813",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "4",
+      "event_index": 4,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "12b3aaf211bd3673697cdb01acc71ca0e655ed7191417017d4d32983c2680066",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "d3522ebfc40fe6a22b7e96dc2cd8defd00a04662fe209cec981c5fbba7c4979e",
+      "authenticity": "authentic",
+      "call_id": "a76e94e1-da48-4dd6-b7eb-df249935543c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "5",
+      "event_index": 5,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "5070bd6ab1b3ddd7e6188693036728977ba999109b2216d141cc35c052819223",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "6d89df43e0ae079b704039e225b8366a498a475d4a147be0debbb2c8d5091ac2",
+      "authenticity": "authentic",
+      "call_id": "8f04dd6d-da67-488b-9c66-75d251044a4a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "9",
+      "event_index": 9,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "eb40eb1da890abb444e487ab4a63b16734d1cbcf718222d15195592a21f1e911",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "9ac0d0c8da7de9b4e49ab510a6d2dabea1a7b7041c9a8ab971aa9cd916dcd64a",
+      "authenticity": "authentic",
+      "call_id": "766665c3-f110-488d-83ec-0c3e94daada7",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "10",
+      "event_index": 10,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "6205ebdeb9ac27f3626b8e2d65f9f8ba4e5cf4aeb95cb7af48c34c6b2537d982",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "043f21b71563b4b8bd9bec31ee980fa99d76ff4b78050e7c1d87628123e062b8",
+      "authenticity": "authentic",
+      "call_id": "5b2b9fe6-3d4b-4892-b4e8-54d80b779580",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "11",
+      "event_index": 11,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "afc8f137f08a31406fd86a01342622c08fd7a06fb807505f7c006a771d963667",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "70e40a41dedb46a3a21df2d9b82d4c7d18cc4fb9e9790c7adfa5763ffecc1a9d",
+      "authenticity": "authentic",
+      "call_id": "b6bc9c19-4909-416e-83eb-4a7db66600e4",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "12",
+      "event_index": 12,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "f1a08d195cce6ab681385d1d92f4c697fe21731be8f7ef60d65e77234227cfc2",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "b324c42aa82916a9150c5391eeb472bf763d3631116b46bf4c6bbe4845d7708d",
+      "authenticity": "authentic",
+      "call_id": "869dd600-c2d9-48a0-b43f-ceb7111b9109",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "17",
+      "event_index": 17,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "95352d0b929dceed7a00aa23a219e691c4628c1e1ebd447b859357d3c72b95a4",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "a100811e8f6d25aea9b19f6bad966d30f75968d134b0ddd4ee9a4f2eccb02a40",
+      "authenticity": "authentic",
+      "call_id": "46c47864-213d-44a2-a941-3bcb71d260f1",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "19",
+      "event_index": 19,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "4e6946038bf709b67d76b407666135aef0d912a054f0139b233eaa96caf9a7b7",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "26f29b2899b236e20d59cdfb88eeea17cdcb126d5a71b350acd6170ec9fcd971",
+      "authenticity": "authentic",
+      "call_id": "105b9e2d-d431-4d4d-9edf-76584869fb84",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "20",
+      "event_index": 20,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "93acbab356a3a9f8c4e850dce7b431563ea00ca2d493fa488a471f3c041c8d68",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "dfbbcb0dd48562c72b050093f9f6c83ec6d4ecd36b3b28906e461447dc4c0d78",
+      "authenticity": "authentic",
+      "call_id": "c0f90646-190c-4c8d-9940-9d19373c952c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "21",
+      "event_index": 21,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "7a0554268bbf6ae750561baf3d5a105b6eaf69c1a8a17341687b22b68175cb96",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "67cf7505c6e5bb1a7335f2d64a35ce1108a0af1e8e731a0873790b073458c4c6",
+      "authenticity": "authentic",
+      "call_id": "828e5c11-47ce-4376-b037-fc19cc0e5f3d",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "22",
+      "event_index": 22,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "2756903cbf7f0939260523168ff4f12c902b75c4e1f95f6d34c61c1ffce47ca5",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "a943deea39e095b1c5c5063025d901f2a21d3820f5fbfe876fc5ecd1c473fe0f",
+      "authenticity": "authentic",
+      "call_id": "e7c58644-c2d4-4796-9550-9f4eceb3281c",
+      "details": {
+        "jargon_reasons": [
+          "repeated token loop"
+        ],
+        "jargon_score": 0.35
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "27",
+      "event_index": 27,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a33e24c519ac5bea1cb58cddac5a12a8573930be494f6e669e4a95f5545ce3a1",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "3ee2cf4ac26f067eb3a130763d7dd23f8112f665c8890854387ff84687be9c86",
+      "authenticity": "authentic",
+      "call_id": "f8937865-dd85-4e92-a8e1-2c969eaa3448",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "28",
+      "event_index": 28,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "ea774d31c92eb6ae77bac9063326902bb2a87e53cd4b8d3c5940076ed07dea3e",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "089fe464fe1c0bab99d0297b734088240177209cc7de9e6ac181e1967301961f",
+      "authenticity": "authentic",
+      "call_id": "bedd6cf2-20e9-4af4-9d44-1ccc36db869d",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "31",
+      "event_index": 31,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "b24574a49af2e21e8bf2addfe733dba0bdac956e05cd2af49f89583c501b0f81",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "0ff9884ef12f4730056b33f71338ab867fed694afe46ec0001de28d0dc1a7b38",
+      "authenticity": "authentic",
+      "call_id": "e5bcc486-9e88-4a72-9e6d-9f8196c0dd56",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "32",
+      "event_index": 32,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0092c3e5257bb45be36f4b956cbf427cef2de3e716ecbb8b42b59e9bd584460e",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "9958b8e89225cf910183023b2f955f4f52ce14b342068d72483a013adce983f7",
+      "authenticity": "authentic",
+      "call_id": "60fe6905-d923-4fba-8506-0b86e2f4853c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "33",
+      "event_index": 33,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "d2a0388ea314c65f6d7b350bbddb4141b3b77e584c37bcf46f16c7043885bf8d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "5209b4cf0879b0716e112775139bc070fd0688649d4aafce56716e937a8e86c5",
+      "authenticity": "authentic",
+      "call_id": "98cbadc9-919b-4e65-a47d-81364e05aab7",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "37",
+      "event_index": 37,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "fd3dd74abd40e49015787d4b76c8ab90a7225ad969208d7631700f46f949ec4b",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "9cb94b27a29ac24149063cbe57bad6e7e8adb96decdb2441282f7e0e9d1bfa58",
+      "authenticity": "authentic",
+      "call_id": "7b4c96b3-aa40-493e-94cc-261e417fc329",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "38",
+      "event_index": 38,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "78c92e396dbf9d5df26d792018640e58ed89e0bcff324f5a91c56a24647ef8e7",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "ecceffbb47ab1cc416e7687b5afd8bbabbb39f4d2de40ad4aa23792fd0d2a6a7",
+      "authenticity": "authentic",
+      "call_id": "91383e53-357c-4450-9271-d0e8c09342de",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "41",
+      "event_index": 41,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "b3f29c002ff88f64963b33d82f4119b1c9d810804d712439516e1c0b75994c4c",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "51530003fc030939abb75d4a7aea2e60cfb5a593004f8f3971f5d34c1873da9d",
+      "authenticity": "authentic",
+      "call_id": "938bef0b-2802-49e6-94e5-4ce86f97e89f",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "47",
+      "event_index": 47,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "e0ab35389e5ad0babeab29af306486043e208af097bbf5c4b111382b6e262329",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "write"
+    },
+    {
+      "args_sha256": "689a9e8b61f18b1a70a69c8ae29b4dcd04c4a9bd9d92596ad01baa8540abf1d4",
+      "authenticity": "authentic",
+      "call_id": "dfc0600b-a1ff-4d48-a844-8110344e3eb0",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "49",
+      "event_index": 49,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "42f9e442329fa6243a0dd7f687c91534dca75267014e619b73c13cd0ee6d3822",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "5514675164c4b232ce05b8c70ce3c27f2b966d9fd861272958624e01628517cc",
+      "authenticity": "authentic",
+      "call_id": "c470b866-cea8-466b-bdde-c6d17a6de9ac",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "51",
+      "event_index": 51,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "aa653397662eab440c46888618e13296ff2d104e837360ac2f32b0ff3a4c0ce2",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "aa5316e3581ad54d3ded6155cdc73ef371225c0db9fd6621bca12e2bfc027f9e",
+      "authenticity": "authentic",
+      "call_id": "a1ba28ed-2e90-461e-9228-01b8b9b7627d",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "53",
+      "event_index": 53,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "ab0adac818103caf11b3a99b2552ead8ea7fc43c7461d657e784490e3c781a2d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "476873f0a5ce2152ad8f3cd3dd437eaa89f70f104813c255803870c5fa42c05c",
+      "authenticity": "authentic",
+      "call_id": "150176b3-0a60-483b-bd4f-e00bfbea365a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "55",
+      "event_index": 55,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "ced6ecef09dae0244477f3b4166ecd577130871cf81b1a7cb5a8a5968d369e28",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "105477782daa587058c3905e56fbf56448f40adfa97af5c95ea02d5057ee9650",
+      "authenticity": "authentic",
+      "call_id": "7459b4e5-a2f5-4ec1-bf14-6d455fe4b023",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "57",
+      "event_index": 57,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "4cbf3caeba245cc4b17826c321c6526d4d200333db70afa948efdd6c6d883fca",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "c91a068fc2ddea4b5ec930e348f76e7d17062420ea845a6391739d4bd8949f8e",
+      "authenticity": "authentic",
+      "call_id": "7b5ea017-bfec-4e41-933d-a6c0f0b05ae0",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "59",
+      "event_index": 59,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "162a0007bd1f62a2fc350ffef797b15ea7151840f1ed638da73b3cb800b10e9f",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "55e7ab87ad9feffb0cfa9c16a4207c1e9e6458134c5fb48ad006686687a713d0",
+      "authenticity": "authentic",
+      "call_id": "5888cfcd-9c83-4aad-83c6-042a92644a88",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "61",
+      "event_index": 61,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "88726781190df9c46581df92c930cc94d079eb45764067ab5ca437afba8df201",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "697d14eaf9e41bb6f01d39250a9a7d0d415d19ded7f91f471dfc6aacfb6c193f",
+      "authenticity": "authentic",
+      "call_id": "1255b0c4-658c-4aaf-b151-502edd453530",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "67",
+      "event_index": 67,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "131393815fb67b5638a63da9887984ae27389ec0066925437cad7965499ec1fa",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "dbaba086bfc76fa7fd50a28ddb3dc0f7e0ba6644a30ee195c1cba259d7e49e17",
+      "authenticity": "authentic",
+      "call_id": "44e91d6f-d7b6-458f-b413-fdeddfa8d37b",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "69",
+      "event_index": 69,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0025798c95161a0c558f80f8abc138f64e2ab47e112c5546c4ac7fd102928600",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "2091dac96eb2336914c6b542d187c0000514339c7ad355b83c3723df694828ad",
+      "authenticity": "authentic",
+      "call_id": "ac00b35f-0541-4832-ae56-04c7996c5c3a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "71",
+      "event_index": 71,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "cf3a29633e8fc9106509f77c5dcb56c5274731adb4bae67419da06a301b719fa",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "write"
+    },
+    {
+      "args_sha256": "e45a771d15a049fcc18e5da13828c020bc629f3c91f2d898c1dc39c6ef7b4f78",
+      "authenticity": "authentic",
+      "call_id": "60408ad3-dc29-4e65-9240-68cbdb11b947",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "73",
+      "event_index": 73,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "e201a1102f1172b14db3fc275d06b94ad96c4eea77710e01062f617468b3be92",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "write"
+    },
+    {
+      "args_sha256": "b1bb43afbb0c7976841643bc287eef0c6c4e2006ee0a62f57c2e9949775f798d",
+      "authenticity": "authentic",
+      "call_id": "f1ead9f6-3864-4d89-adb8-414408fbcae6",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "75",
+      "event_index": 75,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "2928ab3d0536202ba24b828c348a6e6a7bc23449cdc330609e9c51ccb0864140",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "ca0ecc57ec2d2de102b803b7817d5988da138065cc69cbc34961e6413b4ca8b5",
+      "authenticity": "authentic",
+      "call_id": "bb5022c2-31a1-413f-b5d0-0d9c99d13eef",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "76",
+      "event_index": 76,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "7c02760099b618d00ce91086409184cbb7126085918e2de6f9612f647b8b7f97",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "0cb234c9174fa5511a27bdf908782ffbc8f4ec40ac09c369dd8f9b3b69c34272",
+      "authenticity": "authentic",
+      "call_id": "294b77c3-b657-40d9-a7a7-f439e1b0a5bb",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "79",
+      "event_index": 79,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0f2fbbec9ac5b06c3ff5ea5db1628556ab8e7dbfb82a4bdde7544131fff43c90",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "281c9f846e47237d2bd6431e2fefc07fe9c80e9813456987e85be1034193cdf7",
+      "authenticity": "authentic",
+      "call_id": "ea727c0f-166b-4dac-94a9-57de1275e4b6",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "81",
+      "event_index": 81,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "2ff685aff26987f8eee508e2454115590b3b26bb74cbf14a3338fd9c25384119",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "c1c3a4c3b2e118e5271f35a98150e352f972995dbeee4b40ffc7fef6243cfe1a",
+      "authenticity": "authentic",
+      "call_id": "04d4cdad-de98-4aec-b917-b658bcdafc2d",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "83",
+      "event_index": 83,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "8e1c96ab77402508e2050a044771a2634cf201924b7d66f54f7e3f49b3a0e813",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "b1a7d9daa55604cb87ffa990ded05d3b9399986044efff950d9b4f01438211d2",
+      "authenticity": "authentic",
+      "call_id": "a2bfe362-ac6e-4aec-8244-75fbb9087f86",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "88",
+      "event_index": 88,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a63902d717157079a57ee08fdd2ee1efcbcdc0795b6f720949908f30d08ab9f8",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "3276502856015e27d8a0e61bac654d6cf22616aebd3d399d045d91a422c54754",
+      "authenticity": "authentic",
+      "call_id": "fdce16eb-e92b-44d9-a227-3e6bcc8283bd",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "90",
+      "event_index": 90,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0150ce8b8666da4b8f9283b3fc05108536ad2846ded8397e2186ead558d75712",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "dd941494b09ba3e2ed989f1692157ffb1384d1321ea75de2e8ce014c6f6de73a",
+      "authenticity": "authentic",
+      "call_id": "7419b314-8b88-4677-ac52-cc8da44f2ea1",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "107",
+      "event_index": 107,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "6e630ed2bfabbbf5394406cafa46cb59a5c180a941aad2e63150ef3efab64963",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "write"
+    },
+    {
+      "args_sha256": "03d181a950ffa04c139f7f70e0b776ded99e5b400ad8d4b206525605f52b70db",
+      "authenticity": "authentic",
+      "call_id": "c2b38830-c116-4b37-bf2b-a3deea45276a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "109",
+      "event_index": 109,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "7addf667bf67174b5f54d117202704cdce2fd3f37b2ae129d355c0806c9df6c3",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "5f077ba0cc51af65d3ecb4730500f4ce788f389045056ff099ca486221ac09bb",
+      "authenticity": "authentic",
+      "call_id": "e2179a2d-6891-4fe9-980e-c40e83c1ba9b",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "111",
+      "event_index": 111,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "8a162dd67b1449ad14f8d6a1dddec562243075a68a993a8094df2564a39b0247",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "822c0c972f2330a13f99f0ad0f7f35926792bf0baee7dcc9d0e5090ffb94c80a",
+      "authenticity": "authentic",
+      "call_id": "c8b03a60-6b27-4d02-9214-311e791225ca",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "113",
+      "event_index": 113,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "236773c083e089e2ee5a86fe133e0bc34496bcf6b827fe3dc0160b84e34d128f",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "fd47d966b36c630ddf086a2de0199d76a6b0233d59f350a5ed6f7c236e7382a8",
+      "authenticity": "authentic",
+      "call_id": "59a9d597-8ec2-489b-adba-e435ea99ad01",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "115",
+      "event_index": 115,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "ab612f730ddf3f753d1f53498f85b4c6f9b930c74b05ed58e1bedc87302c7af8",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "6d89df43e0ae079b704039e225b8366a498a475d4a147be0debbb2c8d5091ac2",
+      "authenticity": "authentic",
+      "call_id": "f0cd24a5-4af0-4133-b16a-f9ce54f84aaa",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "keep_duplicate",
+      "event_id": "125",
+      "event_index": 125,
+      "parse_status": "ok",
+      "reason": "duplicate of a retained call",
+      "restored": false,
+      "result_sha256": "8fd306d2e3a76cb74f517fa15319121da4000f7d93c8a33a5d43c6a2ba4a3e1d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "7e5730598ed3f43aaac149a47c266cbf00ea5697b5a0f0f4e310664a450bf65a",
+      "authenticity": "authentic",
+      "call_id": "3255c41f-f9e3-4b0c-80b9-2282ee4b8535",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "127",
+      "event_index": 127,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "b5f7c0dd2c78068cdada13ffd93a94b68c44096f5a3adb64795d8c18ac5f5b74",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "133ff116cbc1c629116cbb75036a126715fa94c084473346bd1f790945981824",
+      "authenticity": "authentic",
+      "call_id": "36cf7014-2c32-4abd-bf12-be3521b142d5",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "129",
+      "event_index": 129,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "1d70ae40e8b4c2809ca25d4ce5f23ee1a6dd8d69b50aaf14174e840425c4fe17",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "4f6220c227c7d84ca8086a8ee74f0d88197953f558de1642ea007d1b5374569a",
+      "authenticity": "authentic",
+      "call_id": "b189918a-d8ac-4ebe-9cdf-21199e0497a5",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "131",
+      "event_index": 131,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "d61ad5526cade9495a77a7ab7ab80c27b3ec36fd0ca07f4a445f6341f6d3fb0f",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "cbdb4c8a04eb2fdbb2f19b218b8ab045127e4d59f52bdd9f40ba92d7f5d8e822",
+      "authenticity": "authentic",
+      "call_id": "487945af-e68f-42c0-bae1-672502f17e7c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "133",
+      "event_index": 133,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "644a7bef7c324bdb9a19a14efdf35b499c1964aaeffdaa5441feac0abbb90037",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "2553a588daec5c949631e88ed0ef36167fc897e825ec8d43d5f86fb3c2aca719",
+      "authenticity": "authentic",
+      "call_id": "ebce552e-9f29-4672-ac47-12f973351d94",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "135",
+      "event_index": 135,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "6dfa8d40f1b3d0439c145f4bdf91f4605e5bbfd302a9ea9e4ec202da3ca6a02d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "dccb65ebadb35f965a22ae5e631204c7e2fa399cd10f29795d42248584a2552e",
+      "authenticity": "authentic",
+      "call_id": "942f5307-9142-43e8-89f5-8275d5ab3b2a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "137",
+      "event_index": 137,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0eff3e00847de988334d432f1da9d442931ce2ca38b50bc85ff3bbfcc5d4d411",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "f7fe6442f99d24d73dc299591253eb7a17e606ab8ee091d2495f9268e14a9169",
+      "authenticity": "authentic",
+      "call_id": "f77feebd-0ec3-48a8-a18e-ba4082cd618e",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "139",
+      "event_index": 139,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "dba2e5b3f1098d81da884bc28824c388c1e23f7eba2b7595a5202dc2733ebcbe",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "7e430aea95a0c1f2dc22df83d055fc8dfd5fe26eaaa7fe101cb45452be11d2c7",
+      "authenticity": "authentic",
+      "call_id": "c20b6436-8f20-44a3-936c-ccd844096cd0",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "141",
+      "event_index": 141,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "2300702427daa1ae6438bedad573ff4789974d85c4185dec1f722ffdc29cd8c2",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "caaf25d9939a0f2299cc4df601af942fcbf74dd3e914152ec2183427d0f18554",
+      "authenticity": "authentic",
+      "call_id": "4ff9d719-5133-4f74-b98a-e02592a6cb69",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "143",
+      "event_index": 143,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "6081b2bbe39dfc80160ef561c3f588dbf8487d96a455df2233b06960bbf99be8",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "efd92bd5b18924e49e21eaa3683315c9d78702f739531f701607577566bcf76f",
+      "authenticity": "authentic",
+      "call_id": "34a94847-c9b4-4471-a66d-32718f567d9e",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "145",
+      "event_index": 145,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "5aaa43767acb9b289bd82530b04616f7999c3c0926c92551d9d3e77898989234",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "fd5eef2872cff39fc328efe54075f2d716cc505164aec0c1cd717f47aa86aea3",
+      "authenticity": "authentic",
+      "call_id": "e68ec86d-36e8-414a-88c4-377d6ce8838a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "147",
+      "event_index": 147,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "7381011b36a98ed8d60d0d03c534e5af450d725bf290c9fd792aa5eef931ce90",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "18624b1cb983c4fb740ca709d5ba38ed924fae3d7a3d7ae0be5eb65e18834654",
+      "authenticity": "authentic",
+      "call_id": "36bcc587-78e4-4eb3-a1fc-1381682776e3",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "149",
+      "event_index": 149,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "cb70a5e5c2b3ef7981d5b754b34b4122a0c644fd51ba730954ac9e47187bbfed",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "44f9106fca4ee048353acd8dde3a5f0795e8194a49ea815356eac889bda2846e",
+      "authenticity": "authentic",
+      "call_id": "a70a1904-8ade-4bb1-b5bc-7ef93615852a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "151",
+      "event_index": 151,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "16be3213042a623d038da62f278c38d74d244199a02898313634d7300e2231ed",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "20fd250d0caae33b3f13c2f478825ddd7e00887e9a9d09089f9121cf619d8f3c",
+      "authenticity": "authentic",
+      "call_id": "f5c0c29d-f144-4e9c-945b-21a171a3b723",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "153",
+      "event_index": 153,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "d2d2c5ec4dd037638c3aef6c72f923aa39e8293d06a8cdf5f0bb2195c653ad63",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "dc9b529a7e842a9eb7f67a8d3b2d147a7e850da34c89359848ae84642e709d23",
+      "authenticity": "authentic",
+      "call_id": "1a9a112d-8ff9-4272-8fb9-502c898f67d1",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "155",
+      "event_index": 155,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a411f7953c82545726398b331139fe234857021ebbe29cff4fd69f2a846fc5a7",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "514b27b5b085187ad749278045046d7d436a6d48e4290972f077cb3c3514727d",
+      "authenticity": "authentic",
+      "call_id": "f0a34a77-d107-422b-a0ad-91a6635cb242",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "157",
+      "event_index": 157,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "d2d37128ac72e2b9bf78b277e1da6a7cd30621f82354164b9de699b5a0d29055",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "88455414b4714e6f7eb82fd41caf157763aed2e10be17b2148167f8eb8224020",
+      "authenticity": "authentic",
+      "call_id": "66fe69a6-8d76-4141-8b8b-4d21ad989d92",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "159",
+      "event_index": 159,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "f2e422a17c83175413ac295f891844eb7a83a7ede4237790d1df11d701e46c2d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "67bf68d4ee003ff604a8f415e1b0be37a0781a34ef0a2a1c914a2372a55ad026",
+      "authenticity": "authentic",
+      "call_id": "abff9623-ec05-44d2-91ff-eda5e654dbaa",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "323",
+      "event_index": 323,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "3bed873bd8d1cfd840424835932f96acdbbe5cfc38c8e10eddb214c96fb4cbab",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "b2e30296f5e4e27dc7c133bae1ef85255f83caf76aa8d88cda8b8495ec0e5831",
+      "authenticity": "authentic",
+      "call_id": "beda9910-02a0-4ffb-bfff-f326f300ea5a",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "325",
+      "event_index": 325,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a10bb1ef26242013299b27111e86204eac50ea925be0cb6c53a9c88da681cbd3",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "a100811e8f6d25aea9b19f6bad966d30f75968d134b0ddd4ee9a4f2eccb02a40",
+      "authenticity": "authentic",
+      "call_id": "a7e3c69e-561a-40ca-a9ea-4150c55eb87f",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "keep_duplicate",
+      "event_id": "326",
+      "event_index": 326,
+      "parse_status": "ok",
+      "reason": "duplicate of a retained call",
+      "restored": false,
+      "result_sha256": "4e6946038bf709b67d76b407666135aef0d912a054f0139b233eaa96caf9a7b7",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "74e89c950d7609b608d52a272e79537ae0e2412d3e56efeb0fd3fcfd94e22e12",
+      "authenticity": "authentic",
+      "call_id": "cfa5a5f3-0082-41f6-a1c2-f2d1c38ff33f",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "340",
+      "event_index": 340,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "d875c516996a3ebe5dccd33d1a04267b24a0f8579362efe0371a2a1176391b21",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "cdafacf574b10c259d0dd16b623a600e12325576f4c45937f2d312296f06a024",
+      "authenticity": "authentic",
+      "call_id": "22f751ae-976a-4392-be5c-b5dfcffab6f7",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "341",
+      "event_index": 341,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "bacf0c406613b32a709f1cb9db1a86bf5252c23c5b802052cbcbf1273ad75af9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "fbf1fe76b201f808a572994a7e72dff2f7424a66f0bcb1231413ee661aa048bd",
+      "authenticity": "authentic",
+      "call_id": "a4a65ad1-7068-4734-98a5-baf05f71c2a3",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "350",
+      "event_index": 350,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "689086dfd5a369cc0b7c23c5fd91940c294c96405f2a3b5c94be15f8477531a0",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "b22daf074f17d1244373cade72ecfbb18685b2cda75ac33aa6a54edf59287184",
+      "authenticity": "authentic",
+      "call_id": "37ce4f18-7c01-4897-97da-25940b9939b9",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "352",
+      "event_index": 352,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "b86c7dbd0032ff52c455af8102acf73d5c1d364aa703be60d2db8657479292c0",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "29a456461ae16460f6546a7fea613b41bb981520c13819197fe9187c3946ec62",
+      "authenticity": "authentic",
+      "call_id": "16d8df86-2c37-4044-88f4-0af0626bdc26",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "364",
+      "event_index": 364,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "f85109959c589e2bdbdd94c7cf8d23218775067c1fb7e23e8fa4ebb306c7f841",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "11bc3eb13fe0538e856f81a95da6f401c967302342e171c03aa9db3e1df18b7b",
+      "authenticity": "authentic",
+      "call_id": "45b3659f-dab5-45d0-b143-0fa85d0f081e",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "366",
+      "event_index": 366,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "9c9db928fb9ba772798d8f3c2fcc9feba882558204f0b672af4497f57dddf5d4",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "e8059f1e357e0573487fbdbb60d2b6a32d00c228f97ec10262ce30e9f9398847",
+      "authenticity": "authentic",
+      "call_id": "a95e2295-42ab-4510-955a-2e07d15c9e6f",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "373",
+      "event_index": 373,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "8260c01a0e9e11a5a2f0aae3dfae9fac86c3fafd36b6e3f3afa8327e9af542dc",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "438c5404894dcc277071ea8f36a2850aa10fa978f0acbe6f8eab278c6bf1fe65",
+      "authenticity": "authentic",
+      "call_id": "0d8ba341-5114-4631-b776-ba72defa6cf2",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "375",
+      "event_index": 375,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "30d5580c846aab55545a5f45460a36d3a18becd094a3b0b9c60dd285869e6614",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "4095d9caec9b5b5554c258817687b2c3e5acc270433971a8af3a878d66930c41",
+      "authenticity": "authentic",
+      "call_id": "1d33452e-bec1-42ae-8175-7d44501dd0d7",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "377",
+      "event_index": 377,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "bcc9ca9166f669006ac455d3ecf83c904511bcf9edb954232b6a57b8e59e495c",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "0c9ae9c048770574bfc6e6b954a2a80afdd7a08e8f7700bbf120fdd5618f5b88",
+      "authenticity": "authentic",
+      "call_id": "467332c8-440b-4a00-93cd-a29b97c87246",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "379",
+      "event_index": 379,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a03f772b86e0b37cf82b123f591c3ab218412137e0de6fb7d0f20dafcae5f7fa",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "1acc88e8c9d0a0c2c9cddc6ed5e33e666425d0e4a3a7746947cabd82ad6e64a8",
+      "authenticity": "authentic",
+      "call_id": "f25884d1-34e1-486b-befd-2f8d30aff70f",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "381",
+      "event_index": 381,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "2ff685aff26987f8eee508e2454115590b3b26bb74cbf14a3338fd9c25384119",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "70e40a41dedb46a3a21df2d9b82d4c7d18cc4fb9e9790c7adfa5763ffecc1a9d",
+      "authenticity": "authentic",
+      "call_id": "fcbbd8b9-966f-45d6-a208-916c15c31974",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "keep_duplicate",
+      "event_id": "383",
+      "event_index": 383,
+      "parse_status": "ok",
+      "reason": "duplicate of a retained call",
+      "restored": false,
+      "result_sha256": "ad537d43f2e9a86b6d328bf87ab39c89093b5a90d207d958b05ee839997f471b",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "359bffa967de1bf5fb36939b6d81128bc9797ee19459f3ebfe273bc16dcef761",
+      "authenticity": "authentic",
+      "call_id": "56196567-a8b2-4d0b-b6c0-aea358754787",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "385",
+      "event_index": 385,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a8fd76ddc82f08e0a10ca4debda840a3a180c1d81872cc3eec5b2ad3597bd546",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "4b50edc00e7b446f689f184cd0299ada6d4c1aa9c20374473a7899aa03c36751",
+      "authenticity": "authentic",
+      "call_id": "9a9f47a3-e314-4035-839e-52f9ab6fd286",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "403",
+      "event_index": 403,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "94c98af44cfc00ce80fc6dcd51c17a17f86bf60069193ff300bc4a0456fadf18",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "d984bd2cb8b98a558a28b7772a51cfec05e7ab5565b19667f04461412ad90e17",
+      "authenticity": "authentic",
+      "call_id": "8eae1451-b7e3-437b-bc79-e8de61dc1b70",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "405",
+      "event_index": 405,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "4ff43e0d43160999aaebfc3d6919a4917d5016e7e4923107b07a609a353d9543",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "dbb3582dc4e2fb9bce1352a090f9998a7c95d7d0b2315ecb3cde703bff31cd39",
+      "authenticity": "authentic",
+      "call_id": "6024e738-3f03-4c45-aab0-d409fa65947c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "407",
+      "event_index": 407,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "04e204c42271d3f2a858d990973fbf8eff355482e6619118ddeaeef6ce162181",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "ed0f6e7e1c017c477d5aaf0e6827e96e4b6357d367e8d822c5d6279c1ac2f3b6",
+      "authenticity": "authentic",
+      "call_id": "d54b6032-6854-4b91-aae5-1840ca627032",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "409",
+      "event_index": 409,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "f7fa746b8c39397a61f2f21b831735652e27a1e260d8cd099284ed142d60434f",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "27b1ea00f35929f6e807a0c21356633f6a2d325e80f7b8e8483cc68aab9e543c",
+      "authenticity": "authentic",
+      "call_id": "189dbbab-7ae9-45e7-9512-b1cfa0b83c7c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "411",
+      "event_index": 411,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "e0994d757acc5d053f9db2bb7191e5c9deadd98ac9254b23cd423485515cf6fa",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "66a05465e3e1554160212b414c27fb92bf02aaac5fd89c5f9735fead32090dd4",
+      "authenticity": "authentic",
+      "call_id": "dbbd3460-df28-4714-9d63-4a4ac57c893c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "413",
+      "event_index": 413,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "c1744adf4f708cf1836300e5b02af528b6712f44ed8c2cc0733ec8b2d9000a45",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "359bffa967de1bf5fb36939b6d81128bc9797ee19459f3ebfe273bc16dcef761",
+      "authenticity": "authentic",
+      "call_id": "e8b3d712-0628-400d-be28-7f8a0475a87c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "keep_duplicate",
+      "event_id": "415",
+      "event_index": 415,
+      "parse_status": "ok",
+      "reason": "duplicate of a retained call",
+      "restored": false,
+      "result_sha256": "467f8f4c821b8d99ed4b76f8c6a5983f32eba1f104826070ae3483b66a40f353",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "25b2f7da3dc1daa36fd91d152eb79f0cd4b7534c68280a2cdd2febf4801f7156",
+      "authenticity": "authentic",
+      "call_id": "ba8870da-dd62-4b83-a5ee-89ca17059734",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "417",
+      "event_index": 417,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "da755bb7aefce1b24d27f581d2d8acaadd08e0f908d1b501e879a9a29648a1a7",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "a48899650edb9e1cdd4d30075ce599ebd5812833a7569208705096a4bd1c07c9",
+      "authenticity": "authentic",
+      "call_id": "e426afd9-5e69-4aaa-af6f-5921ba970f2f",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "419",
+      "event_index": 419,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "00b2f45add9c07a4daebf90760e2c389f1e09338527458ce3c4d975a925569e2",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "bef6f396982490bf9a5d2a8e8d99915e3eb9696971bea269e5e4d8bf9f8af0b5",
+      "authenticity": "authentic",
+      "call_id": "bc4b46ce-3a56-4dad-9260-adbf632189ad",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "421",
+      "event_index": 421,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0cd3f40dbfb0de9bccf8c5b178090316b9887db38ba3201a784f126b31dec10b",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "d62497f9dae6b8dee751e46184201c0d0704358331378d5bff1795d5fb6ec9ea",
+      "authenticity": "authentic",
+      "call_id": "7b922c83-8864-4aba-8831-287040386d90",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "426",
+      "event_index": 426,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "93d79d88bb6647858bbfb031be47a4fcc4bd71bdea2624e7ed484e2d1616b611",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "da079f667ff552435cac5edca1b653751f6d65f19de47e56122695fd645c4645",
+      "authenticity": "authentic",
+      "call_id": "6e07cbbd-d100-429e-b65c-2e51c40aca5e",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "428",
+      "event_index": 428,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "a0c7b01512be226530a4a686da490346316c590c67f41f226f5aeed4a159274e",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "0f8872b9ea9316a6acc9c3025026e58363c45ae01e9b17a5431c176a577f730e",
+      "authenticity": "authentic",
+      "call_id": "3c92f406-0b11-40ee-a7bb-1f704b3f5a36",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "430",
+      "event_index": 430,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "eed758caa9af4a50d2bfcff0c5236b79badbca36ea70e4d5135b6178a1acc294",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "c1731f533b6ef4adcf7b47a0bb81f7a0d4ba9a92953707b17111f3c681030ab1",
+      "authenticity": "authentic",
+      "call_id": "8af9d408-0bb0-4a75-9826-0656c4aa850c",
+      "details": {
+        "jargon_reasons": [],
+        "jargon_score": 0.0
+      },
+      "disposition": "restore_failure_recovery",
+      "event_id": "432",
+      "event_index": 432,
+      "parse_status": "ok",
+      "reason": "authentic call from a superseded attempt/segment",
+      "restored": true,
+      "result_sha256": "0e133f8cf9f5dd7c715bf1a16f0310157edec397741a3d53fac43e07cd5b7c35",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "6e54781aef19445fcbff795de0b7af3b11f38e3fc3f3eb0849233eb5f60d1e6f",
+      "authenticity": "authentic",
+      "call_id": "56e2a4a6-c228-41c3-86fb-29ea932ec98f",
+      "details": {},
+      "disposition": "present",
+      "event_id": "736",
+      "event_index": 736,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "844f4962ac815137e05621d68167198c7a4977b523ee814cfc39ead09767bc9b",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "0719bd040588e073963bac26472c340e21695145096e820d00aa9734d0447422",
+      "authenticity": "authentic",
+      "call_id": "bca9d0cc-0a3f-40ad-bc81-f733c269d047",
+      "details": {},
+      "disposition": "present",
+      "event_id": "738",
+      "event_index": 738,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "e573df310d599c37ecb0c9a66555dda595a2aad5c37660e2c40485ad253a509d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "3b00e41de0b62e146ba49cd8d4ae67ac983f08332221e62134e2dd78a319a28e",
+      "authenticity": "authentic",
+      "call_id": "99331d96-75fc-47eb-b6a7-8302430d0bf4",
+      "details": {},
+      "disposition": "present",
+      "event_id": "740",
+      "event_index": 740,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "8d7e710b2abb926ca68d938a363032e12f134f5883983d19f74d4821ed32b541",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "2345bd99d939155e5c831302c26b1de01ed9cb14879436c9a179a35331c8d82e",
+      "authenticity": "authentic",
+      "call_id": "97834ded-2738-40d3-828a-4a6fb7830e3a",
+      "details": {},
+      "disposition": "present",
+      "event_id": "762",
+      "event_index": 762,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "5963423d229c2e68ca51b469cdabc36f0be56f7477e9c1a6296cbd5cae97fe8d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "d839aaf8d9788107f021cedde476f8fafa87d1ce9091cbdd9981530e0537e150",
+      "authenticity": "authentic",
+      "call_id": "30c66c71-29d8-4c7a-8270-e3b74e55e031",
+      "details": {},
+      "disposition": "present",
+      "event_id": "764",
+      "event_index": 764,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "702005521ccc5ad774ce2d86cc1da9ea9d899c3ff7b209ef38860f84fedad00f",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    },
+    {
+      "args_sha256": "0e4a94fc77a42bfdcdb85e623a1b2ec9a53d0cce46415432e6e262bb084cc7b3",
+      "authenticity": "authentic",
+      "call_id": "2b9aeada-395b-43b6-af40-45a66a3774fe",
+      "details": {},
+      "disposition": "present",
+      "event_id": "766",
+      "event_index": 766,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "2a2c37ab85a9712553b3dab00f8135116df8cc02d20676441338c7da50674f32",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "9ac0d0c8da7de9b4e49ab510a6d2dabea1a7b7041c9a8ab971aa9cd916dcd64a",
+      "authenticity": "authentic",
+      "call_id": "3ff12355-e115-431c-9fb9-de55135f0c45",
+      "details": {},
+      "disposition": "present",
+      "event_id": "768",
+      "event_index": 768,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "c387f6f46e364e79e1453ba8673d3cd8190ecf1ba48ef31b508eef2f1d899c5d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "2ad3e02651a5b3c6e13bdf3bc0da86f51c391bd820ab4b26e9cee389daf984fc",
+      "authenticity": "authentic",
+      "call_id": "350549fc-3d83-44c1-a046-8170ed919c4b",
+      "details": {},
+      "disposition": "present",
+      "event_id": "770",
+      "event_index": 770,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "01993e79dcd7181ba3a325aca6fefba8d1481c23b98791aad961c5a828c9f6ef",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "7fb1271e3b42d8113f3e4662fbc3e50adc21f6eb2e18ac9b75a4a07f8fb54094",
+      "authenticity": "authentic",
+      "call_id": "af091301-77d8-4ddf-9622-79d8a5f23c04",
+      "details": {},
+      "disposition": "present",
+      "event_id": "779",
+      "event_index": 779,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "830ca2409f970a55cae84723849d7c8555f38a782114cb780ba01fc165aaeab0",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "1896986bf6f9cc128967ac1d51c277bc0b4c157fb717bf1804c3ca9c8a001668",
+      "authenticity": "authentic",
+      "call_id": "1342f805-dd01-4bb9-b237-51d2542b93fa",
+      "details": {},
+      "disposition": "present",
+      "event_id": "781",
+      "event_index": 781,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "121914a6b6cc891727c25e5424e890bf95c3d6a8dd0c760096a2be8839443f4f",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "e74c0fce0cb2c7633075d20bcf1b75f19b0f557d085a416d349059861c165e3b",
+      "authenticity": "authentic",
+      "call_id": "7f6b0bab-da43-495c-8c2e-5658030a07c6",
+      "details": {},
+      "disposition": "present",
+      "event_id": "783",
+      "event_index": 783,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "98eef8fd3c56935ece38678044b1007bb26b9f0014ff68a64619dbc5fbf4dcc9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "e74c0fce0cb2c7633075d20bcf1b75f19b0f557d085a416d349059861c165e3b",
+      "authenticity": "authentic",
+      "call_id": "f10d86b8-31a5-4838-94ff-df8214530ac7",
+      "details": {},
+      "disposition": "present",
+      "event_id": "785",
+      "event_index": 785,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "98eef8fd3c56935ece38678044b1007bb26b9f0014ff68a64619dbc5fbf4dcc9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "9581180f4fbd56237c6b9295fe98fdc98b546b0234e22e42720d9e3a999cf266",
+      "authenticity": "authentic",
+      "call_id": "26e811f3-86a1-46a3-9a42-bf7bb9a9456a",
+      "details": {},
+      "disposition": "present",
+      "event_id": "787",
+      "event_index": 787,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "6f80172985ccb07bc40b95724c3501942f9bd5da5633b8292574efdc867f0265",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "27f1bc140453fc2f2542e7fe700c1dba55d2987b95bef0120aee3d62d2d93c53",
+      "authenticity": "authentic",
+      "call_id": "39594ad7-1e63-4f26-b97b-678a7d1324fa",
+      "details": {},
+      "disposition": "present",
+      "event_id": "789",
+      "event_index": 789,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "98eef8fd3c56935ece38678044b1007bb26b9f0014ff68a64619dbc5fbf4dcc9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "3f1b994961baed97747107fd51fc62244065a171e9b852c01a153ed91bc90c58",
+      "authenticity": "authentic",
+      "call_id": "5d9cffa5-458d-458f-a7b8-6f8fce337f6d",
+      "details": {},
+      "disposition": "present",
+      "event_id": "791",
+      "event_index": 791,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "636cec9e9cd411ec5b2b76ad9bc980c07b74e238be8c8c6f64ccc81c6ac3f349",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "39f2ada340835f0998dab9ba64c4c40f375e74ee37bb8d21610bdf2677701613",
+      "authenticity": "authentic",
+      "call_id": "c744b011-eed1-4d65-97af-05634ddc2343",
+      "details": {},
+      "disposition": "present",
+      "event_id": "793",
+      "event_index": 793,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "55ea7994420dc28d68d14e5ff57c2bff90963ba32522ce57fb3a427e0ed34890",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "c57ff6e0a37cbe416f6b9dd4061099e2906c7fadb9540a26e06ea9dbb45b86f6",
+      "authenticity": "authentic",
+      "call_id": "efa826b4-1cfa-4bc6-9f83-15dc99b6d223",
+      "details": {},
+      "disposition": "present",
+      "event_id": "795",
+      "event_index": 795,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "2479ca7fb580474762af2f7ac60170111fd3f95121e8630016beec3b478d508d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "989a446b544c38a04c9394518543849669f87e96a0bd8dc1c004c663c5c8daf2",
+      "authenticity": "authentic",
+      "call_id": "16bc8311-e558-4060-8571-2b6839a7f1a0",
+      "details": {},
+      "disposition": "present",
+      "event_id": "797",
+      "event_index": 797,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "636cec9e9cd411ec5b2b76ad9bc980c07b74e238be8c8c6f64ccc81c6ac3f349",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "f916976610e90945dac69f87a40f2eaf46825d09744d9f30d6f7ac2e3cad4753",
+      "authenticity": "authentic",
+      "call_id": "b78dda3c-e165-4216-ba45-b47bfea0e91b",
+      "details": {},
+      "disposition": "present",
+      "event_id": "799",
+      "event_index": 799,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "809ef25d01e83ac91732a382019fca6213202f1bd5db311d7176240e51eed2bc",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "write"
+    },
+    {
+      "args_sha256": "645c3be5070a64672e18dbd4735ff7b9e64b6bd6c1f24a290758c7966c6834e5",
+      "authenticity": "authentic",
+      "call_id": "b72cb2fe-a390-4ed4-bb4d-aceb1fa11cab",
+      "details": {},
+      "disposition": "present",
+      "event_id": "801",
+      "event_index": 801,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "d298f1dd35b1aa780d080259e10dc62cd92e8fed2d11559e0bfa5c2cc8375032",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "3da92589b0aac86646c9abc5c4af7917b8396ba0bb81b2aae4d2412371e79575",
+      "authenticity": "authentic",
+      "call_id": "c218b3b4-66b1-4100-b062-d0aa90ae6e82",
+      "details": {},
+      "disposition": "present",
+      "event_id": "803",
+      "event_index": 803,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "98eef8fd3c56935ece38678044b1007bb26b9f0014ff68a64619dbc5fbf4dcc9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "fb039380b44d8203e7cda186ccc6fb870da13da774882945e6da91ee7617678e",
+      "authenticity": "authentic",
+      "call_id": "9d9872f2-6d6e-4859-8eb4-524983e58f17",
+      "details": {},
+      "disposition": "present",
+      "event_id": "805",
+      "event_index": 805,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "6033eea02480b65a8f0461b406d8f93b7e901690c3bb6caf42a8b84864270b8c",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "9581180f4fbd56237c6b9295fe98fdc98b546b0234e22e42720d9e3a999cf266",
+      "authenticity": "authentic",
+      "call_id": "3a19dafa-e6d0-41b3-9f75-d1433da16a8f",
+      "details": {},
+      "disposition": "present",
+      "event_id": "807",
+      "event_index": 807,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "6f80172985ccb07bc40b95724c3501942f9bd5da5633b8292574efdc867f0265",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "6a54e96e894f57ec51445b82539edef59a356d0ec831c4afcba284d49c661b4e",
+      "authenticity": "authentic",
+      "call_id": "4567ef1f-d857-45fb-9b73-48ab0c1651d3",
+      "details": {},
+      "disposition": "present",
+      "event_id": "809",
+      "event_index": 809,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "97d32f901386ed0da383c69aaf3ae0406a71a1a237a9d8cf9176af18c81c73a0",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "fbd8d9a41d59d0a4af46933820c598a40a332dfdf0b9494fa19a534093aa1688",
+      "authenticity": "authentic",
+      "call_id": "9beea87c-4bd8-4042-9977-846e6c2c976c",
+      "details": {},
+      "disposition": "present",
+      "event_id": "815",
+      "event_index": 815,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "13ad2de12611c55657db5fbccaafdde59debfaa4d167e77be98a01e37d492207",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "6d89df43e0ae079b704039e225b8366a498a475d4a147be0debbb2c8d5091ac2",
+      "authenticity": "authentic",
+      "call_id": "7d50235b-0843-45ed-8fea-85a7e51ce37f",
+      "details": {},
+      "disposition": "present",
+      "event_id": "817",
+      "event_index": 817,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "52248810b038ebdac43e4ef0c7ae72153a9f836a8a1e8506da2322e39d743ce6",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "b05db554737bc498f220abf1792fe59ae672d940df112840895ca9bccf4781f4",
+      "authenticity": "authentic",
+      "call_id": "9deb951b-4044-4f3a-ba39-019aae0aee4b",
+      "details": {},
+      "disposition": "present",
+      "event_id": "819",
+      "event_index": 819,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "037cac2f471b0a8090da57dc6060817212a96d20caaac88b26de2970b747ec70",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "b066e50e91ccfefc3c4c6490773f34f4c9a074ac5ec718ccdd26c896c09b719e",
+      "authenticity": "authentic",
+      "call_id": "25e961b7-3901-46ee-ad72-174a7be188d6",
+      "details": {},
+      "disposition": "present",
+      "event_id": "825",
+      "event_index": 825,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "3d1e5098a2397be730efc0b7005c3054298177d38bd88b87d9e823f0041f9fbd",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "70e40a41dedb46a3a21df2d9b82d4c7d18cc4fb9e9790c7adfa5763ffecc1a9d",
+      "authenticity": "authentic",
+      "call_id": "b66d6db6-de24-4c01-9fd7-86e2b10e1334",
+      "details": {},
+      "disposition": "present",
+      "event_id": "827",
+      "event_index": 827,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "b7e95347a9fd499724d6a84fd2374ebe013a0a10121056a5f9f6b71ec61bbc6a",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "read"
+    },
+    {
+      "args_sha256": "2413346fcae0cd6d873532106f534f7581ae74a5feb48ce9b3b7983d9657f1a6",
+      "authenticity": "authentic",
+      "call_id": "47148d62-26df-48cd-89c8-0da29e24a044",
+      "details": {},
+      "disposition": "present",
+      "event_id": "829",
+      "event_index": 829,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "43778bc0adaf05fb43f38df5af31a98a4237fdc3ab0ed213e6e1b78e54f379d9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "381957c96f1e1032eef92e6c154cccfd17eeaf578f91e87af0acc02196367df1",
+      "authenticity": "authentic",
+      "call_id": "7e58b0b7-924f-4d79-b3ca-bdbfb6b5fc02",
+      "details": {},
+      "disposition": "present",
+      "event_id": "836",
+      "event_index": 836,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "647af3c23361fc50c388afb0a618bcd5b306575511d45b6de6c8b54d6090da80",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "75fc6023e1ebe66dd48fe84861c856b8a2eb23436f32ce19734fdc998dcb5ec0",
+      "authenticity": "authentic",
+      "call_id": "fa2449bf-275b-4904-903b-68eb545f5e69",
+      "details": {},
+      "disposition": "present",
+      "event_id": "847",
+      "event_index": 847,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "99a56fdb16bbb30115b38dffaa4f2ae0192a525b4d13124fbdbc6bdbe1d4f947",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "edit"
+    },
+    {
+      "args_sha256": "465fe16d4ec5d853ee28af8e1b9c913e1199d723be0543b06d20b6147d0b7005",
+      "authenticity": "authentic",
+      "call_id": "089c81c0-6870-410c-ba99-6eb94844c858",
+      "details": {},
+      "disposition": "present",
+      "event_id": "849",
+      "event_index": 849,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "457d0b3a5d8e25f704d148b5e68f86b312f60420ba0d80c210e725cd8e351d1e",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "912196529dfa2b8d09905a0c55d9bada801d7bde8659debab36af9675c7b0343",
+      "authenticity": "authentic",
+      "call_id": "477e7bc3-2b69-43c1-83ba-cd46757da6c2",
+      "details": {},
+      "disposition": "present",
+      "event_id": "851",
+      "event_index": 851,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "926a635098704ba7d16074f820c6a011e3b2d2d4d2694acd70c647b648bea3d9",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "801611b338608b4c29444b4b4d2501b412490d84e9faef4b5d093ee2f413eed8",
+      "authenticity": "authentic",
+      "call_id": "3d5dd218-6165-4f93-b231-e22ff995370b",
+      "details": {},
+      "disposition": "present",
+      "event_id": "853",
+      "event_index": 853,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "7b6eebd6dbb41713fde6fe6ee468e297a98bb5f200de6733400c085fd10b84e5",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "9f7504b3f145d1fe6ebfbbe8c0777ab7ae3192b2f3faf1f6740567ab790405eb",
+      "authenticity": "authentic",
+      "call_id": "477ccd84-a710-4a51-9ad3-a0b898aa5093",
+      "details": {},
+      "disposition": "present",
+      "event_id": "855",
+      "event_index": 855,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "a89d681edfa9521570e5d917f42a885db37993e05ad07dea4758d64126195645",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "f9d996f8c397c8b6477fa925bc7a68de2e5bafc8f7561cf32b15719144bd6a91",
+      "authenticity": "authentic",
+      "call_id": "3a90df5c-a821-4747-8b55-3128272ddbc2",
+      "details": {},
+      "disposition": "present",
+      "event_id": "857",
+      "event_index": 857,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "17f6be230c27753aacd8ea319b180176069d9777f2180d5cffcce289581639bf",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "da2315b83d550469da90b95da98cd5f6c26e310af7eaabf2463e089df195c964",
+      "authenticity": "authentic",
+      "call_id": "123f034d-1e92-42ea-8a8f-f72501897a28",
+      "details": {},
+      "disposition": "present",
+      "event_id": "859",
+      "event_index": 859,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "fad0bde33a54dc2749bb5e207e0fa7f012e8d79e50e6c7b5d8086a8bd58b81b5",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "1dc4b4a2c86f06bfad9b05dd6ea13ac8b11e03cac00768f16d5a69b357cb0e7e",
+      "authenticity": "authentic",
+      "call_id": "fbb76b53-2287-41de-a2a0-7bb072d71635",
+      "details": {},
+      "disposition": "present",
+      "event_id": "861",
+      "event_index": 861,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "fe3a8b419846e0967449968330d1853cf0ea15e21deb499161c1a5f3ee9ee1d5",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "5e40a3bf361269a0eeb71279b4a15a14ce58ac10bea650b431f3493896c02cf4",
+      "authenticity": "authentic",
+      "call_id": "09d365f1-3651-44a3-a988-c6245ec0e6e6",
+      "details": {},
+      "disposition": "present",
+      "event_id": "863",
+      "event_index": 863,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "b0769cea2960ff5399aa4cbebf0b5c059dd8ab3b834cb0ec553b1fd0d9dd401a",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "c9be73bace546b56c6cca16d4d6469ec27d3d3e50a2825dd62e8b2867aebf73a",
+      "authenticity": "authentic",
+      "call_id": "9053fbc5-8dba-46f2-905d-603723970058",
+      "details": {},
+      "disposition": "present",
+      "event_id": "865",
+      "event_index": 865,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "490b13509f4a37369a58603160c3c61f39ab474fdbe8a5c5f2464aec3ca7338e",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "bash"
+    },
+    {
+      "args_sha256": "2530a5e6839daf922804e7a99e3f6092db36b872ca0566c9564e05b4a42806b8",
+      "authenticity": "authentic",
+      "call_id": "d6aca8e6-62c7-47c0-b6bb-df685816cf97",
+      "details": {},
+      "disposition": "present",
+      "event_id": "867",
+      "event_index": 867,
+      "parse_status": "ok",
+      "reason": "call is present in the sample",
+      "restored": false,
+      "result_sha256": "ad477fb8bcb29adc8e6df4c2b5e4b9da32abf3606438e08a439e69ec27a35d0d",
+      "session_id": "25f9536b97c243a68e2674b4e4fe9998",
+      "tool_name": "todo_write"
+    }
+  ],
+  "counts": {
+    "failure_recovery_tool_calls": 88,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 92,
+    "raw_tool_calls": 134,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 88,
+    "sample_tool_calls": 42,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "0571b7eb5d6b7555",
+  "schema": 1,
+  "selected_session_id": "25f9536b97c243a68e2674b4e4fe9998"
+}

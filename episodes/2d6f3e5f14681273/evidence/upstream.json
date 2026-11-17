@@ -1,0 +1,24 @@
+{
+  "base_is_ancestor": true,
+  "clone": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "diff_files": 3,
+  "diff_sha256": "cc7d4b40d42d2d84f0640d38cd5e8cf0d7a02598d8b784e5d651d7b26fec8be9",
+  "kind": "megabit.upstream",
+  "license_detected": [
+    "MIT"
+  ],
+  "license_match": true,
+  "license_recorded": "MIT",
+  "method": "git cat-file/merge-base/diff on cached clone",
+  "produced_files": [
+    "src/attr/_funcs.py"
+  ],
+  "target_exists": true,
+  "target_files": [
+    "changelog.d/1469.change.md",
+    "src/attr/_funcs.py",
+    "tests/test_funcs.py"
+  ],
+  "upstream_verified": true,
+  "verified_at": "2026-11-17T09:32:58Z"
+}

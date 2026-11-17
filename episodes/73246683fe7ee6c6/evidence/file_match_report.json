@@ -1,0 +1,40 @@
+{
+  "classification": {
+    "attr/__init__.py": "source",
+    "attr/_make.py": "source",
+    "tests/test_funcs.py": "test",
+    "tests/test_make.py": "test"
+  },
+  "extra": [],
+  "extra_classification": {},
+  "extra_tests": [],
+  "kind": "megabit.file_match_report",
+  "locked_test_files": [
+    "tests/test_funcs.py",
+    "tests/test_make.py"
+  ],
+  "locked_tests_excluded": [
+    "tests/test_funcs.py",
+    "tests/test_make.py"
+  ],
+  "matched": [
+    "attr/__init__.py",
+    "attr/_make.py"
+  ],
+  "missing": [],
+  "missing_classification": {},
+  "missing_docs": [],
+  "missing_including_locked_tests": [
+    "tests/test_funcs.py",
+    "tests/test_make.py"
+  ],
+  "missing_source": [],
+  "missing_tests": [],
+  "root_config_contamination": false,
+  "source_coverage": true,
+  "source_files_matched": [
+    "attr/__init__.py",
+    "attr/_make.py"
+  ],
+  "status": "clean"
+}

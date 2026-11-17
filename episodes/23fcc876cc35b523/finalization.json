@@ -13,9 +13,22 @@
   "outcome": "valid",
   "raw_path": "<MEGABIT_DATA>/episodes/23fcc876cc35b523/23fcc876cc35b523.episode.jsonl",
   "raw_sha256": "363a1e877d4fdd6fa382c4f4741fdac6f2b4d5d53bb7342581a3a2bd1efd2ad9",
+  "remediation": {
+    "adopted_at": "2026-11-17T09:32:47Z",
+    "evidence_dir": "evidence/",
+    "kind": "megabit.remediation_adoption",
+    "previous_sample_sha256": "e68d147ff897c30c851206babe79d1823f342aafd76bce1a3507f7bf1d9f7a60",
+    "raw_sha256": "363a1e877d4fdd6fa382c4f4741fdac6f2b4d5d53bb7342581a3a2bd1efd2ad9",
+    "remediation_version": "2026-11-17-r2",
+    "report": "REMEDIATION_REPORT_2026-11-17.md",
+    "sample_sha256": "bd61bc80789962f7602843a4e25b7bf329e6ecb9374de87b57eb2a9bda1e7f0a",
+    "split": "action_only",
+    "split_reason": "reasoning_unrecoverable_v1"
+  },
   "review_rounds": 1,
   "sample_path": "<MEGABIT_DATA>/episodes/23fcc876cc35b523/23fcc876cc35b523.sample.jsonl",
-  "sample_sha256": "e68d147ff897c30c851206babe79d1823f342aafd76bce1a3507f7bf1d9f7a60",
+  "sample_rebuilt_at": "2026-11-13T13:05:34Z",
+  "sample_sha256": "bd61bc80789962f7602843a4e25b7bf329e6ecb9374de87b57eb2a9bda1e7f0a",
   "schema": 1,
   "segment": {
     "degenerate": false,
@@ -29,6 +42,5 @@
   "terminal_state": "final_answer",
   "tests_passed": true,
   "tests_ran": true,
-  "tool_calls": 18,
-  "sample_rebuilt_at": "2026-11-13T13:05:34Z"
+  "tool_calls": 18
 }

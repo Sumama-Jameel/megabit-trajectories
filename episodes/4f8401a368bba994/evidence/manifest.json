@@ -1,0 +1,227 @@
+{
+  "attempts": [
+    {
+      "degenerate": false,
+      "included": false,
+      "index": 0,
+      "session_id": "3b9728f5cd674196999179c2f3779c55",
+      "superseded_by": 1,
+      "tests_passed": false,
+      "tool_calls": 28
+    },
+    {
+      "degenerate": false,
+      "included": true,
+      "index": 1,
+      "session_id": "3b9728f5cd674196999179c2f3779c55",
+      "tests_passed": true,
+      "tool_calls": 95
+    }
+  ],
+  "calls": {
+    "failure_recovery_tool_calls": 28,
+    "jargon_tool_calls": 0,
+    "missing_tool_calls": 28,
+    "raw_tool_calls": 123,
+    "rejection_example_calls": 0,
+    "restored_tool_calls": 28,
+    "sample_tool_calls": 95,
+    "unresolved_tool_calls": 0
+  },
+  "episode_id": "4f8401a368bba994",
+  "harness_tests": {
+    "canonical_context": "round:1",
+    "canonical_run_ids": [
+      "37e03d87c1af98f7",
+      "176a0f4e830a63ca",
+      "0bc177105549a8b1"
+    ],
+    "green": true,
+    "legacy_harness": true,
+    "run_count": 3,
+    "runs": [
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      },
+      {
+        "cmd": "python -m pytest",
+        "exit": 0,
+        "kind": "substantive",
+        "timed_out": false
+      }
+    ],
+    "schema": 1,
+    "source": "legacy_retry_journal",
+    "three_sequential_passes": true
+  },
+  "kind": "megabit.episode.manifest",
+  "plan": {
+    "applicable": true,
+    "confidence": 0.99,
+    "detected": true,
+    "detector_version": "plan_detector_v1",
+    "evidence_event_ids": [
+      109
+    ],
+    "first_mutation_event_id": "123",
+    "first_mutation_index": 123,
+    "judge": null,
+    "needs_review": false,
+    "plan_created_at": "2026-10-04T13:35:29.765477237Z",
+    "reason": "non-empty todo plan before the first mutation",
+    "require_plan": true,
+    "schema": 1,
+    "signals": {
+      "todo_plan": true
+    },
+    "text_sha256": "1c821226c414563092122851f7dc7ed22dad613b180d2d1a01d9fd83a850be73",
+    "todo_writes": 3
+  },
+  "provenance": {
+    "base_commit": "cbd7a4109da16ce58f54c2a618b4c986e3041fcf",
+    "generator": "megabit",
+    "generator_version": "0.1.0",
+    "harness": "megabit-agent",
+    "license_spdx": "BSD-3-Clause",
+    "mode": "founder_flow",
+    "model": "stealth/space-bunny-alpha",
+    "qa_tests_seeded": true,
+    "repo_name": "click",
+    "repo_url": "https://github.com/pallets/click",
+    "session_id": "3b9728f5cd674196999179c2f3779c55",
+    "source_verified": true,
+    "source_verify_reason": "legacy record states verified without a stored reason",
+    "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
+    "target_message": "Refactor pager stream handling; drop text/binary branching",
+    "task_fingerprint": "sha256:dd5fa8cf55f00485c105273ce9675c815a80ab674f4f3972175b0a17318d145a",
+    "task_id": "4f8401a368bba994",
+    "task_mac_valid": true,
+    "ticket_summary": "# Paging output can keep colour codes when I asked for none, can close my terminal output, and can fail on non-English text\n\n## What happens now\n\nWhen I ask Click to send my long output through a page",
+    "verification_line_similarity": 0.6414,
+    "verification_passed": true
+  },
+  "quarantine": null,
+  "raw_path": "4f8401a368bba994.episode.jsonl",
+  "raw_sha256": "76b12cfef31437b2a724298d8621700464d374c9cfb3cc47651a41e8887cbfe4",
+  "reasoning": {
+    "available": false,
+    "kind": "none",
+    "schema": 1,
+    "segments": [],
+    "sha256": null,
+    "source": "none",
+    "tokens": 0,
+    "unrecoverable": true
+  },
+  "remediation_version": "2026-11-17-r2",
+  "review": {
+    "findings_count": 1,
+    "note": "Reviewer execution is not a test gate; the harness owns tests.",
+    "reviewer_authoritative": false,
+    "reviewer_ran_tests": false,
+    "reviewer_test_calls": 0,
+    "schema": 1
+  },
+  "sample_path": "4f8401a368bba994.sample.jsonl",
+  "sample_sha256": "6bdfb2a12516209bfe36e06d4869b97ab24d26d67c29fbcb54eddfa8465121c0",
+  "schema_version": 2,
+  "splits": [
+    "research_only"
+  ],
+  "supersedes": "4f8401a368bba994",
+  "task_validity": {
+    "base_commit": "cbd7a4109da16ce58f54c2a618b4c986e3041fcf",
+    "source_verified": true,
+    "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
+    "verification_passed": true
+  },
+  "ticket_paths": {
+    "base_commit": "cbd7a4109da16ce58f54c2a618b4c986e3041fcf",
+    "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+    "diff2_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+    "episode_id": "4f8401a368bba994",
+    "forbidden_paths": [],
+    "hints": {
+      "allowed_path_count": 165,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/_termui_impl.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/_compat.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/utils.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_termui.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_utils/test_echo_via_pager.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "hints.md",
+      "unknown_paths": []
+    },
+    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+    "result": "pass",
+    "schema": 1,
+    "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
+    "ticket": {
+      "allowed_path_count": 165,
+      "forbidden_path_count": 0,
+      "forbidden_paths": [],
+      "paths": [
+        {
+          "status": "allowed",
+          "token": "src/click/_termui_impl.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/_compat.py"
+        },
+        {
+          "status": "allowed",
+          "token": "src/click/utils.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_termui.py"
+        },
+        {
+          "status": "allowed",
+          "token": "tests/test_utils/test_echo_via_pager.py"
+        },
+        {
+          "status": "allowed",
+          "token": "CHANGES.md"
+        }
+      ],
+      "result": "pass",
+      "source": "ticket.md",
+      "unknown_paths": []
+    },
+    "unknown_paths": []
+  }
+}

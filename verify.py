@@ -15,7 +15,6 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-EPISODES = ROOT / "episodes"
 
 
 def sha256(path: Path) -> str:
@@ -34,6 +33,27 @@ def read_jsonl(path: Path) -> list:
             if line:
                 rows.append(json.loads(line))
     return rows
+
+
+def find_episodes(root: Path) -> list:  # returns episode dirs
+    episodes = root / "episodes"
+    if episodes.is_dir():
+        dirs = sorted(
+            d for d in episodes.iterdir()
+            if d.is_dir() and (d / f"{d.name}.episode.jsonl").exists()
+        )
+        if dirs:
+            return dirs, "episodes/"
+    # Kaggle auto-extracted layout: ./<task_id>/episodes/<task_id>/...
+    # where the extraction root doubles as the dataset repo root
+    eps = []
+    for d in sorted(root.iterdir()):
+        if not d.is_dir():
+            continue
+        inner = d / "episodes" / d.name
+        if (inner / f"{d.name}.episode.jsonl").exists():
+            eps.append(inner)
+    return eps, "kaggle<task_id>/episodes/<task_id>/"
 
 
 def check_episode(ep: Path) -> list:
@@ -100,11 +120,12 @@ def check_episode(ep: Path) -> list:
 
 def main() -> int:
     quiet = "--quiet" in sys.argv
-    if not EPISODES.is_dir():
-        print(f"episodes directory not found: {EPISODES}")
+    dirs, layout = find_episodes(ROOT)
+    if not dirs:
+        print(f"episodes not found under {ROOT}/episodes or ./<task_id>/episodes/<task_id>/")
         return 1
-
-    dirs = sorted(d for d in EPISODES.iterdir() if d.is_dir())
+    if not quiet:
+        print(f"layout: {layout} ({len(dirs)} episode dirs)")
     failures = 0
     for ep in dirs:
         problems = check_episode(ep)

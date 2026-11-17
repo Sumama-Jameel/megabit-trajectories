@@ -1,0 +1,88 @@
+{
+  "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
+  "diff1_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
+  "diff2_tree_sha256": "4044e5792d51bb7419d38d26e6900615675ad9b7096eab935fa05d684d7b95bc",
+  "episode_id": "a535207a360b1f44",
+  "forbidden_paths": [],
+  "hints": {
+    "allowed_path_count": 163,
+    "forbidden_path_count": 1,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/click/utils.py"
+      },
+      {
+        "status": "allowed",
+        "token": "src/click/__init__.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_testing.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/api.md"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/wincmd.md"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/handling-files.md"
+      },
+      {
+        "status": "allowed",
+        "token": "CHANGES.md"
+      }
+    ],
+    "result": "pass",
+    "source": "hints.md",
+    "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
+  "ticket": {
+    "allowed_path_count": 163,
+    "forbidden_path_count": 1,
+    "forbidden_paths": [],
+    "paths": [
+      {
+        "status": "allowed",
+        "token": "src/click/utils.py"
+      },
+      {
+        "status": "allowed",
+        "token": "src/click/__init__.py"
+      },
+      {
+        "status": "allowed",
+        "token": "tests/test_testing.py"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/api.md"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/wincmd.md"
+      },
+      {
+        "status": "allowed",
+        "token": "docs/handling-files.md"
+      },
+      {
+        "status": "allowed",
+        "token": "CHANGES.md"
+      }
+    ],
+    "result": "pass",
+    "source": "ticket.md",
+    "unknown_paths": []
+  },
+  "unknown_paths": []
+}
