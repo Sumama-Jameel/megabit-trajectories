@@ -241,7 +241,7 @@ was never read, moved or published.
 | 10 | Every degenerate/jargon segment marked & excluded | done (`a066` segments + clean view; 0 jargon) |
 | 11 | Every count generated from one source of truth | done (`counts.json`; README/DATA_CARD match; `make counts-check`) |
 | 12 | Every provenance field boolean with evidence | done (2 nulls corrected to `false` with reasons) |
-| 13 | Every promoted final diff passes offline replay | **partial** — 41 of 66 replay green on this host (python 3.10 + pytest 9.0.3 + cached pure wheels); 25 are environment-limited (see §7.3) |
+| 13 | Every promoted final diff passes offline replay | **met** — 66/66 replay green in megabit/sandbox:latest (host network for the one live-httpbin episode only, 65 with `--network none`) |
 | 14 | Every release has a deep verification report and signed manifest | done (`verify_report.json`, ok:true; `release_manifest.json`) |
 | 15 | v1 remains available and hash-identical | done (`.git` fb84792 + tar backup; raw untouched) |
 | 16 | Every new SFT episode captures reasoning, hashed & linked | done (relay tee + `reasoning_capture` + tests; flip `reasoning: true` already in config; **no reasoning episodes generated yet**) |
@@ -262,21 +262,26 @@ those is follow-up F-3 (see below).
 Reclassified per the audit; the offline twin and the source-change re-mine are
 generation work and are tracked separately.
 
-### 7.3 Offline replay (this host, no network)
+### 7.3 Offline replay (no network for 65 of 66)
 
-`--replay` ran every episode's final diff in a fresh worktree at the base
-commit, with the locked seeded tests applied, three sequential runs each:
+Every episode's final diff was replayed in a fresh git worktree at the
+base commit with the locked seeded tests applied, then run through the
+suite three times sequentially.
 
-- **41 of 66 pass.** All 25 remaining failures are environment artifacts, not
-  diff defects: 27 collection errors name `hypothesis` (packaging + attrs
-  conftests), which exists only as a CPython 3.11 wheel in the local pip
-  cache; the host is CPython 3.10 with no downloads allowed, so 19 packaging
-  episodes and 2 attrs episodes cannot import their conftest. The remainder
-  name `zope.interface` / `tornado` (also cp311 native wheels in cache).
-- 0 failures are attributable to the produced diff.
-- To close this: run the same replay inside the sandbox image
-  (`python:3.11-slim`, pytest) or a CPython 3.11 environment with the cached
-  wheels — see follow-up F-5.
+**Result (megabit/sandbox:latest, CPython 3.11.16, pytest 9.2.0): 66 of
+66 replay green.**
+
+- 65 of 66 episodes were replayed with `--network none`. 0 failures
+  attributable to the produced_diff or the seeded tests.
+- 1 episode, `490a433138e1fe8e` (httpie), is required by its seeded
+  tests to reach `httpbin.org` for basic/digest auth. It was replayed
+  under host network against the live httpbin.org — the same environment
+  the recorded export ran in. 3 runs × all tests green (15/15). No
+  fixture, no mock, no data change.
+- `replay_report.json` at this root is the authoritative record. It
+  carries per-run exit codes, pass counts, and the `environment_note`
+  documenting why the httpie episode ran with host network instead of
+  `--network none`.
 
 ### 7.4 Provider state
 
@@ -301,6 +306,7 @@ F-3 Reasoning-bearing v2 episodes (blocked on provider key rotation);
 F-4 Scratch-dir/preflight engine work — DONE in engine
     (`/workspace/.megabit_tmp` tooling exists and the briefing no longer
     demands a todo; env preflight rejects only environment errors);
-F-5 Sandbox-image (CPython 3.11) replay of the 25 environment-limited
-    episodes; F-6 Reconcile the audit's 68 `/tmp` rejections with this
-    corpus's event stream.
+F-5 Sandbox-image (CPython 3.11) replay of all 66 episodes — DONE
+    (66/66 green; 65 with --network none, 1 with host network against the
+    live httpbin.org); F-6 Reconcile the audit's 68 `/tmp` rejections with
+    this corpus's event stream.

@@ -36,9 +36,9 @@
    "sha256": "19552e67d255a7283e3f325f4093e2ed88f59905b4080b5ce952a99ad5f718fe"
   },
   {
-   "bytes": 16635,
+   "bytes": 16827,
    "path": "REMEDIATION_REPORT_2026-11-17.md",
-   "sha256": "361ed8d381e74cad9e577e831629751e836304aa04aa634b96bd9473bd2f6bfd"
+   "sha256": "d53ca2eb84864e528c5c7af92cccc7dc06605e9e4663803e513c303525bcb23e"
   },
   {
    "bytes": 6517,
@@ -11006,12 +11006,12 @@
    "sha256": "fc7e2848120be1a9ccedc362b8022124a7567bdd36a9d3d29f0c68c5e1665f7c"
   }
  ],
- "generated_at": "2026-11-17T17:04:38Z",
+ "generated_at": "2026-11-18T19:07:00Z",
  "kind": "megabit.release.manifest",
  "remediation_version": "2026-11-17-r2",
  "root": "/home/sumama/Private/megabit-trajectories",
  "schema": 1,
- "signature": "d92068adbed79b8eb14042918c60423b5af6a152f0e7136bc8be68ae4a3f82b2",
- "total_bytes": 63293430,
- "tree_sha256": "85641fc6f34d307a7c68399287ae2df5c3a89493f7e7064fd415639f09df6f57"
+ "signature": "975be3fa0a5705f973c8f968c93e2589645850d4ba793243ea90e826c6b59f2b",
+ "total_bytes": 63293622,
+ "tree_sha256": "ca684e5c17d509e8f26e9a2f926f3a0fe2fef9be8e7de880c77339c69f6c15b1"
 }
