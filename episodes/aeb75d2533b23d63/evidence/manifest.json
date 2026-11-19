@@ -1,186 +1,188 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "dc8c095a3738499bbca1a831172b1025",
-      "tests_passed": true,
-      "tool_calls": 18
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 18,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 18,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "aeb75d2533b23d63",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "d26dc54104a9cc18",
-      "7a0d214acba144d3",
-      "3951c44accd5a72b"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      26
-    ],
-    "first_mutation_event_id": "28",
-    "first_mutation_index": 28,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-22T14:08:02.591493044Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "0f38400ffe50fac870b2be0e7c82d39a04dd2ce20dbe5cf39204772fa0da13b9",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "Apache-2.0",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "packaging",
-    "repo_url": "https://github.com/pypa/packaging",
-    "session_id": "dc8c095a3738499bbca1a831172b1025",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
-    "target_message": "fix: make InvalidMetadata and CyclicDependencyGroup picklable (#1328)",
-    "task_fingerprint": "sha256:31174049b9a5926cfa80725f7473b6b7d4246a28ad5ccb386ffe06e94753306b",
-    "task_id": "aeb75d2533b23d63",
-    "task_mac_valid": true,
-    "ticket_summary": "# Errors from dependency groups and metadata break when they are copied\n\n## What happens now\n\nTwo of the errors this library raises keep useful details inside them. The cyclic dependency group error k",
-    "verification_line_similarity": 0.7541,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "aeb75d2533b23d63.episode.jsonl",
-  "raw_sha256": "3d98ccb8acb1e8ad83d34a73fb4ddfe5985f7bb10a9fccd6285275a50efa2009",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "aeb75d2533b23d63.sample.jsonl",
-  "sample_sha256": "8b8a2f9906583ff848ba8af7dc8795b60a339e56616980acfd36a48e432343f3",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "aeb75d2533b23d63",
-  "task_validity": {
-    "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
-    "source_verified": true,
-    "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
-    "diff1_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
-    "diff2_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
-    "episode_id": "aeb75d2533b23d63",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 138,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/packaging/dependency_groups.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/packaging/metadata.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
-    "ticket": {
-      "allowed_path_count": 138,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/packaging/dependency_groups.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/packaging/metadata.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "dc8c095a3738499bbca1a831172b1025",
+   "tests_passed": true,
+   "tool_calls": 18
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 18,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 18,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "aeb75d2533b23d63",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "d26dc54104a9cc18",
+   "7a0d214acba144d3",
+   "3951c44accd5a72b"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   26
+  ],
+  "first_mutation_event_id": "28",
+  "first_mutation_index": 28,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-22T14:08:02.591493044Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "0f38400ffe50fac870b2be0e7c82d39a04dd2ce20dbe5cf39204772fa0da13b9",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "Apache-2.0",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "session_id": "dc8c095a3738499bbca1a831172b1025",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+  "target_message": "fix: make InvalidMetadata and CyclicDependencyGroup picklable (#1328)",
+  "task_fingerprint": "sha256:31174049b9a5926cfa80725f7473b6b7d4246a28ad5ccb386ffe06e94753306b",
+  "task_id": "aeb75d2533b23d63",
+  "task_mac_valid": true,
+  "ticket_summary": "# Errors from dependency groups and metadata break when they are copied\n\n## What happens now\n\nTwo of the errors this library raises keep useful details inside them. The cyclic dependency group error k",
+  "verification_line_similarity": 0.7541,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "aeb75d2533b23d63.episode.jsonl",
+ "raw_sha256": "3d98ccb8acb1e8ad83d34a73fb4ddfe5985f7bb10a9fccd6285275a50efa2009",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "aeb75d2533b23d63.sample.jsonl",
+ "sample_sha256": "8b8a2f9906583ff848ba8af7dc8795b60a339e56616980acfd36a48e432343f3",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "aeb75d2533b23d63",
+ "task_validity": {
+  "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+  "source_verified": true,
+  "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "458b0ae53e5a4261df851657d147e590b4546eb2",
+  "diff1_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
+  "diff2_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
+  "episode_id": "aeb75d2533b23d63",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 138,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/packaging/dependency_groups.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/packaging/metadata.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "1a9c4cb6b6aac7fb6137fcdc4f440af912d8d87f",
+  "ticket": {
+   "allowed_path_count": 138,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/packaging/dependency_groups.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/packaging/metadata.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

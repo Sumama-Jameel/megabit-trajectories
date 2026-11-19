@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "962263d80c224d439edea38785fc9021",
-      "tests_passed": true,
-      "tool_calls": 17
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 17,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 17,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "12817d803e8f9f1c",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "db882d78eff6d6e8",
-      "f1e6fff578c03b43",
-      "c85fcf537e390850"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      33
-    ],
-    "first_mutation_event_id": "35",
-    "first_mutation_index": 35,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-22T15:16:20.605232186Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "859e394b8931fe093eb282f3daf934a58ebd2f2a8ffea14a0bab0619efab55fc",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "Apache-2.0",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "packaging",
-    "repo_url": "https://github.com/pypa/packaging",
-    "session_id": "962263d80c224d439edea38785fc9021",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
-    "target_message": "fix(dependency_groups): collect InvalidRequirement instead of leaking it (#1302)",
-    "task_fingerprint": "sha256:d319e0c0ffc560efa0e00c509c5ead0d037988a498ff3eafaaa62cb2076e200d",
-    "task_id": "12817d803e8f9f1c",
-    "task_mac_valid": true,
-    "ticket_summary": "# A bad dependency entry hides the other problems in the same group\n\n## What happens now\nWhen a group of extra dependencies in a project file holds an entry that is not a valid dependency, reading tha",
-    "verification_line_similarity": 0.7925,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "12817d803e8f9f1c.episode.jsonl",
-  "raw_sha256": "cb3765d0729c3b46d765cf0ec3eaa2d1c8f7ca814f65021cd034f51ad14e8c2b",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "12817d803e8f9f1c.sample.jsonl",
-  "sample_sha256": "12623cd10c4c142c83fa6027e4314fd66e5ba8313b8c4e64dccd9c85c1335995",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "12817d803e8f9f1c",
-  "task_validity": {
-    "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
-    "source_verified": true,
-    "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
-    "diff1_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
-    "diff2_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
-    "episode_id": "12817d803e8f9f1c",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 138,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/packaging/dependency_groups.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/packaging/errors.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dependency_groups.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
-    "ticket": {
-      "allowed_path_count": 138,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/packaging/dependency_groups.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/packaging/errors.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dependency_groups.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "962263d80c224d439edea38785fc9021",
+   "tests_passed": true,
+   "tool_calls": 17
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 17,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 17,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "12817d803e8f9f1c",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "db882d78eff6d6e8",
+   "f1e6fff578c03b43",
+   "c85fcf537e390850"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   33
+  ],
+  "first_mutation_event_id": "35",
+  "first_mutation_index": 35,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-22T15:16:20.605232186Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "859e394b8931fe093eb282f3daf934a58ebd2f2a8ffea14a0bab0619efab55fc",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "Apache-2.0",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "session_id": "962263d80c224d439edea38785fc9021",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
+  "target_message": "fix(dependency_groups): collect InvalidRequirement instead of leaking it (#1302)",
+  "task_fingerprint": "sha256:d319e0c0ffc560efa0e00c509c5ead0d037988a498ff3eafaaa62cb2076e200d",
+  "task_id": "12817d803e8f9f1c",
+  "task_mac_valid": true,
+  "ticket_summary": "# A bad dependency entry hides the other problems in the same group\n\n## What happens now\nWhen a group of extra dependencies in a project file holds an entry that is not a valid dependency, reading tha",
+  "verification_line_similarity": 0.7925,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "12817d803e8f9f1c.episode.jsonl",
+ "raw_sha256": "cb3765d0729c3b46d765cf0ec3eaa2d1c8f7ca814f65021cd034f51ad14e8c2b",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "12817d803e8f9f1c.sample.jsonl",
+ "sample_sha256": "12623cd10c4c142c83fa6027e4314fd66e5ba8313b8c4e64dccd9c85c1335995",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "12817d803e8f9f1c",
+ "task_validity": {
+  "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
+  "source_verified": true,
+  "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "cf100d20e09c270cb6e19e72edbd0d40728de501",
+  "diff1_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
+  "diff2_tree_sha256": "33acb7a03e0a257bfe0e011ed27908ecb3795487c5bd1252c8dd8446466b4dbf",
+  "episode_id": "12817d803e8f9f1c",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 138,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/packaging/dependency_groups.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/packaging/errors.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dependency_groups.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "30824d9e3b33372a81af5e7a1d7e2ceb95e348c6",
+  "ticket": {
+   "allowed_path_count": 138,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/packaging/dependency_groups.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/packaging/errors.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dependency_groups.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

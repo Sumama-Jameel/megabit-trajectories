@@ -1,227 +1,229 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "1d15329e98b24ffc82983f57b55d0218",
-      "tests_passed": true,
-      "tool_calls": 17
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 17,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 17,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "b9e9143d07b01282",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "93212b09d65d54ea",
-      "295e1de8a7f5524a",
-      "b605f38650da1ffd"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.22,
-    "detected": false,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39
-    ],
-    "first_mutation_event_id": "40",
-    "first_mutation_index": 40,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-09-29T06:52:14.179468102Z",
-    "reason": "no concrete plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "explicit_heading": false,
-      "forward_markers": 0,
-      "generic_only": false,
-      "mutation_seen": true,
-      "ordered_steps": 0,
-      "plan_words": 1,
-      "targets": [
-        "_cmpkey",
-        "packaging/version.py",
-        "release"
-      ],
-      "text_chars": 191,
-      "ticket_echo": false,
-      "verification": false
-    },
-    "text_sha256": "7cfde7489983957f5cb5b562d765582e76d44acaa1d8d340e6ce6ccab78672de",
-    "todo_writes": 0
-  },
-  "provenance": {
-    "base_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "Apache-2.0",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "packaging",
-    "repo_url": "https://github.com/pypa/packaging",
-    "session_id": "1d15329e98b24ffc82983f57b55d0218",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "4b016f0088b201889d7fdff37fff4370075dce7c",
-    "target_message": "Do not throw away trailing digits for representation",
-    "task_fingerprint": "sha256:bfe4daa7e9d8c0468b1c731ef90085fada806f377ed4a0ff765df5efd0216970",
-    "task_id": "b9e9143d07b01282",
-    "task_mac_valid": true,
-    "ticket_summary": "# Version numbers lose their trailing zeros when shown\n\n## What happens now\nWhen I read a version written as one point zero and print it, I get back just\none. The trailing zero is gone. The same short",
-    "verification_line_similarity": 0.6471,
-    "verification_passed": true
-  },
-  "quarantine": {
-    "reason": "plan_detector_v1_found_no_plan_before_first_edit",
-    "record": "evidence/legacy_unplanned.json"
-  },
-  "raw_path": "b9e9143d07b01282.episode.jsonl",
-  "raw_sha256": "df6b12aecc12e5a733eab910091845283ed248cf381196469bef0eccbe652a52",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "b9e9143d07b01282.sample.jsonl",
-  "sample_sha256": "bd25be8ef9f61078de5957a76c51e97fc63f61ce9824dc656296fe32745d341b",
-  "schema_version": 2,
-  "splits": [
-    "legacy_unplanned"
-  ],
-  "supersedes": "b9e9143d07b01282",
-  "task_validity": {
-    "base_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
-    "source_verified": true,
-    "target_commit": "4b016f0088b201889d7fdff37fff4370075dce7c",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
-    "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
-    "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
-    "episode_id": "b9e9143d07b01282",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 34,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "packaging/version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/version.rst"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "4b016f0088b201889d7fdff37fff4370075dce7c",
-    "ticket": {
-      "allowed_path_count": 34,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "packaging/version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/version.rst"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "1d15329e98b24ffc82983f57b55d0218",
+   "tests_passed": true,
+   "tool_calls": 17
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 17,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 17,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "b9e9143d07b01282",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "93212b09d65d54ea",
+   "295e1de8a7f5524a",
+   "b605f38650da1ffd"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.22,
+  "detected": false,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ],
+  "first_mutation_event_id": "40",
+  "first_mutation_index": 40,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-29T06:52:14.179468102Z",
+  "reason": "no concrete plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "explicit_heading": false,
+   "forward_markers": 0,
+   "generic_only": false,
+   "mutation_seen": true,
+   "ordered_steps": 0,
+   "plan_words": 1,
+   "targets": [
+    "_cmpkey",
+    "packaging/version.py",
+    "release"
+   ],
+   "text_chars": 191,
+   "ticket_echo": false,
+   "verification": false
+  },
+  "text_sha256": "7cfde7489983957f5cb5b562d765582e76d44acaa1d8d340e6ce6ccab78672de",
+  "todo_writes": 0
+ },
+ "provenance": {
+  "base_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "Apache-2.0",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "session_id": "1d15329e98b24ffc82983f57b55d0218",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "4b016f0088b201889d7fdff37fff4370075dce7c",
+  "target_message": "Do not throw away trailing digits for representation",
+  "task_fingerprint": "sha256:bfe4daa7e9d8c0468b1c731ef90085fada806f377ed4a0ff765df5efd0216970",
+  "task_id": "b9e9143d07b01282",
+  "task_mac_valid": true,
+  "ticket_summary": "# Version numbers lose their trailing zeros when shown\n\n## What happens now\nWhen I read a version written as one point zero and print it, I get back just\none. The trailing zero is gone. The same short",
+  "verification_line_similarity": 0.6471,
+  "verification_passed": true
+ },
+ "quarantine": {
+  "reason": "plan_detector_v1_found_no_plan_before_first_edit",
+  "record": "evidence/legacy_unplanned.json"
+ },
+ "raw_path": "b9e9143d07b01282.episode.jsonl",
+ "raw_sha256": "df6b12aecc12e5a733eab910091845283ed248cf381196469bef0eccbe652a52",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "b9e9143d07b01282.sample.jsonl",
+ "sample_sha256": "bd25be8ef9f61078de5957a76c51e97fc63f61ce9824dc656296fe32745d341b",
+ "schema_version": 2,
+ "splits": [
+  "legacy_unplanned"
+ ],
+ "supersedes": "b9e9143d07b01282",
+ "task_validity": {
+  "base_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
+  "source_verified": true,
+  "target_commit": "4b016f0088b201889d7fdff37fff4370075dce7c",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "77eee20e51b2440a8b191a02438b6623f9156260",
+  "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "episode_id": "b9e9143d07b01282",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 34,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "packaging/version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/version.rst"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "4b016f0088b201889d7fdff37fff4370075dce7c",
+  "ticket": {
+   "allowed_path_count": 34,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "packaging/version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/version.rst"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
+ "briefing_file": "briefing.md"
 }

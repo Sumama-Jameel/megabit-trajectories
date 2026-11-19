@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "4312587de1a64137b964b5db87aa9e58",
-      "tests_passed": true,
-      "tool_calls": 27
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 27,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 27,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "979988594a97aafb",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "54d042524fe92f6c",
-      "89f258f25cfd0475",
-      "452ed3b534a19f3f"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      30
-    ],
-    "first_mutation_event_id": "35",
-    "first_mutation_index": 35,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-04T11:12:42.050379239Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "2aaceb380ff2f0519e8eadecfad63ac567c0a2e2cc2a67bc8ef6913e2ebd3b42",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-3-Clause",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "4312587de1a64137b964b5db87aa9e58",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "05f6fd0df4ecbd104eb7a229f9f185c2484dee69",
-    "target_message": "Always return a help record for an `Argument`",
-    "task_fingerprint": "sha256:b1d9b325b41879f1e201f008dc853af31dfc2426fd1c6fdc15849d1aefda63b4",
-    "task_id": "979988594a97aafb",
-    "task_mac_valid": true,
-    "ticket_summary": "# Asking an argument for its help line gives nothing back when it has no help text\n\n## What happens now\n\nWhen you ask a command line argument for the line that shows up in the help page, and that argu",
-    "verification_line_similarity": 0.6933,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "979988594a97aafb.episode.jsonl",
-  "raw_sha256": "b1aa72db0c8d2388be7af542f2c332bc132033383b998f99821504a767c120b7",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "979988594a97aafb.sample.jsonl",
-  "sample_sha256": "e9823bf700a09f69056f0f6bdf6f6bd32cc4ba35759afe5779e401eb4bf43f50",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "979988594a97aafb",
-  "task_validity": {
-    "base_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
-    "source_verified": true,
-    "target_commit": "05f6fd0df4ecbd104eb7a229f9f185c2484dee69",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
-    "diff1_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
-    "diff2_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
-    "episode_id": "979988594a97aafb",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 178,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_arguments.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "05f6fd0df4ecbd104eb7a229f9f185c2484dee69",
-    "ticket": {
-      "allowed_path_count": 178,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_arguments.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "4312587de1a64137b964b5db87aa9e58",
+   "tests_passed": true,
+   "tool_calls": 27
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 27,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 27,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "979988594a97aafb",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "54d042524fe92f6c",
+   "89f258f25cfd0475",
+   "452ed3b534a19f3f"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   30
+  ],
+  "first_mutation_event_id": "35",
+  "first_mutation_index": 35,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-04T11:12:42.050379239Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "2aaceb380ff2f0519e8eadecfad63ac567c0a2e2cc2a67bc8ef6913e2ebd3b42",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-3-Clause",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "4312587de1a64137b964b5db87aa9e58",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "05f6fd0df4ecbd104eb7a229f9f185c2484dee69",
+  "target_message": "Always return a help record for an `Argument`",
+  "task_fingerprint": "sha256:b1d9b325b41879f1e201f008dc853af31dfc2426fd1c6fdc15849d1aefda63b4",
+  "task_id": "979988594a97aafb",
+  "task_mac_valid": true,
+  "ticket_summary": "# Asking an argument for its help line gives nothing back when it has no help text\n\n## What happens now\n\nWhen you ask a command line argument for the line that shows up in the help page, and that argu",
+  "verification_line_similarity": 0.6933,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "979988594a97aafb.episode.jsonl",
+ "raw_sha256": "b1aa72db0c8d2388be7af542f2c332bc132033383b998f99821504a767c120b7",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "979988594a97aafb.sample.jsonl",
+ "sample_sha256": "e9823bf700a09f69056f0f6bdf6f6bd32cc4ba35759afe5779e401eb4bf43f50",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "979988594a97aafb",
+ "task_validity": {
+  "base_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
+  "source_verified": true,
+  "target_commit": "05f6fd0df4ecbd104eb7a229f9f185c2484dee69",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "f25f697a439acc2b0d84aa8f5413330f4e2e75cf",
+  "diff1_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+  "diff2_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+  "episode_id": "979988594a97aafb",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 178,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_arguments.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "05f6fd0df4ecbd104eb7a229f9f185c2484dee69",
+  "ticket": {
+   "allowed_path_count": 178,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_arguments.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "228a62affc4e4ef2a40f5a2ed7a4e5be",
-      "tests_passed": true,
-      "tool_calls": 29
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 29,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 29,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "e0de8e048c30d0d6",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "211f323410c1a027",
-      "344afb09036e31e5",
-      "cfd8758ad8942bc5"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      23
-    ],
-    "first_mutation_event_id": "31",
-    "first_mutation_index": 31,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-22T14:24:14.810289482Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "f462a2b7ac8efe560fc67ededebcb1171b27b26616d883dfa38f8dc8cc9344a6",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-3-Clause",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "228a62affc4e4ef2a40f5a2ed7a4e5be",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
-    "target_message": "Validate style() color arguments, fix explicit black color argument",
-    "task_fingerprint": "sha256:24f8887719ff977f8281ce2083c2d6fbb566fcedf3e9cc6b470340f7ad594da8",
-    "task_id": "e0de8e048c30d0d6",
-    "task_mac_valid": true,
-    "ticket_summary": "# Black as color number 0 is ignored, and other wrong colors are not reported clearly\n\n## What happens now\n\nWhen I choose a color for my text by giving the number 0, which is black, nothing happens. T",
-    "verification_line_similarity": 0.5732,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "e0de8e048c30d0d6.episode.jsonl",
-  "raw_sha256": "710ee6dbadc015e2b711e74b86dccbf900bfe1ccf7ae861dbeba26492d7d6fe0",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "e0de8e048c30d0d6.sample.jsonl",
-  "sample_sha256": "3d79d68be50bc019371819103872dce121e8009b283effad43e8b3b9c66bd67c",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "e0de8e048c30d0d6",
-  "task_validity": {
-    "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
-    "source_verified": true,
-    "target_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
-    "diff1_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
-    "diff2_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
-    "episode_id": "e0de8e048c30d0d6",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 163,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/termui.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_utils/test_style.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
-    "ticket": {
-      "allowed_path_count": 163,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/termui.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_utils/test_style.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "228a62affc4e4ef2a40f5a2ed7a4e5be",
+   "tests_passed": true,
+   "tool_calls": 29
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 29,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 29,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "e0de8e048c30d0d6",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "211f323410c1a027",
+   "344afb09036e31e5",
+   "cfd8758ad8942bc5"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   23
+  ],
+  "first_mutation_event_id": "31",
+  "first_mutation_index": 31,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-22T14:24:14.810289482Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "f462a2b7ac8efe560fc67ededebcb1171b27b26616d883dfa38f8dc8cc9344a6",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-3-Clause",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "228a62affc4e4ef2a40f5a2ed7a4e5be",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+  "target_message": "Validate style() color arguments, fix explicit black color argument",
+  "task_fingerprint": "sha256:24f8887719ff977f8281ce2083c2d6fbb566fcedf3e9cc6b470340f7ad594da8",
+  "task_id": "e0de8e048c30d0d6",
+  "task_mac_valid": true,
+  "ticket_summary": "# Black as color number 0 is ignored, and other wrong colors are not reported clearly\n\n## What happens now\n\nWhen I choose a color for my text by giving the number 0, which is black, nothing happens. T",
+  "verification_line_similarity": 0.5732,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "e0de8e048c30d0d6.episode.jsonl",
+ "raw_sha256": "710ee6dbadc015e2b711e74b86dccbf900bfe1ccf7ae861dbeba26492d7d6fe0",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "e0de8e048c30d0d6.sample.jsonl",
+ "sample_sha256": "3d79d68be50bc019371819103872dce121e8009b283effad43e8b3b9c66bd67c",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "e0de8e048c30d0d6",
+ "task_validity": {
+  "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+  "source_verified": true,
+  "target_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "7925a3410d7098c28cfca3b2baa6c852666bbd14",
+  "diff1_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
+  "diff2_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
+  "episode_id": "e0de8e048c30d0d6",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 163,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/termui.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_utils/test_style.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "07c909f23f0f83b5ca137c167b9a134d66201f67",
+  "ticket": {
+   "allowed_path_count": 163,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/termui.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_utils/test_style.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

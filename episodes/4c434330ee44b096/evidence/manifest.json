@@ -1,210 +1,212 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "6755a6ddb30d482c82de2a2a3363c722",
-      "tests_passed": true,
-      "tool_calls": 27
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 27,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 27,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "4c434330ee44b096",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "8e323fb1dc5a1c5a",
-      "abeb52500edd7985",
-      "0951af0941e44219"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      30
-    ],
-    "first_mutation_event_id": "34",
-    "first_mutation_index": 34,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-09-28T12:39:53.145820841Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "24ccbac0db483f0b70f498dea3f4f8cb4180449cb8cb94d30cdb09795ce2c481",
-    "todo_writes": 2
-  },
-  "provenance": {
-    "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "6755a6ddb30d482c82de2a2a3363c722",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
-    "target_message": "Strip underscore for __init__",
-    "task_fingerprint": "sha256:9c64289218ad94f9c5fdf713f712f3e97a5a847fb4deb48780deba057f969b5a",
-    "task_id": "4c434330ee44b096",
-    "task_mac_valid": true,
-    "ticket_summary": "# Fields with underscores can only be set by typing the underscore\n\n## What happens now\nWhen I declare a field whose name has a leading or a trailing underscore, the setup method that the library writ",
-    "verification_line_similarity": 0.5588,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "4c434330ee44b096.episode.jsonl",
-  "raw_sha256": "5b73beefbf10af2f1d87c958ce9efde97b70f6c69113d541ef323f49d2ff8842",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "4c434330ee44b096.sample.jsonl",
-  "sample_sha256": "a8077f9215f7202f767047684071883b2b6ec49efbc74929868fb9f75831ff68",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "4c434330ee44b096",
-  "task_validity": {
-    "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
-    "source_verified": true,
-    "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
-    "diff1_tree_sha256": "515530e4a81de4feeab2d4a0f7010489101d239d722ca9ae04b01a7af6a3fde7",
-    "diff2_tree_sha256": "515530e4a81de4feeab2d4a0f7010489101d239d722ca9ae04b01a7af6a3fde7",
-    "episode_id": "4c434330ee44b096",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 29,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_dunders.py"
-        },
-        {
-          "status": "allowed",
-          "token": "attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/examples.rst"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dunders.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dark_magic.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
-    "ticket": {
-      "allowed_path_count": 29,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_dunders.py"
-        },
-        {
-          "status": "allowed",
-          "token": "attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/examples.rst"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dunders.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dark_magic.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "6755a6ddb30d482c82de2a2a3363c722",
+   "tests_passed": true,
+   "tool_calls": 27
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 27,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 27,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "4c434330ee44b096",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "8e323fb1dc5a1c5a",
+   "abeb52500edd7985",
+   "0951af0941e44219"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   30
+  ],
+  "first_mutation_event_id": "34",
+  "first_mutation_index": 34,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-28T12:39:53.145820841Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "24ccbac0db483f0b70f498dea3f4f8cb4180449cb8cb94d30cdb09795ce2c481",
+  "todo_writes": 2
+ },
+ "provenance": {
+  "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "6755a6ddb30d482c82de2a2a3363c722",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
+  "target_message": "Strip underscore for __init__",
+  "task_fingerprint": "sha256:9c64289218ad94f9c5fdf713f712f3e97a5a847fb4deb48780deba057f969b5a",
+  "task_id": "4c434330ee44b096",
+  "task_mac_valid": true,
+  "ticket_summary": "# Fields with underscores can only be set by typing the underscore\n\n## What happens now\nWhen I declare a field whose name has a leading or a trailing underscore, the setup method that the library writ",
+  "verification_line_similarity": 0.5588,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "4c434330ee44b096.episode.jsonl",
+ "raw_sha256": "5b73beefbf10af2f1d87c958ce9efde97b70f6c69113d541ef323f49d2ff8842",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "4c434330ee44b096.sample.jsonl",
+ "sample_sha256": "a8077f9215f7202f767047684071883b2b6ec49efbc74929868fb9f75831ff68",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "4c434330ee44b096",
+ "task_validity": {
+  "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
+  "source_verified": true,
+  "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "0e2507d51d44e5601347a7f4d9a7ef9430e4b0d6",
+  "diff1_tree_sha256": "515530e4a81de4feeab2d4a0f7010489101d239d722ca9ae04b01a7af6a3fde7",
+  "diff2_tree_sha256": "515530e4a81de4feeab2d4a0f7010489101d239d722ca9ae04b01a7af6a3fde7",
+  "episode_id": "4c434330ee44b096",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 29,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_dunders.py"
+    },
+    {
+     "status": "allowed",
+     "token": "attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/examples.rst"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dunders.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dark_magic.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "3e45f0559ef9646d434af3a508281c9991b22c8a",
+  "ticket": {
+   "allowed_path_count": 29,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_dunders.py"
+    },
+    {
+     "status": "allowed",
+     "token": "attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/examples.rst"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dunders.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dark_magic.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
+ "briefing_file": "briefing.md"
 }

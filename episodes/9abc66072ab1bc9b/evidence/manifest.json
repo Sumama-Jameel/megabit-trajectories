@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "1a17be9102594a639423ec9233b0bc9a",
-      "tests_passed": true,
-      "tool_calls": 19
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 19,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 19,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "9abc66072ab1bc9b",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "0e213f23875d9780",
-      "6c3c693895b67708",
-      "b670b46b53e4ca9d"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      16
-    ],
-    "first_mutation_event_id": "18",
-    "first_mutation_index": 18,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-22T12:34:26.555354484Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-3-Clause",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "1a17be9102594a639423ec9233b0bc9a",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
-    "target_message": "Preserve declaration order of help option names",
-    "task_fingerprint": "sha256:9eb09960e40d537a6e3843cef9385a0de657e8d332a051f8015de6169b6bc853",
-    "task_id": "9abc66072ab1bc9b",
-    "task_mac_valid": true,
-    "ticket_summary": "# My help option names come back in a mixed-up order\n\n## What happens now\nWhen I give my command more than one name for the help option, the names come back in\na mixed-up order instead of the order I ",
-    "verification_line_similarity": 0.5152,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "9abc66072ab1bc9b.episode.jsonl",
-  "raw_sha256": "19bc769d24cf9509839aa1b270a0385094666c775e7b2f2bdbf8732caaa48cbb",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "9abc66072ab1bc9b.sample.jsonl",
-  "sample_sha256": "859f2af9bc6f43a8cb6bcbebdf0dd6c5f6bc3bd6083d3bd4371702276392f0db",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "9abc66072ab1bc9b",
-  "task_validity": {
-    "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
-    "source_verified": true,
-    "target_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
-    "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
-    "diff2_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
-    "episode_id": "9abc66072ab1bc9b",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 165,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_commands.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
-    "ticket": {
-      "allowed_path_count": 165,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_commands.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "1a17be9102594a639423ec9233b0bc9a",
+   "tests_passed": true,
+   "tool_calls": 19
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 19,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 19,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "9abc66072ab1bc9b",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "0e213f23875d9780",
+   "6c3c693895b67708",
+   "b670b46b53e4ca9d"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   16
+  ],
+  "first_mutation_event_id": "18",
+  "first_mutation_index": 18,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-22T12:34:26.555354484Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-3-Clause",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "1a17be9102594a639423ec9233b0bc9a",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
+  "target_message": "Preserve declaration order of help option names",
+  "task_fingerprint": "sha256:9eb09960e40d537a6e3843cef9385a0de657e8d332a051f8015de6169b6bc853",
+  "task_id": "9abc66072ab1bc9b",
+  "task_mac_valid": true,
+  "ticket_summary": "# My help option names come back in a mixed-up order\n\n## What happens now\nWhen I give my command more than one name for the help option, the names come back in\na mixed-up order instead of the order I ",
+  "verification_line_similarity": 0.5152,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "9abc66072ab1bc9b.episode.jsonl",
+ "raw_sha256": "19bc769d24cf9509839aa1b270a0385094666c775e7b2f2bdbf8732caaa48cbb",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "9abc66072ab1bc9b.sample.jsonl",
+ "sample_sha256": "859f2af9bc6f43a8cb6bcbebdf0dd6c5f6bc3bd6083d3bd4371702276392f0db",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "9abc66072ab1bc9b",
+ "task_validity": {
+  "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+  "source_verified": true,
+  "target_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "00e592cea702e0b2caa0dee42489fdb1c22cd845",
+  "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+  "diff2_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+  "episode_id": "9abc66072ab1bc9b",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 165,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_commands.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "047adef258fc25566163ffc3efd14effc0ef7352",
+  "ticket": {
+   "allowed_path_count": 165,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_commands.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

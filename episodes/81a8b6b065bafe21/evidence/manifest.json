@@ -1,218 +1,220 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "eef6980dbb8841beaf77057076675ea0",
-      "tests_passed": true,
-      "tool_calls": 95
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 95,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 95,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "81a8b6b065bafe21",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "dd115a2f9e641655",
-      "c0687bb1516ab9fc",
-      "d080b3ed538202ba"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      240
-    ],
-    "first_mutation_event_id": "246",
-    "first_mutation_index": 246,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-05T19:44:10.17206414Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "fd7eb5029f1ec2960cac81f893501acbf2c62b0da03192bccddc90ea2357674a",
-    "todo_writes": 2
-  },
-  "provenance": {
-    "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "eef6980dbb8841beaf77057076675ea0",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
-    "target_message": "Resolve field aliases before calling field_transformer (#1509)",
-    "task_fingerprint": "sha256:fd42ba60324f64814bb2ceff02a42bfae2a5cd938ad4b3921a7c8cfd50d7e153",
-    "task_id": "81a8b6b065bafe21",
-    "task_mac_valid": true,
-    "ticket_summary": "# My field helper cannot tell an automatic name from one I picked myself\n\n## What happens now\n\nWhen I write a helper that looks at each field of my class, the fields I get do not yet have their automa",
-    "verification_line_similarity": 0.4823,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "81a8b6b065bafe21.episode.jsonl",
-  "raw_sha256": "5787c4bcfee2292509bab135b0487aba88d943745a10eb4552d3acdbeb1ee332",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "81a8b6b065bafe21.sample.jsonl",
-  "sample_sha256": "d14f1ac26f509792663eebaa4123d49fa62641385ddf255396105fad74f49327",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "81a8b6b065bafe21",
-  "task_validity": {
-    "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
-    "source_verified": true,
-    "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
-    "diff1_tree_sha256": "2f26701c9e4bf94f824635cefb8bb10c27d8b19e6d3236c8051afc8ad71a09d8",
-    "diff2_tree_sha256": "8292a8f301ca63c3e4e0e80e05cd41df9fcfa04db9357657e5756043c4d9e7de",
-    "episode_id": "81a8b6b065bafe21",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 129,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/extending.md"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_functional.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_hooks.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/utils.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
-    "ticket": {
-      "allowed_path_count": 129,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/extending.md"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_functional.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_hooks.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/utils.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "eef6980dbb8841beaf77057076675ea0",
+   "tests_passed": true,
+   "tool_calls": 95
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 95,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 95,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "81a8b6b065bafe21",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "dd115a2f9e641655",
+   "c0687bb1516ab9fc",
+   "d080b3ed538202ba"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   240
+  ],
+  "first_mutation_event_id": "246",
+  "first_mutation_index": 246,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-05T19:44:10.17206414Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "fd7eb5029f1ec2960cac81f893501acbf2c62b0da03192bccddc90ea2357674a",
+  "todo_writes": 2
+ },
+ "provenance": {
+  "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "eef6980dbb8841beaf77057076675ea0",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
+  "target_message": "Resolve field aliases before calling field_transformer (#1509)",
+  "task_fingerprint": "sha256:fd42ba60324f64814bb2ceff02a42bfae2a5cd938ad4b3921a7c8cfd50d7e153",
+  "task_id": "81a8b6b065bafe21",
+  "task_mac_valid": true,
+  "ticket_summary": "# My field helper cannot tell an automatic name from one I picked myself\n\n## What happens now\n\nWhen I write a helper that looks at each field of my class, the fields I get do not yet have their automa",
+  "verification_line_similarity": 0.4823,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "81a8b6b065bafe21.episode.jsonl",
+ "raw_sha256": "5787c4bcfee2292509bab135b0487aba88d943745a10eb4552d3acdbeb1ee332",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "81a8b6b065bafe21.sample.jsonl",
+ "sample_sha256": "d14f1ac26f509792663eebaa4123d49fa62641385ddf255396105fad74f49327",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "81a8b6b065bafe21",
+ "task_validity": {
+  "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
+  "source_verified": true,
+  "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
+  "diff1_tree_sha256": "2f26701c9e4bf94f824635cefb8bb10c27d8b19e6d3236c8051afc8ad71a09d8",
+  "diff2_tree_sha256": "8292a8f301ca63c3e4e0e80e05cd41df9fcfa04db9357657e5756043c4d9e7de",
+  "episode_id": "81a8b6b065bafe21",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 129,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/extending.md"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_functional.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_hooks.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/utils.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
+  "ticket": {
+   "allowed_path_count": 129,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/extending.md"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_functional.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_hooks.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/utils.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

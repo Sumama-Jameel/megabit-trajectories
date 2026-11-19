@@ -1,210 +1,212 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "f3b6622c129844b7a368fab492fc15bd",
-      "tests_passed": true,
-      "tool_calls": 16
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 16,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 16,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "7bd0a927168a14f3",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "9c08fbf7956bbb01",
-      "00797f7109a5ed46",
-      "022fbb78849b1cf8"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.38,
-    "detected": false,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      0,
-      1,
-      18
-    ],
-    "first_mutation_event_id": "19",
-    "first_mutation_index": 19,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-09-29T13:40:28.848796055Z",
-    "reason": "no concrete plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "explicit_heading": false,
-      "forward_markers": 2,
-      "generic_only": false,
-      "mutation_seen": true,
-      "ordered_steps": 0,
-      "plan_words": 0,
-      "targets": [
-        "has"
-      ],
-      "text_chars": 77,
-      "ticket_echo": false,
-      "verification": false
-    },
-    "text_sha256": "3867676f9d484dc372c312376a524c923dc9e67a1ffb23265fdd9486064ba445",
-    "todo_writes": 0
-  },
-  "provenance": {
-    "base_commit": "da4c9ca5149d563d66f0aa9fbd21e60a370906be",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "f3b6622c129844b7a368fab492fc15bd",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "104e6635511fc0e44eede9066912f5295edf009a",
-    "target_message": "Add `has`",
-    "task_fingerprint": "sha256:d39638415b64d5d3fc8e6b6685f092fcafa4d7f7fd4357f36a47f2acc89e72e8",
-    "task_id": "7bd0a927168a14f3",
-    "task_mac_valid": true,
-    "ticket_summary": "# I have no way to ask \"is this one of my classes?\" without catching an error\n\n## What happens now\n\nToday the library gives me two tools: one that lists the field names of a class, and one that turns ",
-    "verification_line_similarity": 0.4368,
-    "verification_passed": true
-  },
-  "quarantine": {
-    "reason": "plan_detector_v1_found_no_plan_before_first_edit",
-    "record": "evidence/legacy_unplanned.json"
-  },
-  "raw_path": "7bd0a927168a14f3.episode.jsonl",
-  "raw_sha256": "beb2e194ffe0f533b1bac93325c7231473877ff973eae3c6d55b8a9fcf13d00c",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "7bd0a927168a14f3.sample.jsonl",
-  "sample_sha256": "5c65a8c477102aef42065e3837d0214a3fd47e883b72666eed6928a05413187c",
-  "schema_version": 2,
-  "splits": [
-    "legacy_unplanned"
-  ],
-  "supersedes": "7bd0a927168a14f3",
-  "task_validity": {
-    "base_commit": "da4c9ca5149d563d66f0aa9fbd21e60a370906be",
-    "source_verified": true,
-    "target_commit": "104e6635511fc0e44eede9066912f5295edf009a",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "da4c9ca5149d563d66f0aa9fbd21e60a370906be",
-    "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
-    "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
-    "episode_id": "7bd0a927168a14f3",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 27,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_funcs.py"
-        },
-        {
-          "status": "allowed",
-          "token": "attr/__init__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_funcs.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "104e6635511fc0e44eede9066912f5295edf009a",
-    "ticket": {
-      "allowed_path_count": 27,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_funcs.py"
-        },
-        {
-          "status": "allowed",
-          "token": "attr/__init__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_funcs.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "f3b6622c129844b7a368fab492fc15bd",
+   "tests_passed": true,
+   "tool_calls": 16
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 16,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 16,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "7bd0a927168a14f3",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "9c08fbf7956bbb01",
+   "00797f7109a5ed46",
+   "022fbb78849b1cf8"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.38,
+  "detected": false,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   0,
+   1,
+   18
+  ],
+  "first_mutation_event_id": "19",
+  "first_mutation_index": 19,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-29T13:40:28.848796055Z",
+  "reason": "no concrete plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "explicit_heading": false,
+   "forward_markers": 2,
+   "generic_only": false,
+   "mutation_seen": true,
+   "ordered_steps": 0,
+   "plan_words": 0,
+   "targets": [
+    "has"
+   ],
+   "text_chars": 77,
+   "ticket_echo": false,
+   "verification": false
+  },
+  "text_sha256": "3867676f9d484dc372c312376a524c923dc9e67a1ffb23265fdd9486064ba445",
+  "todo_writes": 0
+ },
+ "provenance": {
+  "base_commit": "da4c9ca5149d563d66f0aa9fbd21e60a370906be",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "f3b6622c129844b7a368fab492fc15bd",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "104e6635511fc0e44eede9066912f5295edf009a",
+  "target_message": "Add `has`",
+  "task_fingerprint": "sha256:d39638415b64d5d3fc8e6b6685f092fcafa4d7f7fd4357f36a47f2acc89e72e8",
+  "task_id": "7bd0a927168a14f3",
+  "task_mac_valid": true,
+  "ticket_summary": "# I have no way to ask \"is this one of my classes?\" without catching an error\n\n## What happens now\n\nToday the library gives me two tools: one that lists the field names of a class, and one that turns ",
+  "verification_line_similarity": 0.4368,
+  "verification_passed": true
+ },
+ "quarantine": {
+  "reason": "plan_detector_v1_found_no_plan_before_first_edit",
+  "record": "evidence/legacy_unplanned.json"
+ },
+ "raw_path": "7bd0a927168a14f3.episode.jsonl",
+ "raw_sha256": "beb2e194ffe0f533b1bac93325c7231473877ff973eae3c6d55b8a9fcf13d00c",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "7bd0a927168a14f3.sample.jsonl",
+ "sample_sha256": "5c65a8c477102aef42065e3837d0214a3fd47e883b72666eed6928a05413187c",
+ "schema_version": 2,
+ "splits": [
+  "legacy_unplanned"
+ ],
+ "supersedes": "7bd0a927168a14f3",
+ "task_validity": {
+  "base_commit": "da4c9ca5149d563d66f0aa9fbd21e60a370906be",
+  "source_verified": true,
+  "target_commit": "104e6635511fc0e44eede9066912f5295edf009a",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "da4c9ca5149d563d66f0aa9fbd21e60a370906be",
+  "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+  "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+  "episode_id": "7bd0a927168a14f3",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 27,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_funcs.py"
+    },
+    {
+     "status": "allowed",
+     "token": "attr/__init__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_funcs.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "104e6635511fc0e44eede9066912f5295edf009a",
+  "ticket": {
+   "allowed_path_count": 27,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_funcs.py"
+    },
+    {
+     "status": "allowed",
+     "token": "attr/__init__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_funcs.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
+ "briefing_file": "briefing.md"
 }

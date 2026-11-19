@@ -1,202 +1,204 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "2709a843a09744ebbd56689d2d2d258e",
-      "tests_passed": true,
-      "tool_calls": 44
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 44,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 44,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "a5e823c9f6618766",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "c317744b95459d60",
-      "9ea866684729eeb9",
-      "ef94d7be244dd8c6"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      60
-    ],
-    "first_mutation_event_id": "66",
-    "first_mutation_index": 66,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-06T07:02:55.054669848Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "61911ffd028f485d0c57cdee6274147ce36076e956f2d21618c479774a0f0141",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "2709a843a09744ebbd56689d2d2d258e",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
-    "target_message": "Fix message passing in frozen errors",
-    "task_fingerprint": "sha256:39147e938cb1952c60397e005f4ae14004f55bfd6bb7ffdea6df21378b1629e1",
-    "task_id": "a5e823c9f6618766",
-    "task_mac_valid": true,
-    "ticket_summary": "# The message I get when I try to change a frozen object is shared and not my own\n\n## What happens now\n\nWhen I try to change a value on an object that was made frozen, the error text is\nstored just on",
-    "verification_line_similarity": 0.5625,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "a5e823c9f6618766.episode.jsonl",
-  "raw_sha256": "bfe3cc937f7cd2ae3ec70d64aaefb2afade2f326bffe7b7bada725e51b183fa8",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "a5e823c9f6618766.sample.jsonl",
-  "sample_sha256": "41b2a70b9c38f36776f8a9b02af22124085857b00bc99b8abd2ac6e92e3196c3",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "a5e823c9f6618766",
-  "task_validity": {
-    "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
-    "source_verified": true,
-    "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
-    "diff1_tree_sha256": "fc4cb2b28678f310ac72feeed046140a3d6749e2cc5654b75b50b7520339cd84",
-    "diff2_tree_sha256": "fc4cb2b28678f310ac72feeed046140a3d6749e2cc5654b75b50b7520339cd84",
-    "episode_id": "a5e823c9f6618766",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 131,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/exceptions.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/attr/setters.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_functional.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
-    "ticket": {
-      "allowed_path_count": 131,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/exceptions.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/attr/setters.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_functional.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "2709a843a09744ebbd56689d2d2d258e",
+   "tests_passed": true,
+   "tool_calls": 44
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 44,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 44,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "a5e823c9f6618766",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "c317744b95459d60",
+   "9ea866684729eeb9",
+   "ef94d7be244dd8c6"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   60
+  ],
+  "first_mutation_event_id": "66",
+  "first_mutation_index": 66,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-06T07:02:55.054669848Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "61911ffd028f485d0c57cdee6274147ce36076e956f2d21618c479774a0f0141",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "2709a843a09744ebbd56689d2d2d258e",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
+  "target_message": "Fix message passing in frozen errors",
+  "task_fingerprint": "sha256:39147e938cb1952c60397e005f4ae14004f55bfd6bb7ffdea6df21378b1629e1",
+  "task_id": "a5e823c9f6618766",
+  "task_mac_valid": true,
+  "ticket_summary": "# The message I get when I try to change a frozen object is shared and not my own\n\n## What happens now\n\nWhen I try to change a value on an object that was made frozen, the error text is\nstored just on",
+  "verification_line_similarity": 0.5625,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "a5e823c9f6618766.episode.jsonl",
+ "raw_sha256": "bfe3cc937f7cd2ae3ec70d64aaefb2afade2f326bffe7b7bada725e51b183fa8",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "a5e823c9f6618766.sample.jsonl",
+ "sample_sha256": "41b2a70b9c38f36776f8a9b02af22124085857b00bc99b8abd2ac6e92e3196c3",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "a5e823c9f6618766",
+ "task_validity": {
+  "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
+  "source_verified": true,
+  "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "eccd966d80aff5196efc959316961cfa780439f9",
+  "diff1_tree_sha256": "fc4cb2b28678f310ac72feeed046140a3d6749e2cc5654b75b50b7520339cd84",
+  "diff2_tree_sha256": "fc4cb2b28678f310ac72feeed046140a3d6749e2cc5654b75b50b7520339cd84",
+  "episode_id": "a5e823c9f6618766",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 131,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/exceptions.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/attr/setters.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_functional.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "ce89f5d11feb0805da9ed10bb165238cc959f1bb",
+  "ticket": {
+   "allowed_path_count": 131,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/exceptions.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/attr/setters.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_functional.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

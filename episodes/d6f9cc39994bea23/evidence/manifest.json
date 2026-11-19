@@ -1,203 +1,205 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "bb903fe304324790888a349c815a0807",
-      "tests_passed": true,
-      "tool_calls": 35
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 35,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 35,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "d6f9cc39994bea23",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "dd5a33f87b8037a3",
-      "6368dbd0d071aa4a",
-      "5a261dacdb95551b"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.38,
-    "detected": false,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      0,
-      1,
-      34,
-      35
-    ],
-    "first_mutation_event_id": "36",
-    "first_mutation_index": 36,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-09-29T11:33:49.341656584Z",
-    "reason": "no concrete plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "explicit_heading": false,
-      "forward_markers": 2,
-      "generic_only": false,
-      "mutation_seen": true,
-      "ordered_steps": 0,
-      "plan_words": 1,
-      "targets": [
-        "packaging/version.py"
-      ],
-      "text_chars": 118,
-      "ticket_echo": false,
-      "verification": false
-    },
-    "text_sha256": "6343cffc4cc01c95f08aacdceb13ce36cab7c36366b2f0ed41926de1e35c1b87",
-    "todo_writes": 0
-  },
-  "provenance": {
-    "base_commit": "314effac7413d08926fff93f1570897a55dd07f5",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "Apache-2.0",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "packaging",
-    "repo_url": "https://github.com/pypa/packaging",
-    "session_id": "bb903fe304324790888a349c815a0807",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "6e3268aa634c49e9a2c53779829e0911d3c95811",
-    "target_message": "Switch from : to ! to denote an Epoch",
-    "task_fingerprint": "sha256:7d9baece9d51e6baafab22c5ad842e57f4ba8d6fbec1e71149f07a27655eed2a",
-    "task_id": "d6f9cc39994bea23",
-    "task_mac_valid": true,
-    "ticket_summary": "# Version numbers with an exclamation mark are rejected as invalid\n\n## What happens now\n\nToday the only mark this project accepts between an epoch number and the rest of a version is a colon. So a ver",
-    "verification_line_similarity": 1.0,
-    "verification_passed": true
-  },
-  "quarantine": {
-    "reason": "plan_detector_v1_found_no_plan_before_first_edit",
-    "record": "evidence/legacy_unplanned.json"
-  },
-  "raw_path": "d6f9cc39994bea23.episode.jsonl",
-  "raw_sha256": "79b4884fa9ab16c09030cea84bfba675caa283fcd3fcd238ed64de97c11b8ee1",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "d6f9cc39994bea23.sample.jsonl",
-  "sample_sha256": "de7d1e96898db5420613f563c22e467b61ed4d86e4bbbf179743b42fe803137f",
-  "schema_version": 2,
-  "splits": [
-    "legacy_unplanned"
-  ],
-  "supersedes": "d6f9cc39994bea23",
-  "task_validity": {
-    "base_commit": "314effac7413d08926fff93f1570897a55dd07f5",
-    "source_verified": true,
-    "target_commit": "6e3268aa634c49e9a2c53779829e0911d3c95811",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "314effac7413d08926fff93f1570897a55dd07f5",
-    "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
-    "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
-    "episode_id": "d6f9cc39994bea23",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 34,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "packaging/version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_version.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "6e3268aa634c49e9a2c53779829e0911d3c95811",
-    "ticket": {
-      "allowed_path_count": 34,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "packaging/version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_version.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "bb903fe304324790888a349c815a0807",
+   "tests_passed": true,
+   "tool_calls": 35
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 35,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 35,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "d6f9cc39994bea23",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "dd5a33f87b8037a3",
+   "6368dbd0d071aa4a",
+   "5a261dacdb95551b"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.38,
+  "detected": false,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   0,
+   1,
+   34,
+   35
+  ],
+  "first_mutation_event_id": "36",
+  "first_mutation_index": 36,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-29T11:33:49.341656584Z",
+  "reason": "no concrete plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "explicit_heading": false,
+   "forward_markers": 2,
+   "generic_only": false,
+   "mutation_seen": true,
+   "ordered_steps": 0,
+   "plan_words": 1,
+   "targets": [
+    "packaging/version.py"
+   ],
+   "text_chars": 118,
+   "ticket_echo": false,
+   "verification": false
+  },
+  "text_sha256": "6343cffc4cc01c95f08aacdceb13ce36cab7c36366b2f0ed41926de1e35c1b87",
+  "todo_writes": 0
+ },
+ "provenance": {
+  "base_commit": "314effac7413d08926fff93f1570897a55dd07f5",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "Apache-2.0",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "session_id": "bb903fe304324790888a349c815a0807",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "6e3268aa634c49e9a2c53779829e0911d3c95811",
+  "target_message": "Switch from : to ! to denote an Epoch",
+  "task_fingerprint": "sha256:7d9baece9d51e6baafab22c5ad842e57f4ba8d6fbec1e71149f07a27655eed2a",
+  "task_id": "d6f9cc39994bea23",
+  "task_mac_valid": true,
+  "ticket_summary": "# Version numbers with an exclamation mark are rejected as invalid\n\n## What happens now\n\nToday the only mark this project accepts between an epoch number and the rest of a version is a colon. So a ver",
+  "verification_line_similarity": 1.0,
+  "verification_passed": true
+ },
+ "quarantine": {
+  "reason": "plan_detector_v1_found_no_plan_before_first_edit",
+  "record": "evidence/legacy_unplanned.json"
+ },
+ "raw_path": "d6f9cc39994bea23.episode.jsonl",
+ "raw_sha256": "79b4884fa9ab16c09030cea84bfba675caa283fcd3fcd238ed64de97c11b8ee1",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "d6f9cc39994bea23.sample.jsonl",
+ "sample_sha256": "de7d1e96898db5420613f563c22e467b61ed4d86e4bbbf179743b42fe803137f",
+ "schema_version": 2,
+ "splits": [
+  "legacy_unplanned"
+ ],
+ "supersedes": "d6f9cc39994bea23",
+ "task_validity": {
+  "base_commit": "314effac7413d08926fff93f1570897a55dd07f5",
+  "source_verified": true,
+  "target_commit": "6e3268aa634c49e9a2c53779829e0911d3c95811",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "314effac7413d08926fff93f1570897a55dd07f5",
+  "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "episode_id": "d6f9cc39994bea23",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 34,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "packaging/version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_version.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "6e3268aa634c49e9a2c53779829e0911d3c95811",
+  "ticket": {
+   "allowed_path_count": 34,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "packaging/version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_version.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
+ "briefing_file": "briefing.md"
 }

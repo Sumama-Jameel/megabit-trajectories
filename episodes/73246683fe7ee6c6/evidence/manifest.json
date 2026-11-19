@@ -1,202 +1,204 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "4a2be2cf73144c57934df6662490c305",
-      "tests_passed": true,
-      "tool_calls": 24
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 24,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 24,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "73246683fe7ee6c6",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "5691884e85a02d46",
-      "c3258dd2017c2213",
-      "e09b0d00dffba425"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      27
-    ],
-    "first_mutation_event_id": "36",
-    "first_mutation_index": 36,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-02T08:35:58.035295023Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "38f8c65597415dbfb7370ad6ad94a16ce3a9724445014d106f31624fda620215",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "14c5485cf58b6df1790dd043d6d040e8c3d02642",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "4a2be2cf73144c57934df6662490c305",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "fdd41b0466a263af2bbb5b353baf91255ee2740d",
-    "target_message": "Rename s to _add_methods",
-    "task_fingerprint": "sha256:d4d7f877be2f676c424db651e311d21be68cf4917d4e394e208651f5926b3727",
-    "task_id": "73246683fe7ee6c6",
-    "task_mac_valid": true,
-    "ticket_summary": "# The decorator that builds the extra class methods has no readable name\n\n## What happens now\nIf you open the file that builds the extra class methods, the one thing that attaches the printed form, th",
-    "verification_line_similarity": 0.7059,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "73246683fe7ee6c6.episode.jsonl",
-  "raw_sha256": "f68284f1929115a11c49f882bd57bdcab8ed3591dab72d2408fb0a3470abd712",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "73246683fe7ee6c6.sample.jsonl",
-  "sample_sha256": "542df07d94638194ee62e1b07065383ebf3850eaae85c728ae16131638c401fb",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "73246683fe7ee6c6",
-  "task_validity": {
-    "base_commit": "14c5485cf58b6df1790dd043d6d040e8c3d02642",
-    "source_verified": true,
-    "target_commit": "fdd41b0466a263af2bbb5b353baf91255ee2740d",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "14c5485cf58b6df1790dd043d6d040e8c3d02642",
-    "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
-    "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
-    "episode_id": "73246683fe7ee6c6",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 27,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "attr/__init__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_funcs.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "fdd41b0466a263af2bbb5b353baf91255ee2740d",
-    "ticket": {
-      "allowed_path_count": 27,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "attr/__init__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_funcs.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "4a2be2cf73144c57934df6662490c305",
+   "tests_passed": true,
+   "tool_calls": 24
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 24,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 24,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "73246683fe7ee6c6",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "5691884e85a02d46",
+   "c3258dd2017c2213",
+   "e09b0d00dffba425"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   27
+  ],
+  "first_mutation_event_id": "36",
+  "first_mutation_index": 36,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-02T08:35:58.035295023Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "38f8c65597415dbfb7370ad6ad94a16ce3a9724445014d106f31624fda620215",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "14c5485cf58b6df1790dd043d6d040e8c3d02642",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "4a2be2cf73144c57934df6662490c305",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "fdd41b0466a263af2bbb5b353baf91255ee2740d",
+  "target_message": "Rename s to _add_methods",
+  "task_fingerprint": "sha256:d4d7f877be2f676c424db651e311d21be68cf4917d4e394e208651f5926b3727",
+  "task_id": "73246683fe7ee6c6",
+  "task_mac_valid": true,
+  "ticket_summary": "# The decorator that builds the extra class methods has no readable name\n\n## What happens now\nIf you open the file that builds the extra class methods, the one thing that attaches the printed form, th",
+  "verification_line_similarity": 0.7059,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "73246683fe7ee6c6.episode.jsonl",
+ "raw_sha256": "f68284f1929115a11c49f882bd57bdcab8ed3591dab72d2408fb0a3470abd712",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "73246683fe7ee6c6.sample.jsonl",
+ "sample_sha256": "542df07d94638194ee62e1b07065383ebf3850eaae85c728ae16131638c401fb",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "73246683fe7ee6c6",
+ "task_validity": {
+  "base_commit": "14c5485cf58b6df1790dd043d6d040e8c3d02642",
+  "source_verified": true,
+  "target_commit": "fdd41b0466a263af2bbb5b353baf91255ee2740d",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "14c5485cf58b6df1790dd043d6d040e8c3d02642",
+  "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+  "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+  "episode_id": "73246683fe7ee6c6",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 27,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "attr/__init__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_funcs.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "fdd41b0466a263af2bbb5b353baf91255ee2740d",
+  "ticket": {
+   "allowed_path_count": 27,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "attr/__init__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_funcs.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "e4b786c468f62c29db8b7b90cb48c63c500525ac73f14c9339052f29af886494",
+ "briefing_file": "briefing.md"
 }

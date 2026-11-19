@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "04a9f334e9a2449ea12170e9d77918f0",
-      "tests_passed": true,
-      "tool_calls": 46
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 46,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 46,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "8b48d640ad1f1576",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "c586bf0874f4ea74",
-      "af27c552afa5a5b0",
-      "a8eaabe524416ff2"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      85
-    ],
-    "first_mutation_event_id": "92",
-    "first_mutation_index": 92,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-06T06:20:21.215870206Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "d931f9b79143cb7fc7c0e054d7f50d70b28ade438014075e8e68f2155ffe3573",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "04a9f334e9a2449ea12170e9d77918f0",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
-    "target_message": "Make validators optional in deep_mapping (#1448)",
-    "task_fingerprint": "sha256:178573599eec638390a41a7f44af52978927ecc1c095e29c227fc99733e9061b",
-    "task_id": "8b48d640ad1f1576",
-    "task_mac_valid": true,
-    "ticket_summary": "# I can only check keys and values together, not just one of them\n\n## What happens now\nWhen I check a dictionary, I have to give both a check for the keys and a check for the values. If I only care ab",
-    "verification_line_similarity": 0.5714,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "8b48d640ad1f1576.episode.jsonl",
-  "raw_sha256": "e1a8b5a6c65dbe9b7daa82aa60c29a6ce68e3e5136eb0b5dd0dde8e5cf3ac843",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "8b48d640ad1f1576.sample.jsonl",
-  "sample_sha256": "254ed3814bfd629b313bd71580dcfe434a57d0dea0dc5e0c96319ffcdd01e7bb",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "8b48d640ad1f1576",
-  "task_validity": {
-    "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
-    "source_verified": true,
-    "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
-    "diff1_tree_sha256": "201b781acffad76680932450a63a801dc800d8ca7b25dd017e4cec9169116829",
-    "diff2_tree_sha256": "a117f0a38bf6c038d194745a5f242dc162676693e34fb919e41768d1247b3d63",
-    "episode_id": "8b48d640ad1f1576",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 126,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/validators.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_validators.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/typing_example.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
-    "ticket": {
-      "allowed_path_count": 126,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/validators.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_validators.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/typing_example.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "04a9f334e9a2449ea12170e9d77918f0",
+   "tests_passed": true,
+   "tool_calls": 46
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 46,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 46,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "8b48d640ad1f1576",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "c586bf0874f4ea74",
+   "af27c552afa5a5b0",
+   "a8eaabe524416ff2"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   85
+  ],
+  "first_mutation_event_id": "92",
+  "first_mutation_index": 92,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-06T06:20:21.215870206Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "d931f9b79143cb7fc7c0e054d7f50d70b28ade438014075e8e68f2155ffe3573",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "04a9f334e9a2449ea12170e9d77918f0",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
+  "target_message": "Make validators optional in deep_mapping (#1448)",
+  "task_fingerprint": "sha256:178573599eec638390a41a7f44af52978927ecc1c095e29c227fc99733e9061b",
+  "task_id": "8b48d640ad1f1576",
+  "task_mac_valid": true,
+  "ticket_summary": "# I can only check keys and values together, not just one of them\n\n## What happens now\nWhen I check a dictionary, I have to give both a check for the keys and a check for the values. If I only care ab",
+  "verification_line_similarity": 0.5714,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "8b48d640ad1f1576.episode.jsonl",
+ "raw_sha256": "e1a8b5a6c65dbe9b7daa82aa60c29a6ce68e3e5136eb0b5dd0dde8e5cf3ac843",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "8b48d640ad1f1576.sample.jsonl",
+ "sample_sha256": "254ed3814bfd629b313bd71580dcfe434a57d0dea0dc5e0c96319ffcdd01e7bb",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "8b48d640ad1f1576",
+ "task_validity": {
+  "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
+  "source_verified": true,
+  "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "6879ffd11d9c382782008a515e78765e46c178d6",
+  "diff1_tree_sha256": "201b781acffad76680932450a63a801dc800d8ca7b25dd017e4cec9169116829",
+  "diff2_tree_sha256": "a117f0a38bf6c038d194745a5f242dc162676693e34fb919e41768d1247b3d63",
+  "episode_id": "8b48d640ad1f1576",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 126,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/validators.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_validators.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/typing_example.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "cbaef3f8f5ec3d6049b42c8c27f542c1571bb4c8",
+  "ticket": {
+   "allowed_path_count": 126,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/validators.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_validators.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/typing_example.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

@@ -1,226 +1,228 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "32217a80611b436ab07016768e2ab556",
-      "tests_passed": true,
-      "tool_calls": 39
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 39,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 39,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "94dab878e2c9a0ec",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "df7966fac40736d1",
-      "779845a22c1c4414",
-      "8dc5499ce47901c8"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      30
-    ],
-    "first_mutation_event_id": "37",
-    "first_mutation_index": 37,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-09-29T11:46:20.746215639Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "7c1e3104ccad7dacbeceae2210ea139691688a8818893cbbc63dd7febd8733d9",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "Apache-2.0",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "packaging",
-    "repo_url": "https://github.com/pypa/packaging",
-    "session_id": "32217a80611b436ab07016768e2ab556",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
-    "target_message": "Allow identity comparisons, even for non PEP 440 compliant versions",
-    "task_fingerprint": "sha256:ef625993ffffbd4d0e82db576d516c276fcbe13e3678beadc09c74d04d895f24",
-    "task_id": "94dab878e2c9a0ec",
-    "task_mac_valid": true,
-    "ticket_summary": "# I cannot pin one exact release name that is not a numbered version\n\n## What happens now\nToday the only signs a version requirement can start with are: two equals signs, two equals signs with a bang,",
-    "verification_line_similarity": 0.3226,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "94dab878e2c9a0ec.episode.jsonl",
-  "raw_sha256": "3b4c1a2a131efc3911cf7a19d034cf5d459dfe8088b0ea6113186d5658b98acb",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "94dab878e2c9a0ec.sample.jsonl",
-  "sample_sha256": "8e6c0aca40de5658cf8345688137cb349636efe7cf64b689c6c75e918b5c1a8d",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "94dab878e2c9a0ec",
-  "task_validity": {
-    "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
-    "source_verified": true,
-    "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
-    "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
-    "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
-    "episode_id": "94dab878e2c9a0ec",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 34,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "packaging/version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "packaging/_compat.py"
-        },
-        {
-          "status": "allowed",
-          "token": "packaging/_structures.py"
-        },
-        {
-          "status": "allowed",
-          "token": "packaging/__about__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/index.rst"
-        },
-        {
-          "status": "allowed",
-          "token": "README.rst"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
-    "ticket": {
-      "allowed_path_count": 34,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "packaging/version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_version.py"
-        },
-        {
-          "status": "allowed",
-          "token": "packaging/_compat.py"
-        },
-        {
-          "status": "allowed",
-          "token": "packaging/_structures.py"
-        },
-        {
-          "status": "allowed",
-          "token": "packaging/__about__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/index.rst"
-        },
-        {
-          "status": "allowed",
-          "token": "README.rst"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "32217a80611b436ab07016768e2ab556",
+   "tests_passed": true,
+   "tool_calls": 39
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 39,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 39,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "94dab878e2c9a0ec",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "df7966fac40736d1",
+   "779845a22c1c4414",
+   "8dc5499ce47901c8"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   30
+  ],
+  "first_mutation_event_id": "37",
+  "first_mutation_index": 37,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-29T11:46:20.746215639Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "7c1e3104ccad7dacbeceae2210ea139691688a8818893cbbc63dd7febd8733d9",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "Apache-2.0",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "session_id": "32217a80611b436ab07016768e2ab556",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+  "target_message": "Allow identity comparisons, even for non PEP 440 compliant versions",
+  "task_fingerprint": "sha256:ef625993ffffbd4d0e82db576d516c276fcbe13e3678beadc09c74d04d895f24",
+  "task_id": "94dab878e2c9a0ec",
+  "task_mac_valid": true,
+  "ticket_summary": "# I cannot pin one exact release name that is not a numbered version\n\n## What happens now\nToday the only signs a version requirement can start with are: two equals signs, two equals signs with a bang,",
+  "verification_line_similarity": 0.3226,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "94dab878e2c9a0ec.episode.jsonl",
+ "raw_sha256": "3b4c1a2a131efc3911cf7a19d034cf5d459dfe8088b0ea6113186d5658b98acb",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "94dab878e2c9a0ec.sample.jsonl",
+ "sample_sha256": "8e6c0aca40de5658cf8345688137cb349636efe7cf64b689c6c75e918b5c1a8d",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "94dab878e2c9a0ec",
+ "task_validity": {
+  "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
+  "source_verified": true,
+  "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "c96bae148fd4cfc609a8b6894fce7b69220855ea",
+  "diff1_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "diff2_tree_sha256": "272c1d381f76cc3cc5080e652c533035994d327864e2f87b418328ef160fcef1",
+  "episode_id": "94dab878e2c9a0ec",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 34,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "packaging/version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "packaging/_compat.py"
+    },
+    {
+     "status": "allowed",
+     "token": "packaging/_structures.py"
+    },
+    {
+     "status": "allowed",
+     "token": "packaging/__about__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/index.rst"
+    },
+    {
+     "status": "allowed",
+     "token": "README.rst"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "8fc910b9b2564bd1282767ee847fb44b36972411",
+  "ticket": {
+   "allowed_path_count": 34,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "packaging/version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_version.py"
+    },
+    {
+     "status": "allowed",
+     "token": "packaging/_compat.py"
+    },
+    {
+     "status": "allowed",
+     "token": "packaging/_structures.py"
+    },
+    {
+     "status": "allowed",
+     "token": "packaging/__about__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/index.rst"
+    },
+    {
+     "status": "allowed",
+     "token": "README.rst"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
+ "briefing_file": "briefing.md"
 }

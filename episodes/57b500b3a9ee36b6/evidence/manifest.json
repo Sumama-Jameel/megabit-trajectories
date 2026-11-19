@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "30b4e01174b445e1b67a3da577c71a0a",
-      "tests_passed": true,
-      "tool_calls": 25
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 25,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 25,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "57b500b3a9ee36b6",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "b18e10648b84142a",
-      "83a5cae8919fb18b",
-      "b2947075f16b5265"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      37
-    ],
-    "first_mutation_event_id": "39",
-    "first_mutation_index": 39,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-03T17:12:30.693353274Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "d9c6cbe3affc4fa1fa8a2bc3bae378068f095966ab3a56372d81ee5836a94d8d",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "083d566f2f4809c55dea9ea6d85ae37404da48bc",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-2-Clause",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "30b4e01174b445e1b67a3da577c71a0a",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "8512acddabb12e2c641f098f638499501742ce0c",
-    "target_message": "Added support for object ensuring",
-    "task_fingerprint": "sha256:0b9088c9eeb51b1bb93752112db201566cdb38aac896d920903521968a293942",
-    "task_id": "57b500b3a9ee36b6",
-    "task_mac_valid": true,
-    "ticket_summary": "# Subcommands stop with an error unless the outer command builds the shared object first\n\n## What happens now\n\nWhen I give my subcommands a shared object through the pass decorator, every subcommand r",
-    "verification_line_similarity": 0.6833,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "57b500b3a9ee36b6.episode.jsonl",
-  "raw_sha256": "be981e47c492fa7c166aca72af84142b253945ca1461b3ea4edeecc8226c72e4",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "57b500b3a9ee36b6.sample.jsonl",
-  "sample_sha256": "b0bc9ea799c09c59f050098f4e7970313ed6042e9f5d3be998b363e89ebed699",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "57b500b3a9ee36b6",
-  "task_validity": {
-    "base_commit": "083d566f2f4809c55dea9ea6d85ae37404da48bc",
-    "source_verified": true,
-    "target_commit": "8512acddabb12e2c641f098f638499501742ce0c",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "083d566f2f4809c55dea9ea6d85ae37404da48bc",
-    "diff1_tree_sha256": "67cb17ddc65fd28d81be6d6852f011fdd28183714f8fd4f50d734d2b4a89d93b",
-    "diff2_tree_sha256": "a75a07dff89aaa230db732919d7f19c9ac7c12a5a09431ab43262f33979c706a",
-    "episode_id": "57b500b3a9ee36b6",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 52,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "click/decorators.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/complex.rst"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "8512acddabb12e2c641f098f638499501742ce0c",
-    "ticket": {
-      "allowed_path_count": 52,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "click/decorators.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/complex.rst"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "30b4e01174b445e1b67a3da577c71a0a",
+   "tests_passed": true,
+   "tool_calls": 25
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 25,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 25,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "57b500b3a9ee36b6",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "b18e10648b84142a",
+   "83a5cae8919fb18b",
+   "b2947075f16b5265"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   37
+  ],
+  "first_mutation_event_id": "39",
+  "first_mutation_index": 39,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-03T17:12:30.693353274Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "d9c6cbe3affc4fa1fa8a2bc3bae378068f095966ab3a56372d81ee5836a94d8d",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "083d566f2f4809c55dea9ea6d85ae37404da48bc",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-2-Clause",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "30b4e01174b445e1b67a3da577c71a0a",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "8512acddabb12e2c641f098f638499501742ce0c",
+  "target_message": "Added support for object ensuring",
+  "task_fingerprint": "sha256:0b9088c9eeb51b1bb93752112db201566cdb38aac896d920903521968a293942",
+  "task_id": "57b500b3a9ee36b6",
+  "task_mac_valid": true,
+  "ticket_summary": "# Subcommands stop with an error unless the outer command builds the shared object first\n\n## What happens now\n\nWhen I give my subcommands a shared object through the pass decorator, every subcommand r",
+  "verification_line_similarity": 0.6833,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "57b500b3a9ee36b6.episode.jsonl",
+ "raw_sha256": "be981e47c492fa7c166aca72af84142b253945ca1461b3ea4edeecc8226c72e4",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "57b500b3a9ee36b6.sample.jsonl",
+ "sample_sha256": "b0bc9ea799c09c59f050098f4e7970313ed6042e9f5d3be998b363e89ebed699",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "57b500b3a9ee36b6",
+ "task_validity": {
+  "base_commit": "083d566f2f4809c55dea9ea6d85ae37404da48bc",
+  "source_verified": true,
+  "target_commit": "8512acddabb12e2c641f098f638499501742ce0c",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "083d566f2f4809c55dea9ea6d85ae37404da48bc",
+  "diff1_tree_sha256": "67cb17ddc65fd28d81be6d6852f011fdd28183714f8fd4f50d734d2b4a89d93b",
+  "diff2_tree_sha256": "a75a07dff89aaa230db732919d7f19c9ac7c12a5a09431ab43262f33979c706a",
+  "episode_id": "57b500b3a9ee36b6",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 52,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "click/decorators.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/complex.rst"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "8512acddabb12e2c641f098f638499501742ce0c",
+  "ticket": {
+   "allowed_path_count": 52,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "click/decorators.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/complex.rst"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

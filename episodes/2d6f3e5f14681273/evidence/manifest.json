@@ -1,186 +1,188 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "b13f0e30a06c4f1d933a85d7118f362d",
-      "tests_passed": true,
-      "tool_calls": 43
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 43,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 43,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "2d6f3e5f14681273",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "63f7376803322219",
-      "612dedabbe43e42f",
-      "56cc93170f77bce9"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      66
-    ],
-    "first_mutation_event_id": "68",
-    "first_mutation_index": 68,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-15T17:28:43.231812728Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "c2c985962787e170f777a78553097f5f43579400d9a4df8535ff9d18c1db9871",
-    "todo_writes": 2
-  },
-  "provenance": {
-    "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "b13f0e30a06c4f1d933a85d7118f362d",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
-    "target_message": "Improve performance of attr.astuple (#1469)",
-    "task_fingerprint": "sha256:231ddf508c5bf06b984da23e2d6c9e6e0c92f256a9682e39de090a0eb5b4fe9f",
-    "task_id": "2d6f3e5f14681273",
-    "task_mac_valid": true,
-    "ticket_summary": "# Turning attrs objects into tuples is slower than it needs to be\n\n## What happens now\nWhen I turn an attrs object into a tuple, each value in it is put through a long\nchain of checks. Plain values su",
-    "verification_line_similarity": 0.4231,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "2d6f3e5f14681273.episode.jsonl",
-  "raw_sha256": "6d644d638c4b486f5973063f5d0775c9df9ec93640269d2db7aa50444cef1f03",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "2d6f3e5f14681273.sample.jsonl",
-  "sample_sha256": "9b86c6ef517dade6db3515181ca0e4ed1f413a512b0799d39e7ce006950444f3",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "2d6f3e5f14681273",
-  "task_validity": {
-    "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
-    "source_verified": true,
-    "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
-    "diff1_tree_sha256": "3cab36741564459f5bc3ae98bd9a0694a7624ac991fe5f8c1545dffbc6917a49",
-    "diff2_tree_sha256": "569bdd84e02316b02956baac08db73c605ec4cca2cc8618ccd9f11f3423360ab",
-    "episode_id": "2d6f3e5f14681273",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 134,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/_funcs.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_funcs.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
-    "ticket": {
-      "allowed_path_count": 134,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/_funcs.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_funcs.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "b13f0e30a06c4f1d933a85d7118f362d",
+   "tests_passed": true,
+   "tool_calls": 43
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 43,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 43,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "2d6f3e5f14681273",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "63f7376803322219",
+   "612dedabbe43e42f",
+   "56cc93170f77bce9"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   66
+  ],
+  "first_mutation_event_id": "68",
+  "first_mutation_index": 68,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-15T17:28:43.231812728Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "c2c985962787e170f777a78553097f5f43579400d9a4df8535ff9d18c1db9871",
+  "todo_writes": 2
+ },
+ "provenance": {
+  "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "b13f0e30a06c4f1d933a85d7118f362d",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
+  "target_message": "Improve performance of attr.astuple (#1469)",
+  "task_fingerprint": "sha256:231ddf508c5bf06b984da23e2d6c9e6e0c92f256a9682e39de090a0eb5b4fe9f",
+  "task_id": "2d6f3e5f14681273",
+  "task_mac_valid": true,
+  "ticket_summary": "# Turning attrs objects into tuples is slower than it needs to be\n\n## What happens now\nWhen I turn an attrs object into a tuple, each value in it is put through a long\nchain of checks. Plain values su",
+  "verification_line_similarity": 0.4231,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "2d6f3e5f14681273.episode.jsonl",
+ "raw_sha256": "6d644d638c4b486f5973063f5d0775c9df9ec93640269d2db7aa50444cef1f03",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "2d6f3e5f14681273.sample.jsonl",
+ "sample_sha256": "9b86c6ef517dade6db3515181ca0e4ed1f413a512b0799d39e7ce006950444f3",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "2d6f3e5f14681273",
+ "task_validity": {
+  "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
+  "source_verified": true,
+  "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "6ef8d73dd728cdebf939b3a2cd694af57d1f6b5d",
+  "diff1_tree_sha256": "3cab36741564459f5bc3ae98bd9a0694a7624ac991fe5f8c1545dffbc6917a49",
+  "diff2_tree_sha256": "569bdd84e02316b02956baac08db73c605ec4cca2cc8618ccd9f11f3423360ab",
+  "episode_id": "2d6f3e5f14681273",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 134,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/_funcs.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_funcs.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "1315e42fe51743fe1c3529da6792dcda2ef6cc1f",
+  "ticket": {
+   "allowed_path_count": 134,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/_funcs.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_funcs.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

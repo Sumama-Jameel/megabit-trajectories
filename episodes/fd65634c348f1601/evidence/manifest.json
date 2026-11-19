@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "3c1e6e85a9d940dbac489c871f638f0e",
-      "tests_passed": true,
-      "tool_calls": 56
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 56,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 56,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "fd65634c348f1601",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "384088e6f064de82",
-      "d6fc6aa1e9fb2f00",
-      "24d4a9543ffaad71"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      62
-    ],
-    "first_mutation_event_id": "66",
-    "first_mutation_index": 66,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-04T12:17:40.296731652Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "f70d9c5c36dc6602fe99bc9b8bf182b380b64c383ff5cda1b8dfad70202a4d37",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-3-Clause",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "3c1e6e85a9d940dbac489c871f638f0e",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
-    "target_message": "Move common `help` argument from `Option` and `Argument` to `Parameter`",
-    "task_fingerprint": "sha256:8ba9aac929f6d1a27611216c85b5f959e0c73a9210c9f362e3b68bf8f964c887",
-    "task_id": "fd65634c348f1601",
-    "task_mac_valid": true,
-    "ticket_summary": "# Only options and arguments can carry help text; every other kind of parameter cannot\n\n## What happens now\n\nIf you write your own kind of parameter, you cannot give it a help text. Passing one raises",
-    "verification_line_similarity": 0.5875,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "fd65634c348f1601.episode.jsonl",
-  "raw_sha256": "d5a6f8d226d77d38929f96ffe31abfbec8f74eba6edccdc897ac6d271efbd3f2",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "fd65634c348f1601.sample.jsonl",
-  "sample_sha256": "797fa09f1bdfefbb431ff35fe0c7d68307cff0b1337b972e609a93e9370564f5",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "fd65634c348f1601",
-  "task_validity": {
-    "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
-    "source_verified": true,
-    "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
-    "diff1_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
-    "diff2_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
-    "episode_id": "fd65634c348f1601",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 178,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_info_dict.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
-    "ticket": {
-      "allowed_path_count": 178,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/core.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_info_dict.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "3c1e6e85a9d940dbac489c871f638f0e",
+   "tests_passed": true,
+   "tool_calls": 56
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 56,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 56,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "fd65634c348f1601",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "384088e6f064de82",
+   "d6fc6aa1e9fb2f00",
+   "24d4a9543ffaad71"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   62
+  ],
+  "first_mutation_event_id": "66",
+  "first_mutation_index": 66,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-04T12:17:40.296731652Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "f70d9c5c36dc6602fe99bc9b8bf182b380b64c383ff5cda1b8dfad70202a4d37",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-3-Clause",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "3c1e6e85a9d940dbac489c871f638f0e",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
+  "target_message": "Move common `help` argument from `Option` and `Argument` to `Parameter`",
+  "task_fingerprint": "sha256:8ba9aac929f6d1a27611216c85b5f959e0c73a9210c9f362e3b68bf8f964c887",
+  "task_id": "fd65634c348f1601",
+  "task_mac_valid": true,
+  "ticket_summary": "# Only options and arguments can carry help text; every other kind of parameter cannot\n\n## What happens now\n\nIf you write your own kind of parameter, you cannot give it a help text. Passing one raises",
+  "verification_line_similarity": 0.5875,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "fd65634c348f1601.episode.jsonl",
+ "raw_sha256": "d5a6f8d226d77d38929f96ffe31abfbec8f74eba6edccdc897ac6d271efbd3f2",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "fd65634c348f1601.sample.jsonl",
+ "sample_sha256": "797fa09f1bdfefbb431ff35fe0c7d68307cff0b1337b972e609a93e9370564f5",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "fd65634c348f1601",
+ "task_validity": {
+  "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
+  "source_verified": true,
+  "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "86949d19b930ef68a45566544cb4b9508d895d0d",
+  "diff1_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+  "diff2_tree_sha256": "0366238632eeb6069e89f463e4240c87c74087f0e8637a8411a987676da2d51c",
+  "episode_id": "fd65634c348f1601",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 178,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_info_dict.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
+  "ticket": {
+   "allowed_path_count": 178,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/core.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_info_dict.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

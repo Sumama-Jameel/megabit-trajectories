@@ -1,186 +1,188 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "42ebcf2a451047d3b9c508d759a09140",
-      "tests_passed": true,
-      "tool_calls": 30
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 30,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 30,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "e3a02407766bdf33",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "f196fc9a8e4b2f8d",
-      "f3701a723364fae8",
-      "6410082633278add"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      18
-    ],
-    "first_mutation_event_id": "20",
-    "first_mutation_index": 20,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-22T14:45:13.044030119Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "",
-    "todo_writes": 2
-  },
-  "provenance": {
-    "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "Apache-2.0",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "packaging",
-    "repo_url": "https://github.com/pypa/packaging",
-    "session_id": "42ebcf2a451047d3b9c508d759a09140",
-    "source_verified": false,
-    "source_verify_reason": "task record has no SPDX id; license detected Apache-2.0 in the repository; there is no recorded base license to compare against; verification cannot produce a positive result",
-    "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
-    "target_message": "fix(pylock): respect an explicitly empty tag sequence in select() (#1349)",
-    "task_fingerprint": "sha256:d53979382ece8c3c5a3ed43cf87f080d3635b84f8fdeebbca202813a9029f85c",
-    "task_id": "e3a02407766bdf33",
-    "task_mac_valid": true,
-    "ticket_summary": "# Asking for no wheels still hands me the wheel built for my own machine\n\n## What happens now\nWhen I ask a lock file to give me packages and I pass an empty list of wheel tags to mean \"no wheels allow",
-    "verification_line_similarity": 0.5217,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "e3a02407766bdf33.episode.jsonl",
-  "raw_sha256": "f8d34abe11434f4ff5a59cd699ba6fcc084fa68867080a699a9c6f68da5b6ce1",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "e3a02407766bdf33.sample.jsonl",
-  "sample_sha256": "6208d488e08b8fc6c6a8ff9c468bea28e79b842e0d024d55ee11c7372c9d2583",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "e3a02407766bdf33",
-  "task_validity": {
-    "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
-    "source_verified": null,
-    "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
-    "diff1_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
-    "diff2_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
-    "episode_id": "e3a02407766bdf33",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 139,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/packaging/pylock.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_pylock_select.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
-    "ticket": {
-      "allowed_path_count": 139,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/packaging/pylock.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_pylock_select.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "42ebcf2a451047d3b9c508d759a09140",
+   "tests_passed": true,
+   "tool_calls": 30
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 30,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 30,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "e3a02407766bdf33",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "f196fc9a8e4b2f8d",
+   "f3701a723364fae8",
+   "6410082633278add"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   18
+  ],
+  "first_mutation_event_id": "20",
+  "first_mutation_index": 20,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-22T14:45:13.044030119Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "",
+  "todo_writes": 2
+ },
+ "provenance": {
+  "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "Apache-2.0",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "packaging",
+  "repo_url": "https://github.com/pypa/packaging",
+  "session_id": "42ebcf2a451047d3b9c508d759a09140",
+  "source_verified": false,
+  "source_verify_reason": "task record has no SPDX id; license detected Apache-2.0 in the repository; there is no recorded base license to compare against; verification cannot produce a positive result",
+  "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+  "target_message": "fix(pylock): respect an explicitly empty tag sequence in select() (#1349)",
+  "task_fingerprint": "sha256:d53979382ece8c3c5a3ed43cf87f080d3635b84f8fdeebbca202813a9029f85c",
+  "task_id": "e3a02407766bdf33",
+  "task_mac_valid": true,
+  "ticket_summary": "# Asking for no wheels still hands me the wheel built for my own machine\n\n## What happens now\nWhen I ask a lock file to give me packages and I pass an empty list of wheel tags to mean \"no wheels allow",
+  "verification_line_similarity": 0.5217,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "e3a02407766bdf33.episode.jsonl",
+ "raw_sha256": "f8d34abe11434f4ff5a59cd699ba6fcc084fa68867080a699a9c6f68da5b6ce1",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "e3a02407766bdf33.sample.jsonl",
+ "sample_sha256": "6208d488e08b8fc6c6a8ff9c468bea28e79b842e0d024d55ee11c7372c9d2583",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "e3a02407766bdf33",
+ "task_validity": {
+  "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
+  "source_verified": null,
+  "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "b62954b62d04f58a939d2856c67ebe4de32cdb5d",
+  "diff1_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+  "diff2_tree_sha256": "694298300e587001c4f08c0420ed22412228363912e5d31c8daa0da074475e27",
+  "episode_id": "e3a02407766bdf33",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 139,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/packaging/pylock.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_pylock_select.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/packaging-5de5720acd",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "826426fc88773515fab149a5f6bde85761e57fbb",
+  "ticket": {
+   "allowed_path_count": 139,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/packaging/pylock.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_pylock_select.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

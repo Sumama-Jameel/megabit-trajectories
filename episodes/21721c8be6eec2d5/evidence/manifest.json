@@ -1,194 +1,196 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "ad79e660c5b144aa8d53063a12c4fa42",
-      "tests_passed": true,
-      "tool_calls": 100
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 100,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 100,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "21721c8be6eec2d5",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "c16713cefea26e31",
-      "001c800cc5a9d215",
-      "636c0ae217164960"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      127
-    ],
-    "first_mutation_event_id": "144",
-    "first_mutation_index": 144,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-15T17:04:10.640096958Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "1e7fe5cc63481e75bc4e54196cac9be5534c5f6812fa3d528c558a639b3a6f01",
-    "todo_writes": 1
-  },
-  "provenance": {
-    "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "ad79e660c5b144aa8d53063a12c4fa42",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
-    "target_message": "Make `kw_only=True` behavior consistent with dataclasses (#1457)",
-    "task_fingerprint": "sha256:d7ae9fe123d038b5b0013c28d0fa07c86c3a330804c0320439f47e58d4167933",
-    "task_id": "21721c8be6eec2d5",
-    "task_mac_valid": true,
-    "ticket_summary": "# Class-level keyword-only setting overrides my own and inherited field choices\n\n## What happens now\nWhen I mark a class as keyword-only and one of its own fields asks to stay positional, that field s",
-    "verification_line_similarity": 0.5,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "21721c8be6eec2d5.episode.jsonl",
-  "raw_sha256": "5093d8821b490d40bc379f31e23649464ee63e2a82fa24fa3c10f15ec3e8f361",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "21721c8be6eec2d5.sample.jsonl",
-  "sample_sha256": "bd97bb41fd5918a2d762821b8148bd66ecd6cc38eeae6054898e65bffad7ef53",
-  "schema_version": 2,
-  "splits": [
-    "research_only"
-  ],
-  "supersedes": "21721c8be6eec2d5",
-  "task_validity": {
-    "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
-    "source_verified": true,
-    "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
-    "diff1_tree_sha256": "0b4fbe1114642c537fb60b4dfb1628d7f3aa035bafa41fc96ab90b8759f68771",
-    "diff2_tree_sha256": "4229c3ac4bac16dd9e9d8c1481338a8b34815c37798d395fc2a2a679d9d191ac",
-    "episode_id": "21721c8be6eec2d5",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 131,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/attr/_next_gen.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_make.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
-    "ticket": {
-      "allowed_path_count": 131,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/attr/_make.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/attr/_next_gen.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_make.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "ad79e660c5b144aa8d53063a12c4fa42",
+   "tests_passed": true,
+   "tool_calls": 100
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 100,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 100,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "21721c8be6eec2d5",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "c16713cefea26e31",
+   "001c800cc5a9d215",
+   "636c0ae217164960"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   127
+  ],
+  "first_mutation_event_id": "144",
+  "first_mutation_index": 144,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-15T17:04:10.640096958Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "1e7fe5cc63481e75bc4e54196cac9be5534c5f6812fa3d528c558a639b3a6f01",
+  "todo_writes": 1
+ },
+ "provenance": {
+  "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "ad79e660c5b144aa8d53063a12c4fa42",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
+  "target_message": "Make `kw_only=True` behavior consistent with dataclasses (#1457)",
+  "task_fingerprint": "sha256:d7ae9fe123d038b5b0013c28d0fa07c86c3a330804c0320439f47e58d4167933",
+  "task_id": "21721c8be6eec2d5",
+  "task_mac_valid": true,
+  "ticket_summary": "# Class-level keyword-only setting overrides my own and inherited field choices\n\n## What happens now\nWhen I mark a class as keyword-only and one of its own fields asks to stay positional, that field s",
+  "verification_line_similarity": 0.5,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "21721c8be6eec2d5.episode.jsonl",
+ "raw_sha256": "5093d8821b490d40bc379f31e23649464ee63e2a82fa24fa3c10f15ec3e8f361",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "21721c8be6eec2d5.sample.jsonl",
+ "sample_sha256": "bd97bb41fd5918a2d762821b8148bd66ecd6cc38eeae6054898e65bffad7ef53",
+ "schema_version": 2,
+ "splits": [
+  "research_only"
+ ],
+ "supersedes": "21721c8be6eec2d5",
+ "task_validity": {
+  "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
+  "source_verified": true,
+  "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "af349876f4fb5df2b71a3f4878239b775bc89230",
+  "diff1_tree_sha256": "0b4fbe1114642c537fb60b4dfb1628d7f3aa035bafa41fc96ab90b8759f68771",
+  "diff2_tree_sha256": "4229c3ac4bac16dd9e9d8c1481338a8b34815c37798d395fc2a2a679d9d191ac",
+  "episode_id": "21721c8be6eec2d5",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 131,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/attr/_next_gen.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_make.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
+  "ticket": {
+   "allowed_path_count": 131,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/attr/_make.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/attr/_next_gen.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_make.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

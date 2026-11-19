@@ -1,198 +1,200 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "b611b52f98814ae4a6d073e284bd7fd9",
-      "tests_passed": true,
-      "tool_calls": 33
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 33,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 33,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "7d2d3557467897b4",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "1f2019dffab83fb0",
-      "38219785b5e0d2d1",
-      "09314c35bb39eaef"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      28
-    ],
-    "first_mutation_event_id": "34",
-    "first_mutation_index": 34,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-05T06:28:13.168131619Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "176890c00f74455bd5e0452274d062cd581011a44d326ced52fd1c0715dcd238",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "61b69e967e525bd502f5bf42def4d551e761fe0e",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-3-Clause",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "b611b52f98814ae4a6d073e284bd7fd9",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "a6256bfb5971d5e58585fe7b6c656134e1ade5a4",
-    "target_message": "Forwards all user's parameters set in `PAGER`",
-    "task_fingerprint": "sha256:c024d62585be60d84b7e8ca7a5a21c0274b07daab391d9d8943cfe26de9ba6b8",
-    "task_id": "7d2d3557467897b4",
-    "task_mac_valid": true,
-    "ticket_summary": "# Colors in the pager turn themselves on for the wrong reasons, and pager options are dropped on Windows\n\n## What happens now\n\nWhen Click pages text, it decides whether to keep colors by joining the v",
-    "verification_line_similarity": 0.4224,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "7d2d3557467897b4.episode.jsonl",
-  "raw_sha256": "a8c32f6ff7caa10c03bba699b7518d37405465948f0b774b8399fc315cdeb58c",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "7d2d3557467897b4.sample.jsonl",
-  "sample_sha256": "034db167c139503fabdf567e6c6962e2815ae6590b48b215a4599bea8c14b047",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "7d2d3557467897b4",
-  "task_validity": {
-    "base_commit": "61b69e967e525bd502f5bf42def4d551e761fe0e",
-    "source_verified": true,
-    "target_commit": "a6256bfb5971d5e58585fe7b6c656134e1ade5a4",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "61b69e967e525bd502f5bf42def4d551e761fe0e",
-    "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
-    "diff2_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
-    "episode_id": "7d2d3557467897b4",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 165,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/_termui_impl.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_termui.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "a6256bfb5971d5e58585fe7b6c656134e1ade5a4",
-    "ticket": {
-      "allowed_path_count": 165,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "README.md"
-        },
-        {
-          "status": "allowed",
-          "token": "src/click/_termui_impl.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_termui.py"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "b611b52f98814ae4a6d073e284bd7fd9",
+   "tests_passed": true,
+   "tool_calls": 33
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 33,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 33,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "7d2d3557467897b4",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "1f2019dffab83fb0",
+   "38219785b5e0d2d1",
+   "09314c35bb39eaef"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   28
+  ],
+  "first_mutation_event_id": "34",
+  "first_mutation_index": 34,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-05T06:28:13.168131619Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "176890c00f74455bd5e0452274d062cd581011a44d326ced52fd1c0715dcd238",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "61b69e967e525bd502f5bf42def4d551e761fe0e",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-3-Clause",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "b611b52f98814ae4a6d073e284bd7fd9",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "a6256bfb5971d5e58585fe7b6c656134e1ade5a4",
+  "target_message": "Forwards all user's parameters set in `PAGER`",
+  "task_fingerprint": "sha256:c024d62585be60d84b7e8ca7a5a21c0274b07daab391d9d8943cfe26de9ba6b8",
+  "task_id": "7d2d3557467897b4",
+  "task_mac_valid": true,
+  "ticket_summary": "# Colors in the pager turn themselves on for the wrong reasons, and pager options are dropped on Windows\n\n## What happens now\n\nWhen Click pages text, it decides whether to keep colors by joining the v",
+  "verification_line_similarity": 0.4224,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "7d2d3557467897b4.episode.jsonl",
+ "raw_sha256": "a8c32f6ff7caa10c03bba699b7518d37405465948f0b774b8399fc315cdeb58c",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "7d2d3557467897b4.sample.jsonl",
+ "sample_sha256": "034db167c139503fabdf567e6c6962e2815ae6590b48b215a4599bea8c14b047",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "7d2d3557467897b4",
+ "task_validity": {
+  "base_commit": "61b69e967e525bd502f5bf42def4d551e761fe0e",
+  "source_verified": true,
+  "target_commit": "a6256bfb5971d5e58585fe7b6c656134e1ade5a4",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "61b69e967e525bd502f5bf42def4d551e761fe0e",
+  "diff1_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+  "diff2_tree_sha256": "4985408cce4d09f570754a0721dbe52c87def86bf85bfff3715dbcb6864f9678",
+  "episode_id": "7d2d3557467897b4",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 165,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/_termui_impl.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_termui.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "a6256bfb5971d5e58585fe7b6c656134e1ade5a4",
+  "ticket": {
+   "allowed_path_count": 165,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "README.md"
+    },
+    {
+     "status": "allowed",
+     "token": "src/click/_termui_impl.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_termui.py"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }

@@ -1,268 +1,270 @@
 {
-  "attempts": [
-    {
-      "degenerate": true,
-      "included": false,
-      "index": 0,
-      "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab",
-      "superseded_by": 1,
-      "tests_passed": null,
-      "tool_calls": 5
-    },
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 1,
-      "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab",
-      "tests_passed": true,
-      "tool_calls": 15
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 5,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 5,
-    "raw_tool_calls": 20,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 5,
-    "sample_tool_calls": 15,
-    "unresolved_tool_calls": 0
+ "attempts": [
+  {
+   "degenerate": true,
+   "included": false,
+   "index": 0,
+   "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab",
+   "superseded_by": 1,
+   "tests_passed": null,
+   "tool_calls": 5
   },
-  "episode_id": "a066c3d9cbcb7e18",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "e8815dde5ab9373c",
-      "030b07dcb9be9b16",
-      "8a488886326fef53"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest ",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.8,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60,
-      61,
-      62,
-      63,
-      64,
-      65,
-      66,
-      67,
-      68,
-      69,
-      70,
-      71,
-      72,
-      73,
-      74,
-      75,
-      76,
-      77,
-      78,
-      79,
-      80,
-      81,
-      82,
-      83,
-      84
-    ],
-    "first_mutation_event_id": "85",
-    "first_mutation_index": 85,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-09-29T12:00:51.546380799Z",
-    "reason": "concrete target and verification before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "explicit_heading": false,
-      "forward_markers": 3,
-      "generic_only": false,
-      "mutation_seen": true,
-      "ordered_steps": 2,
-      "plan_words": 2,
-      "targets": [
-        "_attrs_to_script",
-        "attr/_dunders.py",
-        "validator(attr_dict['name'], name)"
-      ],
-      "text_chars": 249,
-      "ticket_echo": false,
-      "verification": true
-    },
-    "text_sha256": "41d3f30df5d7a4c58fc0dc8e5f160df079bc27e3d65cceae2f625924bcc6f1aa",
-    "todo_writes": 0
-  },
-  "provenance": {
-    "base_commit": "8bfa3a3c6febcaa0a9fd2d375742caa79ca6a99c",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "MIT",
-    "mode": "founder_flow",
-    "model": "stealth/space-bunny-alpha",
-    "qa_tests_seeded": true,
-    "repo_name": "attrs",
-    "repo_url": "https://github.com/python-attrs/attrs",
-    "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "774cf0142abbf0aee55940d1d793c79ddfd1a71c",
-    "target_message": "Pass the Attribute object into validators",
-    "task_fingerprint": "sha256:aeb93edf92349e9d3e90f70f2230572949ea73829e9ac96c71f7b8f0e2a55604",
-    "task_id": "a066c3d9cbcb7e18",
-    "task_mac_valid": true,
-    "ticket_summary": "# My check function cannot tell which field it is checking\n\n## What happens now\nWhen I attach a check function to an attribute, the generated start-up code hands that function only the value I passed ",
-    "verification_line_similarity": 0.6897,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "a066c3d9cbcb7e18.episode.jsonl",
-  "raw_sha256": "7486b69f40d21e31cc5b478586d22b0f59210170172231e618f30cf2ef77be81",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "a066c3d9cbcb7e18.sample.jsonl",
-  "sample_sha256": "a9f404ff9ff397be7575cd1b5559099b280b51f389179a21e35b00541c3e1942",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "a066c3d9cbcb7e18",
-  "task_validity": {
-    "base_commit": "8bfa3a3c6febcaa0a9fd2d375742caa79ca6a99c",
-    "source_verified": true,
-    "target_commit": "774cf0142abbf0aee55940d1d793c79ddfd1a71c",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "8bfa3a3c6febcaa0a9fd2d375742caa79ca6a99c",
-    "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
-    "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
-    "episode_id": "a066c3d9cbcb7e18",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 27,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_dunders.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dunders.py"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "774cf0142abbf0aee55940d1d793c79ddfd1a71c",
-    "ticket": {
-      "allowed_path_count": 27,
-      "forbidden_path_count": 0,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "attr/_dunders.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_dunders.py"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 1,
+   "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab",
+   "tests_passed": true,
+   "tool_calls": 15
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 5,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 5,
+  "raw_tool_calls": 20,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 5,
+  "sample_tool_calls": 15,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "a066c3d9cbcb7e18",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "e8815dde5ab9373c",
+   "030b07dcb9be9b16",
+   "8a488886326fef53"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest ",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.8,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84
+  ],
+  "first_mutation_event_id": "85",
+  "first_mutation_index": 85,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-09-29T12:00:51.546380799Z",
+  "reason": "concrete target and verification before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "explicit_heading": false,
+   "forward_markers": 3,
+   "generic_only": false,
+   "mutation_seen": true,
+   "ordered_steps": 2,
+   "plan_words": 2,
+   "targets": [
+    "_attrs_to_script",
+    "attr/_dunders.py",
+    "validator(attr_dict['name'], name)"
+   ],
+   "text_chars": 249,
+   "ticket_echo": false,
+   "verification": true
+  },
+  "text_sha256": "41d3f30df5d7a4c58fc0dc8e5f160df079bc27e3d65cceae2f625924bcc6f1aa",
+  "todo_writes": 0
+ },
+ "provenance": {
+  "base_commit": "8bfa3a3c6febcaa0a9fd2d375742caa79ca6a99c",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "MIT",
+  "mode": "founder_flow",
+  "model": "stealth/space-bunny-alpha",
+  "qa_tests_seeded": true,
+  "repo_name": "attrs",
+  "repo_url": "https://github.com/python-attrs/attrs",
+  "session_id": "68c33d6221d0454abe8aeb6dcbfb85ab",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "774cf0142abbf0aee55940d1d793c79ddfd1a71c",
+  "target_message": "Pass the Attribute object into validators",
+  "task_fingerprint": "sha256:aeb93edf92349e9d3e90f70f2230572949ea73829e9ac96c71f7b8f0e2a55604",
+  "task_id": "a066c3d9cbcb7e18",
+  "task_mac_valid": true,
+  "ticket_summary": "# My check function cannot tell which field it is checking\n\n## What happens now\nWhen I attach a check function to an attribute, the generated start-up code hands that function only the value I passed ",
+  "verification_line_similarity": 0.6897,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "a066c3d9cbcb7e18.episode.jsonl",
+ "raw_sha256": "7486b69f40d21e31cc5b478586d22b0f59210170172231e618f30cf2ef77be81",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "a066c3d9cbcb7e18.sample.jsonl",
+ "sample_sha256": "a9f404ff9ff397be7575cd1b5559099b280b51f389179a21e35b00541c3e1942",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "a066c3d9cbcb7e18",
+ "task_validity": {
+  "base_commit": "8bfa3a3c6febcaa0a9fd2d375742caa79ca6a99c",
+  "source_verified": true,
+  "target_commit": "774cf0142abbf0aee55940d1d793c79ddfd1a71c",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "8bfa3a3c6febcaa0a9fd2d375742caa79ca6a99c",
+  "diff1_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+  "diff2_tree_sha256": "88fb9abac7b0ad62f66cda0008b83b4d2ec6d289f607cb414605a5166e418cef",
+  "episode_id": "a066c3d9cbcb7e18",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 27,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_dunders.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dunders.py"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/attrs-d7a3a3cd07",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "774cf0142abbf0aee55940d1d793c79ddfd1a71c",
+  "ticket": {
+   "allowed_path_count": 27,
+   "forbidden_path_count": 0,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "attr/_dunders.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_dunders.py"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
+ "briefing_file": "briefing.md"
 }

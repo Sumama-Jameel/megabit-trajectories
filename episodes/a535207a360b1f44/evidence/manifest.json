@@ -1,226 +1,228 @@
 {
-  "attempts": [
-    {
-      "degenerate": false,
-      "included": true,
-      "index": 0,
-      "session_id": "4c5391ad439c4c9a9b5faf788ba6d482",
-      "tests_passed": true,
-      "tool_calls": 42
-    }
-  ],
-  "calls": {
-    "failure_recovery_tool_calls": 0,
-    "jargon_tool_calls": 0,
-    "missing_tool_calls": 0,
-    "raw_tool_calls": 42,
-    "rejection_example_calls": 0,
-    "restored_tool_calls": 0,
-    "sample_tool_calls": 42,
-    "unresolved_tool_calls": 0
-  },
-  "episode_id": "a535207a360b1f44",
-  "harness_tests": {
-    "canonical_context": "round:1",
-    "canonical_run_ids": [
-      "df15c5da106069c9",
-      "124d932f5238891b",
-      "3ee9c37897bd86b5"
-    ],
-    "green": true,
-    "legacy_harness": true,
-    "run_count": 3,
-    "runs": [
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      },
-      {
-        "cmd": "python -m pytest",
-        "exit": 0,
-        "kind": "substantive",
-        "timed_out": false
-      }
-    ],
-    "schema": 1,
-    "source": "legacy_retry_journal",
-    "three_sequential_passes": true
-  },
-  "kind": "megabit.episode.manifest",
-  "plan": {
-    "applicable": true,
-    "confidence": 0.99,
-    "detected": true,
-    "detector_version": "plan_detector_v1",
-    "evidence_event_ids": [
-      48
-    ],
-    "first_mutation_event_id": "50",
-    "first_mutation_index": 50,
-    "judge": null,
-    "needs_review": false,
-    "plan_created_at": "2026-10-22T12:47:36.512756115Z",
-    "reason": "non-empty todo plan before the first mutation",
-    "require_plan": true,
-    "schema": 1,
-    "signals": {
-      "todo_plan": true
-    },
-    "text_sha256": "",
-    "todo_writes": 3
-  },
-  "provenance": {
-    "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
-    "generator": "megabit",
-    "generator_version": "0.1.0",
-    "harness": "megabit-agent",
-    "license_spdx": "BSD-3-Clause",
-    "mode": "founder_flow",
-    "model": "deepseek-v4.1-flash:free",
-    "qa_tests_seeded": true,
-    "repo_name": "click",
-    "repo_url": "https://github.com/pallets/click",
-    "session_id": "4c5391ad439c4c9a9b5faf788ba6d482",
-    "source_verified": true,
-    "source_verify_reason": "legacy record states verified without a stored reason",
-    "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
-    "target_message": "Add tests to deprecations. Better deprecate streams.",
-    "task_fingerprint": "sha256:61f411e95d1ec8dd28711c3402f308cab3244459bee8a2b99bdc6f57893b5314",
-    "task_id": "a535207a360b1f44",
-    "task_mac_valid": true,
-    "ticket_summary": "# Old helper names for streams give no warning\n\n## What happens now\nRight now the two helpers that give a program a stream for reading and writing live in the click.utils module under the plain names ",
-    "verification_line_similarity": 0.7163,
-    "verification_passed": true
-  },
-  "quarantine": null,
-  "raw_path": "a535207a360b1f44.episode.jsonl",
-  "raw_sha256": "f43d444e3218ae07807c4c582296f350c44351c21b0a9195f677786f71eac6c6",
-  "reasoning": {
-    "available": false,
-    "kind": "none",
-    "schema": 1,
-    "segments": [],
-    "sha256": null,
-    "source": "none",
-    "tokens": 0,
-    "unrecoverable": true
-  },
-  "remediation_version": "2026-11-17-r2",
-  "review": {
-    "findings_count": 1,
-    "note": "Reviewer execution is not a test gate; the harness owns tests.",
-    "reviewer_authoritative": false,
-    "reviewer_ran_tests": false,
-    "reviewer_test_calls": 0,
-    "schema": 1
-  },
-  "sample_path": "a535207a360b1f44.sample.jsonl",
-  "sample_sha256": "42ca71e0e47b093f91a6c61f5c179661843150924b1d66a7a1248d1216a15117",
-  "schema_version": 2,
-  "splits": [
-    "action_only"
-  ],
-  "supersedes": "a535207a360b1f44",
-  "task_validity": {
-    "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
-    "source_verified": true,
-    "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
-    "verification_passed": true
-  },
-  "ticket_paths": {
-    "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
-    "diff1_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
-    "diff2_tree_sha256": "4044e5792d51bb7419d38d26e6900615675ad9b7096eab935fa05d684d7b95bc",
-    "episode_id": "a535207a360b1f44",
-    "forbidden_paths": [],
-    "hints": {
-      "allowed_path_count": 163,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/utils.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/click/__init__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_testing.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/api.md"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/wincmd.md"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/handling-files.md"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "hints.md",
-      "unknown_paths": []
-    },
-    "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
-    "result": "pass",
-    "schema": 1,
-    "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
-    "ticket": {
-      "allowed_path_count": 163,
-      "forbidden_path_count": 1,
-      "forbidden_paths": [],
-      "paths": [
-        {
-          "status": "allowed",
-          "token": "src/click/utils.py"
-        },
-        {
-          "status": "allowed",
-          "token": "src/click/__init__.py"
-        },
-        {
-          "status": "allowed",
-          "token": "tests/test_testing.py"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/api.md"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/wincmd.md"
-        },
-        {
-          "status": "allowed",
-          "token": "docs/handling-files.md"
-        },
-        {
-          "status": "allowed",
-          "token": "CHANGES.md"
-        }
-      ],
-      "result": "pass",
-      "source": "ticket.md",
-      "unknown_paths": []
-    },
-    "unknown_paths": []
+ "attempts": [
+  {
+   "degenerate": false,
+   "included": true,
+   "index": 0,
+   "session_id": "4c5391ad439c4c9a9b5faf788ba6d482",
+   "tests_passed": true,
+   "tool_calls": 42
   }
+ ],
+ "calls": {
+  "failure_recovery_tool_calls": 0,
+  "jargon_tool_calls": 0,
+  "missing_tool_calls": 0,
+  "raw_tool_calls": 42,
+  "rejection_example_calls": 0,
+  "restored_tool_calls": 0,
+  "sample_tool_calls": 42,
+  "unresolved_tool_calls": 0
+ },
+ "episode_id": "a535207a360b1f44",
+ "harness_tests": {
+  "canonical_context": "round:1",
+  "canonical_run_ids": [
+   "df15c5da106069c9",
+   "124d932f5238891b",
+   "3ee9c37897bd86b5"
+  ],
+  "green": true,
+  "legacy_harness": true,
+  "run_count": 3,
+  "runs": [
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   },
+   {
+    "cmd": "python -m pytest",
+    "exit": 0,
+    "kind": "substantive",
+    "timed_out": false
+   }
+  ],
+  "schema": 1,
+  "source": "legacy_retry_journal",
+  "three_sequential_passes": true
+ },
+ "kind": "megabit.episode.manifest",
+ "plan": {
+  "applicable": true,
+  "confidence": 0.99,
+  "detected": true,
+  "detector_version": "plan_detector_v1",
+  "evidence_event_ids": [
+   48
+  ],
+  "first_mutation_event_id": "50",
+  "first_mutation_index": 50,
+  "judge": null,
+  "needs_review": false,
+  "plan_created_at": "2026-10-22T12:47:36.512756115Z",
+  "reason": "non-empty todo plan before the first mutation",
+  "require_plan": true,
+  "schema": 1,
+  "signals": {
+   "todo_plan": true
+  },
+  "text_sha256": "",
+  "todo_writes": 3
+ },
+ "provenance": {
+  "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
+  "generator": "megabit",
+  "generator_version": "0.1.0",
+  "harness": "megabit-agent",
+  "license_spdx": "BSD-3-Clause",
+  "mode": "founder_flow",
+  "model": "deepseek-v4.1-flash:free",
+  "qa_tests_seeded": true,
+  "repo_name": "click",
+  "repo_url": "https://github.com/pallets/click",
+  "session_id": "4c5391ad439c4c9a9b5faf788ba6d482",
+  "source_verified": true,
+  "source_verify_reason": "legacy record states verified without a stored reason",
+  "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
+  "target_message": "Add tests to deprecations. Better deprecate streams.",
+  "task_fingerprint": "sha256:61f411e95d1ec8dd28711c3402f308cab3244459bee8a2b99bdc6f57893b5314",
+  "task_id": "a535207a360b1f44",
+  "task_mac_valid": true,
+  "ticket_summary": "# Old helper names for streams give no warning\n\n## What happens now\nRight now the two helpers that give a program a stream for reading and writing live in the click.utils module under the plain names ",
+  "verification_line_similarity": 0.7163,
+  "verification_passed": true
+ },
+ "quarantine": null,
+ "raw_path": "a535207a360b1f44.episode.jsonl",
+ "raw_sha256": "f43d444e3218ae07807c4c582296f350c44351c21b0a9195f677786f71eac6c6",
+ "reasoning": {
+  "available": false,
+  "kind": "none",
+  "schema": 1,
+  "segments": [],
+  "sha256": null,
+  "source": "none",
+  "tokens": 0,
+  "unrecoverable": true
+ },
+ "remediation_version": "2026-11-17-r2",
+ "review": {
+  "findings_count": 1,
+  "note": "Reviewer execution is not a test gate; the harness owns tests.",
+  "reviewer_authoritative": false,
+  "reviewer_ran_tests": false,
+  "reviewer_test_calls": 0,
+  "schema": 1
+ },
+ "sample_path": "a535207a360b1f44.sample.jsonl",
+ "sample_sha256": "42ca71e0e47b093f91a6c61f5c179661843150924b1d66a7a1248d1216a15117",
+ "schema_version": 2,
+ "splits": [
+  "action_only"
+ ],
+ "supersedes": "a535207a360b1f44",
+ "task_validity": {
+  "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
+  "source_verified": true,
+  "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
+  "verification_passed": true
+ },
+ "ticket_paths": {
+  "base_commit": "7a0a3447f6ddd2c15438c5d098e289323f9f9556",
+  "diff1_tree_sha256": "959a7a52054135c2166de3c6eb28b08e38b82710658ae866357f30732064959f",
+  "diff2_tree_sha256": "4044e5792d51bb7419d38d26e6900615675ad9b7096eab935fa05d684d7b95bc",
+  "episode_id": "a535207a360b1f44",
+  "forbidden_paths": [],
+  "hints": {
+   "allowed_path_count": 163,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/utils.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/click/__init__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_testing.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/api.md"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/wincmd.md"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/handling-files.md"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "hints.md",
+   "unknown_paths": []
+  },
+  "repo_dir": "/home/sumama/Private/MegaBit/megabit-data/repos/click-45ec183d5a",
+  "result": "pass",
+  "schema": 1,
+  "target_commit": "051725fa7e0c69effc9107066d8791c5b99242c3",
+  "ticket": {
+   "allowed_path_count": 163,
+   "forbidden_path_count": 1,
+   "forbidden_paths": [],
+   "paths": [
+    {
+     "status": "allowed",
+     "token": "src/click/utils.py"
+    },
+    {
+     "status": "allowed",
+     "token": "src/click/__init__.py"
+    },
+    {
+     "status": "allowed",
+     "token": "tests/test_testing.py"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/api.md"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/wincmd.md"
+    },
+    {
+     "status": "allowed",
+     "token": "docs/handling-files.md"
+    },
+    {
+     "status": "allowed",
+     "token": "CHANGES.md"
+    }
+   ],
+   "result": "pass",
+   "source": "ticket.md",
+   "unknown_paths": []
+  },
+  "unknown_paths": []
+ },
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
+ "briefing_file": "briefing.md"
 }
