@@ -13,7 +13,7 @@
   "keys",
   "node_modules"
  ],
- "file_count": 2198,
+ "file_count": 2200,
  "files": [
   {
    "bytes": 216,
@@ -21,9 +21,9 @@
    "sha256": "d4e84e2d1d63646a8e0b4b53864d43030960549d6db9b0af2cfa428460b3cd56"
   },
   {
-   "bytes": 20558,
+   "bytes": 20626,
    "path": "DATA_CARD.md",
-   "sha256": "9b04bbdc596c62081d81ad4aba487504dd39e4f58cd55db4bfd4401ad7d3a722"
+   "sha256": "3b6114b6e95b1bba704724c205f30ecc14b2e9134088b18b403790c660a9f208"
   },
   {
    "bytes": 1070,
@@ -31,14 +31,14 @@
    "sha256": "92d31c2cece55b8bd232b1d11846eefe5228b11cb0b1de7840ee0ac7d918b48f"
   },
   {
-   "bytes": 30240,
+   "bytes": 30269,
    "path": "README.md",
-   "sha256": "19552e67d255a7283e3f325f4093e2ed88f59905b4080b5ce952a99ad5f718fe"
+   "sha256": "d24868924c2dedc37ef3327b2afff80e81acd0fb2d54e304a8710fb00c7ed254"
   },
   {
-   "bytes": 16827,
+   "bytes": 17568,
    "path": "REMEDIATION_REPORT_2026-11-17.md",
-   "sha256": "d53ca2eb84864e528c5c7af92cccc7dc06605e9e4663803e513c303525bcb23e"
+   "sha256": "58902d6c13fb9fabdc6d7fcf7a40740e48c20be884d156238be6d6dadab94288"
   },
   {
    "bytes": 6517,
@@ -446,9 +446,9 @@
    "sha256": "b7baa8f9cfc4d967dc86dc86f3c213abd542ea8b322aed9bb1dd02a4049cdf1e"
   },
   {
-   "bytes": 1192,
+   "bytes": 1715,
    "path": "episodes/0571b7eb5d6b7555/evidence/harness_friction.jsonl",
-   "sha256": "3595156249827673ec0f0c8f6c38c13ebc02fa67e829701eea1af01fa94d165e"
+   "sha256": "52555c835d1c5bff729ed39d917b8451357b374f1a98cadf73ab201d8c4543d4"
   },
   {
    "bytes": 2124,
@@ -9221,6 +9221,11 @@
    "sha256": "82806bba27a39a4d6b8d22858ab40795bc55f48ecfa3790bfc4cc1fd476d1aa1"
   },
   {
+   "bytes": 471,
+   "path": "episodes/c929463c84ceb538/evidence/harness_friction.jsonl",
+   "sha256": "5e76daf17efaef27415ef383d3273682d8c557b34afe4162f7409e0e0ede567a"
+  },
+  {
    "bytes": 5744,
    "path": "episodes/c929463c84ceb538/evidence/manifest.json",
    "sha256": "5b5ed92dcf644687251e8d758f0b2b5b5362260dbc58d8e60e613991286ac1ce"
@@ -10376,6 +10381,11 @@
    "sha256": "be99761c7ee4b1432fc0cc1df77f7954cc4f084ac7ca4c415dc06b7f32bbb1ba"
   },
   {
+   "bytes": 473,
+   "path": "episodes/efd63c576c434d63/evidence/harness_friction.jsonl",
+   "sha256": "2a9e51ef9fa214f16495b81a7d12a74b2833651b1c2f4b589ba742cdd37e14a8"
+  },
+  {
    "bytes": 5844,
    "path": "episodes/efd63c576c434d63/evidence/manifest.json",
    "sha256": "b39f34c3c6c19b98a844c3ef4efeb76d2070ca50735aef8b23b09642815dbd5a"
@@ -11006,12 +11016,12 @@
    "sha256": "fc7e2848120be1a9ccedc362b8022124a7567bdd36a9d3d29f0c68c5e1665f7c"
   }
  ],
- "generated_at": "2026-11-18T19:07:00Z",
+ "generated_at": "2026-11-19T08:24:11Z",
  "kind": "megabit.release.manifest",
  "remediation_version": "2026-11-17-r2",
  "root": "/home/sumama/Private/megabit-trajectories",
  "schema": 1,
- "signature": "975be3fa0a5705f973c8f968c93e2589645850d4ba793243ea90e826c6b59f2b",
- "total_bytes": 63293622,
- "tree_sha256": "ca684e5c17d509e8f26e9a2f926f3a0fe2fef9be8e7de880c77339c69f6c15b1"
+ "signature": "695429a59dd3d3c508269e0c76df21dbc03aa04aa3929ae7b80b74ac28b832ee",
+ "total_bytes": 63295927,
+ "tree_sha256": "3b000e66e66662aa34f0fb6be9d8a4ee87da38a86ad87216df3cacdaf9df8a1a"
 }

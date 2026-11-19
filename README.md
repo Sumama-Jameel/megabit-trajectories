@@ -116,7 +116,7 @@ A full read-only audit of the corpus (`TRAJECTORY_VERIFICATION_2026-11-17`) foun
 - 6 episodes with no detected plan before the first edit are labelled `legacy_unplanned`; 14 others previously flagged by the old todo-based gate show plans in narration and keep their evidence. No todo write is required by any gate.
 - `b37ef87e467d64e6`'s corrupt grep call is preserved with its rejection in `evidence/restore_rejection.jsonl`; `a066c3d9cbcb7e18`'s degenerate first attempt is preserved in raw with a machine marker and excluded from the clean view (`episode.clean.jsonl`).
 - `611e35323caaf082` now carries an offline replay of its final diff (3/3 sequential runs against the locked seeded tests).
-- 221 authentic calls from failed/superseded attempts are restored as `failure_recovery` data; nothing authentic was silently dropped. 68-call `/tmp` rejection friction (re-measured: 41 tool_result denial events across 36-38 episodes; see report) annotated as harness friction, not model error.
+- 221 authentic calls from failed/superseded attempts are restored as `failure_recovery` data; nothing authentic was silently dropped. 41 `/tmp`-deny events across 38 episodes are annotated as harness friction, not model error; the audit's 68-figure did not reproduce from the shipped bytes and is reconciled in the report.
 - No secrets anywhere: 2,738 files byte-scanned (0 findings); `keys/` never published and now git-ignored.
 - Every provenance field is a boolean with a reason; the two null records are corrected to `false` with the reason recorded (framework hashes unchanged — the raw bytes are the record).
 

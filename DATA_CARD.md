@@ -259,8 +259,9 @@ replacement for SWE-bench-style evaluation.
   executed the suite). An offline replay of its final diff passes 3/3 against the locked
   seeded tests (evidence/harness_replay.json).
 - The 68 `/tmp`-denial rejections previously reported were re-measured: 41 denial events in
-  raw logs across 36–38 episodes; the audit’s number does not reproduce from the shipped
-  bytes. Annotated as harness friction, not model error.
+  raw logs (36 bash, 3 execute, 2 write) across 38 episodes; the audit’s number was measured
+  over a broader source and does not reproduce from this corpus's bytes. Annotated as
+  harness friction, not model error.
 - Python only in v1. No Rust, Go, C/C++, or kernel-scale data yet.
 - Five repositories. Narrow domain coverage.
 - Two episodes ended at the iteration cap; they are flagged in metadata even though

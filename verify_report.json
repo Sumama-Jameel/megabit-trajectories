@@ -56,7 +56,7 @@
   "schema": 1,
   "secret_scan": {
     "findings": [],
-    "scanned_files": 2196
+    "scanned_files": 2198
   },
   "splits": {
     "action_only": 56,

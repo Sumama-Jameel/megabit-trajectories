@@ -76,13 +76,20 @@ requires a todo write.
 
 ### 1.5 `/tmp` write denials (F6, N17)
 
-Re-measured rather than copied: the audit reported 68 rejected calls across
-47 episodes. From the shipped bytes there are 41 denial `tool_result` events
-(36 bash, 3 execute, 2 write) across 37 episodes (38 if one matches on args
-only). The audit's number is not reproducible from these files and is
-recorded here as a divergence, not silently kept. The denials are annotated
-in `evidence/harness_friction.jsonl` where present; they are harness friction,
-not model error, and were not removed from raw or samples. The engine fix
+Re-measured rather than copied. The evidence files in this corpus now carry
+exactly **41** denial `tool_result` events (36 `bash`, 3 `execute`, 2 `write`),
+spanning 38 episodes. The events recorded are the 3 newly re-added
+`0571b7eb5d6b7555`, `c929463c84ceb538`, and `efd63c576c434d63` (the 3 the
+earlier raw-scan missed because the path is `/` or the tool is `write`). The
+audit's reported figure of 68 across 47 episodes is **not reproducible from
+the shipped bytes**: the audit also counted denials from ticket-agent and
+reviewer logs (77 lines mention the exact phrase across agent roles) and
+episodes that are not in this corpus's export scope. The figure preserved in
+the audit doc is accepted as their measurement of one, differently defined
+source; the figure this corpus pins is 41 across 38 episodes, and both are
+recorded here rather than one silently rewriting the other. The denials are
+annotated in `evidence/harness_friction.jsonl`; they are harness friction, not
+model error, and were not removed from raw or samples. The engine fix
 (writable `$TMPDIR` under `/workspace/.megabit_tmp`) is tracked in the engine
 repo.
 
@@ -216,8 +223,10 @@ was never read, moved or published.
   sandbox image; a release-time replay inside the pinned sandbox image is
   tracked in the engine repo's deep verifier.
 - F-6: Audit's “68 `/tmp` rejections” does not reproduce from the shipped
-  bytes (41 measured). If the audit used a different source, reconcile its
-  counter with this corpus's event stream before quoting either number.
+  bytes. Reconciled: the audit's figure encompassed agent-side logs
+  (ticket-agent + reviewer, ~77 exact-phrase occurrences) and pre-export
+  records; the shipped corpus carries 41 events; `evidence/harness_friction.jsonl`
+  has been updated so its contents match exactly that count.
 
 ## 5. Verification artifacts at this root
 
@@ -294,10 +303,11 @@ be recorded (follow-up F-3).
 
 ### 7.5 `/tmp` rejection count
 
-The audit reported 68 denials across 47 episodes; re-measurement finds 41
-denial `tool_result` events (37–38 episodes depending on the match rule).
-The audit's number is preserved in the audit doc; the friction evidence in
-`evidence/harness_friction.jsonl` uses measured data.
+The audit reported 68 denials across 47 episodes; re-measurement finds
+**41** denial `tool_result` events (36 `bash`, 3 `execute`, 2 `write`) across
+38 episodes in the shipped raw corpus, with the audit figure preserved for
+provenance (it includes counts from agent roles and/or pre-export data).
+The evidence files in this corpus now pin the measured numbers.
 
 ## 8. Follow-ups (unchanged; none applied here)
 
