@@ -14,6 +14,35 @@ All three are plain Python 3.9 and up. Run them from the repository root.
 
 ---
 
+## Kept rejections: the `sample_v2` file
+
+One episode (`b37ef87e467d64e6`) has a tool call the model made with broken
+arguments: the JSON text was cut off mid-stream. The pipeline rejected it and
+the model recovered with a correct call. The founder rule is that a bad call
+MADE BY THE MODEL stays in the training data with its rejection. Nothing is
+removed; only the container is fixed.
+
+The old `*.sample.jsonl` files are left byte-for-byte as published. The
+repaired episode also ships `b37ef87e467d64e6.sample_v2.jsonl`. A bad call in
+that file uses a labeled shape instead of a parseable `arguments` object:
+
+```json
+{"id": "call_01a0e94bd96872fda2fc1397", "name": "grep",
+ "arguments_raw": "{\"output_mode\":\"content\",\"path\":\"/workspace\"",
+ "parse_status": "error"}
+```
+
+Its paired tool turn keeps the exact rejection text and carries
+`"error": "rejected"`. A strict reader checks `parse_status` before parsing
+arguments. `convert_formats.py` maps a kept call to an honest text note in
+OpenAI format so a strict chat loader never crashes on the broken JSON.
+
+`training_manifest.json` names the canonical training file and sha256 for all
+66 episodes, and `verify.py` checks those checksums. Old readers that glob
+`*.sample.jsonl` still see exactly 66 samples.
+
+---
+
 ## 1. `merge_parallel_calls.py` (the exporter rule)
 
 A model can ask for two or three tools at the same moment. In the raw event

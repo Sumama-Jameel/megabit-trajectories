@@ -9,6 +9,8 @@
    "tool_calls": 29
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 29,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "1b1f2e9f7ff0fd2a",
  "harness_tests": {
@@ -90,7 +98,21 @@
   "repo_url": "https://github.com/pypa/packaging",
   "session_id": "1edd04e0d3e4433cbd0a1a1200444282",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "d5fedc90bba333ed0962ba5dfb7072d38f2c1d84",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "packaging-5de5720acd",
+   "license_match": true,
+   "repo_name": "packaging",
+   "target_commit": "9d4927b661d44a5a74d31890c9a777838fe31760",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:54:59Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "9d4927b661d44a5a74d31890c9a777838fe31760",
   "target_message": "fix(version): raise InvalidVersion for non-str pre letters in from_parts (#1241)",
   "task_fingerprint": "sha256:cb470e54fe6b0fc37e1ab345e62cf4608d7c9d2da07bfe852939c4edb2d2d9c4",
@@ -118,8 +140,17 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "execute",
+   "grep",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "1b1f2e9f7ff0fd2a.sample.jsonl",
@@ -182,7 +213,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
- "briefing_file": "briefing.md"
+ }
 }

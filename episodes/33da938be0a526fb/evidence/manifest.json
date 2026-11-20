@@ -9,6 +9,8 @@
    "tool_calls": 27
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "e4b786c468f62c29db8b7b90cb48c63c500525ac73f14c9339052f29af886494",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 27,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "33da938be0a526fb",
  "harness_tests": {
@@ -90,7 +98,21 @@
   "repo_url": "https://github.com/python-attrs/attrs",
   "session_id": "4e9f96f246044a3498e7a5e38c3d6e78",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "2040ed5e486f5a3310c6a1718a2103427fe36948",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "attrs-d7a3a3cd07",
+   "license_match": true,
+   "repo_name": "attrs",
+   "target_commit": "8bb430cf1887feae4e04d2821d4ee3725038eb9c",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:00Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "8bb430cf1887feae4e04d2821d4ee3725038eb9c",
   "target_message": "Add basic support for zope.interface",
   "task_fingerprint": "sha256:e9ae4f4df5f039a5c0b965fe9a74bca2a6d42ac80391adc42d7347fd44970253",
@@ -118,8 +140,16 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "bash",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "33da938be0a526fb.sample.jsonl",
@@ -214,7 +244,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "e4b786c468f62c29db8b7b90cb48c63c500525ac73f14c9339052f29af886494",
- "briefing_file": "briefing.md"
+ }
 }

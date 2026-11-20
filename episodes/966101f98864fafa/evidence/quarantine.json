@@ -1,8 +1,16 @@
 {
-  "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F1/F2",
-  "kind": "megabit.quarantine",
-  "reason": "target_diff_has_no_source_change",
-  "required_before_sft": "Re-mine the slot with a target whose human diff changes at least one non-test, non-docs, non-license source file, and re-run through the normal gates.",
-  "source_files_changed": 0,
-  "summary": "Human fix changes only tests/conftest.py and tests/test_basic.py (plus an optparse LICENSE credit). The seeded QA patch is exactly those two test files, they were locked pre-coder (lock_tests_stage1/2), the write-deny tree includes both, so the coder could not solve the ticket. The produced diff touches only LICENSE. The 0.45 gate passed on the LICENSE hunk, not on a source fix. Episode is kept as evidence of a test-only target; it is excluded from every training-ready list and must not ship as an SFT exemplar."
+ "finding": "TRAJECTORY_VERIFICATION_2026-11-17 F1/F2",
+ "kind": "megabit.quarantine",
+ "reason": "target_diff_has_no_source_change",
+ "required_before_sft": "Re-mine the slot with a target whose human diff changes at least one non-test, non-docs, non-license source file, and re-run through the normal gates.",
+ "residual_value": {
+  "kind": "megabit.residual_value",
+  "one_of": "66 episodes",
+  "reason_for_retention": "evidence of a test-only target and correct refusal",
+  "summary": "The human fix changed only locked test files, so the coder could not implement the ticket. The episode still contains real tool calls, real exploration, a real recovery arc and a correct refusal (\"no product changes were needed\"). It is useful failure-mode data, not a coding lesson.",
+  "tool_calls": 51,
+  "training_eligible": false
+ },
+ "source_files_changed": 0,
+ "summary": "Human fix changes only tests/conftest.py and tests/test_basic.py (plus an optparse LICENSE credit). The seeded QA patch is exactly those two test files, they were locked pre-coder (lock_tests_stage1/2), the write-deny tree includes both, so the coder could not solve the ticket. The produced diff touches only LICENSE. The 0.45 gate passed on the LICENSE hunk, not on a source fix. Episode is kept as evidence of a test-only target; it is excluded from every training-ready list and must not ship as an SFT exemplar."
 }

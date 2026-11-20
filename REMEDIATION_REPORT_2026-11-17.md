@@ -1,5 +1,7 @@
 # MegaBit Trajectories — Remediation Report
 
+> **Current numbers:** this is a dated 2026-11-17 report. The single source of truth for counts is `counts.json` at the corpus root (39 raw `/tmp` denials in 36 episodes, 35 in samples across 35 episodes). Where this report quotes older figures, `counts.json` and `docs/STATUS.md` in the engine repo supersede it.
+
 - Date: 2026-11-17
 - Scope: the full 66-episode corpus at this repository
 - Mode: in-place remediation (founder-chosen "Option B"), evidence preserved

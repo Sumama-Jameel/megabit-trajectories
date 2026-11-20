@@ -1,0 +1,10 @@
+{
+ "briefing_file": "briefing.md",
+ "briefing_sha256": "e4b786c468f62c29db8b7b90cb48c63c500525ac73f14c9339052f29af886494",
+ "git_guidance": "false_git_useless",
+ "policy_version": "2026-11-19",
+ "schema": 1,
+ "sft_eligible": false,
+ "source": "historical_annotation",
+ "template_version": "v1"
+}

@@ -9,6 +9,8 @@
    "tool_calls": 45
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 1,
   "sample_tool_calls": 44,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "b37ef87e467d64e6",
  "harness_tests": {
@@ -177,7 +185,21 @@
   "repo_url": "https://github.com/python-attrs/attrs",
   "session_id": "bbc04518feb440b6a95b53c5fc761afc",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "c7381fd0e21431ec737b29a3e767afb8efb219d8",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "attrs-d7a3a3cd07",
+   "license_match": true,
+   "repo_name": "attrs",
+   "target_commit": "5ce5e48074a53f7b95421f64f15a858e2d6d9263",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:02Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "5ce5e48074a53f7b95421f64f15a858e2d6d9263",
   "target_message": "Change attr.a to attr.ib",
   "task_fingerprint": "sha256:1a166aafd26ad9d02e1700faa8a059a4849003514a204aa5f6ca6906e805e085",
@@ -205,8 +227,16 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "bash",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "b37ef87e467d64e6.sample.jsonl",
@@ -293,7 +323,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
- "briefing_file": "briefing.md"
+ }
 }

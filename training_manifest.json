@@ -1,0 +1,404 @@
+{
+ "episodes": [
+  {
+   "episode": "012ad533e237baaf",
+   "path": "episodes/012ad533e237baaf/012ad533e237baaf.sample.jsonl",
+   "schema": 1,
+   "sha256": "12b945da6c14df7c18d89e7e90192b57ef0af867bd704756b254b078b3b90409"
+  },
+  {
+   "episode": "032c699ac1c2d252",
+   "path": "episodes/032c699ac1c2d252/032c699ac1c2d252.sample.jsonl",
+   "schema": 1,
+   "sha256": "f586dbe2251180f2fb8d1275f14d123b3b379c93e479f65ea1bfe7b846e0c0aa"
+  },
+  {
+   "episode": "0571b7eb5d6b7555",
+   "path": "episodes/0571b7eb5d6b7555/0571b7eb5d6b7555.sample.jsonl",
+   "schema": 1,
+   "sha256": "c017636b55b4e10f60c80878e3eccb276743a5dd316d1cd7b84c0862ed7fe7a4"
+  },
+  {
+   "episode": "1039a0159065c3b0",
+   "path": "episodes/1039a0159065c3b0/1039a0159065c3b0.sample.jsonl",
+   "schema": 1,
+   "sha256": "041774469d62af5bcc0df2062e984327d88fc1d11b9918547144e9b8b504cee3"
+  },
+  {
+   "episode": "114f10e73ae47ce3",
+   "path": "episodes/114f10e73ae47ce3/114f10e73ae47ce3.sample.jsonl",
+   "schema": 1,
+   "sha256": "25a97c7e7cf6c3b6740b86967ebe3b07536d6750cd72d5a7c66194114a325e4f"
+  },
+  {
+   "episode": "12817d803e8f9f1c",
+   "path": "episodes/12817d803e8f9f1c/12817d803e8f9f1c.sample.jsonl",
+   "schema": 1,
+   "sha256": "12623cd10c4c142c83fa6027e4314fd66e5ba8313b8c4e64dccd9c85c1335995"
+  },
+  {
+   "episode": "1b1f2e9f7ff0fd2a",
+   "path": "episodes/1b1f2e9f7ff0fd2a/1b1f2e9f7ff0fd2a.sample.jsonl",
+   "schema": 1,
+   "sha256": "94fb5aeb0d58d39727b3a44dbd7411008126810d366a0110bf82baba7083119d"
+  },
+  {
+   "episode": "1bdf5e7c144469b8",
+   "path": "episodes/1bdf5e7c144469b8/1bdf5e7c144469b8.sample.jsonl",
+   "schema": 1,
+   "sha256": "0b7e631b8278e97ab59bb638c27067ef7f2e5c272f81b685e028c4fe1d67cc73"
+  },
+  {
+   "episode": "1eb9f1613651e8fb",
+   "path": "episodes/1eb9f1613651e8fb/1eb9f1613651e8fb.sample.jsonl",
+   "schema": 1,
+   "sha256": "f0ae669c3148f83915837de7ace0d41209a9becd2bdac290282510a613e7083a"
+  },
+  {
+   "episode": "1f3dfd68ce2f10fd",
+   "path": "episodes/1f3dfd68ce2f10fd/1f3dfd68ce2f10fd.sample.jsonl",
+   "schema": 1,
+   "sha256": "28bc4f7a0387aec8016f161ac1ff50a55d0eacfc4de2399825f3d7bb74f1a80c"
+  },
+  {
+   "episode": "21721c8be6eec2d5",
+   "path": "episodes/21721c8be6eec2d5/21721c8be6eec2d5.sample.jsonl",
+   "schema": 1,
+   "sha256": "bd97bb41fd5918a2d762821b8148bd66ecd6cc38eeae6054898e65bffad7ef53"
+  },
+  {
+   "episode": "2288ac90554bcfa6",
+   "path": "episodes/2288ac90554bcfa6/2288ac90554bcfa6.sample.jsonl",
+   "schema": 1,
+   "sha256": "f8f8f6ccc31fb41aa247c23ae04bf6e4636acbc8f1bb9588626c0cfd389eab52"
+  },
+  {
+   "episode": "23fcc876cc35b523",
+   "path": "episodes/23fcc876cc35b523/23fcc876cc35b523.sample.jsonl",
+   "schema": 1,
+   "sha256": "bd61bc80789962f7602843a4e25b7bf329e6ecb9374de87b57eb2a9bda1e7f0a"
+  },
+  {
+   "episode": "25e452d88c01814e",
+   "path": "episodes/25e452d88c01814e/25e452d88c01814e.sample.jsonl",
+   "schema": 1,
+   "sha256": "5694c51b197fbcbcc6fb840fdf297779f5cd37b643e13764e8f3f8c19c8f3685"
+  },
+  {
+   "episode": "2b67051b08a2794f",
+   "path": "episodes/2b67051b08a2794f/2b67051b08a2794f.sample.jsonl",
+   "schema": 1,
+   "sha256": "c2cf546eca1898073d7330d4f4eb8594660c864597e87d5c6125db5e1e3a16d7"
+  },
+  {
+   "episode": "2d6f3e5f14681273",
+   "path": "episodes/2d6f3e5f14681273/2d6f3e5f14681273.sample.jsonl",
+   "schema": 1,
+   "sha256": "9b86c6ef517dade6db3515181ca0e4ed1f413a512b0799d39e7ce006950444f3"
+  },
+  {
+   "episode": "2f219d6f06d064cc",
+   "path": "episodes/2f219d6f06d064cc/2f219d6f06d064cc.sample.jsonl",
+   "schema": 1,
+   "sha256": "c2ee3986c307c34dbc312eb62a39f0d593e67cc2f349bb99c41e327a3f7011b6"
+  },
+  {
+   "episode": "31fc77740af45bd4",
+   "path": "episodes/31fc77740af45bd4/31fc77740af45bd4.sample.jsonl",
+   "schema": 1,
+   "sha256": "4379e646e727a7b1db84d96db14250432cc4a2d6764148d2abceda24e07302b4"
+  },
+  {
+   "episode": "33da938be0a526fb",
+   "path": "episodes/33da938be0a526fb/33da938be0a526fb.sample.jsonl",
+   "schema": 1,
+   "sha256": "f0643579e31dd0ea8c0a1d287468678d5a145f91fdca7a9d33ca17d261e06c6b"
+  },
+  {
+   "episode": "349db9dae0e05b9e",
+   "path": "episodes/349db9dae0e05b9e/349db9dae0e05b9e.sample.jsonl",
+   "schema": 1,
+   "sha256": "992c58024e401c65118e3cfdd279eb1142d344f22567e4bbd17966c79fb2884c"
+  },
+  {
+   "episode": "3a35d6717919075a",
+   "path": "episodes/3a35d6717919075a/3a35d6717919075a.sample.jsonl",
+   "schema": 1,
+   "sha256": "101e595604dcd385b34925b915ee20efba539fd0deaec574695991c0a33f9001"
+  },
+  {
+   "episode": "3fc1a5fb92713be9",
+   "path": "episodes/3fc1a5fb92713be9/3fc1a5fb92713be9.sample.jsonl",
+   "schema": 1,
+   "sha256": "5469654096fe246aed1a6c9ae1372c9fea4ee0bc2c9bb1a61c893a7df522f3aa"
+  },
+  {
+   "episode": "400b4635d276b767",
+   "path": "episodes/400b4635d276b767/400b4635d276b767.sample.jsonl",
+   "schema": 1,
+   "sha256": "e09863e94c29d020f0061ba317cbdf0642c577746ffbdf97fc27fa7b6915ab22"
+  },
+  {
+   "episode": "407fa06b826e1657",
+   "path": "episodes/407fa06b826e1657/407fa06b826e1657.sample.jsonl",
+   "schema": 1,
+   "sha256": "7b0ef3be2d60c947dd9424caf8c8f5bb5b6fc6b50b9f961f1f833e9b82fc7819"
+  },
+  {
+   "episode": "44a7dbbd48675f67",
+   "path": "episodes/44a7dbbd48675f67/44a7dbbd48675f67.sample.jsonl",
+   "schema": 1,
+   "sha256": "b7a3d8a28ed1dde4c847ec647c52311e068c2a6949681811da88645fbadbbf61"
+  },
+  {
+   "episode": "467619066bf26662",
+   "path": "episodes/467619066bf26662/467619066bf26662.sample.jsonl",
+   "schema": 1,
+   "sha256": "6f656c86a9344ee6392b701b75b6a652f13c96460eafbeb6d221d8fe1e3b49fd"
+  },
+  {
+   "episode": "490a433138e1fe8e",
+   "path": "episodes/490a433138e1fe8e/490a433138e1fe8e.sample.jsonl",
+   "schema": 1,
+   "sha256": "e016031692fd2a877d80eac7617c42fb07489bd94fc135196bbf8cedab1fad4a"
+  },
+  {
+   "episode": "4c434330ee44b096",
+   "path": "episodes/4c434330ee44b096/4c434330ee44b096.sample.jsonl",
+   "schema": 1,
+   "sha256": "a8077f9215f7202f767047684071883b2b6ec49efbc74929868fb9f75831ff68"
+  },
+  {
+   "episode": "4f8401a368bba994",
+   "path": "episodes/4f8401a368bba994/4f8401a368bba994.sample.jsonl",
+   "schema": 1,
+   "sha256": "6bdfb2a12516209bfe36e06d4869b97ab24d26d67c29fbcb54eddfa8465121c0"
+  },
+  {
+   "episode": "5760e3b4271e5d3e",
+   "path": "episodes/5760e3b4271e5d3e/5760e3b4271e5d3e.sample.jsonl",
+   "schema": 1,
+   "sha256": "5ff7d409bdbf6c9cc9b7b8669bc64dc272275ba67c4a6c9e1e473251c6ca2399"
+  },
+  {
+   "episode": "57b500b3a9ee36b6",
+   "path": "episodes/57b500b3a9ee36b6/57b500b3a9ee36b6.sample.jsonl",
+   "schema": 1,
+   "sha256": "b0bc9ea799c09c59f050098f4e7970313ed6042e9f5d3be998b363e89ebed699"
+  },
+  {
+   "episode": "611e35323caaf082",
+   "path": "episodes/611e35323caaf082/611e35323caaf082.sample.jsonl",
+   "schema": 1,
+   "sha256": "e7f374ac8c00b6b5298f81424ecc75ed917dfe2466d1ea188850e7f3a333cf58"
+  },
+  {
+   "episode": "73246683fe7ee6c6",
+   "path": "episodes/73246683fe7ee6c6/73246683fe7ee6c6.sample.jsonl",
+   "schema": 1,
+   "sha256": "542df07d94638194ee62e1b07065383ebf3850eaae85c728ae16131638c401fb"
+  },
+  {
+   "episode": "7bd0a927168a14f3",
+   "path": "episodes/7bd0a927168a14f3/7bd0a927168a14f3.sample.jsonl",
+   "schema": 1,
+   "sha256": "5c65a8c477102aef42065e3837d0214a3fd47e883b72666eed6928a05413187c"
+  },
+  {
+   "episode": "7d2d3557467897b4",
+   "path": "episodes/7d2d3557467897b4/7d2d3557467897b4.sample.jsonl",
+   "schema": 1,
+   "sha256": "034db167c139503fabdf567e6c6962e2815ae6590b48b215a4599bea8c14b047"
+  },
+  {
+   "episode": "81a8b6b065bafe21",
+   "path": "episodes/81a8b6b065bafe21/81a8b6b065bafe21.sample.jsonl",
+   "schema": 1,
+   "sha256": "d14f1ac26f509792663eebaa4123d49fa62641385ddf255396105fad74f49327"
+  },
+  {
+   "episode": "864a19a5d07ecac7",
+   "path": "episodes/864a19a5d07ecac7/864a19a5d07ecac7.sample.jsonl",
+   "schema": 1,
+   "sha256": "37d3e8b1af73a9fbeba28731a9ec49e56d30fada82096c2bc9db4b6fe79fadd8"
+  },
+  {
+   "episode": "86fc0604d03248ba",
+   "path": "episodes/86fc0604d03248ba/86fc0604d03248ba.sample.jsonl",
+   "schema": 1,
+   "sha256": "b1c4d768c362537b17e5fc3c5c9ea99d2fafdc988f47ca041ecfb5aad5420b22"
+  },
+  {
+   "episode": "8a4bf108bb03b794",
+   "path": "episodes/8a4bf108bb03b794/8a4bf108bb03b794.sample.jsonl",
+   "schema": 1,
+   "sha256": "4bc9d6908786b3a41618a927a75dbb2a96accf46a8d0ced84bd33e152e8dad4d"
+  },
+  {
+   "episode": "8b48d640ad1f1576",
+   "path": "episodes/8b48d640ad1f1576/8b48d640ad1f1576.sample.jsonl",
+   "schema": 1,
+   "sha256": "254ed3814bfd629b313bd71580dcfe434a57d0dea0dc5e0c96319ffcdd01e7bb"
+  },
+  {
+   "episode": "8bb1081352bda3fc",
+   "path": "episodes/8bb1081352bda3fc/8bb1081352bda3fc.sample.jsonl",
+   "schema": 1,
+   "sha256": "2b788bd7e7b03b2967927cd94e111c70e64150bb30e0517537bc9ddf5fb4d3a2"
+  },
+  {
+   "episode": "94dab878e2c9a0ec",
+   "path": "episodes/94dab878e2c9a0ec/94dab878e2c9a0ec.sample.jsonl",
+   "schema": 1,
+   "sha256": "8e6c0aca40de5658cf8345688137cb349636efe7cf64b689c6c75e918b5c1a8d"
+  },
+  {
+   "episode": "966101f98864fafa",
+   "path": "episodes/966101f98864fafa/966101f98864fafa.sample.jsonl",
+   "schema": 1,
+   "sha256": "f535c30724ada0f5104e513ca650f0c8dbede2347faa0f0f8b5495a318bbf75d"
+  },
+  {
+   "episode": "979988594a97aafb",
+   "path": "episodes/979988594a97aafb/979988594a97aafb.sample.jsonl",
+   "schema": 1,
+   "sha256": "e9823bf700a09f69056f0f6bdf6f6bd32cc4ba35759afe5779e401eb4bf43f50"
+  },
+  {
+   "episode": "99a4bccd5addbb0e",
+   "path": "episodes/99a4bccd5addbb0e/99a4bccd5addbb0e.sample.jsonl",
+   "schema": 1,
+   "sha256": "91588b4da0c75ffdddf7703e1cbc50f7fd4c6b9f13797ac4ee08b759ebc718f2"
+  },
+  {
+   "episode": "9abc66072ab1bc9b",
+   "path": "episodes/9abc66072ab1bc9b/9abc66072ab1bc9b.sample.jsonl",
+   "schema": 1,
+   "sha256": "859f2af9bc6f43a8cb6bcbebdf0dd6c5f6bc3bd6083d3bd4371702276392f0db"
+  },
+  {
+   "episode": "a066c3d9cbcb7e18",
+   "path": "episodes/a066c3d9cbcb7e18/a066c3d9cbcb7e18.sample.jsonl",
+   "schema": 1,
+   "sha256": "a9f404ff9ff397be7575cd1b5559099b280b51f389179a21e35b00541c3e1942"
+  },
+  {
+   "episode": "a0b5794e7403ed3d",
+   "path": "episodes/a0b5794e7403ed3d/a0b5794e7403ed3d.sample.jsonl",
+   "schema": 1,
+   "sha256": "cac15e4cfe90fc5bbe24ca828d5fb25859afa908dfccbfe091f120aa7b4fb3f2"
+  },
+  {
+   "episode": "a535207a360b1f44",
+   "path": "episodes/a535207a360b1f44/a535207a360b1f44.sample.jsonl",
+   "schema": 1,
+   "sha256": "42ca71e0e47b093f91a6c61f5c179661843150924b1d66a7a1248d1216a15117"
+  },
+  {
+   "episode": "a5e823c9f6618766",
+   "path": "episodes/a5e823c9f6618766/a5e823c9f6618766.sample.jsonl",
+   "schema": 1,
+   "sha256": "41b2a70b9c38f36776f8a9b02af22124085857b00bc99b8abd2ac6e92e3196c3"
+  },
+  {
+   "episode": "aeb75d2533b23d63",
+   "path": "episodes/aeb75d2533b23d63/aeb75d2533b23d63.sample.jsonl",
+   "schema": 1,
+   "sha256": "8b8a2f9906583ff848ba8af7dc8795b60a339e56616980acfd36a48e432343f3"
+  },
+  {
+   "episode": "afd00fe36c2ad88c",
+   "path": "episodes/afd00fe36c2ad88c/afd00fe36c2ad88c.sample.jsonl",
+   "schema": 1,
+   "sha256": "0046dfd8bab2d7d9678ad06a2f9197a4efd929c27873ec636b5123bdc20c469c"
+  },
+  {
+   "episode": "b37ef87e467d64e6",
+   "path": "episodes/b37ef87e467d64e6/b37ef87e467d64e6.sample_v2.jsonl",
+   "schema": 2,
+   "sha256": "9daba0529252c1c6e41668ddc1f26b3b0acda779f24be58e413bab11597ed411"
+  },
+  {
+   "episode": "b8d783f57b4b84eb",
+   "path": "episodes/b8d783f57b4b84eb/b8d783f57b4b84eb.sample.jsonl",
+   "schema": 1,
+   "sha256": "5c0b9a159c5846c41c6c80a4068c4679ac3c8e28972145ae400380df2364ba56"
+  },
+  {
+   "episode": "b9e9143d07b01282",
+   "path": "episodes/b9e9143d07b01282/b9e9143d07b01282.sample.jsonl",
+   "schema": 1,
+   "sha256": "bd25be8ef9f61078de5957a76c51e97fc63f61ce9824dc656296fe32745d341b"
+  },
+  {
+   "episode": "c929463c84ceb538",
+   "path": "episodes/c929463c84ceb538/c929463c84ceb538.sample.jsonl",
+   "schema": 1,
+   "sha256": "10e896356d938da735313bd6ffc0fb3ca84f699b9a2650ffbcd8c53b18a1b645"
+  },
+  {
+   "episode": "d6f539cc3e8728e8",
+   "path": "episodes/d6f539cc3e8728e8/d6f539cc3e8728e8.sample.jsonl",
+   "schema": 1,
+   "sha256": "a4e5dda2facbc63a089c6f9460e97fd8f0baaee2d5b21161106fe0c1f41e61b9"
+  },
+  {
+   "episode": "d6f9cc39994bea23",
+   "path": "episodes/d6f9cc39994bea23/d6f9cc39994bea23.sample.jsonl",
+   "schema": 1,
+   "sha256": "de7d1e96898db5420613f563c22e467b61ed4d86e4bbbf179743b42fe803137f"
+  },
+  {
+   "episode": "e053a2849dddbebe",
+   "path": "episodes/e053a2849dddbebe/e053a2849dddbebe.sample.jsonl",
+   "schema": 1,
+   "sha256": "43e9a17bd0357ff84bafdba1ebe0871f3eb9e54ee304e3123ccf848d3ca323e8"
+  },
+  {
+   "episode": "e0de8e048c30d0d6",
+   "path": "episodes/e0de8e048c30d0d6/e0de8e048c30d0d6.sample.jsonl",
+   "schema": 1,
+   "sha256": "3d79d68be50bc019371819103872dce121e8009b283effad43e8b3b9c66bd67c"
+  },
+  {
+   "episode": "e3a02407766bdf33",
+   "path": "episodes/e3a02407766bdf33/e3a02407766bdf33.sample.jsonl",
+   "schema": 1,
+   "sha256": "6208d488e08b8fc6c6a8ff9c468bea28e79b842e0d024d55ee11c7372c9d2583"
+  },
+  {
+   "episode": "ebaa0de9c4092fd4",
+   "path": "episodes/ebaa0de9c4092fd4/ebaa0de9c4092fd4.sample.jsonl",
+   "schema": 1,
+   "sha256": "29d29ac55274e90c303eb55786df792403ace10a5770e1a62989fe33f908eace"
+  },
+  {
+   "episode": "efd63c576c434d63",
+   "path": "episodes/efd63c576c434d63/efd63c576c434d63.sample.jsonl",
+   "schema": 1,
+   "sha256": "525eb2645a1661e7a4bee381a0a88c2526ba3d35b806a26c2902b92fceafb4fc"
+  },
+  {
+   "episode": "f20d68038c27594c",
+   "path": "episodes/f20d68038c27594c/f20d68038c27594c.sample.jsonl",
+   "schema": 1,
+   "sha256": "4283c825fd88ccc7663f43c404a55649cf9cac74605e8219cf229306538ace80"
+  },
+  {
+   "episode": "fd65634c348f1601",
+   "path": "episodes/fd65634c348f1601/fd65634c348f1601.sample.jsonl",
+   "schema": 1,
+   "sha256": "797fa09f1bdfefbb431ff35fe0c7d68307cff0b1337b972e609a93e9370564f5"
+  },
+  {
+   "episode": "fe34f71ffe61ad61",
+   "path": "episodes/fe34f71ffe61ad61/fe34f71ffe61ad61.sample.jsonl",
+   "schema": 1,
+   "sha256": "d123bf0f787fdbf01a13d07303d768adec80288410c2c93d4b32f0962df337a7"
+  }
+ ],
+ "generated_by": "scripts/build_kept_samples.py",
+ "rule": "bad model-made calls stay in training data",
+ "schema": 1,
+ "v1_samples_unchanged": true
+}

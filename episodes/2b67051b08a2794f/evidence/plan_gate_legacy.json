@@ -1,0 +1,15 @@
+{
+ "episode": "2b67051b08a2794f",
+ "history_unchanged": true,
+ "kind": "megabit.plan_gate_legacy",
+ "needs_review": false,
+ "new_confidence": 0.99,
+ "new_detector": "plan_detector_v1",
+ "new_verdict": true,
+ "old_gate": "v1_footer_plan_before_edit",
+ "old_verdict": false,
+ "reason": "Old v1 footer gate said no plan before the first edit; plan_detector_v1 found a concrete target and verification in the pre-edit text. The new verdict is authoritative but provisional until the machine calibration report passes.",
+ "schema": 1,
+ "source_of_truth": "new_detector",
+ "status": "provisional_until_machine_calibration"
+}

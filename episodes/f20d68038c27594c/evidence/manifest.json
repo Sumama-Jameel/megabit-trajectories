@@ -9,6 +9,8 @@
    "tool_calls": 70
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 70,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "f20d68038c27594c",
  "harness_tests": {
@@ -90,7 +98,21 @@
   "repo_url": "https://github.com/pallets/click",
   "session_id": "a3ae4e15e53642c1b5dcbc2d7549af87",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "420c8fb44eeadb537cae69d2fee3796e808558dd",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "click-45ec183d5a",
+   "license_match": true,
+   "repo_name": "click",
+   "target_commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:03Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "f58ca3e81424a35626c8a475eb59ab95589008ce",
   "target_message": "Fix `copy`, `deepcopy` and `pickle` of `Sentinel` members",
   "task_fingerprint": "sha256:e768533a54310a2e5d067eb866abe76030cc9b246a9772149c91cb4446db58b2",
@@ -118,8 +140,16 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "bash",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "f20d68038c27594c.sample.jsonl",
@@ -198,7 +228,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
- "briefing_file": "briefing.md"
+ }
 }

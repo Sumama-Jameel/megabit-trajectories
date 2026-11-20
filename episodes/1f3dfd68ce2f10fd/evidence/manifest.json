@@ -9,6 +9,8 @@
    "tool_calls": 24
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 24,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "1f3dfd68ce2f10fd",
  "harness_tests": {
@@ -219,7 +227,21 @@
   "repo_url": "https://github.com/jd/tenacity",
   "session_id": "abb3dd65e21148e5a0d51b4e72fa140b",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "124e3a67c7a9b68f46df39d2a7b1a5e8d15270c1",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "tenacity-e9dd6a3faf",
+   "license_match": true,
+   "repo_name": "tenacity",
+   "target_commit": "39eb157a686a8642646807c64d0791de35a0910a",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:54:59Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "39eb157a686a8642646807c64d0791de35a0910a",
   "target_message": "feat: add enabled parameter to disable retrying (#604)",
   "task_fingerprint": "sha256:a823f44fc57a4658c192a3514f7c8116fec5d92cc2af267809b04b2e23aa33e2",
@@ -247,8 +269,17 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": false,
   "reviewer_ran_tests": true,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 1,
+  "reviewer_tool_names": [
+   "execute",
+   "glob",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "1f3dfd68ce2f10fd.sample.jsonl",
@@ -311,7 +342,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
- "briefing_file": "briefing.md"
+ }
 }

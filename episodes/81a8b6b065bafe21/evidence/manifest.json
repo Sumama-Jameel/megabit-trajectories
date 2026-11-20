@@ -9,6 +9,8 @@
    "tool_calls": 95
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 95,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "81a8b6b065bafe21",
  "harness_tests": {
@@ -90,7 +98,21 @@
   "repo_url": "https://github.com/python-attrs/attrs",
   "session_id": "eef6980dbb8841beaf77057076675ea0",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "f3bcc37c3d2dc3199715f825a86b748c3b3805f9",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "attrs-d7a3a3cd07",
+   "license_match": true,
+   "repo_name": "attrs",
+   "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:01Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "862696afb52fb7c0d47d45e05ec4feb844c11001",
   "target_message": "Resolve field aliases before calling field_transformer (#1509)",
   "task_fingerprint": "sha256:fd42ba60324f64814bb2ceff02a42bfae2a5cd938ad4b3921a7c8cfd50d7e153",
@@ -118,8 +140,16 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "execute",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "81a8b6b065bafe21.sample.jsonl",
@@ -214,7 +244,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
- "briefing_file": "briefing.md"
+ }
 }

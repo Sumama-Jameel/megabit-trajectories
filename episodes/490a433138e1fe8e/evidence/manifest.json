@@ -18,6 +18,8 @@
    "tool_calls": 14
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
  "calls": {
   "failure_recovery_tool_calls": 42,
   "jargon_tool_calls": 0,
@@ -27,6 +29,12 @@
   "restored_tool_calls": 42,
   "sample_tool_calls": 14,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "490a433138e1fe8e",
  "harness_tests": {
@@ -135,7 +143,21 @@
   "repo_url": "https://github.com/httpie/cli",
   "session_id": "caa4e6b8f4454e59a8d70e8399177ca0",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "ee598d304dd722d312940d1eeb11161bad72e089",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "cli-212cc5c7c9",
+   "license_match": true,
+   "repo_name": "cli",
+   "target_commit": "0c4c6c47536a853cf1ac0bb3ff69261a380173e3",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:00Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "0c4c6c47536a853cf1ac0bb3ff69261a380173e3",
   "target_message": "Added --auth-type and tests for basic/digest auth.",
   "task_fingerprint": "sha256:788acb18f1b4ed0b82d6d4aa4df2bdc79ea6d019e51dd0572b0f56a32c140b1c",
@@ -166,8 +188,16 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "bash",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "490a433138e1fe8e.sample.jsonl",
@@ -238,7 +268,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "80fd91e553ac12d27efa29ec1d3e596f34bcb3466f2a741c4997f1a113e88eff",
- "briefing_file": "briefing.md"
+ }
 }

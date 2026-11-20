@@ -79,7 +79,7 @@ Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is 
 | Tool executions that failed in samples | 60 |
 | Raw tool_call events missing tool_call_id | 0 |
 | Repositories | attrs, cli, click, packaging, tenacity |
-| Median tool calls per episode | 29 (shipped segments) |
+| Median tool calls per episode | 29 (export attempts) |
 | Tool outputs capped in samples | 138 |
 | Splits | action_only: 56, legacy_unplanned: 6, network_dependent: 1, quarantine_test_only: 1, research_only: 2 |
 | Trainable SFT episodes | 0 (v1 captured no reasoning; see below) |
@@ -116,7 +116,7 @@ A full read-only audit of the corpus (`TRAJECTORY_VERIFICATION_2026-11-17`) foun
 - 6 episodes with no detected plan before the first edit are labelled `legacy_unplanned`; 14 others previously flagged by the old todo-based gate show plans in narration and keep their evidence. No todo write is required by any gate.
 - `b37ef87e467d64e6`'s corrupt grep call is preserved with its rejection in `evidence/restore_rejection.jsonl`; `a066c3d9cbcb7e18`'s degenerate first attempt is preserved in raw with a machine marker and excluded from the clean view (`episode.clean.jsonl`).
 - `611e35323caaf082` now carries an offline replay of its final diff (3/3 sequential runs against the locked seeded tests).
-- 221 authentic calls from failed/superseded attempts are restored as `failure_recovery` data; nothing authentic was silently dropped. 41 `/tmp`-deny events across 38 episodes are annotated as harness friction, not model error; the audit's 68-figure did not reproduce from the shipped bytes and is reconciled in the report.
+- 221 authentic calls from failed/superseded attempts are restored as `failure_recovery` data; nothing authentic was silently dropped. 39 `/tmp`-deny events across 36 episodes (35 of them in 35 samples) are annotated as harness friction, not model error; the audit's 68-figure did not reproduce from the shipped bytes. `counts.json` is the single source of truth.
 - No secrets anywhere: 2,738 files byte-scanned (0 findings); `keys/` never published and now git-ignored.
 - Every provenance field is a boolean with a reason; the two null records are corrected to `false` with the reason recorded (framework hashes unchanged — the raw bytes are the record).
 
@@ -284,7 +284,9 @@ composite show line similarity instead.
 - § `611e35323caaf082` recorded no three-run harness round in its retry journal
   (the reviewer ran the suite). An offline replay of the final diff against the
   locked seeded tests passes 3 of 3 sequential runs; see
-  `episodes/611e35323caaf082/evidence/harness_replay.json`.
+  `episodes/611e35323caaf082/evidence/harness_replay.json`. The replay is
+  environment-adapted (host Python 3.10.12), so it is labeled a replay, not a
+  canonical harness round.
 
 ## Read This Before You Pretrain
 
@@ -294,6 +296,8 @@ composite show line similarity instead.
 - **Not contamination-free.** The target commit is public, so the fix is derivable from upstream. Use it for training and research, not as a clean leaderboard.
 - **Splits, stated precisely.** `action_only` (56): real actions and real observations, no captured reasoning — v1 disabled reasoning in every provider config, so the segments are honest action data, not reasoning data. `research_only` (2): iteration-cap sessions. `legacy_unplanned` (6): no plan detected before the first edit by `plan_detector_v1`; kept as negative examples. `network_dependent` (1): `490a433138e1fe8e`. `quarantine_test_only` (1): `966101f98864fafa`. **No trainable SFT split is published from v1**: until episodes are recorded with reasoning enabled, nothing in this corpus ships as reasoning-bearing SFT data.
 - **Two episodes are labelled `research_only`** because they ended at the iteration cap, and both record an agent-written test log inside their final diff. They are kept and flagged, not hidden.
+- **966 is kept, not replaced.** Its target was test-only, so the coder could not implement a fix. The 51 real tool calls and the correct refusal remain useful failure-mode data (1 of 66). It is quarantined, not trainable.
+- **20 v1 prompts contained a false statement about git.** They called `git status`, `git diff` and `git log` useless. The statement was wrong for inspecting the agent's own work. The archived prompt bytes are unchanged. Each episode records `evidence/briefing_policy.json`; the 20 affected episodes are `sft_eligible: false` and excluded from every trainable list.
 
 ---
 

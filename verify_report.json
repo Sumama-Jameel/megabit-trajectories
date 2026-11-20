@@ -5,18 +5,19 @@
     "deep_report_and_signed_manifest": true,
     "every_raw_call_accounted": true,
     "no_jargon_in_training": true,
-    "no_sft_network_dependency": true,
-    "no_sft_test_only_target": true,
-    "offline_replay": "not_applicable_no_sft",
+    "no_sft_network_dependency": "not_applicable",
+    "no_sft_test_only_target": "not_applicable",
+    "offline_replay": "not_applicable",
     "provenance_booleans": true,
     "rejection_preserved": true,
     "replay_summary": null,
-    "reviewer_never_runs_tests": true,
-    "sft_plan_before_edit": true,
-    "sft_reasoning_captured": true,
-    "sft_source_change": true,
-    "sft_three_sequential_runs": true,
+    "reviewer_never_runs_tests": "not_applicable",
+    "sft_plan_before_edit": "not_applicable",
+    "sft_reasoning_captured": "not_applicable",
+    "sft_source_change": "not_applicable",
+    "sft_three_sequential_runs": "not_applicable",
     "tickets_diff1_only": true,
+    "training_manifest_ok": true,
     "v1_accounted": true,
     "v1_hash_identical": true,
     "v1_reasoning_not_fabricated": true
@@ -28,8 +29,8 @@
     "episodes": 66,
     "exported_tool_calls": 2312,
     "failure_recovery_tool_calls": 221,
-    "harness_green_rounds": 65,
-    "harness_test_runs": 195,
+    "harness_green_rounds": 31,
+    "harness_test_runs": 198,
     "jargon_tool_calls": 0,
     "raw_tool_calls": 2541,
     "reasoning_available": 0,
@@ -56,8 +57,9 @@
   "schema": 1,
   "secret_scan": {
     "findings": [],
-    "scanned_files": 2198
+    "scanned_files": 2347
   },
+  "sft_count": 0,
   "splits": {
     "action_only": 56,
     "legacy_unplanned": 6,
@@ -66,5 +68,15 @@
     "research_only": 2
   },
   "v2_root": "/home/sumama/Private/megabit-trajectories",
+  "vacuous_gates": [
+    "no_sft_network_dependency",
+    "no_sft_test_only_target",
+    "offline_replay",
+    "reviewer_never_runs_tests",
+    "sft_plan_before_edit",
+    "sft_reasoning_captured",
+    "sft_source_change",
+    "sft_three_sequential_runs"
+  ],
   "warnings": []
 }

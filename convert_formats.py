@@ -80,8 +80,26 @@ def digest(obj) -> str:
     return sha256_bytes(payload)
 
 
+def _is_kept(call: dict) -> bool:
+    """A model-made bad call kept with the validated v2 wrapper."""
+    return (call.get("parse_status") == "error"
+            and isinstance(call.get("arguments_raw"), str))
+
+
+def _kept_call_view(call: dict) -> dict:
+    """Logical view of a kept rejection: raw text, never a fake object."""
+    return {"id": call.get("id"), "name": call.get("name"),
+            "parse_status": "error",
+            "arguments_raw": call.get("arguments_raw") or ""}
+
+
 def canonical(messages: list[dict]) -> list[dict]:
-    """The logical record, independent of any serialized shape."""
+    """The logical record, independent of any serialized shape.
+
+    v2 kept rejections carry ``parse_status: error`` and ``arguments_raw``
+    instead of a parseable ``arguments`` object. The wrapper is preserved;
+    no reader tries to parse half-written JSON as a dict.
+    """
     out = []
     for m in messages:
         role = m.get("role")
@@ -90,11 +108,14 @@ def canonical(messages: list[dict]) -> list[dict]:
             calls = m.get("tool_calls") or []
             if calls:
                 item["tool_calls"] = [
+                    _kept_call_view(c) if _is_kept(c) else
                     {"id": c.get("id"), "name": c.get("name"),
                      "arguments": c.get("arguments") or {}} for c in calls]
         if role == "tool":
             item["tool_call_id"] = m.get("tool_call_id")
             item["name"] = m.get("name")
+            if m.get("error") == "rejected":
+                item["error"] = "rejected"
         out.append(item)
     return out
 
@@ -174,7 +195,9 @@ def emit_openai(record: dict, messages: list[dict]) -> dict:
         if role == "assistant":
             item = {"role": "assistant", "content": m.get("content") or ""}
             calls = m.get("tool_calls") or []
-            if calls:
+            kept = [c for c in calls if _is_kept(c)]
+            normal = [c for c in calls if not _is_kept(c)]
+            if normal:
                 item["tool_calls"] = [{
                     "id": c.get("id"),
                     "type": "function",
@@ -184,8 +207,17 @@ def emit_openai(record: dict, messages: list[dict]) -> dict:
                                                 ensure_ascii=False,
                                                 sort_keys=True),
                     },
-                } for c in calls]
+                } for c in normal]
             out.append(item)
+            # A kept rejection cannot be represented as a strict function
+            # call: its arguments are not JSON. Emit it as an honest text
+            # note instead, so an OpenAI-format reader never crashes.
+            for c in kept:
+                out.append({"role": "assistant",
+                            "content": (
+                                f"[rejected tool call: {c.get('name')} "
+                                f"id={c.get('id')}; arguments were not valid "
+                                f"JSON; raw={c.get('arguments_raw')}]")})
         elif role == "tool":
             out.append({"role": "tool",
                         "tool_call_id": m.get("tool_call_id"),

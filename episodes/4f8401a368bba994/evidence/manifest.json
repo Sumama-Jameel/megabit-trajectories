@@ -18,6 +18,8 @@
    "tool_calls": 95
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
  "calls": {
   "failure_recovery_tool_calls": 28,
   "jargon_tool_calls": 0,
@@ -27,6 +29,12 @@
   "restored_tool_calls": 28,
   "sample_tool_calls": 95,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "4f8401a368bba994",
  "harness_tests": {
@@ -99,7 +107,21 @@
   "repo_url": "https://github.com/pallets/click",
   "session_id": "3b9728f5cd674196999179c2f3779c55",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "cbd7a4109da16ce58f54c2a618b4c986e3041fcf",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "click-45ec183d5a",
+   "license_match": true,
+   "repo_name": "click",
+   "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:00Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "bc32a92cd2ae77afb2352f79ebdf00997f35d333",
   "target_message": "Refactor pager stream handling; drop text/binary branching",
   "task_fingerprint": "sha256:dd5fa8cf55f00485c105273ce9675c815a80ab674f4f3972175b0a17318d145a",
@@ -127,8 +149,16 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "execute",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "4f8401a368bba994.sample.jsonl",
@@ -223,7 +253,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
- "briefing_file": "briefing.md"
+ }
 }

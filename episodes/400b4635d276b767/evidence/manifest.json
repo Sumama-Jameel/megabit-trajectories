@@ -9,6 +9,8 @@
    "tool_calls": 12
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 12,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "400b4635d276b767",
  "harness_tests": {
@@ -90,7 +98,21 @@
   "repo_url": "https://github.com/jd/tenacity",
   "session_id": "b90a968c2cf9436c9d0ce94fff22241e",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "6be363b0439bd213dd5ea4cb0c0c184bf616232a",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "tenacity-e9dd6a3faf",
+   "license_match": true,
+   "repo_name": "tenacity",
+   "target_commit": "213446e8f5f73ca0d20e22ec8ee38b1f75a45434",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:00Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "213446e8f5f73ca0d20e22ec8ee38b1f75a45434",
   "target_message": "fix: guard against None seconds_since_start in after_log (#591)",
   "task_fingerprint": "sha256:3b949c45143b45b3bc16e2f280efa2a0282dcd967f0709b5f07eb247a49cc6bf",
@@ -118,8 +140,17 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "execute",
+   "grep",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "400b4635d276b767.sample.jsonl",
@@ -190,7 +221,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "a567179a5631859b4fa1c76ceabe08e75923d20f1668526ccd958a3b5b54b1e7",
- "briefing_file": "briefing.md"
+ }
 }

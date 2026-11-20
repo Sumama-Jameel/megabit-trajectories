@@ -56,6 +56,42 @@ def find_episodes(root: Path) -> list:  # returns episode dirs
     return eps, "kaggle<task_id>/episodes/<task_id>/"
 
 
+def _check_v2_sample(ep: Path, problems: list) -> None:
+    """Validate a kept-rejection v2 sample when one ships beside v1.
+
+    v1 bytes are never touched. A v2 file uses the same one-line JSONL shape,
+    with bad model-made calls in the labeled ``parse_status: error`` wrapper
+    and a paired tool turn carrying the rejection. Strict readers can branch
+    on ``parse_status`` before parsing arguments.
+    """
+    v2 = ep / f"{ep.name}.sample_v2.jsonl"
+    if not v2.exists():
+        return
+    rows = read_jsonl(v2)
+    if len(rows) != 1:
+        problems.append("sample_v2 must contain exactly one JSON line")
+        return
+    messages = rows[0].get("messages") or []
+    kept: dict[str, dict] = {}
+    for m in messages:
+        for call in (m.get("tool_calls") or []):
+            if (call.get("parse_status") == "error"
+                    and isinstance(call.get("arguments_raw"), str)
+                    and call.get("arguments_raw")):
+                kept[str(call.get("id"))] = call
+    tool_by_id = {str(m.get("tool_call_id")): m for m in messages
+                  if m.get("role") == "tool"}
+    for cid, call in kept.items():
+        tool = tool_by_id.get(cid)
+        if tool is None:
+            problems.append(f"kept rejection has no tool result: {cid}")
+            continue
+        if tool.get("error") != "rejected":
+            problems.append(f"kept rejection lacks rejection marker: {cid}")
+        if not str(tool.get("content") or "").strip():
+            problems.append(f"kept rejection has no error text: {cid}")
+
+
 def check_episode(ep: Path) -> list:
     problems = []
     fin_path = ep / "finalization.json"
@@ -115,6 +151,7 @@ def check_episode(ep: Path) -> list:
         if verification.get("passed") is False:
             problems.append("verification.passed is false")
 
+    _check_v2_sample(ep, problems)
     return problems
 
 
@@ -127,6 +164,24 @@ def main() -> int:
     if not quiet:
         print(f"layout: {layout} ({len(dirs)} episode dirs)")
     failures = 0
+
+    manifest_path = ROOT / "training_manifest.json"
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            rows = manifest.get("episodes") or []
+            if len(rows) != len(dirs):
+                print("FAIL training_manifest episode count mismatch")
+                failures += 1
+            for row in rows:
+                rel, digest = row.get("path"), row.get("sha256")
+                target = ROOT / str(rel)
+                if not target.is_file() or sha256(target) != digest:
+                    print(f"FAIL training_manifest checksum: {row.get('episode')}")
+                    failures += 1
+        except Exception as exc:
+            print(f"FAIL training_manifest unreadable: {exc}")
+            failures += 1
     for ep in dirs:
         problems = check_episode(ep)
         if problems:

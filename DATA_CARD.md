@@ -1,6 +1,6 @@
 # MegaBit Trajectories — Data Card
 
-Last updated: 2026-11-17
+Last updated: 2026-11-19
 Corpus: 66 episodes (samples rebuilt 2026-11-12; remediated in place 2026-11-17; raw episode files unchanged)
 Generator: MegaBit (private factory)
 License of this packaging: MIT. Upstream source code remains under its original license.
@@ -37,6 +37,8 @@ That is the part most public trajectory corpora drop.
 | Line similarity | 66 episodes, range 0.3107–1.0000, median 0.5723 |
 | Splits | action_only: 56, legacy_unplanned: 6, network_dependent: 1, quarantine_test_only: 1, research_only: 2 |
 | Trainable SFT episodes | 0 (see “Splits and transcript flags”) |
+| /tmp write denials (raw / sample) | 39 events in 36 episodes / 35 events in 35 episodes |
+| v2 diff score | not recomputable: target diffs are not published; every manifest records `v1_not_recomputed` |
 | Transcripts ending on an answer | 64 (`ends_with_final_answer`); 2 end on a tool result |
 | Tool output truncated in samples | 138 messages, cap 8,000 chars (see policy below) |
 | Total size | ~63 MB |
@@ -49,6 +51,26 @@ similarity is a weighted score over file overlap, line similarity, token similar
 and hunk containment. Line similarity is a stricter sub-score and can fall below
 0.45 even when the composite passes. Do not read the corpus as "every line matches
 the human patch."
+
+### v2 source-aware score
+
+The 2026-11-19 engine adds `diff_score_v2`: source-file overlap plus the four
+existing components, with hard rejection of targets that change only tests,
+docs or a license. The published v1 corpus cannot carry that score because it
+publishes target diff hashes and file lists, not target diff text. Every
+manifest therefore says `version: v1_not_recomputed` and states the reason.
+This is a missing input, not a passing score. New episodes record v2.
+
+### Briefing defect in 20 v1 prompts
+
+20 of 66 episodes were run with a prompt that called `git status`, `git diff`
+and `git log` useless. The statement was wrong for inspecting the agent's own
+work. The archived prompt bytes are unchanged, because they are the record of
+what the agent actually saw. Each episode carries
+`evidence/briefing_policy.json`; the 20 affected episodes are marked
+`false_git_useless`, `sft_eligible: false`, and are excluded from every
+trainable list. The current engine template allows `git status` and `git diff`
+and a unit test forbids the old sentence from returning.
 
 All 66 episodes carry `composite_similarity` today: in the `verification` block of
 each raw footer and in `metadata` of each sample. The median is 0.6593, and every
@@ -255,13 +277,23 @@ replacement for SWE-bench-style evaluation.
 - One episode (`490a433138e1fe8e`) depends on a live external host; one (`966101f98864fafa`)
   has a test-only human target; six have no detected plan before the first edit. All eight
   are labelled or quarantined rather than hidden.
+- 966 is kept as useful failure-mode data: 51 real tool calls, a real recovery arc and a
+  correct refusal. Its target had no source change, so it is not a coding lesson and stays
+  out of every training-ready list (1 of 66).
+- 490's two auth tests were re-run in a reconstructed environment with network access on,
+  using the recorded requests 2.34.2, the coder's `conftest.py` and `pytest.ini`, and three
+  sequential passes. No original image digest was recorded, so the result is labeled
+  reconstructed, not canonical (`evidence/network_replay.json`).
 - `611e35323caaf082` recorded no three-run harness round in its export journal (the reviewer
   executed the suite). An offline replay of its final diff passes 3/3 against the locked
-  seeded tests (evidence/harness_replay.json).
-- The 68 `/tmp`-denial rejections previously reported were re-measured: 41 denial events in
-  raw logs (36 bash, 3 execute, 2 write) across 38 episodes; the audit’s number was measured
-  over a broader source and does not reproduce from this corpus's bytes. Annotated as
-  harness friction, not model error.
+  seeded tests (evidence/harness_replay.json). All 66 episodes now carry
+  `evidence/harness_v2.json` with complete per-run fields from a reconstructed host replay.
+  Docker was unavailable, so every one is labeled `environment_match: reconstructed` and
+  `canonical: false`; 31 replays are green and 35 are not green in this environment.
+- The 68 `/tmp`-denial rejections previously reported were re-measured with one matcher:
+  39 raw denial events across 36 episodes and 35 in samples across 35 episodes. `counts.json`
+  is the single source of truth; the old 41/38 figure came from a broader source and does not
+  reproduce from this corpus's bytes. Annotated as harness friction, not model error.
 - Python only in v1. No Rust, Go, C/C++, or kernel-scale data yet.
 - Five repositories. Narrow domain coverage.
 - Two episodes ended at the iteration cap; they are flagged in metadata even though
@@ -345,7 +377,7 @@ README said 553 split parallel calls repaired in samples; the published
 samples carry 552. README claimed a median sample of about 72k characters and
 about 17k tokens; measured on len() of message content it is about 62k
 (~15.5k tokens, 4 chars/token), and the largest is about 230k. DATA_CARD said
-2,312 tool calls in shipped segments; the published samples carry 2,311
+2,312 export attempts; the published v1 samples carry 2,311
 tool-call records (attempts at export here total 2,312; the corrupt call of
 b37ef87e467d64e6 is excluded from the sample layer and kept verbatim in
 the raw log). The logs/ description promised a provider alerts file; no

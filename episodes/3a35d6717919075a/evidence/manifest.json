@@ -9,6 +9,8 @@
    "tool_calls": 33
   }
  ],
+ "briefing_file": "briefing.md",
+ "briefing_hash": "e4b786c468f62c29db8b7b90cb48c63c500525ac73f14c9339052f29af886494",
  "calls": {
   "failure_recovery_tool_calls": 0,
   "jargon_tool_calls": 0,
@@ -18,6 +20,12 @@
   "restored_tool_calls": 0,
   "sample_tool_calls": 33,
   "unresolved_tool_calls": 0
+ },
+ "diff_score": {
+  "reason": "target_diff_not_published",
+  "score": null,
+  "source_change": null,
+  "version": "v1_not_recomputed"
  },
  "episode_id": "3a35d6717919075a",
  "harness_tests": {
@@ -90,7 +98,21 @@
   "repo_url": "https://github.com/python-attrs/attrs",
   "session_id": "b1108d2831884cd58b4210d498021b2f",
   "source_verified": true,
-  "source_verify_reason": "legacy record states verified without a stored reason",
+  "source_verify_evidence": {
+   "base_commit": "8bb430cf1887feae4e04d2821d4ee3725038eb9c",
+   "base_exists": true,
+   "base_is_ancestor": true,
+   "clone": "attrs-d7a3a3cd07",
+   "license_match": true,
+   "repo_name": "attrs",
+   "target_commit": "4f62d47d087ac4e704b29ac44ca562be2da871ad",
+   "target_diff_sha256_match": true,
+   "target_exists": true,
+   "task_mac_valid": true,
+   "verified_at": "2026-11-19T15:55:00Z"
+  },
+  "source_verify_method": "git_reverified",
+  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
   "target_commit": "4f62d47d087ac4e704b29ac44ca562be2da871ad",
   "target_message": "We don't need three names for the same thing",
   "task_fingerprint": "sha256:56adc420e57aa116e08ad85a7141ee8b50eb3100f8301167e85267f0788f0aec",
@@ -118,8 +140,17 @@
   "findings_count": 1,
   "note": "Reviewer execution is not a test gate; the harness owns tests.",
   "reviewer_authoritative": false,
+  "reviewer_log_present": true,
+  "reviewer_never_runs_tests": true,
   "reviewer_ran_tests": false,
+  "reviewer_shell_available": true,
   "reviewer_test_calls": 0,
+  "reviewer_tool_names": [
+   "bash",
+   "grep",
+   "read",
+   "write"
+  ],
   "schema": 1
  },
  "sample_path": "3a35d6717919075a.sample.jsonl",
@@ -206,7 +237,5 @@
    "unknown_paths": []
   },
   "unknown_paths": []
- },
- "briefing_hash": "e4b786c468f62c29db8b7b90cb48c63c500525ac73f14c9339052f29af886494",
- "briefing_file": "briefing.md"
+ }
 }
