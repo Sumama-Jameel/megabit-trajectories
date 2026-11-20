@@ -21,9 +21,9 @@
    "sha256": "d4e84e2d1d63646a8e0b4b53864d43030960549d6db9b0af2cfa428460b3cd56"
   },
   {
-   "bytes": 22801,
+   "bytes": 11695,
    "path": "DATA_CARD.md",
-   "sha256": "6e6099ab34dfb9a1adb72032ef50e987afe9b394fc3423cf481fefac21f086aa"
+   "sha256": "3043556d4e03ffe437a5f7625b8f17f0e7546783946c1ce7e3c3ec561ab5920f"
   },
   {
    "bytes": 1070,
@@ -11761,12 +11761,12 @@
    "sha256": "a302a61adc3fc638fb00f78b73f28bc0bda73d9e53dbd0ab24a10a650ba0c680"
   }
  ],
- "generated_at": "2026-11-20T16:56:38Z",
+ "generated_at": "2026-11-20T17:37:54Z",
  "kind": "megabit.release.manifest",
  "remediation_version": "2026-11-17-r2",
  "root": "/home/sumama/Private/megabit-trajectories",
  "schema": 1,
- "signature": "9834345c9431e7d6aabaf40bed5ffb3051bc283d78ce6bb1383dc85231551d74",
- "total_bytes": 63788538,
- "tree_sha256": "100c9fea58b6b95c6de2201cee5972f35cdb89c6c2ef84ace39f7c1ec70b7f38"
+ "signature": "f9aa9a08f8c3e5d2383a0d189f6645c56bc494ceb5d778a88120f80a2b3580b4",
+ "total_bytes": 63777432,
+ "tree_sha256": "ac29893af082f25b73425200cf8fb00c2fcdf97c4f1d6738497685f4fe3a0e59"
 }
