@@ -89,7 +89,17 @@ reviewer logs (77 lines mention the exact phrase across agent roles) and
 episodes that are not in this corpus's export scope. The figure preserved in
 the audit doc is accepted as their measurement of one, differently defined
 source; the figure this corpus pins is 41 across 38 episodes, and both are
-recorded here rather than one silently rewriting the other. The denials are
+recorded here rather than one silently rewriting the other.
+
+**2026-11-20 supersession.** The 41/38 figure above used a broader error-text
+matcher, including the two `write blocked by --write-allow` rows in
+`c929463c84ceb538` and `efd63c576c434d63`. The canonical matcher owned by
+`megabit.remediation.counts.count_denials` is the exact redirect-target error
+`outside --write-allow`; it measures 39 raw denials in 36 episodes and 35 in
+35 samples. Those canonical values are written into `counts.json` and quoted
+by `README.md` and `DATA_CARD.md`. The two broader-matcher rows remain in the
+evidence files, annotated with `matcher_scope: broader_error_text` and
+`canonical_match: false`; no evidence was deleted. The denials are
 annotated in `evidence/harness_friction.jsonl`; they are harness friction, not
 model error, and were not removed from raw or samples. The engine fix
 (writable `$TMPDIR` under `/workspace/.megabit_tmp`) is tracked in the engine

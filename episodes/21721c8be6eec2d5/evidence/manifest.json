@@ -67,6 +67,7 @@
   "applicable": true,
   "confidence": 0.99,
   "detected": true,
+  "detected_by": "deterministic",
   "detector_version": "plan_detector_v1",
   "evidence_event_ids": [
    127
@@ -104,15 +105,20 @@
    "base_is_ancestor": true,
    "clone": "attrs-d7a3a3cd07",
    "license_match": true,
+   "license_match_stored": true,
+   "license_recheck_why": "",
    "repo_name": "attrs",
    "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
    "target_diff_sha256_match": true,
    "target_exists": true,
+   "task_mac_recheck_status": null,
+   "task_mac_recheck_why": "task record unavailable; export-time verdict preserved",
+   "task_mac_rechecked": false,
    "task_mac_valid": true,
-   "verified_at": "2026-11-19T15:54:59Z"
+   "verified_at": "2026-11-21T12:44:29Z"
   },
   "source_verify_method": "git_reverified",
-  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
+  "source_verify_reason": "base/target commits, ancestry, target diff hash and license re-checked from git; task MAC NOT re-checked (export-time verdict True preserved)",
   "target_commit": "6e3786c599279f24e91b0d57ef448f7a85d7a69f",
   "target_message": "Make `kw_only=True` behavior consistent with dataclasses (#1457)",
   "task_fingerprint": "sha256:d7ae9fe123d038b5b0013c28d0fa07c86c3a330804c0320439f47e58d4167933",

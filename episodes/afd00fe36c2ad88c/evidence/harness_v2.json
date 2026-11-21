@@ -1,4 +1,5 @@
 {
+ "agent_egress_relaxed": null,
  "canonical": false,
  "diff_sha256": "0bb527f0a1a8d3f9fd942876cd47fd427cee970df884656f0ac9f6c1beade1ef",
  "docker_available": false,
@@ -17,6 +18,8 @@
  "ok": true,
  "pytest_version": "pytest 9.0.3",
  "python_version": "Python 3.10.12",
+ "replay_network_access": "host_default",
+ "required_test_hosts": [],
  "run_count": 3,
  "runs": [
   {

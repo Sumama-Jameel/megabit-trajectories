@@ -1,6 +1,6 @@
 # MegaBit Trajectories — Data Card
 
-Last updated: 2026-11-19
+Last updated: 2026-11-20
 Corpus: 66 episodes (samples rebuilt 2026-11-12; remediated in place 2026-11-17; raw episode files unchanged)
 Generator: MegaBit (private factory)
 License of this packaging: MIT. Upstream source code remains under its original license.

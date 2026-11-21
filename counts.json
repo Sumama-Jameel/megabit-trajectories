@@ -23,5 +23,10 @@
   "ticket_path_audits": 66,
   "ticket_path_failures": 0,
   "ticket_path_unverifiable": 0,
+  "tmp_write_denial_episodes_raw": 36,
+  "tmp_write_denial_episodes_sample": 35,
+  "tmp_write_denial_matcher": "outside --write-allow",
+  "tmp_write_denials_raw": 39,
+  "tmp_write_denials_sample": 35,
   "unresolved_tool_calls": 0
 }

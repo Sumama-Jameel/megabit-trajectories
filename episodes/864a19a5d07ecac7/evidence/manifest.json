@@ -67,6 +67,7 @@
   "applicable": true,
   "confidence": 0.99,
   "detected": true,
+  "detected_by": "deterministic",
   "detector_version": "plan_detector_v1",
   "evidence_event_ids": [
    29
@@ -104,15 +105,20 @@
    "base_is_ancestor": true,
    "clone": "click-45ec183d5a",
    "license_match": true,
+   "license_match_stored": true,
+   "license_recheck_why": "",
    "repo_name": "click",
    "target_commit": "271effb3d96da5575eb527216ce3552bd7628fab",
    "target_diff_sha256_match": true,
    "target_exists": true,
+   "task_mac_recheck_status": null,
+   "task_mac_recheck_why": "task record unavailable; export-time verdict preserved",
+   "task_mac_rechecked": false,
    "task_mac_valid": true,
-   "verified_at": "2026-11-19T15:55:01Z"
+   "verified_at": "2026-11-21T12:44:30Z"
   },
   "source_verify_method": "git_reverified",
-  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
+  "source_verify_reason": "base/target commits, ancestry, target diff hash and license re-checked from git; task MAC NOT re-checked (export-time verdict True preserved)",
   "target_commit": "271effb3d96da5575eb527216ce3552bd7628fab",
   "target_message": "Add `Option.get_help_spec` to return the option's help left part",
   "task_fingerprint": "sha256:18f9c47967f5e217e251bb7f26b242301ce2761ff21829086eb9d2b6bb0bef65",

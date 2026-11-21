@@ -50,14 +50,14 @@ import json, glob
 records = [json.load(open(p)) for p in
            sorted(glob.glob("episodes/*/*.sample.jsonl"))]
 
-sft = [r for r in records if r["metadata"]["split"] == "sft"]
-ep = sft[0]
+action = [r for r in records if r["metadata"]["split"] == "action_only"]
+ep = action[0]
 print(ep["provenance"]["repo_name"], ep["provenance"]["license_spdx"])
 print(len(ep["messages"]), "messages,", len(ep["tools"]), "tools")
 print(ep["messages"][0]["content"][:400])       # the system prompt
 ```
 
-Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is OpenAI function-calling format, so it drops into most SFT stacks without a converter.
+Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is OpenAI function-calling format, so a chat-format loader can read every message as shipped. There are no trainable SFT episodes in this release.
 
 ---
 
@@ -81,6 +81,7 @@ Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is 
 | Repositories | attrs, cli, click, packaging, tenacity |
 | Median tool calls per episode | 29 (export attempts) |
 | Tool outputs capped in samples | 138 |
+| Harness `/tmp` write denials (canonical matcher) | 39 in 36 raw episodes; 35 in 35 samples |
 | Splits | action_only: 56, legacy_unplanned: 6, network_dependent: 1, quarantine_test_only: 1, research_only: 2 |
 | Trainable SFT episodes | 0 (v1 captured no reasoning; see below) |
 | Line similarity median | 0.5723 |
@@ -293,7 +294,7 @@ python3 verify.py --quiet
 
 It re-computes both sha256 values per episode, checks header and footer presence, tool-call counts, the export verdict, provenance fields, and the recorded `task_mac_valid` verdict (it does not re-derive the HMAC). It does not re-run the sandbox; it checks that the record you downloaded is the record that was published.
 
-Deeper checks live with the engine (`megabit-remediation` tooling): a deep verifier re-derives counts from the artifacts, re-checks every raw call disposition, re-audits every ticket/hint path against the Diff1 tree, re-scans secrets including binaries, and verifies the signed `release_manifest.json` at the repository root. `counts.json` at the repository root is the single generated source of truth for every number above; the release manifest covers every file except itself, the signature, and the deep-verification report.
+Deeper checks live with the engine (`megabit-remediation` tooling): a deep verifier re-derives counts from the artifacts, re-checks every raw call disposition, re-audits every ticket/hint path against the Diff1 tree, re-scans secrets including binaries, and verifies the signed `release_manifest.json` at the repository root. `counts.json` at the repository root is the single generated source of truth for every number above; the release manifest covers every file except itself, the signature, the replay report, and the deep-verification report.
 
 Operational records (setup state, setup logs, retry journals, feedback reports, finalization, config snapshots) carry placeholders instead of the build machine's paths: `<MEGABIT_DATA>`, `<MEGABIT_REPO>`, `<HOME>`, `<SANDBOX_HOME>`. Raw logs and samples are untouched, so every sha256 above still covers the published bytes.
 

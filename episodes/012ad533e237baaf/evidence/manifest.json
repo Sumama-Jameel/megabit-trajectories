@@ -67,6 +67,7 @@
   "applicable": true,
   "confidence": 0.99,
   "detected": true,
+  "detected_by": "deterministic",
   "detector_version": "plan_detector_v1",
   "evidence_event_ids": [
    48
@@ -104,15 +105,20 @@
    "base_is_ancestor": true,
    "clone": "packaging-5de5720acd",
    "license_match": true,
+   "license_match_stored": true,
+   "license_recheck_why": "",
    "repo_name": "packaging",
    "target_commit": "053c884615f2e83d80705251b447769ec2599653",
    "target_diff_sha256_match": true,
    "target_exists": true,
+   "task_mac_recheck_status": null,
+   "task_mac_recheck_why": "task record unavailable; export-time verdict preserved",
+   "task_mac_rechecked": false,
    "task_mac_valid": true,
-   "verified_at": "2026-11-19T15:54:59Z"
+   "verified_at": "2026-11-21T12:44:28Z"
   },
   "source_verify_method": "git_reverified",
-  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
+  "source_verify_reason": "base/target commits, ancestry, target diff hash and license re-checked from git; task MAC NOT re-checked (export-time verdict True preserved)",
   "target_commit": "053c884615f2e83d80705251b447769ec2599653",
   "target_message": "tags: add interpreter_abi (#611)",
   "task_fingerprint": "sha256:bf6a5d16fb279fe9e6f0296fc3f6e0bc449657e4789b49c4374c558dd31bdd66",

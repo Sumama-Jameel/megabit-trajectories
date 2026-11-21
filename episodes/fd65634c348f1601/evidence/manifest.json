@@ -67,6 +67,7 @@
   "applicable": true,
   "confidence": 0.99,
   "detected": true,
+  "detected_by": "deterministic",
   "detector_version": "plan_detector_v1",
   "evidence_event_ids": [
    62
@@ -104,15 +105,20 @@
    "base_is_ancestor": true,
    "clone": "click-45ec183d5a",
    "license_match": true,
+   "license_match_stored": true,
+   "license_recheck_why": "",
    "repo_name": "click",
    "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
    "target_diff_sha256_match": true,
    "target_exists": true,
+   "task_mac_recheck_status": null,
+   "task_mac_recheck_why": "task record unavailable; export-time verdict preserved",
+   "task_mac_rechecked": false,
    "task_mac_valid": true,
-   "verified_at": "2026-11-19T15:55:03Z"
+   "verified_at": "2026-11-21T12:44:31Z"
   },
   "source_verify_method": "git_reverified",
-  "source_verify_reason": "base and target commits, ancestry, target diff hash, license and task MAC re-checked",
+  "source_verify_reason": "base/target commits, ancestry, target diff hash and license re-checked from git; task MAC NOT re-checked (export-time verdict True preserved)",
   "target_commit": "405a5481e4dbd5022799993d787bd8446137d9a3",
   "target_message": "Move common `help` argument from `Option` and `Argument` to `Parameter`",
   "task_fingerprint": "sha256:8ba9aac929f6d1a27611216c85b5f959e0c73a9210c9f362e3b68bf8f964c887",

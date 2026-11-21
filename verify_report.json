@@ -78,5 +78,7 @@
     "sft_source_change",
     "sft_three_sequential_runs"
   ],
-  "warnings": []
+  "warnings": [
+    "release_manifest.sig not verified: corpus ships no key (public mode)"
+  ]
 }
