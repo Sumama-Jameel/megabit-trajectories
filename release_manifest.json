@@ -13,7 +13,7 @@
     "keys",
     "node_modules"
   ],
-  "file_count": 2349,
+  "file_count": 2350,
   "files": [
     {
       "bytes": 216,
@@ -31,14 +31,19 @@
       "sha256": "92d31c2cece55b8bd232b1d11846eefe5228b11cb0b1de7840ee0ac7d918b48f"
     },
     {
-      "bytes": 27952,
+      "bytes": 28351,
       "path": "README.md",
-      "sha256": "e46d3afcf7df6252c6e746b2da1e2a21c0c937e6006edc9b779d79c0af5513a3"
+      "sha256": "8cb4d9ecbdb4e50428f22526699c51ea82a778a450857b734d4f641eadda72a8"
     },
     {
       "bytes": 18536,
       "path": "REMEDIATION_REPORT_2026-11-17.md",
       "sha256": "684295f6272a42c24b46fdb4fac3a35a04a6c55a37cbfeda9d5d78d2a3546e2e"
+    },
+    {
+      "bytes": 2465,
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "a9994bfd15f22069c93b8795ec9d3f370bd3357deedf57999e2a068168671266"
     },
     {
       "bytes": 7793,
@@ -11761,13 +11766,13 @@
       "sha256": "a302a61adc3fc638fb00f78b73f28bc0bda73d9e53dbd0ab24a10a650ba0c680"
     }
   ],
-  "generated_at": "2026-11-21T12:44:33Z",
+  "generated_at": "2026-11-22T14:02:49Z",
   "kind": "megabit.release.manifest",
   "remediation_version": "2026-11-17-r2",
   "root": "/home/sumama/Private/megabit-trajectories",
   "schema": 1,
-  "signature": "31ee951c06512c872f3a29cb290ae1993e1dfb327dc64e8669e0d3847913c439",
-  "total_bytes": 63805641,
-  "tree_sha256": "3661e18e404edd243261828547d63d01ac076bdd7f28fb1f5effd5b80e97c183",
+  "signature": "d820b4a88e32e38278a784e5cce11ea47d8dc380d20d644a2f8de70d3e6604f4",
+  "total_bytes": 63808505,
+  "tree_sha256": "ebedc646a3d5e2385b795381f7b17b930b48d81c816cc07e738bb53d81542405",
   "v2_root": "/home/sumama/Private/megabit-trajectories"
 }
