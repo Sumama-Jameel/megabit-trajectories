@@ -2,32 +2,104 @@
 
 [![Episodes](https://img.shields.io/badge/Episodes-66-blue)](#composition)
 [![Verified](https://img.shields.io/badge/Verified-66%2F66-success)](verify.py)
-[![Tool calls](https://img.shields.io/badge/Tool%20calls%20at%20export-2%2C312-informational)](#composition)
+[![Tool calls](https://img.shields.io/badge/Tool%20calls-2%2C312-informational)](#composition)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
-[![Python](https://img.shields.io/badge/Language-Python-3776AB?logo=python&logoColor=white)](#read-this-before-you-pretrain)
+[![Dataset](https://img.shields.io/badge/Hugging%20Face-Dataset-ffcc4d)](https://huggingface.co/datasets/Sumama-Jameel/megabit-trajectories)
+[![Explorer](https://img.shields.io/badge/Explorer-Live-7c5cff)](https://huggingface.co/spaces/Sumama-Jameel/trajectory-explorer)
 
-**Real coding-agent trajectories, recorded in a real sandbox. 66 sessions where an agent reads a repository, calls tools, runs the tests, hits real errors, and recovers. Every episode is verified, every tool output is genuine, and the whole thing is MIT licensed.**
+Real coding agent sessions. A ticket comes in. The agent reads the repo, calls tools, edits files, runs the tests, hits real errors, and fixes them. Every tool call ran in a real sandbox. Every session is checked. The packaging is MIT licensed, with upstream licenses kept per row.
 
----
+This is the free dataset. Use it to train and study the agent loop: act, observe, fail, repair.
 
-## What This Solves
+- Dataset: https://huggingface.co/datasets/Sumama-Jameel/megabit-trajectories
+- Explorer: https://huggingface.co/spaces/Sumama-Jameel/trajectory-explorer
+- Verifier: `python3 verify.py` in this repo
 
-A coding agent does not fail because it cannot write a function. It fails because it calls a tool with the wrong schema, edits the wrong file, misreads a traceback, and then repeats the same mistake. Static code teaches none of that. Synthetic trajectories teach a version of it that never happened.
+## Load it in 3 lines
 
-It is pretraining data for four capabilities:
+```python
+from datasets import load_dataset
 
-- **Coding.** Real commits from real open source repositories: packaging, click, attrs, tenacity, cli.
-- **Planning.** A ticket is read, the repository is explored, the next step is chosen, edits happen in a sensible order, and the session ends when the work verifies. Plans are re-adjudicated from the full trajectory by a versioned detector (`plan_detector_v1`), not by whether a todo was written: 60 of 66 episodes show a plan before the first edit; 6 are labelled `legacy_unplanned` and kept as negative examples.
-- **Tool calls.** Every call carries its full JSON schema, its arguments, and the exact output the tool returned. Malformed calls made by the model stay in the data: the raw log keeps every byte, and the canonical training sample for the one unparseable call keeps it as a labeled rejection (`arguments_raw` with `parse_status: error`, paired with the exact tool error), see below.
-- **Recovery from failures.** Failed commands, rejected calls, broken tests and the steps that fixed them are kept in order, not filtered out. Authentic calls from failed and superseded attempts are shipped in the `failure_recovery` records.
+ds = load_dataset("Sumama-Jameel/megabit-trajectories", split="train")
+print(ds[0]["repo"], len(ds[0]["messages"]), "messages")
+```
 
-The claim is not that a model becomes better at everything. It is narrower and measurable: this is pretraining data for the loop of act, observe, fail, repair.
+EASY AF.
 
-Research on process data points the same way. Understanding by Reconstruction showed gains on coding and agentic benchmarks after continuing pretraining on reconstructed trajectories. daVinci-Agency got +47% relative on Toolathlon from 239 long-horizon trajectories. Toucan's 1.5M real tool-calling trajectories produced models that beat GPT-4.5-Preview on BFCL V3. Megabit's contribution is simpler: it ships the trajectories with real execution and an audit, instead of a pipeline and a promise.
+## Explore it in the browser
 
----
+Step through any session: play the loop, jump to a failed tool call, read the recovery, and inspect the raw JSON.
 
-## Try It In 60 Seconds
+[Trajectory Explorer](https://huggingface.co/spaces/Sumama-Jameel/trajectory-explorer)
+
+## What one row is
+
+One row is one full session, in order.
+
+```
+system    the tools, the workspace, the rules
+user      the ticket: what to change and how it will be checked
+assistant tool calls: read, grep, edit, write, bash, todo
+tool      the exact output, including errors
+assistant the next step
+tool      a failing test run
+assistant the fix, the retry, the passing run
+```
+
+Nothing is summarized. Nothing is made up. The final patch is in the transcript.
+
+## What it trains
+
+| Capability | What the model sees | How to measure it |
+|---|---|---|
+| Coding | Real edits in attrs, click, packaging, tenacity, and cli | Tests pass at the end of the session |
+| Planning | Ticket, repo exploration, ordered edits, tests before the answer | Plan before the first edit, edit order, time to green |
+| Tool calls | Full JSON schema, arguments, exact output, parallel calls | Schema validity, parse rate, correct argument use |
+| Agentic execution | Long in-order sessions, median 29 tool calls, up to 134 | Steps to completion, tool calls per session |
+| Recovery | Failed commands, rejected calls, broken tests, retries | Recovery rate: does the session fix its own failed call |
+
+The data is built to improve these five behaviors. You do not have to take that on faith. The repo ships a verifier, a per-call ledger, and a per-session provenance record, so you can check the signal before you train on it.
+
+Every row is dense. The model sees the tool schema before the call, the exact output after the call, and the next action. When a call fails, the next turns show the diagnosis and the fix. That is the signal that teaches recovery.
+
+## Composition
+
+| Item | Value |
+|---|---|
+| Sessions | 66 |
+| Repositories | attrs, click, packaging, tenacity, cli |
+| Language | Python |
+| Tool calls recorded in the raw logs | 2,541 |
+| Tool calls in the training rows | 2,312 (2,311 parsed plus 1 rejected) |
+| Recovered calls | 221 authentic calls from failed attempts |
+| Failed tool executions kept with the fix | 60 |
+| Rejected malformed calls kept with the error | 1 |
+| Parallel call batches | 456 |
+| Sessions with tests passing at the end | 66 of 66 |
+| Audited checks per session | 4 of 4 |
+| Models | 3, recorded per row in `provenance.model` |
+| License | MIT for the packaging, upstream licenses kept per row |
+| Size | about 1.17M tokens of message content |
+
+The four audited checks are ticket path, provenance, license, and tests.
+
+One row carries the model's malformed `grep` call exactly as issued, with `parse_status: error`, its raw argument text, and the rejection it received. It is kept on purpose. Clean-call data teaches the happy path. This row teaches the rest.
+
+The 60 failed executions are tool messages with an error set, or output beginning "Tool execution failed". The rejected malformed call is counted separately. The successful retries that follow keep every failure visible in order; nothing is filtered out.
+
+### Splits
+
+| Split | Sessions |
+|---|---|
+| `action_only` | 56 |
+| `legacy_unplanned` | 6 |
+| `network_dependent` | 1 |
+| `quarantine_test_only` | 1 |
+| `research_only` | 2 |
+
+The two `research_only` sessions ended at the iteration cap and are kept and flagged, not hidden.
+
+## Try it in 60 seconds
 
 No install, no API key, no service:
 
@@ -42,135 +114,147 @@ python3 verify.py
 head -c 1200 episodes/012ad533e237baaf/012ad533e237baaf.sample.jsonl
 ```
 
-Load it into a training or inspection loop:
+Or use the Hugging Face copy, which also ships parquet, JSONL, and an index:
 
 ```python
-import json, glob
+from datasets import load_dataset
 
-records = [json.load(open(p)) for p in
-           sorted(glob.glob("episodes/*/*.sample.jsonl"))]
-
-action = [r for r in records if r["metadata"]["split"] == "action_only"]
-ep = action[0]
-print(ep["provenance"]["repo_name"], ep["provenance"]["license_spdx"])
-print(len(ep["messages"]), "messages,", len(ep["tools"]), "tools")
-print(ep["messages"][0]["content"][:400])       # the system prompt
+ds = load_dataset("Sumama-Jameel/megabit-trajectories", split="train")
+print(ds)
 ```
 
-Each file is a single JSON object. `messages` is OpenAI chat format, `tools` is OpenAI function-calling format, so a chat-format loader can read every message as shipped. There are no trainable SFT episodes in this release.
+## How to train on it
 
----
+### Pretraining
 
-## Composition
+This data was collected for continued pretraining. The supervision is the whole transcript, in order.
 
-| Item | Value |
-|---|---|
-| Episodes | 66 |
-| Verified at export | 66 / 66 |
-| Raw tool_call events | 2,541 |
-| Tool-call attempts at export | 2,312 |
-| Tool-call records in published samples | 2,311 |
-| Rejected at export (kept in raw + rejection records) | 1 |
-| Authentic calls restored from failed attempts | 221 (`failure_recovery`) |
-| Jargon calls in any training view | 0 |
-| Unresolved calls | 0 |
-| Split parallel blocks repaired in samples | 552 |
-| Parallel-call batches in samples | 455 |
-| Tool executions that failed in samples | 60 |
-| Raw tool_call events missing tool_call_id | 0 |
-| Repositories | attrs, cli, click, packaging, tenacity |
-| Median tool calls per episode | 29 (export attempts) |
-| Tool outputs capped in samples | 138 |
-| Harness `/tmp` write denials (canonical matcher) | 39 in 36 raw episodes; 35 in 35 samples |
-| Splits | action_only: 56, legacy_unplanned: 6, network_dependent: 1, quarantine_test_only: 1, research_only: 2 |
-| Trainable SFT episodes | 0 (v1 captured no reasoning; see below) |
-| Line similarity median | 0.5723 |
-| Composite similarity median | 0.6593 |
-| License | MIT (data packaging); upstream code keeps its own license |
+1. Use every session. All 66 are full sessions, not answers.
+2. Pack whole sessions. Keep the order. Do not shuffle messages inside a session.
+3. Keep tool results verbatim. Cap markers are part of the record.
+4. Measure the loop. Tool call schema validity, parse rate, tests passed at the end, and recovery rate are the right scores.
 
-The raw log carries 2,541 `tool_call` events, and every one of them carries a non-empty `tool_call_id`. As recorded at export, that is 2,312 tool-call attempts, one of which is the corrupt attempt noted below; the published samples carry 2,311 tool-call records. 605 of those events sit directly after another call with no text or result between them; the samples ship them merged into one assistant turn per batch (455 batches). The merge preserves id order and all call content, so it is a grouping change, not a content change. The merged shape is the default sample shape: a strict chat-format loader can read every message as shipped.
+### Fine-tuning
 
-One call in the corpus carries stream-truncated arguments that no parser can read. The v1 sample file for `b37ef87e467d64e6` excluded that call and its tool result, and the raw log kept both verbatim. The canonical training file named by `training_manifest.json` is `episodes/b37ef87e467d64e6/b37ef87e467d64e6.sample_v2.jsonl`, which keeps the call as a labeled rejection: `arguments_raw` holds the verbatim truncated bytes, `parse_status` is `error`, and the paired tool turn carries `error: "rejected"` with the exact pipeline message. The rejection is also recorded in `episodes/b37ef87e467d64e6/evidence/restore_rejection.jsonl` and indexed by `episodes/failures.jsonl` with the same-tool calls that follow it, so the malformed call, the exact error, and the recovery arc are all visible to a consumer.
+The same 66 sessions can be used for fine-tuning. The repo ships `convert_formats.py`, which converts the corpus into the shapes that LoRA and most fine-tuning stacks load: OpenAI messages, ShareGPT, Hermes, and rendered text. Reformat first, then train. Do not feed the raw sample tree to a trainer that expects a chat template.
 
-"60 tool executions that failed" counts tool messages that record an error (`error` set, or output beginning "Tool execution failed"). The successful retries that follow keep every failure visible in order; nothing is filtered out.
+```bash
+python3 convert_formats.py --list
 
-### Message shape
+# Write a new tree. The corpus is never modified.
+python3 convert_formats.py --corpus . --format sharegpt --out ../ft/sharegpt
+python3 convert_formats.py --corpus . --format openai   --out ../ft/openai
+python3 convert_formats.py --corpus . --format hermes   --out ../ft/hermes
+python3 convert_formats.py --corpus . --format text     --out ../ft/text
 
-```
-system    role prompt: what tools exist, what the workspace is, what is hidden
-user      the ticket: what to change and how it will be judged
-assistant tool_calls[]  read, grep, edit, bash, todo_write ...
-tool      the exact output of that call, capped with a marker if huge
-assistant ...
-tool      a failing test run
-assistant the fix, the retry, the passing run
+# Re-derive every episode and fail if one message, call id, or result moved.
+python3 convert_formats.py --corpus . --format sharegpt --out ../ft/sharegpt --check
 ```
 
-Every assistant step and every tool result is in order. Nothing is summarized and nothing is invented.
+What the formats are for:
 
-### Files per episode
+- `openai`: native `messages[]` with `tool_calls`, for TRL, Axolotl, Unsloth, and most chat-template trainers.
+- `sharegpt`: `conversations[]` with `from` and `value`, for LLaMA-Factory, Axolotl, and LoRA recipes that expect ShareGPT.
+- `hermes`: the Hermes function-calling layout.
+- `text`: one rendered transcript per episode, for plain next-token training.
+
+Cleaning. This is a small corpus with labeled splits, so clean by filtering rather than by rewriting. `metadata.split` is on every sample. Keep `action_only` (56 sessions) for the cleanest training set. `legacy_unplanned` sessions are kept as negative examples for planning; `research_only` ended at the budget cap; `quarantine_test_only` and `network_dependent` are labeled and should stay out of training-ready mixtures. The converter preserves what it is given, so filter the source first if you need a lighter tree. Every run writes a `MANIFEST.json` with source and output hashes.
+
+A fine-tune is not a free win. Our first fine-tune raised tool-call schema validity on a held-out protocol test from 43% to 80%, but the full battery showed regressions in other instruments, so no clean claim is made. Reformat, keep the failure turns, and evaluate on your own held-out protocol test before you trust it.
+
+## Schema
+
+In the Hugging Face parquet file, each row has these columns:
+
+- `episode_id`: the stable session id.
+- `id`: the record id.
+- `repo`, `repo_url`, `license`: the upstream repository and its SPDX license.
+- `model`: the model that produced the session.
+- `messages`: the full ordered transcript. Each message has `role`, `content`, `name`, `tool_call_id`, `tool_calls`, `error`, `truncated`, `duration_ms`, `dropped_chars`, and `original_chars`.
+- `tools`: the OpenAI function-calling catalog used in the session.
+- `metadata`: tool count, attempts, review rounds, normalization detail, terminal state.
+- `provenance`: repo, base commit, target commit, license, model, session id, task check.
+- `verification`: the export verdict and checks.
+- `produced_diff_sha256`: the sha256 of the agent diff.
+
+Inside `tool_calls`, `arguments` is JSON text. Parse it with `json.loads(tc["arguments"])`. The one malformed call has `arguments: null`, `arguments_raw` set, and `parse_status: "error"`, so a strict loader can branch before parsing.
+
+```python
+import json
+row = ds[0]
+for msg in row["messages"]:
+    for tc in msg["tool_calls"] or []:
+        if tc["parse_status"] != "error":
+            args = json.loads(tc["arguments"])
+```
+
+In this repository, each episode ships as a JSONL file with `messages[]`, `tools`, `metadata`, `provenance`, `verification`, and `failure_recovery` records. A chat-format loader can read every message as shipped.
+
+## Files
+
+This repository ships:
 
 ```
-episodes/<task_id>/
-  <task_id>.episode.jsonl    raw event log: header, every event, footer
-  <task_id>.sample.jsonl     training record: messages[] + tools + provenance
-  evidence/                  machine-readable remediation artifacts:
-    manifest.json            per-episode v2 manifest (hashes, split, plan, reasoning,
-                             harness round, provenance, quarantine records)
-    calls.json               per-call accounting (raw call -> disposition)
-    plan.json                plan_detector_v1 evidence for the selected segment
-    reasoning.json           reasoning capture record (none for v1)
-    harness.json             harness three-run record (legacy journal)
-    review.json              reviewer evidence (read-only; reviewer never runs tests)
-    ticket_path_audit.json   Diff1-only path firewall result (66/66 pass)
-    restore_*.jsonl          restored calls by disposition
-    file_match_report.json   produced vs target diff, classified
-    upstream.json            cached-clone commit ancestry + license check
-    harness_friction.jsonl   /tmp denials, where present      
-    ...                        (plus per-episode markers: quarantine, network,
-    legacy_unplanned, and replay/rejection records where applicable)
-  ticket.md                  what the agent was asked to do
-  briefing.md                workspace facts it was given
-  hints.md                   file paths it was allowed to see
-  feedback/round_N.md        reviewer reports for each review round
-  logs/                      coder, reviewer, ticket agent, setup, retries
-  config.snapshot.json       run config, secrets redacted
-  setup_state.json           10-step setup record
-  finalization.json          verdict + sha256 of both JSONL files (+ adoption record)
+episodes/                 the full record: raw log, sample, ticket, evidence
+verify.py                 offline integrity check
+check_shape.py            message shape check
+retag_tools.py            rename the tool vocabulary
+convert_formats.py        export to OpenAI, ShareGPT, Hermes, or text; the shapes LoRA and most fine-tuning stacks load
+merge_parallel_calls.py   merge split parallel calls
+counts.json               the source of truth for every count
+training_manifest.json    canonical sample path and sha256 per episode
+DATA_CARD.md              the full data card
+TOOLS.md                  the tooling guide
+THIRD_PARTY_NOTICES.md    upstream license notices
 ```
 
-The ground-truth patch is not shipped. The agent's own work is: `produced_diff` in the episode footer and the final patch in the sample messages.
+The Hugging Face dataset adds a flat training copy:
 
----
+```
+data/train.parquet        the 66 training rows, viewer ready
+data/train.jsonl          the same rows, one JSON object per line
+data/index.parquet        one flat row per session, easy to filter
+data/index.json           the same index as JSON
+data/tools.json           the tool contract for the whole corpus
+PILOT.md                  how to get a private corpus for your lab
+```
 
-## Why It Is Usable
+Long tool outputs in the flat copy are capped with an explicit marker. The full text is in `episodes/<id>/<id>.episode.jsonl`.
 
-- **Real execution only.** Every tool call ran in a Docker sandbox. Outputs are stored as the tool produced them, including the failures.
-- **The answer was not in the room.** The workspace is rebased onto a fresh root commit, so `git log`, `git diff` and the reflog cannot reveal the human fix.
-- **Verified, not asserted.** An episode ships only if the project's tests pass and the agent's diff clears a composite similarity gate against the human patch. `verify.py` re-checks all 66 files offline.
-- **Self-describing records.** Each sample carries its tool catalog, the alias table, the tool-output policy, the message-normalization record, `split`, `ends_with_final_answer`, and `terminal_state`. A consumer can filter without opening the raw log.
-- **Provenance per episode.** Repository, base and target commit, SPDX license, model, session, task HMAC and the verification report travel with the data.
-- **Failure is data.** Malformed commands, rejected calls, broken installs and the recovery after them are kept. Two episodes ended at the iteration cap and are labelled `research_only` instead of deleted.
-- **Rename it to your vocabulary.** `retag_tools.py` rewrites the shell tool to `SHELL` or `execute`, the reader to `view`, in one command, with a `--check` mode. Renaming there and back is byte-identical.
+## Verify it yourself
 
----
+```bash
+python3 verify.py            # 66/66, exit 0
+python3 verify.py --quiet
+```
 
-## Pretrain On It
+It re-computes both sha256 values per episode, checks header and footer presence, tool-call counts, the export verdict, provenance fields, and the recorded `task_mac_valid` verdict (it does not re-derive the HMAC). It does not re-run the sandbox; it checks that the record you downloaded is the record that was published.
 
-This is continued-pretraining data, not an instruction-tuning set. There is no per-step label or preference to optimize against; the supervision is the whole transcript, in order. The corpus is deliberately boring to load and hard to fake.
+Deeper checks live with the engine (`megabit-remediation` tooling): a deep verifier re-derives counts from the artifacts, re-checks every raw call disposition, re-audits every ticket and hint path against the Diff1 tree, re-scans secrets including binaries, and verifies the signed `release_manifest.json` at the repository root. `counts.json` is the single generated source of truth for every number above; the release manifest covers every file except itself, the signature, the replay report, and the deep-verification report.
 
-1. **Use every episode.** All 66 are sessions, not answers. The 2 `research_only` ones show what a session looks like when it runs out of budget, which is useful context for a model that has to decide when to stop.
-2. **Pack whole sessions.** The median sample is about 62k characters of message content (~15.5k tokens by a 4-chars/token heuristic); the largest is about 230k such characters. Pack at your context length and keep the order. Do not shuffle messages inside an episode.
-3. **Keep tool results verbatim.** Cap markers are part of the record. Do not re-summarize them, or you throw away the failure signal.
-4. **Measure the loop, not a vibe.** Tool-call schema validity, tool-call parse rate, tests passed at the end of a session, and recovery rate (does the session fix its own failed call) are the scores this data is built to move. A held-out protocol test is the right instrument, not a general coding leaderboard.
+Operational records carry placeholders instead of the build machine's paths: `<MEGABIT_DATA>`, `<MEGABIT_REPO>`, `<HOME>`, `<SANDBOX_HOME>`. Raw logs and samples are untouched, so every sha256 above still covers the published bytes.
 
-Our first attempt used a fine-tune, which is the wrong tool for transcript data. It raised tool-call schema validity on our held-out protocol test from 43% to 80%, but the full battery showed regressions in other instruments, so we rebuilt the corpus and are retraining. No clean win yet, and no claim of one.
+## Rename the tools
 
-If you pretrain on it, tell us the numbers, including the bad ones. That is how this gets useful.
+```bash
+python3 retag_tools.py --dump-profile > lab.json
+python3 retag_tools.py --corpus . --profile lab.json --out ../renamed
+python3 retag_tools.py --corpus ../renamed --profile lab.json --check
+```
 
----
+It rewrites tool call names, tool result names, each sample's catalog, `episodes/tools.json` and the `finalization.json` digest. Message content is never touched. No dependencies.
 
-## How It Compares
+## Why it is usable
+
+- Real execution only. Every tool call ran in a Docker sandbox. Outputs are stored as the tool produced them, including the failures.
+- The answer was not in the room. The workspace is rebased onto a fresh root commit, so `git log`, `git diff` and the reflog cannot reveal the human fix.
+- Verified, not asserted. An episode ships only if the project's tests pass and the agent's diff clears a composite similarity gate against the human patch. `verify.py` re-checks all 66 files offline.
+- Self-describing records. Each sample carries its tool catalog, the alias table, the tool-output policy, the message-normalization record, `split`, `ends_with_final_answer`, and `terminal_state`. A consumer can filter without opening the raw log.
+- Provenance per episode. Repository, base and target commit, SPDX license, model, session, task HMAC and the verification report travel with the data.
+- Failure is data. Malformed commands, rejected calls, broken installs and the recovery after them are kept.
+- Rename it to your vocabulary. `retag_tools.py` rewrites the shell tool to `SHELL` or `execute`, the reader to `view`, in one command, with a `--check` mode. Renaming there and back is byte-identical.
+
+## How it compares
 
 | Project | Real execution | Human answer hidden | Ships data | Scale |
 |---|---|---|---|---|
@@ -184,9 +268,10 @@ If you pretrain on it, tell us the numbers, including the bad ones. That is how 
 
 Most of these are bigger. Rig is two orders of magnitude bigger with a trained model on top. The difference is what is shipped: execution-grounded episodes with an audit trail, a verifier, and a license record per episode, rather than a pipeline or a paper.
 
----
+## The episodes
 
-## The Episodes
+<details>
+<summary>All 66 sessions, with similarity, tool calls, review rounds, tests, and time</summary>
 
 | Episode | Repository | Sim | Tool calls | Review rounds | Tests pass | Time |
 |---|---|---|---|---|---|---|
@@ -262,76 +347,21 @@ gate is composite >= 0.45, not line similarity; line similarity is a stricter su
 and can fall below 0.45 while the composite passes. Older episodes without a recorded
 composite show line similarity instead.
 
-- † `966101f98864fafa` is quarantined (`quarantine_test_only`): the human fix is
-  test-only, the seeded tests were locked before the coder started, the produced
-  diff touches only LICENSE, and the gate passed on the LICENSE hunk. Kept as
-  evidence; excluded from every training-ready list.
-- ‡ `490a433138e1fe8e` is `network_dependent`: live httpbin.org calls in the coder
-  session and in the seeded tests, with no egress-relaxation record on file. Kept
-  as labeled research data; do not present as offline-reproducible.
-- § `611e35323caaf082` recorded no three-run harness round in its retry journal
-  (the reviewer ran the suite). An offline replay of the final diff against the
-  locked seeded tests passes 3 of 3 sequential runs; see
-  `episodes/611e35323caaf082/evidence/harness_replay.json`. The replay is
-  environment-adapted (host Python 3.10.12), so it is labeled a replay, not a
-  canonical harness round.
+- † `966101f98864fafa` is quarantined (`quarantine_test_only`): the human fix is test-only, the seeded tests were locked before the coder started, the produced diff touches only LICENSE, and the gate passed on the LICENSE hunk. Kept as evidence; excluded from every training-ready list.
+- ‡ `490a433138e1fe8e` is `network_dependent`: live httpbin.org calls in the coder session and in the seeded tests, with no egress-relaxation record on file. Kept as labeled research data; do not present as offline-reproducible.
+- § `611e35323caaf082` recorded no three-run harness round in its retry journal (the reviewer ran the suite). An offline replay of the final diff against the locked seeded tests passes 3 of 3 sequential runs; see `episodes/611e35323caaf082/evidence/harness_replay.json`. The replay is environment-adapted (host Python 3.10.12), so it is labeled a replay, not a canonical harness round.
 
-## Read This Before You Pretrain
+</details>
 
-- **66 sessions, about 1.17M tokens (about 4.7M characters of message content).** Nearly every token is a real action or a real observation, so the density is high: 2,541 raw tool-call events, 2,312 export attempts (2,311 tool-call records in the published samples, 1 rejected-at-export call preserved with its error), 221 authentic calls restored from failed attempts into `failure_recovery`, 455 parallel-call batches and 60 tool executions that failed. That makes it a strong component in a pretraining mixture. It is not a corpus to pretrain on alone, and a gain here is a protocol-instrument result, not a general capability claim.
+## Read this before you pretrain
+
+- **66 sessions, about 1.17M tokens (about 4.7M characters of message content).** Nearly every token is a real action or a real observation, so the density is high: 2,541 raw tool-call events, 2,312 tool-call records in the training rows (2,311 parsed plus 1 rejected), 221 authentic calls restored from failed attempts, 456 parallel-call batches, and 60 failed tool executions. That makes it a strong component in a pretraining mixture. It is not a corpus to pretrain on alone, and a gain here is a protocol-instrument result, not a general capability claim.
 - **Python only.** Five mainstream libraries. No systems code, no frontend, no infrastructure.
 - **Two episodes are labelled `research_only`** because they ended at the iteration cap, and both record an agent-written test log inside their final diff. They are kept and flagged, not hidden.
 - **20 v1 prompts contained a false statement about git.** They called `git status`, `git diff` and `git log` useless. The statement was wrong for inspecting the agent's own work. The archived prompt bytes are unchanged. Each episode records `evidence/briefing_policy.json`; the 20 affected episodes are `sft_eligible: false` and excluded from every trainable list.
+- **The quarantine and network labels are real.** `966101f98864fafa` passed on a LICENSE-only diff and is excluded from training lists. `490a433138e1fe8e` used live httpbin.org calls and is labelled `network_dependent`, so do not present it as offline-reproducible.
 
----
-
-## Verify
-
-```bash
-python3 verify.py            # 66/66, exit 0
-python3 verify.py --quiet
-```
-
-It re-computes both sha256 values per episode, checks header and footer presence, tool-call counts, the export verdict, provenance fields, and the recorded `task_mac_valid` verdict (it does not re-derive the HMAC). It does not re-run the sandbox; it checks that the record you downloaded is the record that was published.
-
-Deeper checks live with the engine (`megabit-remediation` tooling): a deep verifier re-derives counts from the artifacts, re-checks every raw call disposition, re-audits every ticket/hint path against the Diff1 tree, re-scans secrets including binaries, and verifies the signed `release_manifest.json` at the repository root. `counts.json` at the repository root is the single generated source of truth for every number above; the release manifest covers every file except itself, the signature, the replay report, and the deep-verification report.
-
-Operational records (setup state, setup logs, retry journals, feedback reports, finalization, config snapshots) carry placeholders instead of the build machine's paths: `<MEGABIT_DATA>`, `<MEGABIT_REPO>`, `<HOME>`, `<SANDBOX_HOME>`. Raw logs and samples are untouched, so every sha256 above still covers the published bytes.
-
----
-
-## Rename The Tools
-
-```bash
-python3 retag_tools.py --dump-profile > lab.json
-python3 retag_tools.py --corpus . --profile lab.json --out ../renamed
-python3 retag_tools.py --corpus ../renamed --profile lab.json --check
-```
-
-It rewrites tool call names, tool result names, each sample's catalog, `episodes/tools.json` and the `finalization.json` digest. Message content is never touched. No dependencies.
-
----
-
-## Change The Format
-
-The samples ship as JSONL with `messages[]`, a `tools` catalog and flat call records (`id`, `name`, `arguments`). If your stack wants native `tool_calls`, ShareGPT, Hermes or one rendered text per episode, convert instead of hand-editing 66 files:
-
-```bash
-python3 convert_formats.py --list
-python3 convert_formats.py --corpus . --format openai   --out ../ft/openai
-python3 convert_formats.py --corpus . --format sharegpt --out ../ft/sharegpt
-python3 convert_formats.py --corpus . --format hermes   --out ../ft/hermes
-python3 convert_formats.py --corpus . --format text     --out ../ft/text
-python3 convert_formats.py --corpus . --format sharegpt --out ../ft/sharegpt --check
-```
-
-It writes a new tree and never the corpus. `MANIFEST.json` records the source sha256, the output sha256 and a logical digest per episode; `--check` re-derives every episode from the corpus and exits non-zero if one message, call id or result moved. The rendered `text` format cannot carry a tool result's id, and the manifest states that instead of pretending otherwise.
-
-The samples already ship parallel calls as one assistant turn with several calls, so `convert_formats.py`'s own merge pass is a no-op on them; it exists for a corpus produced by an older exporter, and `--no-merge-parallel` turns it off. Nothing is dropped either way: every call keeps its id, name and arguments.
-
----
-
-## Repo Layout
+## Repo layout
 
 ```
 retag_tools.py                 rename the tool vocabulary (no deps)
@@ -341,6 +371,7 @@ check_shape.py                 check the merged tool-call shape (no deps)
 verify.py                      offline integrity check
 TOOLS.md                       guide to the three repair tools
 counts.json                    generated source of truth for every count
+training_manifest.json         canonical sample path and sha256 per episode
 remediation_manifest.json      file-level adoption ledger (before/after sha256)
 secret_scan.json               full-tree byte scan (0 findings)
 release_manifest.json          signed manifest of every published file
@@ -355,6 +386,25 @@ DATA_CARD.md                   composition, limits, changelog
 LICENSE                        MIT
 ```
 
+Each episode directory contains:
+
+```
+episodes/<task_id>/
+  <task_id>.episode.jsonl    raw event log: header, every event, footer
+  <task_id>.sample.jsonl     training record: messages[] + tools + provenance
+  evidence/                  machine-readable audit artifacts
+  ticket.md                  what the agent was asked to do
+  briefing.md                workspace facts it was given
+  hints.md                   file paths it was allowed to see
+  feedback/round_N.md        reviewer reports for each review round
+  logs/                      coder, reviewer, ticket agent, setup, retries
+  config.snapshot.json       run config, secrets redacted
+  setup_state.json           10-step setup record
+  finalization.json          verdict + sha256 of both JSONL files
+```
+
+The ground-truth patch is not shipped. The agent's own work is: `produced_diff` in the episode footer and the final patch in the sample messages.
+
 ### Upstream repositories
 
 - [attrs](https://github.com/python-attrs/attrs) - under MIT
@@ -363,15 +413,46 @@ LICENSE                        MIT
 - [packaging](https://github.com/pypa/packaging) - under Apache-2.0
 - [tenacity](https://github.com/jd/tenacity) - under Apache-2.0
 
----
+## What we need
 
-## What We Need
-
-- **Pretrain on it and report the number.** Even one instrument, even if it got worse.
+- **Train on it and report the number.** Pretraining or fine-tuning, even one instrument, even if it got worse.
 - **Point the engine at another language.** Python is what is published; the engine handles JS, TS, Go and Rust.
 - **Break it.** Open an issue with the episode id. The defects consumers reported in November 2026 are fixed and listed in the changelog; there are more.
 
----
+## Want this on your stack?
+
+The free dataset is the public proof. The pilot is the private version:
+
+- Your repositories.
+- Your languages. The public release is Python. The pilot covers your stack.
+- Reasoning traces, if your training recipe needs them.
+- Your harness, your tools, your tests.
+- Your eval, run before and after.
+- A fixed scope, a fixed timeline, and a verifier you keep.
+
+If you are at an AI lab and you want a private corpus, email sumamajamil2005@gmail.com with the subject "MegaBit pilot". Tell us the model, the repos, the capabilities, and the eval you care about. We will send a scope and a date.
+
+## Community results
+
+We will list public results here. Send yours to sumamajamil2005@gmail.com.
+
+## Cite this dataset
+
+```bibtex
+@dataset{megabit_trajectories_2026,
+  title = {MegaBit Trajectories},
+  author = {Jameel, Sumama},
+  year = {2026},
+  publisher = {MegaBit},
+  url = {https://huggingface.co/datasets/Sumama-Jameel/megabit-trajectories},
+  license = {MIT}
+}
+```
+
+## Changelog
+
+- 2026-11-20: v1.0.0, first public release on Hugging Face.
+- 2026-11-22: audit follow-up, upstream license notices, and the b37 rejection record.
 
 ## License
 
@@ -379,4 +460,4 @@ MIT. See [LICENSE](LICENSE).
 
 Upstream source code in the corpus keeps its original license: Apache-2.0, MIT, BSD-3-Clause and BSD-2-Clause. Upstream notices travel with the data.
 
-Built by Sumama Jameel. Contact: sumamajamil2005@gmail.com
+Built by MegaBit. Contact: sumamajamil2005@gmail.com
