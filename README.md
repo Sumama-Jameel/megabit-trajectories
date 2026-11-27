@@ -14,6 +14,7 @@ This is the free dataset. Use it to train and study the agent loop: act, observe
 - Dataset: https://huggingface.co/datasets/Sumama-Jameel/megabit-trajectories
 - Explorer: https://huggingface.co/spaces/Sumama-Jameel/trajectory-explorer
 - Verifier: `python3 verify.py` in this repo
+- Proof of work: [CASE_STUDY.md](CASE_STUDY.md), two runs that tested this corpus's claim and what they did and did not show
 
 ## Load it in 3 lines
 
